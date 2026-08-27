@@ -7,10 +7,11 @@ interface Props {
   page: Page;
   settingsLabel: string;
   langLabel: string;
+  systemLanguage: string;
   theme: { label: string; system: string; light: string; dark: string };
 }
 
-const { locale, page, settingsLabel, langLabel, theme } = Astro.props;
+const { locale, page, settingsLabel, langLabel, systemLanguage, theme } = Astro.props;
 
 const entries = await getCollection('i18n');
 const names = new Map(entries.map((e) => [e.id, e.data.name]));
@@ -105,6 +106,28 @@ const ordered = localesInReadingOrder(locale, endonym);
     <section class="group">
       <h2>{langLabel}</h2>
       <ul class="languages">
+        {/*
+          System heads the list, the way Auto heads the picker in the game.
+          What it means here is different, and has to be: in the game Auto is a
+          state the setting rests in, and on a website the language is the
+          address rather than a setting - so this is one press that takes you to
+          the version your browser asks for, not a mode that follows you.
+
+          Hidden until the script has a browser language to point it at, and it
+          stays hidden when that language has no version here, because an entry
+          that does nothing is worse than no entry.
+        */}
+        <li class="system-language" hidden data-system-language>
+          <a href="/" data-system-link>
+            <span class="ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="15" height="15">
+                <rect x="2.5" y="3.5" width="19" height="13" rx="2" />
+                <path d="M8.5 20.5h7M12 17v3.5" />
+              </svg>
+            </span>
+            <span>{systemLanguage}</span>
+          </a>
+        </li>
         {
           ordered.map((code) => (
             <li>
@@ -179,6 +202,26 @@ const ordered = localesInReadingOrder(locale, endonym);
     });
 
     apply(saved());
+  })();
+
+  (function () {
+    // Where "System" points. The language offer beside it already works out
+    // which of the sixteen the browser is asking for and writes it onto the
+    // document; this only needs that answer, so the matching lives in one
+    // place rather than in two that can disagree.
+    var row = document.querySelector('[data-system-language]');
+    if (!row) return;
+
+    var match = document.documentElement.getAttribute('data-browser-locale');
+    if (!match) return;
+
+    var target = document.querySelector('.languages a[hreflang="' + match + '"]');
+    if (!target) return;
+
+    var link = row.querySelector('[data-system-link]');
+    link.setAttribute('href', target.getAttribute('href'));
+    link.setAttribute('hreflang', match);
+    row.hidden = false;
   })();
 
   (function () {

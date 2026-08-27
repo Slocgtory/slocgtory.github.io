@@ -64,47 +64,9 @@ const others = LOCALES.filter((code) => code !== locale).map((code) => ({
 
     var here = document.documentElement.lang;
 
-    /**
-     * The best match between what the browser asks for and what this site has.
-     *
-     * `navigator.languages` is in the visitor's own order of preference, so the
-     * first hit wins. Matching is on the primary subtag - `pl-PL` should find
-     * `pl` - except for Chinese, where the script is the whole point: zh-TW and
-     * zh-HK want Traditional, everything else Simplified, and handing a reader
-     * the wrong one reads as a mistake rather than as a near miss.
-     */
-    function wanted(have) {
-      var asked = navigator.languages || [navigator.language || ''];
-      for (var i = 0; i < asked.length; i++) {
-        var tag = String(asked[i]);
-        var lower = tag.toLowerCase();
-
-        if (lower.indexOf('zh') === 0) {
-          var traditional =
-            lower.indexOf('hant') !== -1 ||
-            lower.indexOf('tw') !== -1 ||
-            lower.indexOf('hk') !== -1 ||
-            lower.indexOf('mo') !== -1;
-          var pick = traditional ? 'zh-Hant' : 'zh-Hans';
-          if (have.indexOf(pick) !== -1) return pick;
-          continue;
-        }
-
-        var primary = lower.split('-')[0];
-        for (var j = 0; j < have.length; j++) {
-          if (have[j].toLowerCase().split('-')[0] === primary) return have[j];
-        }
-      }
-      return null;
-    }
-
-    var offers = box.querySelectorAll('[data-offer-for]');
-    var have = [];
-    offers.forEach(function (node) {
-      have.push(node.getAttribute('data-offer-for'));
-    });
-
-    var match = wanted(have);
+    // Worked out in the head, before anything rendered. See there for why it
+    // is one place rather than two.
+    var match = document.documentElement.getAttribute('data-browser-locale');
     if (!match || match === here) return;
 
     // Turned down once is turned down. Per language, so a later visit in a

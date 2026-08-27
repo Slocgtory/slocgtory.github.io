@@ -570,7 +570,17 @@ main {
   z-index: 50;
   width: 21rem;
   max-width: calc(100vw - 2rem);
-  max-height: min(75vh, 32rem);
+  /*
+    Tall enough that nothing inside it scrolls on a desktop: the panel needs
+    546px for three theme rows, the System row and eight rows of languages, and
+    the old 32rem cap gave it 510 - so the two Chinese entries, the last pair in
+    reading order, sat under the fold behind a scrollbar. 38rem clears that with
+    room for a seventeenth language.
+
+    The viewport half of the min() still stands, because a short window is real
+    and scrolling then is the right answer.
+  */
+  max-height: min(calc(100vh - 6rem), 38rem);
   overflow-y: auto;
   padding: 0.85rem;
   display: flex;
@@ -580,6 +590,18 @@ main {
   border: 1px solid var(--line);
   border-radius: calc(var(--radius) * 2);
   box-shadow: var(--shadow-lg);
+}
+
+/*
+  The rule sits between the two settings, which is where the panel actually
+  divides. It spent one revision under the System row instead, separating that
+  row from the sixteen names below it - but System and those names are the same
+  setting answered two ways, so a line there drew a boundary that is not one,
+  and left the real boundary, appearance against language, unmarked.
+*/
+.group + .group {
+  border-top: 1px solid var(--line-soft);
+  padding-top: 0.9rem;
 }
 
 .group h2 {
@@ -677,6 +699,40 @@ main {
   background: var(--accent-soft);
   font-weight: 600;
 }
+
+/*
+  System heads the list, the way Auto heads the picker in the game, and it takes
+  the full width rather than a cell.
+
+  Two reasons, and the second is the one that shows. It is not a language, so
+  putting it in the left column next to Dansk asks the eye to read it as one -
+  a rule above the sixteen says what it is without a word of explanation. And
+  the count: sixteen pairs cleanly, seventeen does not, so as a cell it would
+  leave a hole at the bottom of one column and shunt every name after it into
+  the wrong side.
+
+  Centred, because a full-width row aligned left reads as a very wide first
+  entry in the left column - which is the reading the whole arrangement is
+  meant to prevent. Width and centring carry that on their own; a rule under it
+  would over-say it, and is spent on the theme/language boundary instead.
+*/
+.system-language {
+  grid-column: 1 / -1;
+  margin-bottom: 0.3rem;
+}
+.system-language[hidden] { display: none; }
+
+.system-language a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.system-language .ico {
+  display: inline-flex;
+  color: var(--ink-mute);
+}
+.system-language a:hover .ico { color: var(--accent); }
 
 /* On a phone the panel is the width of the screen, not of the button. */
 @media (max-width: 30rem) {

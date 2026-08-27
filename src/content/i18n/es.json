@@ -1,12 +1,13 @@
 {
   "name": "Español",
   "dir": "ltr",
-  "sourceHash": "0932137cf870eee4",
+  "sourceHash": "249fbe556f1f373f",
   "site": {
     "skip": "Saltar al contenido",
     "navLabel": "Navegación principal",
     "settingsLabel": "Ajustes",
     "langLabel": "Idioma",
+    "systemLanguage": "Sistema",
     "otherLanguage": "Esta página también está disponible en español.",
     "dismiss": "Cerrar",
     "email": "Slocgtory@gmail.com",

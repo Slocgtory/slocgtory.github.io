@@ -58,6 +58,11 @@ const i18n = defineCollection({
       settingsLabel: z.string().min(1),
       langLabel: z.string().min(1),
 
+      /** Heads the language list, the way Auto heads the game's picker. Its own
+       *  key rather than the theme's: two settings that share a word today must
+       *  not share a string. */
+      systemLanguage: z.string().min(1),
+
       /** Offered to a visitor whose browser speaks this language, written in it.
        *  A Pole reading the English page has to be offered Polish in Polish, or
        *  it is not an offer. */
