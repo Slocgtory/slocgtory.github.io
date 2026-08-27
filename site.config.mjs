@@ -42,6 +42,20 @@ export const LOCALES = [
   'zh-Hans',
 ];
 
+/**
+ * Where this site lives, and it is staying here.
+ *
+ * Settled on 2026-08-27 rather than left open, because this address is not only
+ * an address. It goes into Meta's app submission dashboard as the privacy
+ * policy URL and is re-validated automatically from then on, so moving to a
+ * custom domain after submitting is a change in Meta's console and a reset of
+ * everything the search engines have indexed - cheap now, expensive later. The
+ * answer is: no custom domain, no CNAME.
+ *
+ * Everything derived - canonical links, the sixteen hreflang sets, og:url, the
+ * sitemap - reads this constant. `public/robots.txt` carries the only second
+ * copy, because a static file cannot read a module.
+ */
 export const SITE_URL = 'https://slocgtory.github.io';
 
 /** Markets each language is carried for, shown nowhere but useful when someone
