@@ -23,6 +23,11 @@ import { readFileSync, readdirSync, statSync, existsSync } from 'node:fs';
 import { join, relative, extname } from 'node:path';
 import { LOCALES, DEFAULT_LOCALE, SITE_URL, OG_LOCALES } from '../site.config.mjs';
 
+/** Every app has a page of its own, and the slug is the same in all sixteen. */
+const APP_SLUGS = JSON.parse(readFileSync('src/content/i18n/en.json', 'utf8')).apps.list.map(
+  (a) => a.slug,
+);
+
 const DIST = 'dist';
 const ERROR_PAGE = '404.html';
 
@@ -130,7 +135,7 @@ for (const file of pages) {
 
 // --- the whole build ------------------------------------------------------
 for (const code of LOCALES) {
-  for (const leaf of ['', 'apps/', 'privacy/']) {
+  for (const leaf of ['', 'apps/', 'privacy/', ...APP_SLUGS.map((s) => `apps/${s}/`)]) {
     const dir = code === DEFAULT_LOCALE ? leaf : `${code}/${leaf}`;
     if (!existsSync(join(DIST, dir, 'index.html'))) fail(dir || '/', 'route missing for this language');
   }

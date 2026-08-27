@@ -14,5 +14,5 @@ const data = await loadLocale(DEFAULT_LOCALE);
   site={data.site}
   apps={data.apps.list}
 >
-  <AppsBody apps={data.apps} />
+  <AppsBody apps={data.apps} locale={DEFAULT_LOCALE} />
 </Base>

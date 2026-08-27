@@ -1,13 +1,16 @@
 ---
-import { inline } from '../lib/i18n';
+import { inline, localeUrl } from '../lib/i18n';
 
 interface App {
+  slug: string;
   name: string;
   status: string;
   desc: string;
+  more: string;
 }
 
 interface Props {
+  locale: string;
   apps: {
     title: string;
     intro: string;
@@ -17,7 +20,7 @@ interface Props {
   };
 }
 
-const { apps } = Astro.props;
+const { apps, locale } = Astro.props;
 ---
 
 {/*
@@ -44,10 +47,20 @@ const { apps } = Astro.props;
               app's state.
             */}
             <div class="app-head">
-              <h3>{app.name}</h3>
+              {/*
+                The name is the way in. A separate "read more" under the blurb
+                would be a second link to the same place, and the thing people
+                reach for is the name.
+              */}
+              <h3>
+                <a href={localeUrl(`apps/${app.slug}`, locale)}>{app.name}</a>
+              </h3>
               <span class="status">{app.status}</span>
             </div>
             <p set:html={inline(app.desc)} />
+            <p class="more">
+              <a href={localeUrl(`apps/${app.slug}`, locale)}>{app.more}</a>
+            </p>
           </li>
         ))
       }

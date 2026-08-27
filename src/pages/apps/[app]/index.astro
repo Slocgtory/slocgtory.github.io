@@ -1,0 +1,24 @@
+---
+import Base from '../../../layouts/Base.astro';
+import AppBody from '../../../components/AppBody.astro';
+import { loadLocale, DEFAULT_LOCALE } from '../../../lib/i18n';
+
+export async function getStaticPaths() {
+  const { apps } = await loadLocale(DEFAULT_LOCALE);
+  return apps.list.map((app) => ({ params: { app: app.slug } }));
+}
+
+const data = await loadLocale(DEFAULT_LOCALE);
+const app = data.apps.list.find((a) => a.slug === Astro.params.app)!;
+---
+
+<Base
+  locale={DEFAULT_LOCALE}
+  page={`apps/${app.slug}`}
+  title={app.page.metaTitle}
+  description={app.page.metaDescription}
+  site={data.site}
+  apps={[app]}
+>
+  <AppBody app={app} factsHeading={data.apps.detailsHeading} />
+</Base>

@@ -1,0 +1,52 @@
+---
+import { inline } from '../lib/i18n';
+
+interface Props {
+  app: {
+    name: string;
+    status: string;
+    page: {
+      intro: string[];
+      facts: { label: string; value: string }[];
+      privacyNote: string;
+    };
+  };
+  factsHeading: string;
+}
+
+const { app, factsHeading } = Astro.props;
+---
+
+{/*
+  One app, on the same two-column grid as every other page: the label in the
+  margin, the content on the vertical edge beside it.
+*/}
+<section class="hero">
+  <div class="app-head">
+    <h1>{app.name}</h1>
+    <span class="status">{app.status}</span>
+  </div>
+  {app.page.intro.map((paragraph) => <p class="lede" set:html={inline(paragraph)} />)}
+</section>
+
+<section class="block">
+  <h2 class="block-head">{factsHeading}</h2>
+  <div class="block-body">
+    {/*
+      A description list, because that is what this is: each row names something
+      and answers it. A table would promise columns that do not exist, and two
+      stacked <p>s would lose the pairing entirely.
+    */}
+    <dl class="facts">
+      {
+        app.page.facts.map((fact) => (
+          <div class="fact">
+            <dt>{fact.label}</dt>
+            <dd>{fact.value}</dd>
+          </div>
+        ))
+      }
+    </dl>
+    <p class="note" set:html={inline(app.page.privacyNote)} />
+  </div>
+</section>

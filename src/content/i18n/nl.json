@@ -1,6 +1,6 @@
 {
   "name": "Nederlands",
-  "sourceHash": "554a323365d7ee74",
+  "sourceHash": "10e237e8ed3b7a9a",
   "site": {
     "skip": "Naar de inhoud",
     "navLabel": "Hoofdnavigatie",
@@ -38,11 +38,45 @@
     "title": "Wat er tot nu toe is.",
     "intro": "Alles wat Slocgtory voor Meta Quest heeft gemaakt, uitgebracht of niet.",
     "heading": "Apps",
+    "detailsHeading": "Details",
     "list": [
       {
+        "slug": "allvrpuzzles",
         "name": "AllVRPuzzles",
         "status": "In ontwikkeling",
-        "desc": "Een legpuzzelspel voor Meta Quest 3 en 3S. 210 afbeeldingen verdeeld over 26 kamers, in virtual reality gesneden en in elkaar gezet, met handtracking of controllers. Binnenkort in de Meta Horizon Store."
+        "desc": "Een legpuzzelspel voor Meta Quest 3 en 3S. 210 afbeeldingen verdeeld over 26 kamers, in virtual reality gesneden en in elkaar gezet, met handtracking of controllers. Binnenkort in de Meta Horizon Store.",
+        "more": "Over deze app",
+        "page": {
+          "metaTitle": "AllVRPuzzles — Slocgtory",
+          "metaDescription": "Een puzzelspel voor Meta Quest 3 en 3S. 210 afbeeldingen in 26 kamers, van 12 tot 500 stukjes, met je handen of met controllers.",
+          "intro": [
+            "Een legpuzzel, gesneden en gelegd in virtual reality. Kies een afbeelding, kies hoe fijn hij uiteenvalt — twaalf stukjes of vijfhonderd — en leg hem op een bord dat je zelf op maat en afstand zet.",
+            "Nog in ontwikkeling. Op de dag van verschijnen staat hier een link naar de winkel."
+          ],
+          "facts": [
+            {
+              "label": "Headset",
+              "value": "Meta Quest 3 en Quest 3S"
+            },
+            {
+              "label": "Afbeeldingen",
+              "value": "210 in 26 kamers, tien daarvan gratis"
+            },
+            {
+              "label": "Moeilijkheid",
+              "value": "Vijf standen, van 12 tot 500 stukjes"
+            },
+            {
+              "label": "Besturing",
+              "value": "Handen of controllers"
+            },
+            {
+              "label": "Talen",
+              "value": "18"
+            }
+          ],
+          "privacyNote": "De uitgebrachte app vraagt nooit om internettoegang, dus niets van wat hij opslaat kan je headset verlaten. De details staan in het [privacybeleid](/nl/privacy/)."
+        }
       }
     ],
     "note": "Er is nog niets uitgebracht. Elke app komt hier te staan zodra die verschijnt, met een link naar de winkelpagina."

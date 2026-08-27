@@ -19,5 +19,5 @@ const data = await loadLocale(lang!);
   site={data.site}
   apps={data.apps.list}
 >
-  <AppsBody apps={data.apps} />
+  <AppsBody apps={data.apps} locale={lang!} />
 </Base>

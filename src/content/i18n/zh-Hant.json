@@ -1,6 +1,6 @@
 {
   "name": "繁體中文",
-  "sourceHash": "554a323365d7ee74",
+  "sourceHash": "10e237e8ed3b7a9a",
   "site": {
     "skip": "跳至內容",
     "navLabel": "主要導覽",
@@ -38,11 +38,45 @@
     "title": "目前已有的作品。",
     "intro": "Slocgtory 為 Meta Quest 製作的全部作品，無論是否已發布。",
     "heading": "應用程式",
+    "detailsHeading": "詳細資料",
     "list": [
       {
+        "slug": "allvrpuzzles",
         "name": "AllVRPuzzles",
         "status": "開發中",
-        "desc": "一款 Meta Quest 3 與 3S 的拼圖遊戲。26 個房間中共 210 幅畫作，在虛擬實境中切割並拼合，可使用手部追蹤或控制器遊玩。即將登陸 Meta Horizon Store。"
+        "desc": "一款 Meta Quest 3 與 3S 的拼圖遊戲。26 個房間中共 210 幅畫作，在虛擬實境中切割並拼合，可使用手部追蹤或控制器遊玩。即將登陸 Meta Horizon Store。",
+        "more": "關於這個應用程式",
+        "page": {
+          "metaTitle": "AllVRPuzzles — Slocgtory",
+          "metaDescription": "Meta Quest 3 與 3S 的拼圖遊戲。26 個房間共 210 張圖，12 片到 500 片，用雙手或控制器遊玩。",
+          "intro": [
+            "在虛擬實境中切開並拼合的拼圖。選一張圖，選要切得多細——12 片或 500 片——然後在你自己調好大小與距離的板子上拼起來。",
+            "仍在開發中。上架當天，這裡會放上商店連結。"
+          ],
+          "facts": [
+            {
+              "label": "頭戴裝置",
+              "value": "Meta Quest 3 與 Quest 3S"
+            },
+            {
+              "label": "圖片",
+              "value": "26 個房間共 210 張，其中 10 張免費"
+            },
+            {
+              "label": "難度",
+              "value": "五段，從 12 片到 500 片"
+            },
+            {
+              "label": "操作",
+              "value": "雙手或控制器"
+            },
+            {
+              "label": "語言",
+              "value": "18"
+            }
+          ],
+          "privacyNote": "已發布的應用程式從不要求網路權限，因此它所儲存的一切都不會離開你的頭戴裝置。細節請見[隱私權政策](/zh-Hant/privacy/)。"
+        }
       }
     ],
     "note": "目前尚未推出任何作品。每款應用程式推出時都會列在這裡，並附上商店頁面連結。"

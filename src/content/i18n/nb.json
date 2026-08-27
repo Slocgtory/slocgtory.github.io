@@ -1,6 +1,6 @@
 {
   "name": "Norsk",
-  "sourceHash": "554a323365d7ee74",
+  "sourceHash": "10e237e8ed3b7a9a",
   "site": {
     "skip": "Gå til innhold",
     "navLabel": "Hovednavigasjon",
@@ -38,11 +38,45 @@
     "title": "Det som finnes så langt.",
     "intro": "Alt Slocgtory har laget for Meta Quest, utgitt eller ikke.",
     "heading": "Apper",
+    "detailsHeading": "Detaljer",
     "list": [
       {
+        "slug": "allvrpuzzles",
         "name": "AllVRPuzzles",
         "status": "Under utvikling",
-        "desc": "Et puslespill for Meta Quest 3 og 3S. 210 bilder fordelt på 26 rom, skåret opp og satt sammen i virtuell virkelighet, spilt med håndsporing eller kontrollere. Kommer til Meta Horizon Store."
+        "desc": "Et puslespill for Meta Quest 3 og 3S. 210 bilder fordelt på 26 rom, skåret opp og satt sammen i virtuell virkelighet, spilt med håndsporing eller kontrollere. Kommer til Meta Horizon Store.",
+        "more": "Om denne appen",
+        "page": {
+          "metaTitle": "AllVRPuzzles — Slocgtory",
+          "metaDescription": "Et puslespill til Meta Quest 3 og 3S. 210 bilder i 26 rom, fra 12 til 500 brikker, med hendene eller med kontrollere.",
+          "intro": [
+            "Et puslespill, skåret opp og lagt i virtuell virkelighet. Velg et bilde, velg hvor fint det deles opp — tolv brikker eller fem hundre — og bygg det på en plate du selv har satt i størrelse og avstand.",
+            "Fortsatt under utvikling. På lanseringsdagen står det en lenke til butikken her."
+          ],
+          "facts": [
+            {
+              "label": "Headset",
+              "value": "Meta Quest 3 og Quest 3S"
+            },
+            {
+              "label": "Bilder",
+              "value": "210 i 26 rom, ti av dem gratis"
+            },
+            {
+              "label": "Vanskelighetsgrad",
+              "value": "Fem trinn, fra 12 til 500 brikker"
+            },
+            {
+              "label": "Styring",
+              "value": "Hender eller kontrollere"
+            },
+            {
+              "label": "Språk",
+              "value": "18"
+            }
+          ],
+          "privacyNote": "Den utgitte appen ber aldri om internettilgang, så ingenting av det den lagrer kan forlate headsettet ditt. Detaljene står i [personvernerklæringen](/nb/privacy/)."
+        }
       }
     ],
     "note": "Ingenting er lansert ennå. Hver app blir listet opp her når den kommer, med lenke til butikksiden."

@@ -1,7 +1,10 @@
 import { getEntry } from 'astro:content';
 import { LOCALES, DEFAULT_LOCALE } from '../../site.config.mjs';
 
-export type Page = 'home' | 'apps' | 'privacy';
+/** The three fixed pages, plus one address per app under the catalogue. The
+ *  template literal is what lets `localeUrl` stay a single line: every page
+ *  except home is its own path with a trailing slash. */
+export type Page = 'home' | 'apps' | 'privacy' | `apps/${string}`;
 
 /**
  * Where a page lives for a given language.

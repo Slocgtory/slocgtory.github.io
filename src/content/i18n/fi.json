@@ -1,6 +1,6 @@
 {
   "name": "Suomi",
-  "sourceHash": "554a323365d7ee74",
+  "sourceHash": "10e237e8ed3b7a9a",
   "site": {
     "skip": "Siirry sisältöön",
     "navLabel": "Päävalikko",
@@ -38,11 +38,45 @@
     "title": "Mitä on toistaiseksi olemassa.",
     "intro": "Kaikki, mitä Slocgtory on tehnyt Meta Questille, julkaistu tai ei.",
     "heading": "Sovellukset",
+    "detailsHeading": "Tiedot",
     "list": [
       {
+        "slug": "allvrpuzzles",
         "name": "AllVRPuzzles",
         "status": "Kehitteillä",
-        "desc": "Palapelipeli Meta Quest 3:lle ja 3S:lle. 210 kuvaa 26 huoneessa, paloiteltuina ja koottuina virtuaalitodellisuudessa, käsienseurannalla tai ohjaimilla. Tulossa Meta Horizon Storeen."
+        "desc": "Palapelipeli Meta Quest 3:lle ja 3S:lle. 210 kuvaa 26 huoneessa, paloiteltuina ja koottuina virtuaalitodellisuudessa, käsienseurannalla tai ohjaimilla. Tulossa Meta Horizon Storeen.",
+        "more": "Tietoja tästä sovelluksesta",
+        "page": {
+          "metaTitle": "AllVRPuzzles — Slocgtory",
+          "metaDescription": "Palapelipeli Meta Quest 3:lle ja 3S:lle. 210 kuvaa 26 huoneessa, 12–500 palaa, käsin tai ohjaimin.",
+          "intro": [
+            "Palapeli, joka leikataan ja kootaan virtuaalitodellisuudessa. Valitse kuva, valitse kuinka pieniksi paloiksi se hajoaa — kaksitoista palaa tai viisisataa — ja kokoa se alustalla, jonka koon ja etäisyyden olet itse asettanut.",
+            "Vielä kehitteillä. Julkaisupäivänä tällä sivulla on linkki kauppaan."
+          ],
+          "facts": [
+            {
+              "label": "Laite",
+              "value": "Meta Quest 3 ja Quest 3S"
+            },
+            {
+              "label": "Kuvat",
+              "value": "210 kuvaa 26 huoneessa, kymmenen niistä ilmaisia"
+            },
+            {
+              "label": "Vaikeustaso",
+              "value": "Viisi asetusta, 12–500 palaa"
+            },
+            {
+              "label": "Ohjaus",
+              "value": "Kädet tai ohjaimet"
+            },
+            {
+              "label": "Kielet",
+              "value": "18"
+            }
+          ],
+          "privacyNote": "Julkaistu sovellus ei koskaan pyydä internetyhteyttä, joten mikään sen tallentama ei voi poistua laitteestasi. Yksityiskohdat ovat [tietosuojaselosteessa](/fi/privacy/)."
+        }
       }
     ],
     "note": "Mitään ei ole vielä julkaistu. Jokainen sovellus listataan tähän julkaisunsa yhteydessä, linkkinä kauppasivulleen."

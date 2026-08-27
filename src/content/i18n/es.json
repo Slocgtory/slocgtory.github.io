@@ -1,6 +1,6 @@
 {
   "name": "Español",
-  "sourceHash": "554a323365d7ee74",
+  "sourceHash": "10e237e8ed3b7a9a",
   "site": {
     "skip": "Saltar al contenido",
     "navLabel": "Navegación principal",
@@ -38,11 +38,45 @@
     "title": "Lo que existe hasta ahora.",
     "intro": "Todo lo que Slocgtory ha hecho para Meta Quest, publicado o no.",
     "heading": "Aplicaciones",
+    "detailsHeading": "Detalles",
     "list": [
       {
+        "slug": "allvrpuzzles",
         "name": "AllVRPuzzles",
         "status": "En desarrollo",
-        "desc": "Un juego de rompecabezas para Meta Quest 3 y 3S. 210 imágenes repartidas en 26 salas, cortadas y montadas en realidad virtual, con seguimiento de manos o mandos. Próximamente en Meta Horizon Store."
+        "desc": "Un juego de rompecabezas para Meta Quest 3 y 3S. 210 imágenes repartidas en 26 salas, cortadas y montadas en realidad virtual, con seguimiento de manos o mandos. Próximamente en Meta Horizon Store.",
+        "more": "Sobre esta aplicación",
+        "page": {
+          "metaTitle": "AllVRPuzzles — Slocgtory",
+          "metaDescription": "Un juego de puzles para Meta Quest 3 y 3S. 210 imágenes en 26 salas, de 12 a 500 piezas, con las manos o con mandos.",
+          "intro": [
+            "Un puzle cortado y armado en realidad virtual. Elige una imagen, elige en cuántas piezas se parte —doce o quinientas— y móntalo en un tablero ajustado al tamaño y la distancia que prefieras.",
+            "Todavía en desarrollo. El día del lanzamiento esta página tendrá un enlace a la tienda."
+          ],
+          "facts": [
+            {
+              "label": "Visor",
+              "value": "Meta Quest 3 y Quest 3S"
+            },
+            {
+              "label": "Imágenes",
+              "value": "210 en 26 salas, diez de ellas gratuitas"
+            },
+            {
+              "label": "Dificultad",
+              "value": "Cinco niveles, de 12 a 500 piezas"
+            },
+            {
+              "label": "Control",
+              "value": "Manos o mandos"
+            },
+            {
+              "label": "Idiomas",
+              "value": "18"
+            }
+          ],
+          "privacyNote": "La aplicación publicada nunca pide acceso a Internet, así que nada de lo que guarda puede salir de tu visor. El detalle está en la [política de privacidad](/es/privacy/)."
+        }
       }
     ],
     "note": "Todavía no se ha publicado nada. Cada aplicación aparecerá aquí cuando salga, con un enlace a su página en la tienda."

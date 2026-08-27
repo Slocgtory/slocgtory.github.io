@@ -1,6 +1,6 @@
 {
   "name": "Français",
-  "sourceHash": "554a323365d7ee74",
+  "sourceHash": "10e237e8ed3b7a9a",
   "site": {
     "skip": "Aller au contenu",
     "navLabel": "Navigation principale",
@@ -38,11 +38,45 @@
     "title": "Ce qui existe à ce jour.",
     "intro": "Tout ce que Slocgtory a réalisé pour le Meta Quest, publié ou non.",
     "heading": "Applications",
+    "detailsHeading": "Détails",
     "list": [
       {
+        "slug": "allvrpuzzles",
         "name": "AllVRPuzzles",
         "status": "En développement",
-        "desc": "Un jeu de puzzle pour Meta Quest 3 et 3S. 210 images réparties dans 26 salles, découpées et assemblées en réalité virtuelle, avec le suivi des mains ou les manettes. Bientôt sur le Meta Horizon Store."
+        "desc": "Un jeu de puzzle pour Meta Quest 3 et 3S. 210 images réparties dans 26 salles, découpées et assemblées en réalité virtuelle, avec le suivi des mains ou les manettes. Bientôt sur le Meta Horizon Store.",
+        "more": "À propos de cette application",
+        "page": {
+          "metaTitle": "AllVRPuzzles — Slocgtory",
+          "metaDescription": "Un jeu de puzzle pour Meta Quest 3 et 3S. 210 images dans 26 salles, de 12 à 500 pièces, aux mains ou aux manettes.",
+          "intro": [
+            "Un puzzle découpé et assemblé en réalité virtuelle. Choisissez une image, choisissez la finesse de la découpe — douze pièces ou cinq cents — et construisez-le sur un plateau réglé à la taille et à la distance qui vous conviennent.",
+            "Encore en développement. Cette page portera un lien vers la boutique le jour de la sortie."
+          ],
+          "facts": [
+            {
+              "label": "Casque",
+              "value": "Meta Quest 3 et Quest 3S"
+            },
+            {
+              "label": "Images",
+              "value": "210 dans 26 salles, dont dix gratuites"
+            },
+            {
+              "label": "Difficulté",
+              "value": "Cinq réglages, de 12 à 500 pièces"
+            },
+            {
+              "label": "Contrôle",
+              "value": "Mains ou manettes"
+            },
+            {
+              "label": "Langues",
+              "value": "18"
+            }
+          ],
+          "privacyNote": "L'application publiée ne demande jamais l'accès à Internet : rien de ce qu'elle enregistre ne peut quitter votre casque. Le détail se trouve dans la [politique de confidentialité](/fr/privacy/)."
+        }
       }
     ],
     "note": "Rien n'est encore sorti. Chaque application sera listée ici dès sa parution, avec un lien vers sa page dans la boutique."

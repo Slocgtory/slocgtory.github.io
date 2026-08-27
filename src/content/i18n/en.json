@@ -38,11 +38,45 @@
     "title": "What exists so far.",
     "intro": "Everything Slocgtory has made for Meta Quest, released or not.",
     "heading": "Apps",
+    "detailsHeading": "Details",
     "list": [
       {
+        "slug": "allvrpuzzles",
         "name": "AllVRPuzzles",
         "status": "In development",
-        "desc": "A jigsaw puzzle game for Meta Quest 3 and 3S. 210 pictures across 26 rooms, cut and assembled in virtual reality, played with hand tracking or controllers. Coming to the Meta Horizon Store."
+        "desc": "A jigsaw puzzle game for Meta Quest 3 and 3S. 210 pictures across 26 rooms, cut and assembled in virtual reality, played with hand tracking or controllers. Coming to the Meta Horizon Store.",
+        "more": "About this app",
+        "page": {
+          "metaTitle": "AllVRPuzzles — Slocgtory",
+          "metaDescription": "A jigsaw puzzle game for Meta Quest 3 and 3S. 210 pictures across 26 rooms, from 12 pieces to 500, played with your hands or with controllers.",
+          "intro": [
+            "A jigsaw puzzle, cut and assembled in virtual reality. Pick a picture, pick how finely it breaks apart — twelve pieces or five hundred — and build it on a board set to the size and the distance that suit you.",
+            "Still in development. This page will carry a store link the day it ships."
+          ],
+          "facts": [
+            {
+              "label": "Headset",
+              "value": "Meta Quest 3 and Quest 3S"
+            },
+            {
+              "label": "Pictures",
+              "value": "210 across 26 rooms, ten of them free"
+            },
+            {
+              "label": "Difficulty",
+              "value": "Five settings, from 12 pieces to 500"
+            },
+            {
+              "label": "Input",
+              "value": "Hands or controllers"
+            },
+            {
+              "label": "Languages",
+              "value": "18"
+            }
+          ],
+          "privacyNote": "The released app never asks for internet access, so nothing it saves can leave your headset. The [privacy policy](/privacy/) has the detail."
+        }
       }
     ],
     "note": "Nothing has been released yet. Each app will be listed here as it ships, with a link to its store page."

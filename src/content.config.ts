@@ -30,9 +30,27 @@ const section = z.object({
 });
 
 const app = z.object({
+  /** Last segment of this app's own address, and the same in every language:
+   *  `/apps/allvrpuzzles/` and `/pl/apps/allvrpuzzles/`. A translated slug
+   *  would break every link to it the moment somebody switched language. */
+  slug: z.string().min(1),
   name: z.string().min(1),
   status: z.string().min(1),
+  /** The blurb on the catalogue. The page below says the rest. */
   desc: z.string().min(1),
+  /** What the link to that page is called. */
+  more: z.string().min(1),
+
+  page: z.object({
+    metaTitle: z.string().min(1),
+    metaDescription: z.string().min(1),
+    intro: z.array(z.string().min(1)).min(1),
+    /** Label and value, both translated: "Difficulty" / "Five settings, from
+     *  12 pieces to 500". Every number in them was read out of the game's
+     *  source, not remembered. */
+    facts: z.array(z.object({ label: z.string().min(1), value: z.string().min(1) })).min(1),
+    privacyNote: z.string().min(1),
+  }),
 });
 
 const i18n = defineCollection({
@@ -128,6 +146,10 @@ const i18n = defineCollection({
       intro: z.string().min(1),
       /** Labels the list in the margin, the way every other block is labelled. */
       heading: z.string().min(1),
+      /** Labels the facts on an app's own page. Its own string rather than
+       *  `heading`, which names the catalogue and read "Apps" against a list
+       *  of a headset and a piece count. */
+      detailsHeading: z.string().min(1),
       list: z.array(app).min(1),
       note: z.string().min(1),
     }),

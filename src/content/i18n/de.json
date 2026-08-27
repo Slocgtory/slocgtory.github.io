@@ -1,6 +1,6 @@
 {
   "name": "Deutsch",
-  "sourceHash": "554a323365d7ee74",
+  "sourceHash": "10e237e8ed3b7a9a",
   "site": {
     "skip": "Zum Inhalt springen",
     "navLabel": "Hauptnavigation",
@@ -38,11 +38,45 @@
     "title": "Was es bisher gibt.",
     "intro": "Alles, was Slocgtory für Meta Quest gemacht hat, veröffentlicht oder nicht.",
     "heading": "Apps",
+    "detailsHeading": "Details",
     "list": [
       {
+        "slug": "allvrpuzzles",
         "name": "AllVRPuzzles",
         "status": "In Entwicklung",
-        "desc": "Ein Puzzlespiel für Meta Quest 3 und 3S. 210 Bilder in 26 Räumen, in Virtual Reality zerschnitten und zusammengesetzt, gespielt mit Handtracking oder Controllern. Demnächst im Meta Horizon Store."
+        "desc": "Ein Puzzlespiel für Meta Quest 3 und 3S. 210 Bilder in 26 Räumen, in Virtual Reality zerschnitten und zusammengesetzt, gespielt mit Handtracking oder Controllern. Demnächst im Meta Horizon Store.",
+        "more": "Über diese App",
+        "page": {
+          "metaTitle": "AllVRPuzzles — Slocgtory",
+          "metaDescription": "Ein Puzzlespiel für Meta Quest 3 und 3S. 210 Bilder in 26 Räumen, von 12 bis 500 Teilen, mit den Händen oder mit Controllern.",
+          "intro": [
+            "Ein Puzzle, in der virtuellen Realität geschnitten und zusammengesetzt. Bild wählen, Feinheit wählen — zwölf Teile oder fünfhundert — und auf einem Brett bauen, dessen Größe und Abstand Sie selbst einstellen.",
+            "Noch in Entwicklung. Am Tag der Veröffentlichung steht hier ein Link zum Store."
+          ],
+          "facts": [
+            {
+              "label": "Headset",
+              "value": "Meta Quest 3 und Quest 3S"
+            },
+            {
+              "label": "Bilder",
+              "value": "210 in 26 Räumen, zehn davon kostenlos"
+            },
+            {
+              "label": "Schwierigkeit",
+              "value": "Fünf Stufen, von 12 bis 500 Teilen"
+            },
+            {
+              "label": "Steuerung",
+              "value": "Hände oder Controller"
+            },
+            {
+              "label": "Sprachen",
+              "value": "18"
+            }
+          ],
+          "privacyNote": "Die veröffentlichte App fragt nie nach Internetzugriff, also kann nichts, was sie speichert, Ihr Headset verlassen. Einzelheiten in der [Datenschutzerklärung](/de/privacy/)."
+        }
       }
     ],
     "note": "Bisher wurde nichts veröffentlicht. Jede App wird hier aufgeführt, sobald sie erscheint, mit einem Link zu ihrer Store-Seite."

@@ -1,6 +1,6 @@
 {
   "name": "Dansk",
-  "sourceHash": "554a323365d7ee74",
+  "sourceHash": "10e237e8ed3b7a9a",
   "site": {
     "skip": "Gå til indhold",
     "navLabel": "Hovednavigation",
@@ -38,11 +38,45 @@
     "title": "Hvad der findes indtil videre.",
     "intro": "Alt, hvad Slocgtory har lavet til Meta Quest – udgivet eller ej.",
     "heading": "Apps",
+    "detailsHeading": "Detaljer",
     "list": [
       {
+        "slug": "allvrpuzzles",
         "name": "AllVRPuzzles",
         "status": "Under udvikling",
-        "desc": "Et puslespil til Meta Quest 3 og 3S. 210 billeder fordelt på 26 rum, skåret ud og samlet i virtual reality, spillet med håndsporing eller controllere. Kommer til Meta Horizon Store."
+        "desc": "Et puslespil til Meta Quest 3 og 3S. 210 billeder fordelt på 26 rum, skåret ud og samlet i virtual reality, spillet med håndsporing eller controllere. Kommer til Meta Horizon Store.",
+        "more": "Om denne app",
+        "page": {
+          "metaTitle": "AllVRPuzzles — Slocgtory",
+          "metaDescription": "Et puslespil til Meta Quest 3 og 3S. 210 billeder i 26 rum, fra 12 til 500 brikker, med hænderne eller med controllere.",
+          "intro": [
+            "Et puslespil, skåret og samlet i virtual reality. Vælg et billede, vælg hvor fint det deles op — tolv brikker eller fem hundrede — og byg det på en plade, du selv har sat i størrelse og afstand.",
+            "Stadig under udvikling. På udgivelsesdagen står der et link til butikken her."
+          ],
+          "facts": [
+            {
+              "label": "Headset",
+              "value": "Meta Quest 3 og Quest 3S"
+            },
+            {
+              "label": "Billeder",
+              "value": "210 i 26 rum, ti af dem gratis"
+            },
+            {
+              "label": "Sværhedsgrad",
+              "value": "Fem trin, fra 12 til 500 brikker"
+            },
+            {
+              "label": "Styring",
+              "value": "Hænder eller controllere"
+            },
+            {
+              "label": "Sprog",
+              "value": "18"
+            }
+          ],
+          "privacyNote": "Den udgivne app beder aldrig om internetadgang, så intet af det, den gemmer, kan forlade dit headset. Detaljerne står i [privatlivspolitikken](/da/privacy/)."
+        }
       }
     ],
     "note": "Der er endnu ikke udgivet noget. Hver app bliver vist her, når den udkommer, med et link til dens butiksside."
