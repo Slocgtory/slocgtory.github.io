@@ -46,12 +46,22 @@ const year = 2026;
     */}
     <script is:inline>
       (function () {
+        var choice = 'system';
         try {
           var t = localStorage.getItem('theme');
-          if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+          if (t === 'light' || t === 'dark') choice = t;
         } catch (e) {
           // Blocked site data. The stylesheet still answers the system setting.
         }
+        if (choice !== 'system') document.documentElement.dataset.theme = choice;
+
+        var dark =
+          choice === 'dark' ||
+          (choice === 'system' &&
+            window.matchMedia &&
+            window.matchMedia('(prefers-color-scheme: dark)').matches);
+        var meta = document.querySelector('[data-theme-color]');
+        if (meta) meta.setAttribute('content', dark ? '#0C0D10' : '#FBFBFC');
       })();
     </script>
 
@@ -75,13 +85,40 @@ const year = 2026;
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:locale" content={locale.replace('-', '_')} />
-    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:image" content={new URL('/og.png', SITE_URL).href} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Slocgtory" />
+    <meta property="og:site_name" content="Slocgtory" />
+
+    {/*
+      The browser chrome on a phone. Set here as light and corrected by the
+      script above before paint, because a saved theme is not a media query and
+      `media=` on this tag cannot see it.
+    */}
+    <meta name="theme-color" content="#FBFBFC" data-theme-color />
 
     <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/icon.svg" />
     <link rel="sitemap" href="/sitemap-index.xml" />
 
-    <Font cssVariable="--font-body" preload />
-    <Font cssVariable="--font-display" preload />
+    {/*
+      One file each, not eighteen. `preload` with no argument preloads every
+      weight, style and subset a face has - measured, that was 18 <link
+      rel=preload> on the home page, all of them competing for the same early
+      bandwidth that the HTML and the stylesheet need. Preloading everything is
+      preloading nothing.
+
+      So: the body regular and the display weight the headings use, both Latin.
+      Latin Extended still loads when a page needs it, just not ahead of the
+      page itself, and the mono face is small and below the fold.
+    */}
+    <Font cssVariable="--font-body" preload={[{ weight: 400, style: 'normal', subset: 'latin' }]} />
+    <Font
+      cssVariable="--font-display"
+      preload={[{ weight: 600, style: 'normal', subset: 'latin' }]}
+    />
     <Font cssVariable="--font-mono" />
   </head>
 

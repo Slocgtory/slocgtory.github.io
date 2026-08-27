@@ -16,38 +16,42 @@ const names = new Map(entries.map((e) => [e.id, e.data.name]));
 const endonym = (code: string) => names.get(code) ?? code;
 
 const ordered = localesInReadingOrder(locale, endonym);
+
+const choices = [
+  { value: 'system', label: theme.system },
+  { value: 'light', label: theme.light },
+  { value: 'dark', label: theme.dark },
+] as const;
 ---
 
 <div class="settings">
   {/*
-    Hidden until the script below unhides it. Without JavaScript the choice
-    cannot outlive the page, so an always-visible control would be one that
-    forgets - worse than not offering it. The system's own setting still works,
-    because the stylesheet answers `prefers-color-scheme` on its own.
+    A disclosure rather than three icons side by side, for two reasons. The
+    control beside it is already one, and a header with two matching pills reads
+    as a pair where a segment plus a pill reads as two unrelated things. And a
+    theme is set once and then left alone - permanent visibility is worth paying
+    header room for when a control is used often, which this is not.
 
-    Real radios with one name, so the browser gives arrow-key movement, the
-    roving tab stop and the announcement free. A row of buttons with ARIA would
-    have to reimplement all three, and usually reimplements two.
-
-    Every icon carries its word as well, out of sight. A sun and a moon are a
-    well-worn pair, but a screen reader has no idea what a path element means,
-    and `title` alone is not an accessible name.
+    Hidden until the script unhides it: without JavaScript the choice cannot
+    outlive the page, and a control that forgets is worse than one not offered.
+    The system's own setting still works, because the stylesheet answers
+    prefers-color-scheme on its own.
   */}
-  <div class="seg" role="radiogroup" aria-label={theme.label} hidden data-theme-control>
-    <label title={theme.system}>
-      <input type="radio" name="theme" value="system" checked />
-      <span class="ico" aria-hidden="true">
+  <details class="picker theme-picker" data-choice="system" hidden data-theme-control>
+    <summary aria-label={theme.label}>
+      {/*
+        All three icons are rendered and CSS shows the one matching
+        `data-choice`. The alternative is JavaScript that carries SVG path data
+        in a string, where the markup and the script would each hold half of
+        what the icon is.
+      */}
+      <span class="ico" data-for="system" aria-hidden="true">
         <svg viewBox="0 0 24 24" width="16" height="16">
           <rect x="2.5" y="3.5" width="19" height="13" rx="2"></rect>
           <path d="M8.5 20.5h7M12 17v3.5"></path>
         </svg>
       </span>
-      <span class="sr-only">{theme.system}</span>
-    </label>
-
-    <label title={theme.light}>
-      <input type="radio" name="theme" value="light" />
-      <span class="ico" aria-hidden="true">
+      <span class="ico" data-for="light" aria-hidden="true">
         <svg viewBox="0 0 24 24" width="16" height="16">
           <circle cx="12" cy="12" r="4"></circle>
           <path
@@ -55,26 +59,59 @@ const ordered = localesInReadingOrder(locale, endonym);
           ></path>
         </svg>
       </span>
-      <span class="sr-only">{theme.light}</span>
-    </label>
-
-    <label title={theme.dark}>
-      <input type="radio" name="theme" value="dark" />
-      <span class="ico" aria-hidden="true">
+      <span class="ico" data-for="dark" aria-hidden="true">
         <svg viewBox="0 0 24 24" width="16" height="16">
           <path d="M20.5 13.3A8.5 8.5 0 1 1 10.7 3.5a6.6 6.6 0 0 0 9.8 9.8z"></path>
         </svg>
       </span>
-      <span class="sr-only">{theme.dark}</span>
-    </label>
-  </div>
+    </summary>
+
+    {/*
+      Real radios with one name, so arrow keys, the roving tab stop and the
+      announcement come from the browser. A list of buttons with ARIA would have
+      to reimplement all three, and usually reimplements two.
+    */}
+    <nav>
+      <ul role="radiogroup" aria-label={theme.label}>
+        {
+          choices.map(({ value, label }) => (
+            <li>
+              <label>
+                <input type="radio" name="theme" value={value} checked={value === 'system'} />
+                <span class="ico" data-for={value} aria-hidden="true">
+                  {value === 'system' && (
+                    <svg viewBox="0 0 24 24" width="16" height="16">
+                      <rect x="2.5" y="3.5" width="19" height="13" rx="2" />
+                      <path d="M8.5 20.5h7M12 17v3.5" />
+                    </svg>
+                  )}
+                  {value === 'light' && (
+                    <svg viewBox="0 0 24 24" width="16" height="16">
+                      <circle cx="12" cy="12" r="4" />
+                      <path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M6 18l-1.4 1.4M19.4 4.6L18 6" />
+                    </svg>
+                  )}
+                  {value === 'dark' && (
+                    <svg viewBox="0 0 24 24" width="16" height="16">
+                      <path d="M20.5 13.3A8.5 8.5 0 1 1 10.7 3.5a6.6 6.6 0 0 0 9.8 9.8z" />
+                    </svg>
+                  )}
+                </span>
+                <span>{label}</span>
+              </label>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </details>
 
   {/*
     Plain links inside a disclosure, so this one needs no script at all: every
     entry is a real address for the same page in another language, and it works
     with scripting off, in a text browser, and when a link is copied.
   */}
-  <details class="picker" data-lang-picker>
+  <details class="picker lang-picker" data-lang-picker>
     <summary aria-label={langLabel}>
       <span class="ico" aria-hidden="true">
         <svg viewBox="0 0 24 24" width="16" height="16">
@@ -84,8 +121,8 @@ const ordered = localesInReadingOrder(locale, endonym);
       </span>
       <span class="picker-current" lang={locale}>{endonym(locale)}</span>
     </summary>
-    <nav aria-label={langLabel}>
-      <ul>
+    <nav>
+      <ul aria-label={langLabel}>
         {
           ordered.map((code) => (
             <li>
@@ -106,17 +143,17 @@ const ordered = localesInReadingOrder(locale, endonym);
 </div>
 
 {/*
-  Deliberately inline and un-bundled. It is short enough to read in one go, and
-  it is the only script on the site: nothing is fetched to run it.
+  Deliberately inline and un-bundled. Short enough to read in one go, and the
+  only script on the site: nothing is fetched to run it.
 */}
 <script is:inline>
   (function () {
     var root = document.documentElement;
-    var control = document.querySelector('[data-theme-control]');
-    if (!control) return;
+    var picker = document.querySelector('[data-theme-control]');
+    if (!picker) return;
 
     // Only now, when there is something to work the control with.
-    control.hidden = false;
+    picker.hidden = false;
 
     function saved() {
       try {
@@ -135,11 +172,14 @@ const ordered = localesInReadingOrder(locale, endonym);
       if (choice === 'system') delete root.dataset.theme;
       else root.dataset.theme = choice;
 
-      var picked = control.querySelector('input[value="' + choice + '"]');
-      if (picked) picked.checked = true;
+      // One attribute; the stylesheet decides which icon the summary shows.
+      picker.dataset.choice = choice;
+
+      var input = picker.querySelector('input[value="' + choice + '"]');
+      if (input) input.checked = true;
     }
 
-    control.addEventListener('change', function (event) {
+    picker.addEventListener('change', function (event) {
       var input = event.target;
       if (!input || input.name !== 'theme') return;
       try {
@@ -149,26 +189,41 @@ const ordered = localesInReadingOrder(locale, endonym);
         // Nothing to do: the choice still applies to this page.
       }
       apply(input.value);
+      picker.open = false;
     });
 
     apply(saved());
   })();
 
   (function () {
-    // Closing the language list by clicking away or pressing Escape - what a
-    // menu is expected to do. Everything it decorates already works without it.
-    var picker = document.querySelector('[data-lang-picker]');
-    if (!picker) return;
+    // What a menu is expected to do: only one open, close on a click away or on
+    // Escape. Everything underneath already works without any of it.
+    var pickers = document.querySelectorAll('details.picker');
+    if (!pickers.length) return;
+
+    pickers.forEach(function (picker) {
+      picker.addEventListener('toggle', function () {
+        if (!picker.open) return;
+        pickers.forEach(function (other) {
+          if (other !== picker) other.open = false;
+        });
+      });
+    });
 
     document.addEventListener('click', function (event) {
-      if (picker.open && !picker.contains(event.target)) picker.open = false;
+      pickers.forEach(function (picker) {
+        if (picker.open && !picker.contains(event.target)) picker.open = false;
+      });
     });
+
     document.addEventListener('keydown', function (event) {
-      if (event.key === 'Escape' && picker.open) {
+      if (event.key !== 'Escape') return;
+      pickers.forEach(function (picker) {
+        if (!picker.open) return;
         picker.open = false;
         var summary = picker.querySelector('summary');
         if (summary) summary.focus();
-      }
+      });
     });
   })();
 </script>

@@ -1,5 +1,6 @@
 ---
 import { inline } from '../lib/i18n';
+import { POLICY_UPDATED } from '../../site.config.mjs';
 
 interface Section {
   h: string;
@@ -23,7 +24,7 @@ const { privacy, isCanonical } = Astro.props;
 
 <div class="doc-head">
   <h1>{privacy.title}</h1>
-  <p class="updated">{privacy.updated}</p>
+  <p class="updated"><time datetime={POLICY_UPDATED}>{privacy.updated}</time></p>
 </div>
 
 {

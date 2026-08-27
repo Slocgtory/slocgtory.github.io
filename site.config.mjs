@@ -64,3 +64,14 @@ export const LOCALE_MARKETS = {
   'zh-Hant': 'Taiwan',
   'zh-Hans': 'Singapore',
 };
+
+/**
+ * When the privacy policy last changed, machine-readable.
+ *
+ * One constant rather than a field per language: the date is the same in all
+ * sixteen, only the words around it differ. Each translation writes it out its
+ * own way - "27 August 2026", "27 sierpnia 2026", "2026年8月27日" - and this is
+ * what goes in the `datetime` attribute so a crawler, a reader mode or anything
+ * else parsing the page gets one unambiguous answer.
+ */
+export const POLICY_UPDATED = '2026-08-27';

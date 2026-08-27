@@ -1,0 +1,5 @@
+# Everything here is meant to be found, including every translation.
+User-agent: *
+Allow: /
+
+Sitemap: https://slocgtory.github.io/sitemap-index.xml

@@ -19,7 +19,10 @@
   --surface-sunk: #F2F3F6;
   --ink: #101216;
   --ink-soft: #4E5560;
-  --ink-mute: #79808C;
+  /* 5.12 on --surface and 4.95 on --ground. The old #79808C measured 3.98,
+     under the 4.5 that AA asks of body text - and this token draws real text:
+     the policy's date, the note under the app list, the picker's icons. */
+  --ink-mute: #686E7A;
   --line: #E3E5EA;
   --line-soft: #EDEFF3;
   --accent: #2340C8;
@@ -57,7 +60,7 @@
     --surface-sunk: #191C22;
     --ink: #E9EAEE;
     --ink-soft: #A0A7B3;
-    --ink-mute: #767D8A;
+    --ink-mute: #858C99; /* 5.40 on --surface; #767D8A measured 4.41 */
     --line: #23262D;
     --line-soft: #1B1E24;
     --accent: #8FA2FF;
@@ -79,7 +82,7 @@
   --surface-sunk: #191C22;
   --ink: #E9EAEE;
   --ink-soft: #A0A7B3;
-  --ink-mute: #767D8A;
+  --ink-mute: #858C99; /* 5.40 on --surface; #767D8A measured 4.41 */
   --line: #23262D;
   --line-soft: #1B1E24;
   --accent: #8FA2FF;
@@ -479,58 +482,8 @@ main {
   stroke-linejoin: round;
 }
 
-/* The three appearance choices, as one control rather than three buttons. */
-.seg[hidden] { display: none; }
 
-.seg {
-  display: flex;
-  background: var(--surface-sunk);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 2px;
-  gap: 2px;
-}
-
-.seg label {
-  position: relative;
-  display: block;
-  cursor: pointer;
-}
-
-/* The radio stays: it is what makes arrow keys, the tab stop and the
- * announcement work. Only its own box is replaced. */
-.seg input {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  opacity: 0;
-  cursor: pointer;
-}
-
-.seg .ico {
-  padding: 0.32rem 0.5rem;
-  border-radius: 2px;
-  color: var(--ink-mute);
-  transition: background 140ms ease, color 140ms ease;
-}
-
-.seg label:hover .ico { color: var(--ink); }
-
-.seg input:checked + .ico {
-  background: var(--surface);
-  color: var(--accent);
-  box-shadow: var(--shadow-sm);
-}
-
-/* The ring belongs on the thing you can see, not on the invisible input. */
-.seg input:focus-visible + .ico {
-  outline: 2px solid var(--focus);
-  outline-offset: 1px;
-}
-
-/* --- language picker ---------------------------------------------------- */
+/* --- the two pickers ---------------------------------------------------- */
 
 .picker {
   position: relative;
@@ -620,4 +573,63 @@ main {
     top: auto;
   }
   .picker ul { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* --- the appearance picker ----------------------------------------------- */
+
+.theme-picker[hidden] { display: none; }
+
+.theme-picker summary { gap: 0; }
+
+/* All three icons are in the summary; one attribute decides which is drawn.
+ * The alternative is a script carrying SVG path data in a string, where the
+ * markup and the script would each hold half of what the icon is. */
+.theme-picker summary .ico { display: none; }
+.theme-picker[data-choice='system'] summary .ico[data-for='system'],
+.theme-picker[data-choice='light'] summary .ico[data-for='light'],
+.theme-picker[data-choice='dark'] summary .ico[data-for='dark'] {
+  display: grid;
+}
+
+.theme-picker nav { min-width: 9.5rem; }
+.theme-picker ul { grid-template-columns: 1fr; }
+
+.theme-picker label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.35rem 0.6rem;
+  border-radius: 2px;
+  font-size: var(--step--1);
+  color: var(--ink-soft);
+  cursor: pointer;
+}
+.theme-picker label:hover {
+  background: var(--surface-sunk);
+  color: var(--ink);
+}
+
+/* The radio stays: it is what makes arrow keys, the tab stop and the
+ * announcement work. Only its own box is replaced. */
+.theme-picker input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.theme-picker label:has(input:checked) {
+  background: var(--accent-soft);
+  color: var(--ink);
+}
+.theme-picker label:has(input:checked) .ico { color: var(--accent); }
+
+/* The ring belongs on the row you can see, not on the invisible input. */
+.theme-picker label:has(input:focus-visible) {
+  outline: 2px solid var(--focus);
+  outline-offset: -1px;
 }
