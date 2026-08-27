@@ -23,6 +23,14 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - uses: withastro/action@v6
+        with:
+          # Stated rather than left to the default, which happens to be the
+          # same today. `npm run build` is four steps - translations, Astro,
+          # sealing the CSP hashes into dist/, then checking the output - and
+          # two of them have to happen before the artifact is uploaded. If the
+          # action's default ever became `astro build`, the site would deploy
+          # with an unsealed policy and nothing would say so.
+          build-cmd: npm run build
 
   deploy:
     name: Deploy

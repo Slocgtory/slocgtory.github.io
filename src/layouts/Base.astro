@@ -123,6 +123,20 @@ const jsonLd =
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     {/*
+      Before the first script, because a policy only governs what comes after it.
+
+      The hashes are filled in by scripts/seal-csp.mjs once the build has
+      finished: they are of the exact bytes in the final file, so they cannot be
+      written here. See that file for why this exists at all - the short version
+      is that `connect-src 'none'` turns the privacy policy's central claim from
+      a sentence into something the browser enforces.
+    */}
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; script-src SCRIPT_HASHES; style-src 'self' STYLE_HASHES; img-src 'self'; font-src 'self'; connect-src 'none'; base-uri 'self'; form-action 'none'"
+    />
+
+    {/*
       First thing in the document, before a single byte of the stylesheet, and
       deliberately not deferred. A saved theme has to be stamped on <html>
       before the first paint or the page shows in the system's colours and then

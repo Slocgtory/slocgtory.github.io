@@ -6,11 +6,12 @@
   "description": "slocgtory.github.io - apps and the privacy policy that covers them",
   "scripts": {
     "dev": "astro dev",
-    "build": "node scripts/check-translations.mjs && astro build",
+    "build": "node scripts/check-translations.mjs && astro build && node scripts/seal-csp.mjs && node scripts/check-build.mjs",
     "preview": "astro preview",
     "check": "node scripts/check-translations.mjs",
     "check:strict": "node scripts/check-translations.mjs --strict",
-    "restamp": "node scripts/check-translations.mjs --restamp"
+    "restamp": "node scripts/check-translations.mjs --restamp",
+    "check:build": "node scripts/check-build.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",

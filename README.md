@@ -48,15 +48,54 @@ China, which is not a Quest market at all.
     site.config.mjs           the language list and the tables keyed by it
     public/og/                one social card per language
     scripts/check-translations.mjs
+    scripts/seal-csp.mjs      hashes the inline scripts into the policy
+    scripts/check-build.mjs   reads dist/ and asks whether it is right
     tools/make-og-card.mjs    redraws the cards and the favicons
 
 ## Working on it
 
     npm install
     npm run dev        local preview
-    npm run build      checks translations, then builds to dist/
+    npm run build      the whole pipeline (see below)
     npm run check      are the translations current?
+    npm run check:build  is the built output right? (build runs this too)
     npm run restamp    mark them current, after actually re-reading them
+
+## What `npm run build` actually does
+
+Four steps, in this order, and the order matters:
+
+1. `check-translations.mjs` - structure drift stops here.
+2. `astro build` - writes `dist/`.
+3. `seal-csp.mjs` - hashes every inline script and style in the built files and
+   writes them into each page's Content-Security-Policy. The hashes are of the
+   final bytes, after minification, so they cannot be written by hand.
+4. `check-build.mjs` - reads `dist/` back and checks what it says.
+
+Steps 3 and 4 exist because a whole class of fault is invisible in the source.
+The 404 is built through the same layout as every other page and passes
+`page="home"`, because that is how it gets a header - and so it inherited a
+canonical pointing at `/` and sixteen hreflang links to the home pages, telling
+every crawler that the error page was the front door. The source read correctly.
+It was found by chance, and step 4 is so the next one is not.
+
+## The policy the pages carry
+
+Every page ships a Content-Security-Policy in a `<meta>` element, and the point
+is not generic hardening. The privacy policy here tells visitors that nothing
+about them is sent anywhere, and `connect-src 'none'` makes the browser enforce
+that rather than the reader having to take it on trust: an analytics snippet
+added in a hurry, or a font pulled from a CDN, is refused instead of quietly
+making the claim false.
+
+Inline scripts and styles are allowed by hash, not by `'unsafe-inline'`, which
+would have let anything injected run. Verified in a browser: an outbound
+`fetch`, an injected inline script and a third-party image are all refused, and
+every control on the page still works.
+
+One directive is missing and cannot be added. `frame-ancestors` is ignored in a
+`<meta>` element - it needs a real HTTP header, and GitHub Pages does not let
+anyone set one.
 
 ## Keeping sixteen translations honest
 
