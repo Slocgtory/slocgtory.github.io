@@ -116,6 +116,16 @@ for (const file of pages) {
     }
   }
 
+  /*
+    An app's own page is the one a search result points at, so it is the one
+    that has to describe itself. It carried nothing: the condition emitting the
+    graph asked for the catalogue exactly, and `apps/allvrpuzzles` is not
+    `apps`.
+  */
+  if (/^([a-zA-Z-]+\/)?apps\/[^/]+\/index\.html$/.test(rel) && !ld) {
+    fail(rel, 'an app page with no structured data');
+  }
+
   // --- the policy the page ships with ------------------------------------
   const csp = attr(html, /http-equiv="Content-Security-Policy" content="([^"]*)"/);
   if (!csp) fail(rel, 'no Content-Security-Policy');

@@ -86,7 +86,10 @@ if (page === 'home') {
     publisher: { '@id': ORG_ID },
     inLanguage: locale,
   });
-} else if (page === 'apps' && apps?.length) {
+} else if (String(page).startsWith('apps') && apps?.length) {
+  /* Both the catalogue and an app's own page. It was `page === 'apps'`, which
+     is the catalogue alone - so the one page actually about the game, the one a
+     search result would point at, was the one describing itself to nobody. */
   graph.push(
     organisation,
     ...apps.map((app) => ({
