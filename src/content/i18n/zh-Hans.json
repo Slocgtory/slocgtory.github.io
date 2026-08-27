@@ -1,6 +1,6 @@
 {
   "name": "简体中文",
-  "sourceHash": "73e633dca7374fed",
+  "sourceHash": "5d4dfd48edab4a8b",
   "site": {
     "skip": "跳到内容",
     "navLabel": "主导航",
@@ -31,6 +31,12 @@
     "metaDescription": "面向 Meta Quest 的独立虚拟现实开发。应用，以及适用于它们的隐私政策。",
     "title": "由一个人打造的虚拟现实。",
     "intro": "Slocgtory 是一位独立开发者，为 Meta Quest 制作游戏。从头到尾，一个人完成。",
+    "aboutHeading": "工作室",
+    "about": [
+      "代码、图片，以及每一种语言的文字，都出自同一双手——没有团队，没有发行商，也没有谁需要被说服要做什么。",
+      "第一个作品是 [AllVRPuzzles](/zh-Hans/apps/allvrpuzzles/)，一款 Meta Quest 的拼图游戏，仍在开发中。",
+      "游戏用 Rust 写在 Godot 上。已发布的应用完全不请求网络权限——不为了保存设置，也不为了统计启动次数——因此它所存放的一切都不会离开头显。[隐私政策](/zh-Hans/privacy/)有更完整的说明。"
+    ],
     "contactHeading": "联系方式",
     "contactBody": "问题、错误反馈，以及任何与您数据相关的事项：[Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)"
   },

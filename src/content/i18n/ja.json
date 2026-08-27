@@ -1,6 +1,6 @@
 {
   "name": "日本語",
-  "sourceHash": "73e633dca7374fed",
+  "sourceHash": "5d4dfd48edab4a8b",
   "site": {
     "skip": "本文へ移動",
     "navLabel": "メインナビゲーション",
@@ -31,6 +31,12 @@
     "metaDescription": "Meta Quest 向けの独立系 VR 開発。アプリと、それらに適用されるプライバシーポリシー。",
     "title": "ひとりでつくるバーチャルリアリティ。",
     "intro": "Slocgtory は Meta Quest 向けのゲームをつくる独立系デベロッパーです。企画から完成まで、すべて一人で。",
+    "aboutHeading": "スタジオ",
+    "about": [
+      "コードも、絵も、どの言語の文章も、すべて同じ手から出ています。チームも、パブリッシャーも、何をつくるかを説明すべき相手もいません。",
+      "その最初が [AllVRPuzzles](/ja/apps/allvrpuzzles/) — Meta Quest 向けのジグソーパズル、まだ開発中です。",
+      "ゲームは Godot 上の Rust で書かれています。公開版はインターネット接続を一切要求しません。設定を保存するためにも、起動回数を数えるためにも要求しないので、抱えているものがヘッドセットの外に出ることはありません。[プライバシーポリシー](/ja/privacy/)に同じことを詳しく書いています。"
+    ],
     "contactHeading": "お問い合わせ",
     "contactBody": "ご質問、不具合のご報告、データに関するお問い合わせはこちらまで: [Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)"
   },

@@ -141,6 +141,13 @@ const i18n = defineCollection({
       metaDescription: z.string().min(1),
       title: z.string().min(1),
       intro: z.string().min(1),
+
+      /** The front page is not a second catalogue - that page exists and the
+       *  nav opens onto it. This says who makes the things and why they are the
+       *  way they are, which is the one thing the catalogue cannot. */
+      aboutHeading: z.string().min(1),
+      about: z.array(z.string().min(1)).min(1),
+
       contactHeading: z.string().min(1),
       contactBody: z.string().min(1),
     }),

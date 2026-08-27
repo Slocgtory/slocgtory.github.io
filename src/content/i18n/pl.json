@@ -1,6 +1,6 @@
 {
   "name": "Polski",
-  "sourceHash": "73e633dca7374fed",
+  "sourceHash": "5d4dfd48edab4a8b",
   "site": {
     "skip": "Przejdź do treści",
     "navLabel": "Główna",
@@ -31,6 +31,12 @@
     "metaDescription": "Niezależny deweloper gier VR na Meta Quest. Aplikacje i polityka prywatności, która je obejmuje.",
     "title": "Wirtualna rzeczywistość robiona przez jedną osobę.",
     "intro": "Slocgtory to niezależny deweloper tworzący gry na Meta Quest. Jedna osoba, od początku do końca.",
+    "aboutHeading": "Studio",
+    "about": [
+      "Kod, obrazy i słowa w każdym języku powstają w tych samych rękach — bez zespołu, bez wydawcy, bez nikogo, komu trzeba tłumaczyć, co powstaje.",
+      "Pierwsze z tego to [AllVRPuzzles](/pl/apps/allvrpuzzles/), gra w układanie puzzli na Meta Quest, wciąż w produkcji.",
+      "Gry są pisane w Ruście na Godocie. Wydane aplikacje nie proszą o dostęp do internetu w ogóle — ani żeby zapisać ustawienie, ani żeby policzyć uruchomienie — więc nic, co trzymają, nie opuszcza gogli. [Polityka prywatności](/pl/privacy/) mówi to samo, tylko dokładniej."
+    ],
     "contactHeading": "Kontakt",
     "contactBody": "Pytania, zgłoszenia błędów i wszystko dotyczące twoich danych: [Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)."
   },

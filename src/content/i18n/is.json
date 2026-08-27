@@ -1,6 +1,6 @@
 {
   "name": "Íslenska",
-  "sourceHash": "73e633dca7374fed",
+  "sourceHash": "5d4dfd48edab4a8b",
   "site": {
     "skip": "Fara í efni",
     "navLabel": "Aðalvalmynd",
@@ -31,6 +31,12 @@
     "metaDescription": "Sjálfstæð þróun sýndarveruleika fyrir Meta Quest. Forritin og persónuverndarstefnan sem gildir um þau.",
     "title": "Sýndarveruleiki, smíðaður af einni manneskju.",
     "intro": "Slocgtory er sjálfstæður þróunaraðili sem gerir leiki fyrir Meta Quest. Ein manneskja, frá upphafi til enda.",
+    "aboutHeading": "Stúdíó",
+    "about": [
+      "Kóðinn, myndirnar og orðin á hverju tungumáli verða til í sömu höndum - ekkert teymi, enginn útgefandi, enginn sem þarf að réttlæta fyrir hvað er smíðað.",
+      "Það fyrsta er [AllVRPuzzles](/is/apps/allvrpuzzles/), púsluspil fyrir Meta Quest, enn í þróun.",
+      "Leikirnir eru skrifaðir í Rust ofan á Godot. Útgefnu forritin biðja alls ekki um nettengingu - hvorki til að vista stillingu né telja ræsingu - svo ekkert af því sem þau geyma kemst úr höfuðtólinu. [Persónuverndarstefnan](/is/privacy/) segir það sama, ítarlega."
+    ],
     "contactHeading": "Samband",
     "contactBody": "Spurningar, villutilkynningar og allt sem varðar gögnin þín: [Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)."
   },

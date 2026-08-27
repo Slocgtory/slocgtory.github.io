@@ -1,6 +1,6 @@
 {
   "name": "한국어",
-  "sourceHash": "73e633dca7374fed",
+  "sourceHash": "5d4dfd48edab4a8b",
   "site": {
     "skip": "본문으로 건너뛰기",
     "navLabel": "주요 메뉴",
@@ -31,6 +31,12 @@
     "metaDescription": "Meta Quest용 독립 VR 개발. 앱과 이에 적용되는 개인정보 처리방침.",
     "title": "한 사람이 만드는 가상현실.",
     "intro": "Slocgtory는 Meta Quest용 게임을 만드는 독립 개발자입니다. 기획부터 완성까지, 혼자서.",
+    "aboutHeading": "스튜디오",
+    "about": [
+      "코드도, 그림도, 모든 언어의 문장도 같은 손에서 나옵니다. 팀도, 퍼블리셔도, 무엇을 만들지 설명해야 할 상대도 없습니다.",
+      "그 첫 번째가 [AllVRPuzzles](/ko/apps/allvrpuzzles/), Meta Quest용 직소 퍼즐이며 아직 개발 중입니다.",
+      "게임은 Godot 위에서 Rust로 작성합니다. 출시된 앱은 인터넷 접근을 전혀 요청하지 않습니다. 설정을 저장하려고도, 실행 횟수를 세려고도 요청하지 않으므로, 앱이 담고 있는 것은 헤드셋 밖으로 나가지 않습니다. [개인정보 처리방침](/ko/privacy/)에 같은 내용이 자세히 있습니다."
+    ],
     "contactHeading": "문의",
     "contactBody": "질문, 오류 신고, 데이터에 관한 모든 문의: [Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)"
   },

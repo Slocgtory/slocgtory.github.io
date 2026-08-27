@@ -1,6 +1,6 @@
 {
   "name": "Français",
-  "sourceHash": "73e633dca7374fed",
+  "sourceHash": "5d4dfd48edab4a8b",
   "site": {
     "skip": "Aller au contenu",
     "navLabel": "Navigation principale",
@@ -31,6 +31,12 @@
     "metaDescription": "Développement indépendant de réalité virtuelle pour Meta Quest. Les applications et la politique de confidentialité qui les couvre.",
     "title": "La réalité virtuelle, faite par une seule personne.",
     "intro": "Slocgtory est un développeur indépendant qui crée des jeux pour Meta Quest. Une seule personne, du début à la fin.",
+    "aboutHeading": "Studio",
+    "about": [
+      "Le code, les images et les mots dans chaque langue sortent des mêmes mains - pas d’équipe, pas d’éditeur, personne à qui rendre compte de ce qui se construit.",
+      "Le premier est [AllVRPuzzles](/fr/apps/allvrpuzzles/), un jeu de puzzle pour Meta Quest, encore en développement.",
+      "Les jeux sont écrits en Rust sur Godot. Les applications publiées ne demandent aucun accès à Internet - ni pour enregistrer un réglage, ni pour compter un lancement - donc rien de ce qu’elles contiennent ne peut quitter le casque. La [politique de confidentialité](/fr/privacy/) le dit en détail."
+    ],
     "contactHeading": "Contact",
     "contactBody": "Questions, signalements de bugs et tout ce qui concerne vos données : [Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)."
   },

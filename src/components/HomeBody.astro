@@ -5,6 +5,8 @@ interface Props {
   home: {
     title: string;
     intro: string;
+    aboutHeading: string;
+    about: string[];
     contactHeading: string;
     contactBody: string;
   };
@@ -23,6 +25,13 @@ const { home } = Astro.props;
 <section class="hero">
   <h1>{home.title}</h1>
   <p class="lede" set:html={inline(home.intro)} />
+</section>
+
+<section class="block">
+  <h2 class="block-head">{home.aboutHeading}</h2>
+  <div class="block-body">
+    {home.about.map((paragraph) => <p set:html={inline(paragraph)} />)}
+  </div>
 </section>
 
 <section class="block">

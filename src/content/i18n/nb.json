@@ -1,6 +1,6 @@
 {
   "name": "Norsk",
-  "sourceHash": "73e633dca7374fed",
+  "sourceHash": "5d4dfd48edab4a8b",
   "site": {
     "skip": "Gå til innhold",
     "navLabel": "Hovednavigasjon",
@@ -31,6 +31,12 @@
     "metaDescription": "Uavhengig VR-utvikling for Meta Quest. Apper og personvernerklæringen som gjelder for dem.",
     "title": "Virtuell virkelighet, laget av én person.",
     "intro": "Slocgtory er en uavhengig utvikler som lager spill til Meta Quest. Én person, fra start til slutt.",
+    "aboutHeading": "Studio",
+    "about": [
+      "Koden, bildene og ordene på hvert språk kommer fra de samme hendene - ingen gruppe, ingen utgiver, ingen å stå til ansvar overfor for hva som bygges.",
+      "Det første er [AllVRPuzzles](/nb/apps/allvrpuzzles/), et puslespill til Meta Quest, fortsatt under utvikling.",
+      "Spillene er skrevet i Rust på Godot. De utgitte appene ber ikke om internettilgang i det hele tatt - verken for å lagre en innstilling eller for å telle en oppstart - så ingenting av det de rommer kan forlate headsettet. [Personvernerklæringen](/nb/privacy/) sier det samme, utførlig."
+    ],
     "contactHeading": "Kontakt",
     "contactBody": "Spørsmål, feilmeldinger og alt som gjelder dataene dine: [Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)."
   },

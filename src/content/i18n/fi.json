@@ -1,6 +1,6 @@
 {
   "name": "Suomi",
-  "sourceHash": "73e633dca7374fed",
+  "sourceHash": "5d4dfd48edab4a8b",
   "site": {
     "skip": "Siirry sisältöön",
     "navLabel": "Päävalikko",
@@ -31,6 +31,12 @@
     "metaDescription": "Riippumatonta virtuaalitodellisuuskehitystä Meta Questille. Sovellukset ja niitä koskeva tietosuojaseloste.",
     "title": "Virtuaalitodellisuutta, yhden ihmisen tekemänä.",
     "intro": "Slocgtory on riippumaton kehittäjä, joka tekee pelejä Meta Questille. Yksi ihminen, alusta loppuun.",
+    "aboutHeading": "Studio",
+    "about": [
+      "Koodi, kuvat ja sanat jokaisella kielellä syntyvät samoissa käsissä - ei tiimiä, ei julkaisijaa, ei ketään jolle pitäisi perustella mitä tehdään.",
+      "Ensimmäinen niistä on [AllVRPuzzles](/fi/apps/allvrpuzzles/), palapelipeli Meta Questille, yhä kehitteillä.",
+      "Pelit on kirjoitettu Rustilla Godotin päälle. Julkaistut sovellukset eivät pyydä internetyhteyttä lainkaan - eivät asetuksen tallentamiseen eivätkä käynnistyksen laskemiseen - joten mikään niiden sisältämä ei voi poistua laitteesta. [Tietosuojaseloste](/fi/privacy/) kertoo saman laajemmin."
+    ],
     "contactHeading": "Yhteystiedot",
     "contactBody": "Kysymykset, virheilmoitukset ja kaikki tietojasi koskeva: [Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)."
   },
