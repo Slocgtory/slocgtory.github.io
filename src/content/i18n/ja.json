@@ -1,6 +1,6 @@
 {
   "name": "日本語",
-  "sourceHash": "10e237e8ed3b7a9a",
+  "sourceHash": "d06eee96fccc4bb0",
   "site": {
     "skip": "本文へ移動",
     "navLabel": "メインナビゲーション",
@@ -13,6 +13,7 @@
     "nav": {
       "home": "ホーム",
       "apps": "アプリ",
+      "allApps": "すべてのアプリ",
       "privacy": "プライバシー"
     },
     "theme": {

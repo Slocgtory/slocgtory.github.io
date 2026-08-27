@@ -1,6 +1,6 @@
 {
   "name": "Íslenska",
-  "sourceHash": "10e237e8ed3b7a9a",
+  "sourceHash": "d06eee96fccc4bb0",
   "site": {
     "skip": "Fara í efni",
     "navLabel": "Aðalvalmynd",
@@ -13,6 +13,7 @@
     "nav": {
       "home": "Forsíða",
       "apps": "Forrit",
+      "allApps": "Öll forrit",
       "privacy": "Persónuvernd"
     },
     "theme": {

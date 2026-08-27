@@ -12,7 +12,7 @@ interface Site {
   navLabel: string;
   langLabel: string;
   email: string;
-  nav: { home: string; apps: string; privacy: string };
+  nav: { home: string; apps: string; allApps: string; privacy: string };
   settingsLabel: string;
   theme: { label: string; system: string; light: string; dark: string };
 }
@@ -39,12 +39,6 @@ const homeHref = localeUrl('home', locale);
 const appsHref = localeUrl('apps', locale);
 const privacyHref = localeUrl('privacy', locale);
 
-/** The tab strip, in the order the site reads. */
-const tabs = [
-  { key: 'home', href: homeHref, label: site.nav.home },
-  { key: 'apps', href: appsHref, label: site.nav.apps },
-  { key: 'privacy', href: privacyHref, label: site.nav.privacy },
-] as const;
 
 /*
   What this site is, for a machine.
@@ -65,6 +59,10 @@ const tabs = [
   sixteen and nothing on it could have been translated, so a link to the Polish
   page shared as an English object.
 */
+/* The apps the menu offers. Read here rather than passed in, because the
+   masthead is on every page and the menu is part of it. */
+const catalogue = (await getEntry('i18n', locale))?.data.apps.list ?? [];
+
 const card = new URL(`/og/${locale}.png`, SITE_URL).href;
 const cardAlt = (await getEntry('i18n', locale))?.data.home.title ?? 'Slocgtory';
 
@@ -321,17 +319,72 @@ const jsonLd =
         <a class="wordmark" href={homeHref}>Slocgtory</a>
 
         <nav class="site-nav" aria-label={site.navLabel}>
-          {
-            tabs.map((tab) => (
-              <a
-                class="nav-link"
-                href={tab.href}
-                aria-current={!errorPage && page === tab.key ? 'page' : undefined}
-              >
-                {tab.label}
-              </a>
-            ))
-          }
+          <a
+            class="nav-link"
+            href={homeHref}
+            aria-current={!errorPage && page === 'home' ? 'page' : undefined}
+          >
+            {site.nav.home}
+          </a>
+
+          {/*
+            Apps opens rather than navigates, and that is the whole design.
+
+            A tab that is both a link and a menu is the thing everybody gets
+            wrong: on a touch screen the first tap opens it and the second
+            follows it, and nobody can tell which they are about to get. So this
+            one does one job, and the catalogue it used to point at is the first
+            row inside - reachable in the same two presses, without a page load
+            on the way.
+
+            A <details>, so it works with scripting off. The script below only
+            adds what a menu is expected to do once it exists: close on Escape,
+            close when something else is clicked, and never sit open beside the
+            settings panel.
+          */}
+          <details class="tab-menu" data-menu>
+            <summary
+              class="nav-link"
+              aria-current={!errorPage && String(page).startsWith('apps') ? 'page' : undefined}
+            >
+              {site.nav.apps}
+              <span class="caret" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="11" height="11">
+                  <path d="M5 9l7 7 7-7" />
+                </svg>
+              </span>
+            </summary>
+
+            <div class="panel menu-panel">
+              <ul>
+                <li>
+                  <a href={appsHref} aria-current={page === 'apps' ? 'true' : undefined}>
+                    {site.nav.allApps}
+                  </a>
+                </li>
+                {
+                  catalogue.map((app) => (
+                    <li>
+                      <a
+                        href={localeUrl(`apps/${app.slug}`, locale)}
+                        aria-current={page === `apps/${app.slug}` ? 'true' : undefined}
+                      >
+                        {app.name}
+                      </a>
+                    </li>
+                  ))
+                }
+              </ul>
+            </div>
+          </details>
+
+          <a
+            class="nav-link"
+            href={privacyHref}
+            aria-current={!errorPage && page === 'privacy' ? 'page' : undefined}
+          >
+            {site.nav.privacy}
+          </a>
         </nav>
 
         {/*
@@ -363,6 +416,50 @@ const jsonLd =
         {!errorPage && <LanguageOffer locale={locale} page={page} />}
       </div>
     </header>
+
+    {/*
+      What a menu is expected to do, for every menu in the masthead rather than
+      for one of them. There are two now - the apps tab and the settings - and
+      the behaviour lived inside the settings alone, so a second menu would have
+      arrived without it and, worse, the two could have sat open on top of each
+      other.
+
+      Everything underneath already works without any of this: they are
+      <details>, so they open and close with no script at all.
+    */}
+    <script is:inline>
+      (function () {
+        var menus = document.querySelectorAll('[data-menu]');
+        if (!menus.length) return;
+
+        for (var i = 0; i < menus.length; i++) {
+          // One at a time: opening either closes the other.
+          menus[i].addEventListener('toggle', function () {
+            if (!this.open) return;
+            for (var j = 0; j < menus.length; j++) {
+              if (menus[j] !== this) menus[j].open = false;
+            }
+          });
+        }
+
+        document.addEventListener('click', function (event) {
+          for (var i = 0; i < menus.length; i++) {
+            if (menus[i].open && !menus[i].contains(event.target)) menus[i].open = false;
+          }
+        });
+
+        document.addEventListener('keydown', function (event) {
+          if (event.key !== 'Escape') return;
+          for (var i = 0; i < menus.length; i++) {
+            if (!menus[i].open) continue;
+            menus[i].open = false;
+            // Back to the control that opened it, or focus is left nowhere.
+            var summary = menus[i].querySelector('summary');
+            if (summary) summary.focus();
+          }
+        });
+      })();
+    </script>
 
     {/*
       No footer. It held a copyright line and the contact address, and the

@@ -1,6 +1,6 @@
 {
   "name": "简体中文",
-  "sourceHash": "10e237e8ed3b7a9a",
+  "sourceHash": "d06eee96fccc4bb0",
   "site": {
     "skip": "跳到内容",
     "navLabel": "主导航",
@@ -13,6 +13,7 @@
     "nav": {
       "home": "首页",
       "apps": "应用",
+      "allApps": "所有应用",
       "privacy": "隐私"
     },
     "theme": {

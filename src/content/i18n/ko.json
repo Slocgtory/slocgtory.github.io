@@ -1,6 +1,6 @@
 {
   "name": "한국어",
-  "sourceHash": "10e237e8ed3b7a9a",
+  "sourceHash": "d06eee96fccc4bb0",
   "site": {
     "skip": "본문으로 건너뛰기",
     "navLabel": "주요 메뉴",
@@ -13,6 +13,7 @@
     "nav": {
       "home": "홈",
       "apps": "앱",
+      "allApps": "모든 앱",
       "privacy": "개인정보"
     },
     "theme": {

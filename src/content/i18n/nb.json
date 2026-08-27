@@ -1,6 +1,6 @@
 {
   "name": "Norsk",
-  "sourceHash": "10e237e8ed3b7a9a",
+  "sourceHash": "d06eee96fccc4bb0",
   "site": {
     "skip": "Gå til innhold",
     "navLabel": "Hovednavigasjon",
@@ -13,6 +13,7 @@
     "nav": {
       "home": "Hjem",
       "apps": "Apper",
+      "allApps": "Alle apper",
       "privacy": "Personvern"
     },
     "theme": {

@@ -1,6 +1,6 @@
 {
   "name": "Svenska",
-  "sourceHash": "10e237e8ed3b7a9a",
+  "sourceHash": "d06eee96fccc4bb0",
   "site": {
     "skip": "Hoppa till innehållet",
     "navLabel": "Huvudnavigering",
@@ -13,6 +13,7 @@
     "nav": {
       "home": "Start",
       "apps": "Appar",
+      "allApps": "Alla appar",
       "privacy": "Integritet"
     },
     "theme": {

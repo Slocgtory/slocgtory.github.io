@@ -1,6 +1,6 @@
 {
   "name": "Français",
-  "sourceHash": "10e237e8ed3b7a9a",
+  "sourceHash": "d06eee96fccc4bb0",
   "site": {
     "skip": "Aller au contenu",
     "navLabel": "Navigation principale",
@@ -13,6 +13,7 @@
     "nav": {
       "home": "Accueil",
       "apps": "Applications",
+      "allApps": "Toutes les applications",
       "privacy": "Confidentialité"
     },
     "theme": {

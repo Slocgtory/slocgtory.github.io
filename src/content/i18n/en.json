@@ -13,6 +13,7 @@
     "nav": {
       "home": "Home",
       "apps": "Apps",
+      "allApps": "All apps",
       "privacy": "Privacy"
     },
     "theme": {

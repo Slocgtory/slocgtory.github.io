@@ -1,6 +1,6 @@
 {
   "name": "Nederlands",
-  "sourceHash": "10e237e8ed3b7a9a",
+  "sourceHash": "d06eee96fccc4bb0",
   "site": {
     "skip": "Naar de inhoud",
     "navLabel": "Hoofdnavigatie",
@@ -13,6 +13,7 @@
     "nav": {
       "home": "Home",
       "apps": "Apps",
+      "allApps": "Alle apps",
       "privacy": "Privacy"
     },
     "theme": {

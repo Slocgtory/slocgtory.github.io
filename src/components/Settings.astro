@@ -33,7 +33,7 @@ const ordered = localesInReadingOrder(locale, endonym);
   a page, so they belong behind one button rather than beside the navigation.
   What is left in the bar is the name, the one other page, and this.
 */}
-<details class="settings" data-settings>
+<details class="settings" data-settings data-menu>
   <summary aria-label={settingsLabel} title={settingsLabel}>
     <span class="ico" aria-hidden="true">
       <svg viewBox="0 0 24 24" width="19" height="19">
@@ -231,23 +231,5 @@ const ordered = localesInReadingOrder(locale, endonym);
     link.setAttribute('href', target.getAttribute('href'));
     link.setAttribute('hreflang', match);
     row.hidden = false;
-  })();
-
-  (function () {
-    // What a menu is expected to do: close on a click away or on Escape.
-    // Everything underneath already works without any of it.
-    var menu = document.querySelector('[data-settings]');
-    if (!menu) return;
-
-    document.addEventListener('click', function (event) {
-      if (menu.open && !menu.contains(event.target)) menu.open = false;
-    });
-
-    document.addEventListener('keydown', function (event) {
-      if (event.key !== 'Escape' || !menu.open) return;
-      menu.open = false;
-      var summary = menu.querySelector('summary');
-      if (summary) summary.focus();
-    });
   })();
 </script>

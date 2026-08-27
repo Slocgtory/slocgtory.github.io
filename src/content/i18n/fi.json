@@ -1,6 +1,6 @@
 {
   "name": "Suomi",
-  "sourceHash": "10e237e8ed3b7a9a",
+  "sourceHash": "d06eee96fccc4bb0",
   "site": {
     "skip": "Siirry sisältöön",
     "navLabel": "Päävalikko",
@@ -13,6 +13,7 @@
     "nav": {
       "home": "Etusivu",
       "apps": "Sovellukset",
+      "allApps": "Kaikki sovellukset",
       "privacy": "Tietosuoja"
     },
     "theme": {
