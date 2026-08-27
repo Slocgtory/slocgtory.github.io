@@ -20,7 +20,15 @@ const data = await loadLocale(DEFAULT_LOCALE);
 const notFound = await Promise.all(
   LOCALES.map(async (code) => {
     const { site } = await loadLocale(code);
-    return { code, title: site.notFoundTitle, body: site.notFoundBody };
+    return {
+      code,
+      title: site.notFoundTitle,
+      body: site.notFoundBody,
+      // The three tabs in this language too. Swapping the message and leaving
+      // the navigation in English produced a page that was half translated -
+      // and the half that stayed was the half offering the way out.
+      nav: JSON.stringify([site.nav.home, site.nav.apps, site.nav.privacy]),
+    };
   }),
 );
 ---
@@ -31,14 +39,16 @@ const notFound = await Promise.all(
   title={`${data.site.notFoundTitle} - Slocgtory`}
   description={data.site.notFoundTitle}
   site={data.site}
+  errorPage
 >
   {
-    notFound.map(({ code, title, body }) => (
+    notFound.map(({ code, title, body, nav }) => (
       <section
         class="hero"
         lang={code}
         hidden={code !== DEFAULT_LOCALE}
         data-not-found={code}
+        data-nav={nav}
       >
         <h1>{title}</h1>
         <p class="lede" set:html={inline(body)} />
@@ -68,5 +78,17 @@ const notFound = await Promise.all(
     // only part of this page a person sees before deciding it is not for them.
     root.lang = match;
     document.title = wanted.querySelector('h1').textContent + ' - Slocgtory';
+
+    // The header came from the layout in the canonical language. Its labels and
+    // its links both move, so the tabs go to this reader's version of each page
+    // rather than back to English.
+    var labels = JSON.parse(wanted.getAttribute('data-nav') || '[]');
+    var prefix = match === 'en' ? '' : '/' + match;
+    var leaves = ['/', '/apps/', '/privacy/'];
+    var tabs = document.querySelectorAll('.nav-link');
+    for (var i = 0; i < tabs.length && i < labels.length; i++) {
+      tabs[i].textContent = labels[i];
+      tabs[i].setAttribute('href', prefix + leaves[i]);
+    }
   })();
 </script>

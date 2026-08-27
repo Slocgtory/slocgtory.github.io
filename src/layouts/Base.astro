@@ -25,9 +25,12 @@ interface Props {
   /** Only the catalogue passes these, and only so they can be described to a
    *  crawler. Everything shown on the page comes from the page's own body. */
   apps?: { name: string; status: string; desc: string }[];
+  /** The 404, which is not a page in the site's own sense and must not describe
+   *  itself as one. See where this is used below. */
+  errorPage?: boolean;
 }
 
-const { locale, page, title, description, site, apps } = Astro.props;
+const { locale, page, title, description, site, apps, errorPage = false } = Astro.props;
 
 const alternates = alternatesFor(page);
 const canonical = new URL(localeUrl(page, locale), SITE_URL).href;
@@ -186,23 +189,46 @@ const jsonLd =
 
     <title>{title}</title>
     <meta name="description" content={description} />
-    <link rel="canonical" href={canonical} />
+    {
+      /*
+        An error page is not a page of this site, and everything below said it
+        was. It is built through the same layout with `page="home"` - it has to
+        be, because that is how it gets a header - and so it inherited the home
+        page's canonical, the home page's og:url and sixteen hreflang links to
+        the home page. It was telling every crawler that this error IS the home
+        page. GitHub Pages does answer a real miss with a 404 status, which is
+        the signal that counts, but /404.html itself answers 200 and was
+        indexable while claiming to be the front door.
+
+        So it identifies as nothing and asks not to be indexed.
+      */
+      errorPage ? (
+        <meta name="robots" content="noindex, follow" />
+      ) : (
+        <link rel="canonical" href={canonical} />
+      )
+    }
 
     {
+      !errorPage &&
       alternates.map(({ code, url }) => (
         <link rel="alternate" hreflang={code} href={new URL(url, SITE_URL).href} />
       ))
     }
-    <link
-      rel="alternate"
-      hreflang="x-default"
-      href={new URL(localeUrl(page, DEFAULT_LOCALE), SITE_URL).href}
-    />
+    {
+      !errorPage && (
+        <link
+          rel="alternate"
+          hreflang="x-default"
+          href={new URL(localeUrl(page, DEFAULT_LOCALE), SITE_URL).href}
+        />
+      )
+    }
 
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:url" content={canonical} />
+    {!errorPage && <meta property="og:url" content={canonical} />}
     <meta property="og:locale" content={OG_LOCALES[locale]} />
     {
       /* The other fifteen, so a share card in one language knows the rest
@@ -275,7 +301,7 @@ const jsonLd =
               <a
                 class="nav-link"
                 href={tab.href}
-                aria-current={page === tab.key ? 'page' : undefined}
+                aria-current={!errorPage && page === tab.key ? 'page' : undefined}
               >
                 {tab.label}
               </a>
