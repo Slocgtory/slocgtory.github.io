@@ -1,6 +1,6 @@
 {
   "name": "Svenska",
-  "sourceHash": "e351e56a5bdcf006",
+  "sourceHash": "a078012feea6fae8",
   "site": {
     "skip": "Hoppa till innehållet",
     "navLabel": "Huvudnavigering",
@@ -52,11 +52,11 @@
         "slug": "allvrpuzzles",
         "name": "AllVRPuzzles",
         "status": "Under utveckling",
-        "desc": "Ett pusselspel för Meta Quest 2, 3 och 3S. 210 bilder fördelade på 26 rum, skurna och lagda i virtuell verklighet, med handspårning eller handkontroller. Kommer till Meta Horizon Store.",
+        "desc": "Ett pusselspel för Meta Quest. 210 bilder fördelade på 26 rum, skurna och lagda i virtuell verklighet, med handspårning eller handkontroller. Kommer till Meta Horizon Store.",
         "more": "Om den här appen",
         "page": {
           "metaTitle": "AllVRPuzzles — Slocgtory",
-          "metaDescription": "Ett pusselspel till Meta Quest 2, 3 och 3S. 210 bilder i 26 rum, från 12 till 500 bitar, med händerna eller med handkontroller.",
+          "metaDescription": "Ett pusselspel till Meta Quest. 210 bilder i 26 rum, från 12 till 500 bitar, med händerna eller med handkontroller.",
           "intro": [
             "Ett pussel, skuret och lagt i virtuell verklighet. Välj en bild, välj hur fint den delas — tolv bitar eller femhundra — och lägg den på en skiva som du själv ställt in i storlek och avstånd.",
             "Fortfarande under utveckling. På släppdagen finns här en länk till butiken."
@@ -64,7 +64,7 @@
           "facts": [
             {
               "label": "Headset",
-              "value": "Meta Quest 2, Quest 3 och Quest 3S"
+              "value": "Meta Quest 2, Quest 3, Quest 3S och Quest Pro"
             },
             {
               "label": "Bilder",

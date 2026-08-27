@@ -1,6 +1,6 @@
 {
   "name": "Nederlands",
-  "sourceHash": "e351e56a5bdcf006",
+  "sourceHash": "a078012feea6fae8",
   "site": {
     "skip": "Naar de inhoud",
     "navLabel": "Hoofdnavigatie",
@@ -52,11 +52,11 @@
         "slug": "allvrpuzzles",
         "name": "AllVRPuzzles",
         "status": "In ontwikkeling",
-        "desc": "Een legpuzzelspel voor Meta Quest 2, 3 en 3S. 210 afbeeldingen verdeeld over 26 kamers, in virtual reality gesneden en in elkaar gezet, met handtracking of controllers. Binnenkort in de Meta Horizon Store.",
+        "desc": "Een legpuzzelspel voor Meta Quest. 210 afbeeldingen verdeeld over 26 kamers, in virtual reality gesneden en in elkaar gezet, met handtracking of controllers. Binnenkort in de Meta Horizon Store.",
         "more": "Over deze app",
         "page": {
           "metaTitle": "AllVRPuzzles — Slocgtory",
-          "metaDescription": "Een puzzelspel voor Meta Quest 2, 3 en 3S. 210 afbeeldingen in 26 kamers, van 12 tot 500 stukjes, met je handen of met controllers.",
+          "metaDescription": "Een puzzelspel voor Meta Quest. 210 afbeeldingen in 26 kamers, van 12 tot 500 stukjes, met je handen of met controllers.",
           "intro": [
             "Een legpuzzel, gesneden en gelegd in virtual reality. Kies een afbeelding, kies hoe fijn hij uiteenvalt — twaalf stukjes of vijfhonderd — en leg hem op een bord dat je zelf op maat en afstand zet.",
             "Nog in ontwikkeling. Op de dag van verschijnen staat hier een link naar de winkel."
@@ -64,7 +64,7 @@
           "facts": [
             {
               "label": "Headset",
-              "value": "Meta Quest 2, Quest 3 en Quest 3S"
+              "value": "Meta Quest 2, Quest 3, Quest 3S en Quest Pro"
             },
             {
               "label": "Afbeeldingen",

@@ -1,6 +1,6 @@
 {
   "name": "Français",
-  "sourceHash": "e351e56a5bdcf006",
+  "sourceHash": "a078012feea6fae8",
   "site": {
     "skip": "Aller au contenu",
     "navLabel": "Navigation principale",
@@ -52,11 +52,11 @@
         "slug": "allvrpuzzles",
         "name": "AllVRPuzzles",
         "status": "En développement",
-        "desc": "Un jeu de puzzle pour Meta Quest 2, 3 et 3S. 210 images réparties dans 26 salles, découpées et assemblées en réalité virtuelle, avec le suivi des mains ou les manettes. Bientôt sur le Meta Horizon Store.",
+        "desc": "Un jeu de puzzle pour Meta Quest. 210 images réparties dans 26 salles, découpées et assemblées en réalité virtuelle, avec le suivi des mains ou les manettes. Bientôt sur le Meta Horizon Store.",
         "more": "À propos de cette application",
         "page": {
           "metaTitle": "AllVRPuzzles — Slocgtory",
-          "metaDescription": "Un jeu de puzzle pour Meta Quest 2, 3 et 3S. 210 images dans 26 salles, de 12 à 500 pièces, aux mains ou aux manettes.",
+          "metaDescription": "Un jeu de puzzle pour Meta Quest. 210 images dans 26 salles, de 12 à 500 pièces, aux mains ou aux manettes.",
           "intro": [
             "Un puzzle découpé et assemblé en réalité virtuelle. Choisissez une image, choisissez la finesse de la découpe — douze pièces ou cinq cents — et construisez-le sur un plateau réglé à la taille et à la distance qui vous conviennent.",
             "Encore en développement. Cette page portera un lien vers la boutique le jour de la sortie."
@@ -64,7 +64,7 @@
           "facts": [
             {
               "label": "Casque",
-              "value": "Meta Quest 2, Quest 3 et Quest 3S"
+              "value": "Meta Quest 2, Quest 3, Quest 3S et Quest Pro"
             },
             {
               "label": "Images",

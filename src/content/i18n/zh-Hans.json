@@ -1,6 +1,6 @@
 {
   "name": "简体中文",
-  "sourceHash": "e351e56a5bdcf006",
+  "sourceHash": "a078012feea6fae8",
   "site": {
     "skip": "跳到内容",
     "navLabel": "主导航",
@@ -52,11 +52,11 @@
         "slug": "allvrpuzzles",
         "name": "AllVRPuzzles",
         "status": "开发中",
-        "desc": "一款面向 Meta Quest 2、3 与 3S 的拼图游戏。26 个房间共 210 幅画作，在虚拟现实中切割并拼合，可使用手部追踪或控制器游玩。即将登陆 Meta Horizon Store。",
+        "desc": "一款面向 Meta Quest 的拼图游戏。26 个房间共 210 幅画作，在虚拟现实中切割并拼合，可使用手部追踪或控制器游玩。即将登陆 Meta Horizon Store。",
         "more": "关于这个应用",
         "page": {
           "metaTitle": "AllVRPuzzles — Slocgtory",
-          "metaDescription": "Meta Quest 2、3 与 3S 的拼图游戏。26 个房间共 210 张图，12 片到 500 片，用双手或控制器游玩。",
+          "metaDescription": "Meta Quest 的拼图游戏。26 个房间共 210 张图，12 片到 500 片，用双手或控制器游玩。",
           "intro": [
             "在虚拟现实中切开并拼合的拼图。选一张图，选要切得多细——12 片或 500 片——然后在你自己调好大小与距离的板子上拼起来。",
             "仍在开发中。上架当天，这里会放上商店链接。"
@@ -64,7 +64,7 @@
           "facts": [
             {
               "label": "头显",
-              "value": "Meta Quest 2、Quest 3 与 Quest 3S"
+              "value": "Meta Quest 2、Quest 3、Quest 3S 与 Quest Pro"
             },
             {
               "label": "图片",

@@ -1,6 +1,6 @@
 {
   "name": "日本語",
-  "sourceHash": "e351e56a5bdcf006",
+  "sourceHash": "a078012feea6fae8",
   "site": {
     "skip": "本文へ移動",
     "navLabel": "メインナビゲーション",
@@ -52,11 +52,11 @@
         "slug": "allvrpuzzles",
         "name": "AllVRPuzzles",
         "status": "開発中",
-        "desc": "Meta Quest 2 / 3 / 3S 向けのジグソーパズルゲーム。26 の部屋に配置された 210 枚の絵を、バーチャルリアリティ内で切り出して組み上げます。ハンドトラッキングまたはコントローラーでプレイできます。Meta Horizon Store に登場予定。",
+        "desc": "Meta Quest 向けのジグソーパズルゲーム。26 の部屋に配置された 210 枚の絵を、バーチャルリアリティ内で切り出して組み上げます。ハンドトラッキングまたはコントローラーでプレイできます。Meta Horizon Store に登場予定。",
         "more": "このアプリについて",
         "page": {
           "metaTitle": "AllVRPuzzles — Slocgtory",
-          "metaDescription": "Meta Quest 2 / 3 / 3S 向けのジグソーパズル。26 の部屋に 210 枚、12 ピースから 500 ピースまで、手またはコントローラーで。",
+          "metaDescription": "Meta Quest 向けのジグソーパズル。26 の部屋に 210 枚、12 ピースから 500 ピースまで、手またはコントローラーで。",
           "intro": [
             "バーチャルリアリティで切り出して組み立てるジグソーパズル。絵を選び、どこまで細かく分けるかを選び — 12 ピースにも 500 ピースにも — 自分に合う大きさと距離に設定した盤の上で組み立てます。",
             "まだ開発中です。公開された日には、このページにストアへのリンクが載ります。"
@@ -64,7 +64,7 @@
           "facts": [
             {
               "label": "ヘッドセット",
-              "value": "Meta Quest 2 / Quest 3 / Quest 3S"
+              "value": "Meta Quest 2 / Quest 3 / Quest 3S / Quest Pro"
             },
             {
               "label": "絵",
