@@ -1,7 +1,7 @@
 {
   "name": "日本語",
   "dir": "ltr",
-  "sourceHash": "a3a2413c93ce7c53",
+  "sourceHash": "c9e833443ab179cd",
   "site": {
     "skip": "本文へ移動",
     "navLabel": "メインナビゲーション",
@@ -10,6 +10,12 @@
     "nav": {
       "home": "ホーム",
       "privacy": "プライバシー"
+    },
+    "theme": {
+      "label": "テーマ",
+      "system": "システム",
+      "light": "ライト",
+      "dark": "ダーク"
     },
     "notFoundTitle": "ページが見つかりません",
     "notFoundBody": "そのアドレスはこのサイトには存在しません。[ホーム](/ja/) または [プライバシーポリシー](/ja/privacy/) をご覧ください。"

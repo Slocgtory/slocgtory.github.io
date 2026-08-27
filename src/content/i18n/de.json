@@ -1,7 +1,7 @@
 {
   "name": "Deutsch",
   "dir": "ltr",
-  "sourceHash": "a3a2413c93ce7c53",
+  "sourceHash": "c9e833443ab179cd",
   "site": {
     "skip": "Zum Inhalt springen",
     "navLabel": "Hauptnavigation",
@@ -10,6 +10,12 @@
     "nav": {
       "home": "Start",
       "privacy": "Datenschutz"
+    },
+    "theme": {
+      "label": "Darstellung",
+      "system": "System",
+      "light": "Hell",
+      "dark": "Dunkel"
     },
     "notFoundTitle": "Seite nicht gefunden",
     "notFoundBody": "Diese Adresse gibt es auf dieser Website nicht. Versuchen Sie die [Startseite](/de/) oder die [Datenschutzerklärung](/de/privacy/)."

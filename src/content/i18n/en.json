@@ -7,7 +7,16 @@
     "navLabel": "Main",
     "langLabel": "Language",
     "email": "Slocgtory@gmail.com",
-    "nav": { "home": "Home", "privacy": "Privacy" },
+    "nav": {
+      "home": "Home",
+      "privacy": "Privacy"
+    },
+    "theme": {
+      "label": "Theme",
+      "system": "System",
+      "light": "Light",
+      "dark": "Dark"
+    },
     "notFoundTitle": "Page not found",
     "notFoundBody": "That address does not exist on this site. Try the [home page](/) or the [privacy policy](/privacy/)."
   },
@@ -58,7 +67,9 @@
       },
       {
         "h": "Data stored on your headset",
-        "p": ["The app writes two things into its own private storage on the device:"],
+        "p": [
+          "The app writes two things into its own private storage on the device:"
+        ],
         "list": [
           "**Your game progress** - which puzzles you have started or finished, and how the pieces are currently arranged.",
           "**A local record of which picture packs you own**, so the app can show your packs without asking the store every time."
@@ -93,7 +104,9 @@
       },
       {
         "h": "Permissions the app requests",
-        "p": ["The released app requests three permissions, and no others:"],
+        "p": [
+          "The released app requests three permissions, and no others:"
+        ],
         "list": [
           "`org.khronos.openxr.permission.OPENXR` and `OPENXR_SYSTEM` - required to open a virtual reality session at all.",
           "`com.oculus.permission.HAND_TRACKING` - so you can play with your hands instead of controllers."
@@ -107,7 +120,9 @@
       },
       {
         "h": "Children",
-        "p": ["These apps are not directed to children under 13 and are not designed for them."]
+        "p": [
+          "These apps are not directed to children under 13 and are not designed for them."
+        ]
       },
       {
         "h": "Deleting your data",
@@ -134,7 +149,9 @@
       },
       {
         "h": "Contact",
-        "p": ["[Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)"]
+        "p": [
+          "[Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)"
+        ]
       }
     ]
   }

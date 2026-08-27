@@ -30,6 +30,100 @@ export async function loadLocale(code: string) {
 /** Locales other than the canonical one - the ones that get a prefixed route. */
 export const TRANSLATED_LOCALES = LOCALES.filter((c) => c !== DEFAULT_LOCALE);
 
+// --- the order the switcher lists them in ------------------------------------
+
+type Script = 'latin' | 'japanese' | 'korean' | 'hant' | 'hans';
+
+/**
+ * Which writing system each language's own name is in.
+ *
+ * Declared rather than sniffed from the characters at run time. Sniffing gets
+ * Japanese wrong: 日本語 is three Han characters with no kana in it, so it is
+ * indistinguishable from Chinese by inspection, and the two want to sort apart.
+ */
+const SCRIPT: Record<string, Script> = {
+  ja: 'japanese',
+  ko: 'korean',
+  'zh-Hant': 'hant',
+  'zh-Hans': 'hans',
+};
+
+const scriptOf = (code: string): Script => SCRIPT[code] ?? 'latin';
+
+/** The order scripts take when none of them is the reader's. */
+const ROOT_ORDER: Script[] = ['latin', 'japanese', 'korean', 'hant', 'hans'];
+
+const FOLD: Record<string, string> = {
+  á: 'a', à: 'a', â: 'a', ä: 'a', ã: 'a', å: 'a', ā: 'a', ą: 'a',
+  æ: 'ae',
+  ç: 'c', ć: 'c', č: 'c',
+  ď: 'd', đ: 'd', ð: 'd',
+  é: 'e', è: 'e', ê: 'e', ë: 'e', ē: 'e', ę: 'e', ě: 'e',
+  í: 'i', ì: 'i', î: 'i', ï: 'i', ī: 'i',
+  ł: 'l',
+  ñ: 'n', ń: 'n', ň: 'n',
+  ó: 'o', ò: 'o', ô: 'o', ö: 'o', õ: 'o', ø: 'o', ō: 'o',
+  œ: 'oe',
+  ř: 'r',
+  ś: 's', š: 's', ş: 's',
+  ß: 'ss',
+  ť: 't', þ: 't',
+  ú: 'u', ù: 'u', û: 'u', ü: 'u', ū: 'u', ů: 'u',
+  ý: 'y', ÿ: 'y',
+  ź: 'z', ż: 'z', ž: 'z',
+};
+
+/**
+ * A name reduced to what decides its place in an alphabet.
+ *
+ * Primary strength, in the Unicode Collation Algorithm's terms: accents and case
+ * are differences at the second and third level and must not move a word past
+ * another one. Comparing code points instead files `Íslenska` after `Svenska`,
+ * because a capital I-acute sits above every unaccented letter - which is not
+ * where anyone hunting for Icelandic would think to look.
+ *
+ * Not a general collator. It folds the Latin letters that turn up in the names
+ * of languages, a short and closed list, and leaves the other scripts alone -
+ * they sort into their own group before this is consulted. `Intl.Collator`
+ * would be the real answer and is one line, but it orders by the *reader's*
+ * locale, and this list is read by all sixteen at once.
+ */
+export function foldPrimary(name: string): string {
+  return [...name.toLowerCase()].map((c) => FOLD[c] ?? c).join('');
+}
+
+/**
+ * Every locale, in the order this reader should be shown them.
+ *
+ * **There is no correct order across scripts, and this is CLDR's answer to
+ * that.** Their collation guidelines say a language's own script sorts before
+ * the others - the `reorder` setting - naming Latin, Cyrillic and CJK as exactly
+ * the case it is for. Whether 日本語 belongs above or below Nederlands has no
+ * answer in the abstract; which of them the reader can read has an obvious one.
+ *
+ * So the reader's own script leads, then the rest in a fixed order, and inside a
+ * script by the name at primary strength.
+ */
+export function localesInReadingOrder(
+  current: string,
+  endonym: (code: string) => string
+): string[] {
+  const readers = scriptOf(current);
+
+  const rank = (code: string) => {
+    const script = scriptOf(code);
+    if (script === readers) return 0;
+    const at = ROOT_ORDER.indexOf(script);
+    return 1 + (at === -1 ? ROOT_ORDER.length : at);
+  };
+
+  return [...LOCALES].sort((a, b) => {
+    const byScript = rank(a) - rank(b);
+    if (byScript !== 0) return byScript;
+    return foldPrimary(endonym(a)).localeCompare(foldPrimary(endonym(b)), 'en');
+  });
+}
+
 export { LOCALES, DEFAULT_LOCALE };
 
 const ESCAPES: Record<string, string> = {

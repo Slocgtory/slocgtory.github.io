@@ -1,7 +1,7 @@
 {
   "name": "Dansk",
   "dir": "ltr",
-  "sourceHash": "a3a2413c93ce7c53",
+  "sourceHash": "c9e833443ab179cd",
   "site": {
     "skip": "Gå til indhold",
     "navLabel": "Hovednavigation",
@@ -10,6 +10,12 @@
     "nav": {
       "home": "Forside",
       "privacy": "Privatliv"
+    },
+    "theme": {
+      "label": "Udseende",
+      "system": "System",
+      "light": "Lyst",
+      "dark": "Mørkt"
     },
     "notFoundTitle": "Siden blev ikke fundet",
     "notFoundBody": "Denne adresse findes ikke på dette websted. Prøv [forsiden](/da/) eller [privatlivspolitikken](/da/privacy/)."

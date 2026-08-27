@@ -1,7 +1,7 @@
 {
   "name": "Norsk",
   "dir": "ltr",
-  "sourceHash": "a3a2413c93ce7c53",
+  "sourceHash": "c9e833443ab179cd",
   "site": {
     "skip": "Gå til innhold",
     "navLabel": "Hovednavigasjon",
@@ -10,6 +10,12 @@
     "nav": {
       "home": "Forsiden",
       "privacy": "Personvern"
+    },
+    "theme": {
+      "label": "Utseende",
+      "system": "System",
+      "light": "Lyst",
+      "dark": "Mørkt"
     },
     "notFoundTitle": "Fant ikke siden",
     "notFoundBody": "Denne adressen finnes ikke på dette nettstedet. Prøv [forsiden](/nb/) eller [personvernerklæringen](/nb/privacy/)."

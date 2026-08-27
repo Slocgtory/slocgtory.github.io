@@ -1,7 +1,7 @@
 {
   "name": "Nederlands",
   "dir": "ltr",
-  "sourceHash": "a3a2413c93ce7c53",
+  "sourceHash": "c9e833443ab179cd",
   "site": {
     "skip": "Naar de inhoud",
     "navLabel": "Hoofdnavigatie",
@@ -10,6 +10,12 @@
     "nav": {
       "home": "Start",
       "privacy": "Privacy"
+    },
+    "theme": {
+      "label": "Weergave",
+      "system": "Systeem",
+      "light": "Licht",
+      "dark": "Donker"
     },
     "notFoundTitle": "Pagina niet gevonden",
     "notFoundBody": "Dit adres bestaat niet op deze site. Probeer de [startpagina](/nl/) of het [privacybeleid](/nl/privacy/)."

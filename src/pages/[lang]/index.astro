@@ -16,13 +16,7 @@ const data = await loadLocale(lang!);
   page="home"
   title={data.home.metaTitle}
   description={data.home.metaDescription}
-  nav={data.site.nav}
-  labels={{
-      skip: data.site.skip,
-      navLabel: data.site.navLabel,
-      langLabel: data.site.langLabel,
-      email: data.site.email,
-    }}
+  site={data.site}
 >
   <HomeBody home={data.home} />
 </Base>

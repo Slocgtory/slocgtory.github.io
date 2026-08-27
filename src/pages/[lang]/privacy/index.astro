@@ -16,13 +16,7 @@ const data = await loadLocale(lang!);
   page="privacy"
   title={`${data.privacy.metaTitle} - Slocgtory`}
   description={data.privacy.metaDescription}
-  nav={data.site.nav}
-  labels={{
-      skip: data.site.skip,
-      navLabel: data.site.navLabel,
-      langLabel: data.site.langLabel,
-      email: data.site.email,
-    }}
+  site={data.site}
 >
   <PrivacyBody privacy={data.privacy} isCanonical={false} />
 </Base>

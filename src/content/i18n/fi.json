@@ -1,7 +1,7 @@
 {
   "name": "Suomi",
   "dir": "ltr",
-  "sourceHash": "a3a2413c93ce7c53",
+  "sourceHash": "c9e833443ab179cd",
   "site": {
     "skip": "Siirry sisältöön",
     "navLabel": "Päävalikko",
@@ -10,6 +10,12 @@
     "nav": {
       "home": "Etusivu",
       "privacy": "Tietosuoja"
+    },
+    "theme": {
+      "label": "Ulkoasu",
+      "system": "Järjestelmä",
+      "light": "Vaalea",
+      "dark": "Tumma"
     },
     "notFoundTitle": "Sivua ei löytynyt",
     "notFoundBody": "Tätä osoitetta ei ole tällä sivustolla. Kokeile [etusivua](/fi/) tai [tietosuojaselostetta](/fi/privacy/)."

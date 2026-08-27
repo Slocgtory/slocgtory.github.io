@@ -1,0 +1,148 @@
+---
+import { getCollection } from 'astro:content';
+import { localeUrl, localesInReadingOrder, type Page } from '../lib/i18n';
+
+interface Props {
+  locale: string;
+  page: Page;
+  langLabel: string;
+  theme: { label: string; system: string; light: string; dark: string };
+}
+
+const { locale, page, langLabel, theme } = Astro.props;
+
+const entries = await getCollection('i18n');
+const names = new Map(entries.map((e) => [e.id, e.data.name]));
+const endonym = (code: string) => names.get(code) ?? code;
+
+const ordered = localesInReadingOrder(locale, endonym);
+---
+
+<div class="settings">
+  {/*
+    Hidden until the script below unhides it. Without JavaScript the choice
+    cannot outlive the page, so an always-visible control would be one that
+    forgets - worse than not offering it. The system's own setting still works,
+    because the stylesheet answers `prefers-color-scheme` on its own.
+  */}
+  <div class="setting" hidden data-theme-control>
+    <span class="setting-label" id="theme-label">{theme.label}</span>
+    {/*
+      Real radios with one name, so the browser gives arrow-key movement, the
+      roving tab stop and the announcement free. A row of buttons with ARIA
+      would have to reimplement all three, and usually reimplements two.
+    */}
+    <div class="seg" role="radiogroup" aria-labelledby="theme-label">
+      <label>
+        <input type="radio" name="theme" value="system" checked />
+        <span>{theme.system}</span>
+      </label>
+      <label>
+        <input type="radio" name="theme" value="light" />
+        <span>{theme.light}</span>
+      </label>
+      <label>
+        <input type="radio" name="theme" value="dark" />
+        <span>{theme.dark}</span>
+      </label>
+    </div>
+  </div>
+
+  {/*
+    Plain links inside a disclosure, so this one needs no script at all: every
+    entry is a real address for the same page in another language, and it works
+    with scripting off, in a text browser, and when a link is copied.
+  */}
+  <details class="setting picker" data-lang-picker>
+    <summary>
+      <span class="picker-label">{langLabel}</span>
+      <span class="picker-current" lang={locale}>{endonym(locale)}</span>
+    </summary>
+    <nav aria-label={langLabel}>
+      <ul>
+        {
+          ordered.map((code) => (
+            <li>
+              <a
+                href={localeUrl(page, code)}
+                hreflang={code}
+                lang={code}
+                aria-current={code === locale ? 'true' : undefined}
+              >
+                {endonym(code)}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </details>
+</div>
+
+{/*
+  Deliberately inline and un-bundled. It is short enough to read in one go, and
+  it is the only script on the site: nothing is fetched to run it.
+*/}
+<script is:inline>
+  (function () {
+    var root = document.documentElement;
+    var control = document.querySelector('[data-theme-control]');
+    if (!control) return;
+
+    // Only now, when there is something to work the control with.
+    control.hidden = false;
+
+    function saved() {
+      try {
+        var value = localStorage.getItem('theme');
+        return value === 'light' || value === 'dark' ? value : 'system';
+      } catch (e) {
+        // Private windows and blocked site data throw on read. A visitor who
+        // cannot be remembered still gets the system's own setting.
+        return 'system';
+      }
+    }
+
+    function apply(choice) {
+      // Removing the attribute is what "system" means: with nothing stamped,
+      // the stylesheet falls through to prefers-color-scheme.
+      if (choice === 'system') delete root.dataset.theme;
+      else root.dataset.theme = choice;
+
+      var picked = control.querySelector('input[value="' + choice + '"]');
+      if (picked) picked.checked = true;
+    }
+
+    control.addEventListener('change', function (event) {
+      var input = event.target;
+      if (!input || input.name !== 'theme') return;
+      try {
+        if (input.value === 'system') localStorage.removeItem('theme');
+        else localStorage.setItem('theme', input.value);
+      } catch (e) {
+        // Nothing to do: the choice still applies to this page.
+      }
+      apply(input.value);
+    });
+
+    apply(saved());
+  })();
+
+  (function () {
+    // Closing the language list by clicking away or pressing Escape - what a
+    // menu is expected to do. Everything it decorates already works without it.
+    var picker = document.querySelector('[data-lang-picker]');
+    if (!picker) return;
+
+    document.addEventListener('click', function (event) {
+      if (picker.open && !picker.contains(event.target)) picker.open = false;
+    });
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape' && picker.open) {
+        picker.open = false;
+        var summary = picker.querySelector('summary');
+        if (summary) summary.focus();
+      }
+    });
+  })();
+</script>

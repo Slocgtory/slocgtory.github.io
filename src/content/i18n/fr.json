@@ -1,7 +1,7 @@
 {
   "name": "Français",
   "dir": "ltr",
-  "sourceHash": "a3a2413c93ce7c53",
+  "sourceHash": "c9e833443ab179cd",
   "site": {
     "skip": "Aller au contenu",
     "navLabel": "Navigation principale",
@@ -10,6 +10,12 @@
     "nav": {
       "home": "Accueil",
       "privacy": "Confidentialité"
+    },
+    "theme": {
+      "label": "Thème",
+      "system": "Système",
+      "light": "Clair",
+      "dark": "Sombre"
     },
     "notFoundTitle": "Page introuvable",
     "notFoundBody": "Cette adresse n'existe pas sur ce site. Essayez la [page d'accueil](/fr/) ou la [politique de confidentialité](/fr/privacy/)."

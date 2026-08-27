@@ -1,13 +1,22 @@
 {
   "name": "Polski",
   "dir": "ltr",
-  "sourceHash": "a3a2413c93ce7c53",
+  "sourceHash": "c9e833443ab179cd",
   "site": {
     "skip": "Przejdź do treści",
     "navLabel": "Główna",
     "langLabel": "Język",
     "email": "Slocgtory@gmail.com",
-    "nav": { "home": "Start", "privacy": "Prywatność" },
+    "nav": {
+      "home": "Start",
+      "privacy": "Prywatność"
+    },
+    "theme": {
+      "label": "Motyw",
+      "system": "Systemowy",
+      "light": "Jasny",
+      "dark": "Ciemny"
+    },
     "notFoundTitle": "Nie znaleziono strony",
     "notFoundBody": "Ten adres nie istnieje na tej stronie. Spróbuj [strony głównej](/pl/) albo [polityki prywatności](/pl/privacy/)."
   },
@@ -58,7 +67,9 @@
       },
       {
         "h": "Dane zapisywane na twoich goglach",
-        "p": ["Aplikacja zapisuje dwie rzeczy we własnej prywatnej pamięci na urządzeniu:"],
+        "p": [
+          "Aplikacja zapisuje dwie rzeczy we własnej prywatnej pamięci na urządzeniu:"
+        ],
         "list": [
           "**Twoje postępy w grze** — które układanki zacząłeś lub skończyłeś i jak aktualnie ułożone są elementy.",
           "**Lokalny zapis tego, które paczki obrazów posiadasz**, żeby aplikacja mogła je pokazać bez odpytywania sklepu za każdym razem."
@@ -93,7 +104,9 @@
       },
       {
         "h": "Uprawnienia, o które prosi aplikacja",
-        "p": ["Wydana aplikacja prosi o trzy uprawnienia i o żadne inne:"],
+        "p": [
+          "Wydana aplikacja prosi o trzy uprawnienia i o żadne inne:"
+        ],
         "list": [
           "`org.khronos.openxr.permission.OPENXR` i `OPENXR_SYSTEM` — niezbędne, żeby w ogóle otworzyć sesję wirtualnej rzeczywistości.",
           "`com.oculus.permission.HAND_TRACKING` — żebyś mógł grać dłońmi zamiast kontrolerami."
@@ -107,12 +120,18 @@
       },
       {
         "h": "Dzieci",
-        "p": ["Te aplikacje nie są kierowane do dzieci poniżej 13 roku życia ani nie są dla nich projektowane."]
+        "p": [
+          "Te aplikacje nie są kierowane do dzieci poniżej 13 roku życia ani nie są dla nich projektowane."
+        ]
       },
       {
         "h": "Usuwanie twoich danych",
-        "p": ["Wszystko, co aplikacja zapisuje, znajduje się na twoich goglach, więc możesz to usunąć sam, natychmiast, nikogo nie pytając:"],
-        "list": ["Na goglach Quest otwórz **Aplikacje**, znajdź **AllVRPuzzles**, otwórz menu i wybierz **Odinstaluj**."]
+        "p": [
+          "Wszystko, co aplikacja zapisuje, znajduje się na twoich goglach, więc możesz to usunąć sam, natychmiast, nikogo nie pytając:"
+        ],
+        "list": [
+          "Na goglach Quest otwórz **Aplikacje**, znajdź **AllVRPuzzles**, otwórz menu i wybierz **Odinstaluj**."
+        ]
       },
       {
         "h": "Co usunięcie obejmuje, a czego nie",
@@ -130,7 +149,9 @@
       },
       {
         "h": "Kontakt",
-        "p": ["[Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)"]
+        "p": [
+          "[Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)"
+        ]
       }
     ]
   }

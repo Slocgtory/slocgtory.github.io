@@ -1,7 +1,7 @@
 {
   "name": "Íslenska",
   "dir": "ltr",
-  "sourceHash": "a3a2413c93ce7c53",
+  "sourceHash": "c9e833443ab179cd",
   "site": {
     "skip": "Fara í efni",
     "navLabel": "Aðalvalmynd",
@@ -10,6 +10,12 @@
     "nav": {
       "home": "Forsíða",
       "privacy": "Persónuvernd"
+    },
+    "theme": {
+      "label": "Útlit",
+      "system": "Kerfi",
+      "light": "Ljóst",
+      "dark": "Dökkt"
     },
     "notFoundTitle": "Síðan fannst ekki",
     "notFoundBody": "Þetta veffang er ekki til á þessum vef. Prófaðu [forsíðuna](/is/) eða [persónuverndarstefnuna](/is/privacy/)."

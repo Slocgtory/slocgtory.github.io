@@ -1,7 +1,7 @@
 {
   "name": "Español",
   "dir": "ltr",
-  "sourceHash": "a3a2413c93ce7c53",
+  "sourceHash": "c9e833443ab179cd",
   "site": {
     "skip": "Saltar al contenido",
     "navLabel": "Navegación principal",
@@ -10,6 +10,12 @@
     "nav": {
       "home": "Inicio",
       "privacy": "Privacidad"
+    },
+    "theme": {
+      "label": "Tema",
+      "system": "Sistema",
+      "light": "Claro",
+      "dark": "Oscuro"
     },
     "notFoundTitle": "Página no encontrada",
     "notFoundBody": "Esa dirección no existe en este sitio. Prueba con la [página de inicio](/es/) o con la [política de privacidad](/es/privacy/)."

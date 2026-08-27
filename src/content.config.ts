@@ -60,6 +60,16 @@ const i18n = defineCollection({
         home: z.string().min(1),
         privacy: z.string().min(1),
       }),
+
+      /** The appearance control. Four words, and all four are shown. */
+      theme: z.object({
+        label: z.string().min(1),
+        /** Follow the operating system, which is the default and not a colour. */
+        system: z.string().min(1),
+        light: z.string().min(1),
+        dark: z.string().min(1),
+      }),
+
       notFoundTitle: z.string().min(1),
       notFoundBody: z.string().min(1),
     }),

@@ -27,6 +27,17 @@
   --accent-soft: #EAEDFB;
   --focus: #2340C8;
 
+  /* Scrollbars, form controls and the canvas the browser paints behind the
+     page. Stamped in all three states below, or a dark page keeps a white
+     scrollbar and the seam shows. */
+  color-scheme: light;
+
+  /* Shadows belong to the theme as much as the colours do. Black at 6% is a
+     soft edge on white and nothing at all on near-black, so the dark set is
+     both darker and deeper - a panel has to lift off the page in both. */
+  --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.06);
+  --shadow-lg: 0 8px 24px rgb(0 0 0 / 0.12);
+
   --measure: 64ch;
   --page: 60rem;
   --radius: 3px;
@@ -53,10 +64,16 @@
     --accent-ink: #B3C0FF;
     --accent-soft: #171B2E;
     --focus: #8FA2FF;
+    color-scheme: dark;
+    --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.5);
+    --shadow-lg: 0 10px 30px rgb(0 0 0 / 0.6);
   }
 }
 
 :root[data-theme='dark'] {
+  color-scheme: dark;
+  --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.5);
+  --shadow-lg: 0 10px 30px rgb(0 0 0 / 0.6);
   --ground: #0C0D10;
   --surface: #131519;
   --surface-sunk: #191C22;
@@ -218,9 +235,8 @@ strong { font-weight: 600; }
   padding: 1rem 1.5rem;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem 2rem;
-  align-items: baseline;
-  justify-content: space-between;
+  gap: 0.75rem 1.5rem;
+  align-items: center;
 }
 
 .wordmark {
@@ -233,18 +249,20 @@ strong { font-weight: 600; }
 }
 .wordmark:hover { color: var(--accent); }
 
-.site-head nav {
+/* Wordmark left, everything else pushed right; stacks when there is no room. */
+.site-nav {
+  margin-left: auto;
   display: flex;
   gap: 1.5rem;
   font-size: var(--step--1);
 }
-.site-head nav a {
+.site-nav a {
   color: var(--ink-soft);
   text-decoration: none;
 }
-.site-head nav a:hover,
-.site-head nav a[aria-current='page'] { color: var(--ink); }
-.site-head nav a[aria-current='page'] {
+.site-nav a:hover,
+.site-nav a[aria-current='page'] { color: var(--ink); }
+.site-nav a[aria-current='page'] {
   text-decoration: underline;
   text-decoration-color: var(--accent);
   text-decoration-thickness: 2px;
@@ -432,46 +450,189 @@ main {
 .site-foot .inner {
   max-width: var(--page);
   margin: 0 auto;
-  padding: 2rem 1.5rem 2.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+  padding: 1.5rem 1.5rem 2rem;
 }
 
-.langs h2 {
-  font-family: var(--font-mono), monospace;
-  font-size: 0.68rem;
-  font-weight: 500;
-  letter-spacing: 0.11em;
-  text-transform: uppercase;
-  color: var(--ink-mute);
-  margin-bottom: 0.85rem;
-}
-:lang(ja) .langs h2,
-:lang(ko) .langs h2,
-:lang(zh-Hant) .langs h2,
-:lang(zh-Hans) .langs h2 { font-family: inherit; letter-spacing: 0.05em; }
-
-.langs ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem 1.25rem;
-  font-size: var(--step--1);
-}
-.langs a { color: var(--ink-soft); text-decoration: none; }
-.langs a:hover { color: var(--accent); text-decoration: underline; }
-.langs a[aria-current='true'] {
-  color: var(--ink);
-  font-weight: 600;
-}
 
 .colophon {
   color: var(--ink-mute);
   font-size: var(--step--1);
-  border-top: 1px solid var(--line-soft);
-  padding-top: 1.25rem;
   max-width: none;
+}
+
+/* --- settings: appearance and language ---------------------------------- */
+
+.settings {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem 1.25rem;
+}
+
+.setting {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.setting[hidden] { display: none; }
+
+.setting-label {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.66rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  white-space: nowrap;
+}
+:lang(ja) .setting-label,
+:lang(ko) .setting-label,
+:lang(zh-Hant) .setting-label,
+:lang(zh-Hans) .setting-label {
+  font-family: inherit;
+  letter-spacing: 0.04em;
+  text-transform: none;
+  font-size: 0.72rem;
+}
+
+/* The three appearance choices, as one control rather than three buttons. */
+.seg {
+  display: flex;
+  background: var(--surface-sunk);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 2px;
+  gap: 2px;
+}
+
+.seg label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+
+/* The radio stays: it is what makes arrow keys, the tab stop and the
+ * announcement work. Only its own box is replaced. */
+.seg input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.seg span {
+  display: block;
+  padding: 0.25rem 0.6rem;
+  border-radius: 2px;
+  font-size: var(--step--1);
+  line-height: 1.4;
+  color: var(--ink-soft);
+  white-space: nowrap;
+  transition: background 120ms ease, color 120ms ease;
+}
+
+.seg label:hover span { color: var(--ink); }
+
+.seg input:checked + span {
+  background: var(--surface);
+  color: var(--ink);
+  box-shadow: var(--shadow-sm);
+}
+
+/* The ring belongs on the thing you can see, not on the invisible input. */
+.seg input:focus-visible + span {
+  outline: 2px solid var(--focus);
+  outline-offset: 1px;
+}
+
+/* --- language picker ---------------------------------------------------- */
+
+.picker {
+  position: relative;
+}
+
+.picker summary {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  list-style: none;
+  padding: 0.3rem 0.6rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface-sunk);
+  font-size: var(--step--1);
+  color: var(--ink-soft);
+}
+.picker summary::-webkit-details-marker { display: none; }
+.picker summary:hover { color: var(--ink); }
+
+.picker-current { color: var(--ink); }
+
+/* A caret that says which way this opens, drawn rather than fetched. */
+.picker summary::after {
+  content: '';
+  width: 0.4em;
+  height: 0.4em;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: translateY(-0.15em) rotate(45deg);
+  transition: transform 120ms ease;
+}
+.picker[open] summary::after { transform: translateY(0.1em) rotate(-135deg); }
+
+.picker nav {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 0.4rem);
+  z-index: 30;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 0.5rem;
+  box-shadow: var(--shadow-lg);
+  max-height: min(60vh, 26rem);
+  overflow-y: auto;
+}
+
+.picker ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(7.5rem, 1fr));
+  gap: 1px 0.25rem;
+}
+
+.picker a {
+  display: block;
+  padding: 0.3rem 0.6rem;
+  border-radius: 2px;
+  font-size: var(--step--1);
+  color: var(--ink-soft);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.picker a:hover {
+  background: var(--surface-sunk);
+  color: var(--ink);
+}
+.picker a[aria-current='true'] {
+  color: var(--ink);
+  font-weight: 600;
+  background: var(--accent-soft);
+}
+
+/* On a narrow screen the panel is the width of the screen, not of the button. */
+@media (max-width: 30rem) {
+  .picker nav {
+    position: fixed;
+    left: 0.75rem;
+    right: 0.75rem;
+    top: auto;
+  }
+  .picker ul { grid-template-columns: repeat(2, 1fr); }
 }

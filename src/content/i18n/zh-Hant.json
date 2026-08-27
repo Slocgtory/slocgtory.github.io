@@ -1,7 +1,7 @@
 {
   "name": "繁體中文",
   "dir": "ltr",
-  "sourceHash": "a3a2413c93ce7c53",
+  "sourceHash": "c9e833443ab179cd",
   "site": {
     "skip": "跳至內容",
     "navLabel": "主要導覽",
@@ -10,6 +10,12 @@
     "nav": {
       "home": "首頁",
       "privacy": "隱私權"
+    },
+    "theme": {
+      "label": "主題",
+      "system": "系統",
+      "light": "淺色",
+      "dark": "深色"
     },
     "notFoundTitle": "找不到頁面",
     "notFoundBody": "本網站沒有這個網址。請試試[首頁](/zh-Hant/)或[隱私權政策](/zh-Hant/privacy/)。"

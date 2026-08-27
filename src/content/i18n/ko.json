@@ -1,7 +1,7 @@
 {
   "name": "한국어",
   "dir": "ltr",
-  "sourceHash": "a3a2413c93ce7c53",
+  "sourceHash": "c9e833443ab179cd",
   "site": {
     "skip": "본문으로 건너뛰기",
     "navLabel": "주요 메뉴",
@@ -10,6 +10,12 @@
     "nav": {
       "home": "홈",
       "privacy": "개인정보"
+    },
+    "theme": {
+      "label": "테마",
+      "system": "시스템",
+      "light": "라이트",
+      "dark": "다크"
     },
     "notFoundTitle": "페이지를 찾을 수 없습니다",
     "notFoundBody": "해당 주소는 이 사이트에 없습니다. [홈](/ko/) 또는 [개인정보 처리방침](/ko/privacy/)을 확인해 주세요."

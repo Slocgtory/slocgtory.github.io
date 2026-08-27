@@ -1,7 +1,7 @@
 {
   "name": "Italiano",
   "dir": "ltr",
-  "sourceHash": "a3a2413c93ce7c53",
+  "sourceHash": "c9e833443ab179cd",
   "site": {
     "skip": "Vai al contenuto",
     "navLabel": "Navigazione principale",
@@ -10,6 +10,12 @@
     "nav": {
       "home": "Home",
       "privacy": "Privacy"
+    },
+    "theme": {
+      "label": "Tema",
+      "system": "Sistema",
+      "light": "Chiaro",
+      "dark": "Scuro"
     },
     "notFoundTitle": "Pagina non trovata",
     "notFoundBody": "Questo indirizzo non esiste su questo sito. Prova la [pagina iniziale](/it/) o l'[informativa sulla privacy](/it/privacy/)."

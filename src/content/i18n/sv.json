@@ -1,7 +1,7 @@
 {
   "name": "Svenska",
   "dir": "ltr",
-  "sourceHash": "a3a2413c93ce7c53",
+  "sourceHash": "c9e833443ab179cd",
   "site": {
     "skip": "Hoppa till innehållet",
     "navLabel": "Huvudnavigering",
@@ -10,6 +10,12 @@
     "nav": {
       "home": "Start",
       "privacy": "Integritet"
+    },
+    "theme": {
+      "label": "Utseende",
+      "system": "System",
+      "light": "Ljust",
+      "dark": "Mörkt"
     },
     "notFoundTitle": "Sidan hittades inte",
     "notFoundBody": "Den adressen finns inte på den här webbplatsen. Prova [startsidan](/sv/) eller [integritetspolicyn](/sv/privacy/)."
