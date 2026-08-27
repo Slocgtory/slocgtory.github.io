@@ -1,5 +1,6 @@
 ---
 import { Font } from 'astro:assets';
+import { getEntry } from 'astro:content';
 import Settings from '../components/Settings.astro';
 import LanguageOffer from '../components/LanguageOffer.astro';
 import { SITE_URL, OG_LOCALES } from '../../site.config.mjs';
@@ -44,7 +45,6 @@ const tabs = [
   { key: 'apps', href: appsHref, label: site.nav.apps },
   { key: 'privacy', href: privacyHref, label: site.nav.privacy },
 ] as const;
-const year = 2026;
 
 /*
   What this site is, for a machine.
@@ -59,6 +59,15 @@ const year = 2026;
   rather than restating it, and it is repeated on the pages that reference it
   because a crawler reads one page at a time.
 */
+/*
+  The social card for this language, and its alt text read from the same file
+  the card was drawn from - so the two cannot drift. There was one card for all
+  sixteen and nothing on it could have been translated, so a link to the Polish
+  page shared as an English object.
+*/
+const card = new URL(`/og/${locale}.png`, SITE_URL).href;
+const cardAlt = (await getEntry('i18n', locale))?.data.home.title ?? 'Slocgtory';
+
 const ORG_ID = `${SITE_URL}/#slocgtory`;
 
 const organisation = {
@@ -240,10 +249,10 @@ const jsonLd =
       ))
     }
     <meta name="twitter:card" content="summary_large_image" />
-    <meta property="og:image" content={new URL('/og.png', SITE_URL).href} />
+    <meta property="og:image" content={card} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Slocgtory" />
+    <meta property="og:image:alt" content={`Slocgtory - ${cardAlt}`} />
     <meta property="og:site_name" content="Slocgtory" />
 
     {/*

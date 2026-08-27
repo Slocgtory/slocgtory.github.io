@@ -88,7 +88,7 @@ const FOLD: Record<string, string> = {
  * would be the real answer and is one line, but it orders by the *reader's*
  * locale, and this list is read by all sixteen at once.
  */
-export function foldPrimary(name: string): string {
+function foldPrimary(name: string): string {
   return [...name.toLowerCase()].map((c) => FOLD[c] ?? c).join('');
 }
 

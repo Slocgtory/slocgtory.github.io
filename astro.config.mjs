@@ -1,7 +1,7 @@
 // @ts-check
 import { defineConfig, fontProviders } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
-import { LOCALES, DEFAULT_LOCALE, SITE_URL } from './site.config.mjs';
+import { LOCALES, DEFAULT_LOCALE, SITE_URL, SITEMAP_LOCALES } from './site.config.mjs';
 
 export { LOCALES, DEFAULT_LOCALE } from './site.config.mjs';
 
@@ -25,27 +25,9 @@ export default defineConfig({
 
   integrations: [
     sitemap({
-      i18n: {
-        defaultLocale: DEFAULT_LOCALE,
-        locales: {
-          en: 'en',
-          pl: 'pl',
-          de: 'de',
-          fr: 'fr',
-          es: 'es',
-          it: 'it',
-          nl: 'nl',
-          da: 'da',
-          fi: 'fi',
-          is: 'is',
-          nb: 'nb',
-          sv: 'sv',
-          ja: 'ja',
-          ko: 'ko',
-          'zh-Hant': 'zh-Hant',
-          'zh-Hans': 'zh-Hans',
-        },
-      },
+      // Derived from LOCALES, not written out again. This was a hand-kept copy
+      // of the same sixteen names, which is a copy that can disagree.
+      i18n: { defaultLocale: DEFAULT_LOCALE, locales: SITEMAP_LOCALES },
     }),
   ],
 

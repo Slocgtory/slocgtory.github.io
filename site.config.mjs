@@ -56,11 +56,44 @@ export const LOCALES = [
  * sitemap - reads this constant. `public/robots.txt` carries the only second
  * copy, because a static file cannot read a module.
  */
+/**
+ * Every locale-keyed table below is checked against `LOCALES` the moment this
+ * module loads, and a gap is a thrown error rather than a quiet blank.
+ *
+ * There are three such tables now, and this file's own comment used to claim it
+ * was "the one place the language list lives". That stopped being true the
+ * second one appeared. Adding a language and forgetting `OG_LOCALES` produced a
+ * page whose `og:locale` had no value - nothing failed, nothing warned, and the
+ * only way to notice was to read the head of a built page.
+ *
+ * The list is still in one place. What was missing was anything making the
+ * others follow it.
+ */
+function forEveryLocale(name, table) {
+  const missing = LOCALES.filter((code) => !(code in table));
+  const extra = Object.keys(table).filter((code) => !LOCALES.includes(code));
+  if (missing.length || extra.length) {
+    throw new Error(
+      `${name} does not match LOCALES` +
+        (missing.length ? `
+  missing: ${missing.join(', ')}` : '') +
+        (extra.length ? `
+  not a locale: ${extra.join(', ')}` : ''),
+    );
+  }
+  return table;
+}
+
+/** The sitemap wants locale -> hreflang, which here is the identity. Derived
+ *  rather than written out, because a hand-kept copy of the same sixteen names
+ *  is a copy that can disagree. */
+export const SITEMAP_LOCALES = Object.fromEntries(LOCALES.map((code) => [code, code]));
+
 export const SITE_URL = 'https://slocgtory.github.io';
 
 /** Markets each language is carried for, shown nowhere but useful when someone
  *  asks why a language is on the list. */
-export const LOCALE_MARKETS = {
+const LOCALE_MARKETS_TABLE = {
   en: 'United States, United Kingdom, Canada, Ireland, Australia, New Zealand, Singapore',
   de: 'Germany, Austria, Switzerland',
   fr: 'France, Belgium, Canada, Switzerland',
@@ -78,6 +111,11 @@ export const LOCALE_MARKETS = {
   'zh-Hant': 'Taiwan',
   'zh-Hans': 'Singapore',
 };
+
+/* Not exported: nothing imports it, and an export with no importer reads like a
+   thing somebody uses. It is here to answer "why is this language on the list",
+   and it is checked so the answer cannot go missing for a language. */
+export const LOCALE_MARKETS = forEveryLocale('LOCALE_MARKETS', LOCALE_MARKETS_TABLE);
 
 /**
  * When the privacy policy last changed, machine-readable.
@@ -100,7 +138,7 @@ export const POLICY_UPDATED = '2026-08-27';
  * alternates below carry the rest of the languages, not the rest of the
  * countries.
  */
-export const OG_LOCALES = {
+const OG_LOCALES_TABLE = {
   en: 'en_US',
   de: 'de_DE',
   fr: 'fr_FR',
@@ -120,3 +158,5 @@ export const OG_LOCALES = {
   'zh-Hant': 'zh_TW',
   'zh-Hans': 'zh_SG',
 };
+
+export const OG_LOCALES = forEveryLocale('OG_LOCALES', OG_LOCALES_TABLE);
