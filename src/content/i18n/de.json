@@ -1,6 +1,6 @@
 {
   "name": "Deutsch",
-  "sourceHash": "d06eee96fccc4bb0",
+  "sourceHash": "73e633dca7374fed",
   "site": {
     "skip": "Zum Inhalt springen",
     "navLabel": "Hauptnavigation",
@@ -13,6 +13,7 @@
     "nav": {
       "home": "Start",
       "apps": "Apps",
+      "appsMenu": "Apps anzeigen",
       "allApps": "Alle Apps",
       "privacy": "Datenschutz"
     },

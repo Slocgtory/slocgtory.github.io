@@ -1,6 +1,6 @@
 {
   "name": "繁體中文",
-  "sourceHash": "d06eee96fccc4bb0",
+  "sourceHash": "73e633dca7374fed",
   "site": {
     "skip": "跳至內容",
     "navLabel": "主要導覽",
@@ -13,6 +13,7 @@
     "nav": {
       "home": "首頁",
       "apps": "應用程式",
+      "appsMenu": "顯示應用程式",
       "allApps": "所有應用程式",
       "privacy": "隱私權"
     },

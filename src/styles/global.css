@@ -1215,32 +1215,50 @@ main {
  * with scripting off, and it borrows the settings panel's surface so the two
  * things that open from this bar look like the same kind of object.
  */
+/*
+ * The word and the caret are two controls that read as one thing. The word is a
+ * link to the catalogue; the caret opens the menu. They share a hover state so
+ * the pair looks like a pair, and the caret is a real target rather than a
+ * decoration hung off the end of a word - 24px is the floor for a control, and
+ * two of them jammed together is a complaint this masthead has already had.
+ */
 .tab-menu {
   position: relative;
-}
-
-/* A <summary> is a list-item by default, which puts a marker in front of the
-   word and breaks the strip's alignment. */
-.tab-menu > summary {
   display: inline-flex;
   align-items: center;
-  gap: 0.28rem;
-  cursor: pointer;
-  list-style: none;
-  -webkit-tap-highlight-color: transparent;
 }
-.tab-menu > summary::-webkit-details-marker { display: none; }
+
+.tab-menu > details {
+  display: inline-flex;
+}
 
 .tab-menu .caret {
   display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: 0.05rem;
+  border-radius: var(--radius);
   color: var(--ink-mute);
-  transition: transform 140ms ease, color 140ms ease;
+  cursor: pointer;
+  list-style: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 140ms ease, color 140ms ease, background 140ms ease;
 }
-.tab-menu[open] .caret { transform: rotate(180deg); }
-.tab-menu > summary:hover .caret { color: var(--ink); }
+/* A <summary> is a list-item by default, marker and all. */
+.tab-menu .caret::-webkit-details-marker { display: none; }
 
-/* Centred on the tab rather than aligned to an edge: it hangs from the middle
-   of the strip, where there is room on both sides. */
+.tab-menu:hover .caret,
+.tab-menu .caret:hover {
+  color: var(--ink);
+}
+.tab-menu .caret:hover { background: var(--surface-sunk); }
+.tab-menu > details[open] .caret {
+  transform: rotate(180deg);
+  color: var(--ink);
+}
+
 .menu-panel {
   left: 50%;
   right: auto;

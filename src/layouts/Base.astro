@@ -12,7 +12,7 @@ interface Site {
   navLabel: string;
   langLabel: string;
   email: string;
-  nav: { home: string; apps: string; allApps: string; privacy: string };
+  nav: { home: string; apps: string; appsMenu: string; allApps: string; privacy: string };
   settingsLabel: string;
   theme: { label: string; system: string; light: string; dark: string };
 }
@@ -328,55 +328,65 @@ const jsonLd =
           </a>
 
           {/*
-            Apps opens rather than navigates, and that is the whole design.
+            Three ways in, because there are three kinds of visitor.
 
-            A tab that is both a link and a menu is the thing everybody gets
-            wrong: on a touch screen the first tap opens it and the second
-            follows it, and nobody can tell which they are about to get. So this
-            one does one job, and the catalogue it used to point at is the first
-            row inside - reachable in the same two presses, without a page load
-            on the way.
+            The word is a link: clicking it goes to the catalogue, which is what
+            most people want and now costs one press instead of two. The caret
+            beside it is a separate control that opens the menu - that is the
+            one that works on a touch screen and from the keyboard, and the
+            reason the two are not one control is the trap: a tab that both
+            links and opens gives a touch user a first tap that opens and a
+            second that follows, and no way to tell which they are about to get.
 
-            A <details>, so it works with scripting off. The script below only
-            adds what a menu is expected to do once it exists: close on Escape,
-            close when something else is clicked, and never sit open beside the
-            settings panel.
+            Hover opens it too, but only as an extra, and only where hover is
+            real - `(hover: hover)` in the script below. The guidance is explicit
+            that a menu must not depend on hover alone: roughly a fifth of
+            laptops sold now have touch screens, show this same desktop
+            navigation, and cannot hover at all.
           */}
-          <details class="tab-menu" data-menu>
-            <summary
+          <div class="tab-menu" data-hover-menu>
+            <a
               class="nav-link"
+              href={appsHref}
               aria-current={!errorPage && String(page).startsWith('apps') ? 'page' : undefined}
             >
               {site.nav.apps}
-              <span class="caret" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="11" height="11">
-                  <path d="M5 9l7 7 7-7" />
-                </svg>
-              </span>
-            </summary>
+            </a>
 
-            <div class="panel menu-panel">
-              <ul>
-                <li>
-                  <a href={appsHref} aria-current={page === 'apps' ? 'true' : undefined}>
-                    {site.nav.allApps}
-                  </a>
-                </li>
-                {
-                  catalogue.map((app) => (
-                    <li>
-                      <a
-                        href={localeUrl(`apps/${app.slug}`, locale)}
-                        aria-current={page === `apps/${app.slug}` ? 'true' : undefined}
-                      >
-                        {app.name}
-                      </a>
-                    </li>
-                  ))
-                }
-              </ul>
-            </div>
-          </details>
+            <details data-menu>
+              <summary class="caret" aria-label={site.nav.appsMenu} title={site.nav.appsMenu}>
+                {/* `ico`, or the stroke rules do not reach it and the chevron
+                    renders as a filled wedge - which is what it was doing. */}
+                <span class="ico" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="13" height="13">
+                    <path d="M5 9l7 7 7-7" />
+                  </svg>
+                </span>
+              </summary>
+
+              <div class="panel menu-panel">
+                <ul>
+                  <li>
+                    <a href={appsHref} aria-current={page === 'apps' ? 'true' : undefined}>
+                      {site.nav.allApps}
+                    </a>
+                  </li>
+                  {
+                    catalogue.map((app) => (
+                      <li>
+                        <a
+                          href={localeUrl(`apps/${app.slug}`, locale)}
+                          aria-current={page === `apps/${app.slug}` ? 'true' : undefined}
+                        >
+                          {app.name}
+                        </a>
+                      </li>
+                    ))
+                  }
+                </ul>
+              </div>
+            </details>
+          </div>
 
           <a
             class="nav-link"
@@ -447,6 +457,32 @@ const jsonLd =
             if (menus[i].open && !menus[i].contains(event.target)) menus[i].open = false;
           }
         });
+
+        /*
+          Hover, where hover exists. Everything above already works without it;
+          this only saves a press for somebody holding a mouse.
+
+          Delayed both ways on purpose. Opening instantly means the menu appears
+          whenever the pointer crosses the word on its way somewhere else, and
+          closing instantly means it shuts while you are moving diagonally into
+          it - the two complaints every hover menu gets.
+        */
+        var canHover = window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+        var group = document.querySelector('[data-hover-menu]');
+        if (canHover && group) {
+          var menu = group.querySelector('[data-menu]');
+          var timer = null;
+          var hold = function (open) {
+            clearTimeout(timer);
+            timer = setTimeout(function () {
+              menu.open = open;
+            }, open ? 120 : 260);
+          };
+          group.addEventListener('mouseenter', function () { hold(true); });
+          group.addEventListener('mouseleave', function () { hold(false); });
+          // A press is a decision, so it beats whatever the timer was about to do.
+          group.addEventListener('click', function () { clearTimeout(timer); });
+        }
 
         document.addEventListener('keydown', function (event) {
           if (event.key !== 'Escape') return;

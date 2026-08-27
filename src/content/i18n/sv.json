@@ -1,6 +1,6 @@
 {
   "name": "Svenska",
-  "sourceHash": "d06eee96fccc4bb0",
+  "sourceHash": "73e633dca7374fed",
   "site": {
     "skip": "Hoppa till innehållet",
     "navLabel": "Huvudnavigering",
@@ -13,6 +13,7 @@
     "nav": {
       "home": "Start",
       "apps": "Appar",
+      "appsMenu": "Visa appar",
       "allApps": "Alla appar",
       "privacy": "Integritet"
     },

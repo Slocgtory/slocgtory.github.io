@@ -111,8 +111,11 @@ const i18n = defineCollection({
        *  two pages plus a logo rather than as a site with three pages. */
       nav: z.object({
         home: z.string().min(1),
-        /** The tab, which opens rather than navigates - see Base.astro. */
+        /** The tab, which is a link to the catalogue. */
         apps: z.string().min(1),
+        /** Names the caret beside it, which is a separate control and opens the
+         *  menu. Unnamed it announces as a bare triangle next to a word. */
+        appsMenu: z.string().min(1),
         /** First row inside it, and the only way to the catalogue itself.
          *  Deliberately not the same word as the tab above it, or the menu
          *  would open by repeating its own name back. */

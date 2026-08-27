@@ -1,6 +1,6 @@
 {
   "name": "Dansk",
-  "sourceHash": "d06eee96fccc4bb0",
+  "sourceHash": "73e633dca7374fed",
   "site": {
     "skip": "Gå til indhold",
     "navLabel": "Hovednavigation",
@@ -13,6 +13,7 @@
     "nav": {
       "home": "Forside",
       "apps": "Apps",
+      "appsMenu": "Vis apps",
       "allApps": "Alle apps",
       "privacy": "Privatliv"
     },
