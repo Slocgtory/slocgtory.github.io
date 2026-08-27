@@ -24,28 +24,49 @@ const ordered = localesInReadingOrder(locale, endonym);
     cannot outlive the page, so an always-visible control would be one that
     forgets - worse than not offering it. The system's own setting still works,
     because the stylesheet answers `prefers-color-scheme` on its own.
+
+    Real radios with one name, so the browser gives arrow-key movement, the
+    roving tab stop and the announcement free. A row of buttons with ARIA would
+    have to reimplement all three, and usually reimplements two.
+
+    Every icon carries its word as well, out of sight. A sun and a moon are a
+    well-worn pair, but a screen reader has no idea what a path element means,
+    and `title` alone is not an accessible name.
   */}
-  <div class="setting" hidden data-theme-control>
-    <span class="setting-label" id="theme-label">{theme.label}</span>
-    {/*
-      Real radios with one name, so the browser gives arrow-key movement, the
-      roving tab stop and the announcement free. A row of buttons with ARIA
-      would have to reimplement all three, and usually reimplements two.
-    */}
-    <div class="seg" role="radiogroup" aria-labelledby="theme-label">
-      <label>
-        <input type="radio" name="theme" value="system" checked />
-        <span>{theme.system}</span>
-      </label>
-      <label>
-        <input type="radio" name="theme" value="light" />
-        <span>{theme.light}</span>
-      </label>
-      <label>
-        <input type="radio" name="theme" value="dark" />
-        <span>{theme.dark}</span>
-      </label>
-    </div>
+  <div class="seg" role="radiogroup" aria-label={theme.label} hidden data-theme-control>
+    <label title={theme.system}>
+      <input type="radio" name="theme" value="system" checked />
+      <span class="ico" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="16" height="16">
+          <rect x="2.5" y="3.5" width="19" height="13" rx="2"></rect>
+          <path d="M8.5 20.5h7M12 17v3.5"></path>
+        </svg>
+      </span>
+      <span class="sr-only">{theme.system}</span>
+    </label>
+
+    <label title={theme.light}>
+      <input type="radio" name="theme" value="light" />
+      <span class="ico" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="16" height="16">
+          <circle cx="12" cy="12" r="4"></circle>
+          <path
+            d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M6 18l-1.4 1.4M19.4 4.6L18 6"
+          ></path>
+        </svg>
+      </span>
+      <span class="sr-only">{theme.light}</span>
+    </label>
+
+    <label title={theme.dark}>
+      <input type="radio" name="theme" value="dark" />
+      <span class="ico" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="16" height="16">
+          <path d="M20.5 13.3A8.5 8.5 0 1 1 10.7 3.5a6.6 6.6 0 0 0 9.8 9.8z"></path>
+        </svg>
+      </span>
+      <span class="sr-only">{theme.dark}</span>
+    </label>
   </div>
 
   {/*
@@ -53,9 +74,14 @@ const ordered = localesInReadingOrder(locale, endonym);
     entry is a real address for the same page in another language, and it works
     with scripting off, in a text browser, and when a link is copied.
   */}
-  <details class="setting picker" data-lang-picker>
-    <summary>
-      <span class="picker-label">{langLabel}</span>
+  <details class="picker" data-lang-picker>
+    <summary aria-label={langLabel}>
+      <span class="ico" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="16" height="16">
+          <circle cx="12" cy="12" r="9"></circle>
+          <path d="M3 12h18M12 3a14 14 0 0 1 0 18a14 14 0 0 1 0-18z"></path>
+        </svg>
+      </span>
       <span class="picker-current" lang={locale}>{endonym(locale)}</span>
     </summary>
     <nav aria-label={langLabel}>

@@ -440,26 +440,6 @@ main {
 }
 .doc-section li::marker { color: var(--ink-mute); }
 
-/* --- footer ------------------------------------------------------------- */
-
-.site-foot {
-  flex-shrink: 0;
-  border-top: 1px solid var(--line);
-  background: var(--surface);
-}
-.site-foot .inner {
-  max-width: var(--page);
-  margin: 0 auto;
-  padding: 1.5rem 1.5rem 2rem;
-}
-
-
-.colophon {
-  color: var(--ink-mute);
-  font-size: var(--step--1);
-  max-width: none;
-}
-
 /* --- settings: appearance and language ---------------------------------- */
 
 .settings {
@@ -469,33 +449,39 @@ main {
   gap: 0.6rem 1.25rem;
 }
 
-.setting {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-.setting[hidden] { display: none; }
 
-.setting-label {
-  font-family: var(--font-mono), monospace;
-  font-size: 0.66rem;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--ink-mute);
+
+/* Screen-reader-only: the word beside every icon. A sun and a moon are a
+ * well-worn pair, but a path element says nothing out loud, and `title` is a
+ * tooltip rather than an accessible name. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
   white-space: nowrap;
+  border: 0;
 }
-:lang(ja) .setting-label,
-:lang(ko) .setting-label,
-:lang(zh-Hant) .setting-label,
-:lang(zh-Hans) .setting-label {
-  font-family: inherit;
-  letter-spacing: 0.04em;
-  text-transform: none;
-  font-size: 0.72rem;
+
+.ico {
+  display: grid;
+  place-items: center;
+  line-height: 0;
+}
+.ico svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 /* The three appearance choices, as one control rather than three buttons. */
+.seg[hidden] { display: none; }
+
 .seg {
   display: flex;
   background: var(--surface-sunk);
@@ -523,27 +509,23 @@ main {
   cursor: pointer;
 }
 
-.seg span {
-  display: block;
-  padding: 0.25rem 0.6rem;
+.seg .ico {
+  padding: 0.32rem 0.5rem;
   border-radius: 2px;
-  font-size: var(--step--1);
-  line-height: 1.4;
-  color: var(--ink-soft);
-  white-space: nowrap;
-  transition: background 120ms ease, color 120ms ease;
+  color: var(--ink-mute);
+  transition: background 140ms ease, color 140ms ease;
 }
 
-.seg label:hover span { color: var(--ink); }
+.seg label:hover .ico { color: var(--ink); }
 
-.seg input:checked + span {
+.seg input:checked + .ico {
   background: var(--surface);
-  color: var(--ink);
+  color: var(--accent);
   box-shadow: var(--shadow-sm);
 }
 
 /* The ring belongs on the thing you can see, not on the invisible input. */
-.seg input:focus-visible + span {
+.seg input:focus-visible + .ico {
   outline: 2px solid var(--focus);
   outline-offset: 1px;
 }
@@ -557,7 +539,7 @@ main {
 .picker summary {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.45rem;
   cursor: pointer;
   list-style: none;
   padding: 0.3rem 0.6rem;
@@ -569,6 +551,9 @@ main {
 }
 .picker summary::-webkit-details-marker { display: none; }
 .picker summary:hover { color: var(--ink); }
+.picker summary .ico { color: var(--ink-mute); }
+.picker summary:hover .ico,
+.picker[open] summary .ico { color: var(--accent); }
 
 .picker-current { color: var(--ink); }
 

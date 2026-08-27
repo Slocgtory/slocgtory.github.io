@@ -101,16 +101,14 @@ const year = 2026;
       </div>
     </header>
 
+    {/*
+      No footer. It held a copyright line and the contact address, and the
+      address is already where somebody looks for it - in Contact on the home
+      page, and under Contact in the policy, which is the one Meta's submission
+      form points at. A strip repeating it under every page was furniture.
+    */}
     <main id="main">
       <slot />
     </main>
-
-    <footer class="site-foot">
-      <div class="inner">
-        <p class="colophon">
-          &copy; {year} Slocgtory &middot; <a href={`mailto:${site.email}`}>{site.email}</a>
-        </p>
-      </div>
-    </footer>
   </body>
 </html>
