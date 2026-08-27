@@ -689,7 +689,7 @@ main {
   padding-top: 0.9rem;
 }
 
-.group h2 {
+.group-label {
   font-family: var(--font-mono), monospace;
   font-size: 0.66rem;
   font-weight: 500;
@@ -701,7 +701,7 @@ main {
 :lang(ja) .group h2,
 :lang(ko) .group h2,
 :lang(zh-Hant) .group h2,
-:lang(zh-Hans) .group h2 {
+:lang(zh-Hans) .group-label {
   font-family: inherit;
   letter-spacing: 0.05em;
   text-transform: none;
@@ -941,3 +941,39 @@ main {
   .lang-offer::before { display: none; }
 }
 
+
+/* --- Windows High Contrast ------------------------------------------------ */
+/*
+ * In forced-colors mode the user's palette replaces the author's, and every
+ * background becomes Canvas. Three states on this site are carried by a
+ * background, so all three vanish - and one of them is the underline that was
+ * added specifically so the current tab does not depend on colour alone.
+ *
+ * The fix is to restate them in system colours, which are the one palette
+ * forced-colors keeps: `Highlight` is whatever the user chose for selection, so
+ * it stays legible in every high-contrast theme rather than in the two this
+ * stylesheet knows about.
+ *
+ * The theme radios need it most. Their real input is `opacity: 0` - deliberately,
+ * so the browser still owns arrow keys and the announcement - which means the
+ * only visible sign of which one is chosen is the row's fill. Without this,
+ * the panel shows three identical rows.
+ */
+@media (forced-colors: active) {
+  .nav-link[aria-current='page']::after {
+    background: Highlight;
+    forced-color-adjust: none;
+  }
+
+  .choices label:has(input:checked),
+  .languages a[aria-current='true'] {
+    outline: 2px solid Highlight;
+    outline-offset: -2px;
+  }
+
+  /* Both are drawn with `background`, so both are gone; a border is not. */
+  .lang-offer::before,
+  .settings > summary {
+    border-color: CanvasText;
+  }
+}

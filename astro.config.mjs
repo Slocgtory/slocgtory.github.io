@@ -61,13 +61,28 @@ export default defineConfig({
    * including Polish diacritics. CJK is left to the system stack in global.css:
    * a self-hosted Japanese or Chinese face is several megabytes, and every Quest
    * and every phone already ships a good one.
+   *
+   * Every weight and style below is one the stylesheet actually asks for, and
+   * the list is shorter than it was for two reasons worth writing down.
+   *
+   * `styles: ['normal']` is stated on all three because **the default is
+   * ['normal', 'italic']**. Two of these never asked for italic and got it
+   * anyway. Nothing here can produce an italic: `inline()` emits only <a>,
+   * <strong> and <code>, and there is no <em> in any of the 49 built pages.
+   *
+   * The 500s went the same way - measured, not guessed. Display is used at 600
+   * for headings and 700 for the wordmark; body at 400 and 600; only the mono
+   * labels use 500. Together that was 20 dead @font-face rules out of 52, and
+   * they were inlined into every page.
    */
   fonts: [
     {
       name: 'Bricolage Grotesque',
       cssVariable: '--font-display',
       provider: fontProviders.fontsource(),
-      weights: [500, 600, 700],
+      // 600 for h1/h2/h3, 700 for the wordmark. Nothing sets 500.
+      weights: [600, 700],
+      styles: ['normal'],
       subsets: ['latin', 'latin-ext'],
       fallbacks: ['system-ui', 'sans-serif'],
     },
@@ -75,8 +90,9 @@ export default defineConfig({
       name: 'Public Sans',
       cssVariable: '--font-body',
       provider: fontProviders.fontsource(),
-      weights: [400, 500, 600],
-      styles: ['normal', 'italic'],
+      // 400 for running text, 600 for <strong> and the current tab. No 500.
+      weights: [400, 600],
+      styles: ['normal'],
       subsets: ['latin', 'latin-ext'],
       fallbacks: ['system-ui', 'sans-serif'],
     },
@@ -84,7 +100,9 @@ export default defineConfig({
       name: 'JetBrains Mono',
       cssVariable: '--font-mono',
       provider: fontProviders.fontsource(),
+      // 400 for <code> and the policy date, 500 for the margin labels.
       weights: [400, 500],
+      styles: ['normal'],
       subsets: ['latin', 'latin-ext'],
       fallbacks: ['ui-monospace', 'monospace'],
     },

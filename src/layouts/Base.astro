@@ -2,7 +2,7 @@
 import { Font } from 'astro:assets';
 import Settings from '../components/Settings.astro';
 import LanguageOffer from '../components/LanguageOffer.astro';
-import { SITE_URL } from '../../site.config.mjs';
+import { SITE_URL, OG_LOCALES } from '../../site.config.mjs';
 import { alternatesFor, localeUrl, DEFAULT_LOCALE, LOCALES, type Page } from '../lib/i18n';
 import '../styles/global.css';
 
@@ -11,7 +11,7 @@ interface Site {
   navLabel: string;
   langLabel: string;
   email: string;
-  nav: { privacy: string };
+  nav: { home: string; apps: string; privacy: string };
   settingsLabel: string;
   theme: { label: string; system: string; light: string; dark: string };
 }
@@ -22,9 +22,12 @@ interface Props {
   title: string;
   description: string;
   site: Site;
+  /** Only the catalogue passes these, and only so they can be described to a
+   *  crawler. Everything shown on the page comes from the page's own body. */
+  apps?: { name: string; status: string; desc: string }[];
 }
 
-const { locale, page, title, description, site } = Astro.props;
+const { locale, page, title, description, site, apps } = Astro.props;
 
 const alternates = alternatesFor(page);
 const canonical = new URL(localeUrl(page, locale), SITE_URL).href;
@@ -39,6 +42,64 @@ const tabs = [
   { key: 'privacy', href: privacyHref, label: site.nav.privacy },
 ] as const;
 const year = 2026;
+
+/*
+  What this site is, for a machine.
+
+  Deliberately thin. There is no rating, no price and no release date, so none
+  of that is here - a graph is a set of claims, and the temptation with schema
+  is to answer questions nobody asked and get one of them wrong. No `logo`
+  either: the icon is a placeholder letter mark, and pointing Google at it as
+  the studio's logo would make a placeholder permanent.
+
+  The organisation carries an `@id` so the catalogue's entries can point at it
+  rather than restating it, and it is repeated on the pages that reference it
+  because a crawler reads one page at a time.
+*/
+const ORG_ID = `${SITE_URL}/#slocgtory`;
+
+const organisation = {
+  '@type': 'Organization',
+  '@id': ORG_ID,
+  name: 'Slocgtory',
+  url: `${SITE_URL}/`,
+  email: site.email,
+};
+
+const graph = [];
+if (page === 'home') {
+  graph.push(organisation, {
+    '@type': 'WebSite',
+    '@id': `${SITE_URL}/#website`,
+    url: `${SITE_URL}/`,
+    name: 'Slocgtory',
+    publisher: { '@id': ORG_ID },
+    inLanguage: locale,
+  });
+} else if (page === 'apps' && apps?.length) {
+  graph.push(
+    organisation,
+    ...apps.map((app) => ({
+      '@type': 'VideoGame',
+      name: app.name,
+      description: app.desc,
+      url: canonical,
+      author: { '@id': ORG_ID },
+      publisher: { '@id': ORG_ID },
+      applicationCategory: 'GameApplication',
+      gamePlatform: 'Meta Quest',
+      operatingSystem: 'Meta Horizon OS',
+      inLanguage: locale,
+    })),
+  );
+}
+
+/* `<` is escaped rather than left raw: inside a <script> a literal `</` ends
+   the element, whatever the JSON meant by it. */
+const jsonLd =
+  graph.length > 0
+    ? JSON.stringify({ '@context': 'https://schema.org', '@graph': graph }).replace(/</g, '\u003c')
+    : null;
 ---
 
 <!doctype html>
@@ -142,7 +203,14 @@ const year = 2026;
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
-    <meta property="og:locale" content={locale.replace('-', '_')} />
+    <meta property="og:locale" content={OG_LOCALES[locale]} />
+    {
+      /* The other fifteen, so a share card in one language knows the rest
+         exist. `og:locale` alone claimed this page was the only version. */
+      LOCALES.filter((code) => code !== locale).map((code) => (
+        <meta property="og:locale:alternate" content={OG_LOCALES[code]} />
+      ))
+    }
     <meta name="twitter:card" content="summary_large_image" />
     <meta property="og:image" content={new URL('/og.png', SITE_URL).href} />
     <meta property="og:image:width" content="1200" />
@@ -160,6 +228,8 @@ const year = 2026;
     <link rel="icon" href="/icon.png" type="image/png" sizes="32x32" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="sitemap" href="/sitemap-index.xml" />
+
+    {jsonLd && <script type="application/ld+json" is:inline set:html={jsonLd} />}
 
     {/*
       One file each, not eighteen. `preload` with no argument preloads every

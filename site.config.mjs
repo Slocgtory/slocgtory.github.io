@@ -75,3 +75,34 @@ export const LOCALE_MARKETS = {
  * else parsing the page gets one unambiguous answer.
  */
 export const POLICY_UPDATED = '2026-08-27';
+
+/**
+ * Open Graph locales, which are not the same strings as the routes.
+ *
+ * OG wants `language_TERRITORY`, so a bare `en` is not a value it recognises
+ * and neither is `zh_Hant` - the site was emitting both. The territory is the
+ * one this language is carried for; where a language covers several markets it
+ * is the largest, because OG has room for exactly one answer per tag and the
+ * alternates below carry the rest of the languages, not the rest of the
+ * countries.
+ */
+export const OG_LOCALES = {
+  en: 'en_US',
+  de: 'de_DE',
+  fr: 'fr_FR',
+  es: 'es_ES',
+  it: 'it_IT',
+  nl: 'nl_NL',
+  pl: 'pl_PL',
+  da: 'da_DK',
+  sv: 'sv_SE',
+  nb: 'nb_NO',
+  fi: 'fi_FI',
+  is: 'is_IS',
+  ja: 'ja_JP',
+  ko: 'ko_KR',
+  // Traditional Chinese is here for Taiwan and Simplified for Singapore, which
+  // is why these two are not the pair people expect.
+  'zh-Hant': 'zh_TW',
+  'zh-Hans': 'zh_SG',
+};

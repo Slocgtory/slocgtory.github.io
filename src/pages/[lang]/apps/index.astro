@@ -17,6 +17,7 @@ const data = await loadLocale(lang!);
   title={data.apps.metaTitle}
   description={data.apps.metaDescription}
   site={data.site}
+  apps={data.apps.list}
 >
   <AppsBody apps={data.apps} />
 </Base>

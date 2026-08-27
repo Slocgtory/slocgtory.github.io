@@ -50,14 +50,23 @@ const ordered = localesInReadingOrder(locale, endonym);
       the choice cannot outlive the page, and a control that forgets is worse
       than one not offered. The stylesheet still answers the system setting.
     */}
+    {/*
+      These label control groups; they are not headings of the document.
+
+      They were <h2>, and this panel lives in the <header>, so the first two
+      headings on every page were "Theme" and "Language" - both before the <h1>.
+      Anyone moving through the page by heading met the settings before they
+      were told what page they were on. A paragraph with `aria-labelledby` names
+      the group without inventing a level in an outline it does not belong to.
+    */}
     <section class="group" hidden data-theme-control>
-      <h2>{theme.label}</h2>
+      <p class="group-label" id="settings-theme-label">{theme.label}</p>
       {/*
         Real radios with one name, so arrow keys, the roving tab stop and the
         announcement come from the browser. Buttons with ARIA would have to
         reimplement all three, and usually reimplement two.
       */}
-      <ul class="choices" role="radiogroup" aria-label={theme.label}>
+      <ul class="choices" role="radiogroup" aria-labelledby="settings-theme-label">
         <li>
           <label>
             <input type="radio" name="theme" value="system" checked />
@@ -104,8 +113,8 @@ const ordered = localesInReadingOrder(locale, endonym);
       off, in a text browser, and when a link is copied.
     */}
     <section class="group">
-      <h2>{langLabel}</h2>
-      <ul class="languages">
+      <p class="group-label" id="settings-lang-label">{langLabel}</p>
+      <ul class="languages" aria-labelledby="settings-lang-label">
         {/*
           System heads the list, the way Auto heads the picker in the game.
           What it means here is different, and has to be: in the game Auto is a
