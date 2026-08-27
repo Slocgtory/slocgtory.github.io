@@ -101,6 +101,26 @@
   --focus: #8FA2FF;
 }
 
+/*
+  `hidden` means hidden, and without this it does not.
+
+  The attribute's `display: none` comes from the browser's own stylesheet, and
+  anything in this file beats it - not on specificity, but because author styles
+  always win over user-agent ones. So any element with a `display` rule of its
+  own ignores `hidden` completely, and the ones here that were meant to be
+  hidden all had one.
+
+  It had already been patched three times, once per element, which is what a
+  missing baseline looks like: `.lang-offer[hidden]`, `.offer[hidden]`,
+  `.system-language[hidden]`. The fourth was the 404, where sixteen sections are
+  rendered and fifteen carry `hidden` - and all sixteen were on the page, four
+  thousand pixels of every language at once. `!important` because the whole
+  point is to beat a class that sets `display`.
+*/
+[hidden] {
+  display: none !important;
+}
+
 *,
 *::before,
 *::after {
@@ -805,7 +825,6 @@ main {
   grid-column: 1 / -1;
   margin-bottom: 0.3rem;
 }
-.system-language[hidden] { display: none; }
 
 .system-language a {
   display: flex;
@@ -853,7 +872,6 @@ main {
   width: max-content;
   max-width: min(21rem, calc(100vw - 2rem));
 }
-.lang-offer[hidden] { display: none; }
 
 /* Points at the button it belongs to. Without it the card is a box that happens
    to be nearby rather than a note attached to that control. */
@@ -876,7 +894,11 @@ main {
 
 .offer {
   display: flex;
-  align-items: flex-start;
+  /* Centres, not tops. The dismiss is 25.6px and a line of this text is 20.4,
+     so aligning their tops left the button sitting 2.6px low against the words
+     it belongs to - close enough to look like a mistake rather than a choice,
+     which is what it was. */
+  align-items: center;
   gap: 0.4rem;
   max-width: none;
   margin: 0;
@@ -888,7 +910,6 @@ main {
   font-size: var(--step--1);
   line-height: 1.45;
 }
-.offer[hidden] { display: none; }
 
 .offer a {
   color: var(--ink-soft);

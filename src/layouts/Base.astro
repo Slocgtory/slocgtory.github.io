@@ -351,7 +351,16 @@ const jsonLd =
           theme={site.theme}
         />
 
-        <LanguageOffer locale={locale} page={page} />
+        {/*
+          Not on the error page. That one renders all sixteen messages and
+          reveals the reader's own, so by the time anything is on screen it is
+          already in their language, tabs included - and an offer to switch to
+          the language you are reading is noise. It appeared anyway because this
+          runs from the header, before the 404's own script has restamped
+          `lang`, so it compared against the canonical language and offered to
+          fix something that was about to fix itself.
+        */}
+        {!errorPage && <LanguageOffer locale={locale} page={page} />}
       </div>
     </header>
 
