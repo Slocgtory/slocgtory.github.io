@@ -1,7 +1,6 @@
 {
   "name": "Svenska",
-  "dir": "ltr",
-  "sourceHash": "ff5261a51a4021e0",
+  "sourceHash": "554a323365d7ee74",
   "site": {
     "skip": "Hoppa till innehållet",
     "navLabel": "Huvudnavigering",
@@ -57,6 +56,7 @@
     "summary": "**De här apparna samlar inte in några personuppgifter.** Den släppta appen har ingen internetåtkomst alls och kan därför inte skicka något någonstans. Allt nedan är detaljerna bakom den meningen.",
     "sections": [
       {
+        "id": "who",
         "h": "Vem den här policyn kommer från",
         "p": [
           "Slocgtory är en oberoende utvecklare, en enda person. Det finns inget företag, inga anställda och ingen tredje part inblandad i att bygga eller driva de här apparna.",
@@ -64,12 +64,14 @@
         ]
       },
       {
+        "id": "scope",
         "h": "Vad den omfattar",
         "p": [
           "Den här policyn omfattar **AllVRPuzzles**, en app för Meta Quest-headset, och varje framtida app eller spel som Slocgtory ger ut, om inte den appen publicerar en egen policy."
         ]
       },
       {
+        "id": "data-collected",
         "h": "Insamlade uppgifter: inga",
         "p": [
           "Den släppta appen begär inte Android-behörigheten `INTERNET`. Utan den låter operativsystemet inte appen öppna någon nätverksanslutning, så den kan inte överföra uppgifter ens i princip.",
@@ -77,6 +79,7 @@
         ]
       },
       {
+        "id": "stored-on-device",
         "h": "Uppgifter som sparas på ditt headset",
         "p": [
           "Appen skriver två saker till sitt eget privata utrymme på enheten:"
@@ -87,6 +90,7 @@
         ]
       },
       {
+        "id": "stays-on-device",
         "h": "Uppgifterna stannar på enheten",
         "p": [
           "Inget av detta lämnar ditt headset. Android-säkerhetskopiering är avstängd för den här appen (`allowBackup=false`), så uppgifterna kopieras inte heller till någon molnsäkerhetskopia.",
@@ -94,6 +98,7 @@
         ]
       },
       {
+        "id": "purchases",
         "h": "Köp och rättigheter",
         "p": [
           "Bildpaket säljs via Metas Platform In-App Purchases. När du köper ett sker hela transaktionen inuti Metas eget butiksgränssnitt. **Betaluppgifter ses aldrig av och skickas aldrig till den här appen.**",
@@ -107,6 +112,7 @@
         ]
       },
       {
+        "id": "not-requested",
         "h": "Vad som medvetet inte efterfrågas",
         "p": [
           "Appen begär inte och tar inte emot ditt Meta-kontonamn, ditt användar-id, din profil, din vänlista, din e-postadress eller dina betaluppgifter.",
@@ -114,6 +120,7 @@
         ]
       },
       {
+        "id": "permissions",
         "h": "Behörigheter som appen begär",
         "p": [
           "Den släppta appen begär tre behörigheter och inga andra:"
@@ -124,18 +131,21 @@
         ]
       },
       {
+        "id": "no-internet",
         "h": "Inget internet, lagring, mikrofon eller kamera",
         "p": [
           "Den släppta appen begär inte internetåtkomst, fillagring, mikrofon, kamera, plats, kontakter eller någon Meta-kontobehörighet. Skulle en framtida version någon gång behöva något av detta kommer den här sidan att säga det innan den versionen släpps."
         ]
       },
       {
+        "id": "children",
         "h": "Barn",
         "p": [
           "De här apparna riktar sig inte till barn under 13 år och är inte utformade för dem."
         ]
       },
       {
+        "id": "deleting",
         "h": "Radera dina uppgifter",
         "p": [
           "Allt som appen sparar finns på ditt headset, så du kan radera alltihop själv, direkt, utan att fråga någon:"
@@ -145,6 +155,7 @@
         ]
       },
       {
+        "id": "deletion-scope",
         "h": "Vad raderingen når och inte når",
         "p": [
           "Avinstallationen tar bort dina framsteg och den lokala noteringen om dina paket. Dina köp ligger kvar på ditt Meta-konto och kommer tillbaka om du installerar om.",
@@ -153,12 +164,14 @@
         ]
       },
       {
+        "id": "changes",
         "h": "Ändringar av den här policyn",
         "p": [
           "Om något av detta ändras ändras den här sidan med, och datumet överst uppdateras. En ändring som påverkar vad som samlas in noteras även på appens butikssida."
         ]
       },
       {
+        "id": "contact",
         "h": "Kontakt",
         "p": [
           "[Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)"

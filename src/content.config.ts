@@ -17,6 +17,13 @@ import { z } from 'astro/zod';
  */
 
 const section = z.object({
+  /** Anchor for this clause, and the same string in all sixteen languages.
+   *
+   *  Deliberately not slugified from the heading: a slug would be readable and
+   *  useless, because a link to a clause would break the moment the reader
+   *  switched language, and this is the one document here that people quote
+   *  pieces of. `#purchases` is the same clause in Polish and in Japanese. */
+  id: z.string().min(1),
   h: z.string().min(1),
   p: z.array(z.string().min(1)).min(1),
   list: z.array(z.string().min(1)).optional(),
@@ -43,13 +50,25 @@ const i18n = defineCollection({
     /** Endonym: the language's name in that language, which is how a speaker
      *  finds their own row in the switcher. */
     name: z.string().min(1),
-    dir: z.enum(['ltr', 'rtl']).default('ltr'),
+
+    /* There was a `dir` here, per language, and nothing ever read it - the
+     * layout has always written `dir="ltr"` outright. Wiring it up would have
+     * been worse than leaving it: `dir` alone flips the text and not the
+     * layout, and this stylesheet is written in physical properties - `right`,
+     * `margin-right`, `border-left` - so an RTL language would have rendered
+     * half-mirrored and looked supported.
+     *
+     * No Quest market uses an RTL language, so the field was a promise about a
+     * case that does not exist. Adding one later is a real piece of work -
+     * logical properties throughout, and the picker's ordering revisited - and
+     * should start from that, not from a field that was already there. */
 
     /** Fingerprint of the English file this translation was written against.
      *  When English moves, this stops matching and the check script says which
      *  languages have fallen behind. English carries the literal string
      *  "canonical" - it cannot be stale against itself. */
     sourceHash: z.string().min(1),
+
 
     site: z.object({
       skip: z.string().min(1),

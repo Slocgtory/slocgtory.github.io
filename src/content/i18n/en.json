@@ -1,6 +1,5 @@
 {
   "name": "English",
-  "dir": "ltr",
   "sourceHash": "canonical",
   "site": {
     "skip": "Skip to content",
@@ -57,6 +56,7 @@
     "summary": "**These apps do not collect any personal data.** The released app does not have internet access at all, so it cannot send anything anywhere. Everything below is the detail behind that sentence.",
     "sections": [
       {
+        "id": "who",
         "h": "Who this policy is from",
         "p": [
           "Slocgtory is an independent, one-person developer. There is no company, no staff, and no third party involved in building or running these apps.",
@@ -64,12 +64,14 @@
         ]
       },
       {
+        "id": "scope",
         "h": "What it covers",
         "p": [
           "This policy covers **AllVRPuzzles**, an application for Meta Quest headsets, and any future application or game published by Slocgtory unless that app publishes a policy of its own."
         ]
       },
       {
+        "id": "data-collected",
         "h": "Data collected: none",
         "p": [
           "The released app does not request the Android `INTERNET` permission. Without it, the operating system will not allow the app to open a network connection, so it cannot transmit data even in principle.",
@@ -77,6 +79,7 @@
         ]
       },
       {
+        "id": "stored-on-device",
         "h": "Data stored on your headset",
         "p": [
           "The app writes two things into its own private storage on the device:"
@@ -87,6 +90,7 @@
         ]
       },
       {
+        "id": "stays-on-device",
         "h": "That data stays on the device",
         "p": [
           "Neither item leaves your headset. Android backup is switched off for this app (`allowBackup=false`), so this data is not copied into any cloud backup either.",
@@ -94,6 +98,7 @@
         ]
       },
       {
+        "id": "purchases",
         "h": "Purchases and entitlements",
         "p": [
           "Picture packs are sold through Meta's Platform In-App Purchases. When you buy one, the transaction happens entirely inside Meta's own store interface. **Payment details are never seen by, or passed to, this app.**",
@@ -107,6 +112,7 @@
         ]
       },
       {
+        "id": "not-requested",
         "h": "What is deliberately not asked for",
         "p": [
           "The app does not request and does not receive your Meta account name, user ID, profile, friends list, email address, or payment information.",
@@ -114,6 +120,7 @@
         ]
       },
       {
+        "id": "permissions",
         "h": "Permissions the app requests",
         "p": [
           "The released app requests three permissions, and no others:"
@@ -124,18 +131,21 @@
         ]
       },
       {
+        "id": "no-internet",
         "h": "No internet, storage, microphone or camera",
         "p": [
           "The released app does not request internet access, file storage, microphone, camera, location, contacts, or any Meta account permission. If a future version ever needs one, this page will say so before that version ships."
         ]
       },
       {
+        "id": "children",
         "h": "Children",
         "p": [
           "These apps are not directed to children under 13 and are not designed for them."
         ]
       },
       {
+        "id": "deleting",
         "h": "Deleting your data",
         "p": [
           "Everything the app stores is on your headset, so you can delete all of it yourself, immediately, without asking anyone:"
@@ -145,6 +155,7 @@
         ]
       },
       {
+        "id": "deletion-scope",
         "h": "What deletion does and does not reach",
         "p": [
           "Uninstalling removes your progress and the local record of which packs you own. Your purchases stay with your Meta account and come back if you reinstall.",
@@ -153,12 +164,14 @@
         ]
       },
       {
+        "id": "changes",
         "h": "Changes to this policy",
         "p": [
           "If any of this changes, this page changes with it and the date at the top is updated. A change that affects what is collected will also be noted in the app's store listing."
         ]
       },
       {
+        "id": "contact",
         "h": "Contact",
         "p": [
           "[Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)"

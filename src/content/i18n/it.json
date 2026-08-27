@@ -1,7 +1,6 @@
 {
   "name": "Italiano",
-  "dir": "ltr",
-  "sourceHash": "ff5261a51a4021e0",
+  "sourceHash": "554a323365d7ee74",
   "site": {
     "skip": "Vai al contenuto",
     "navLabel": "Navigazione principale",
@@ -57,6 +56,7 @@
     "summary": "**Queste applicazioni non raccolgono alcun dato personale.** L’applicazione pubblicata non ha alcun accesso a Internet, quindi non può inviare nulla da nessuna parte. Tutto ciò che segue è il dettaglio dietro questa frase.",
     "sections": [
       {
+        "id": "who",
         "h": "Da chi proviene questa informativa",
         "p": [
           "Slocgtory è uno sviluppatore indipendente, una persona sola. Non esiste una società, non ci sono dipendenti e nessun terzo è coinvolto nella creazione o nella gestione di queste applicazioni.",
@@ -64,12 +64,14 @@
         ]
       },
       {
+        "id": "scope",
         "h": "Che cosa copre",
         "p": [
           "Questa informativa copre **AllVRPuzzles**, un’applicazione per i visori Meta Quest, e qualsiasi futura applicazione o gioco pubblicato da Slocgtory, salvo che quell’applicazione pubblichi una propria informativa."
         ]
       },
       {
+        "id": "data-collected",
         "h": "Dati raccolti: nessuno",
         "p": [
           "L’applicazione pubblicata non richiede il permesso Android `INTERNET`. Senza di esso il sistema operativo non le consente di aprire una connessione di rete, quindi non può trasmettere dati nemmeno in linea di principio.",
@@ -77,6 +79,7 @@
         ]
       },
       {
+        "id": "stored-on-device",
         "h": "Dati salvati sul tuo visore",
         "p": [
           "L’applicazione scrive due cose nella propria memoria privata sul dispositivo:"
@@ -87,6 +90,7 @@
         ]
       },
       {
+        "id": "stays-on-device",
         "h": "Questi dati restano sul dispositivo",
         "p": [
           "Nessuna delle due cose lascia il tuo visore. Il backup di Android è disattivato per questa applicazione (`allowBackup=false`), quindi questi dati non finiscono nemmeno in un backup nel cloud.",
@@ -94,6 +98,7 @@
         ]
       },
       {
+        "id": "purchases",
         "h": "Acquisti e diritti di accesso",
         "p": [
           "I pacchetti di immagini sono venduti tramite le Platform In-App Purchases di Meta. Quando ne acquisti uno, la transazione avviene interamente nell’interfaccia dello store di Meta. **I dati di pagamento non sono mai visti da questa applicazione né le vengono trasmessi.**",
@@ -107,6 +112,7 @@
         ]
       },
       {
+        "id": "not-requested",
         "h": "Ciò che deliberatamente non viene chiesto",
         "p": [
           "L’applicazione non richiede e non riceve il nome del tuo account Meta, il tuo identificativo utente, il tuo profilo, la tua lista di amici, il tuo indirizzo e-mail o i tuoi dati di pagamento.",
@@ -114,6 +120,7 @@
         ]
       },
       {
+        "id": "permissions",
         "h": "Permessi richiesti dall’applicazione",
         "p": [
           "L’applicazione pubblicata richiede tre permessi e nessun altro:"
@@ -124,18 +131,21 @@
         ]
       },
       {
+        "id": "no-internet",
         "h": "Niente Internet, archiviazione, microfono o fotocamera",
         "p": [
           "L’applicazione pubblicata non richiede accesso a Internet, archiviazione file, microfono, fotocamera, posizione, contatti né alcun permesso relativo all’account Meta. Se una versione futura dovesse averne bisogno, questa pagina lo dirà prima che quella versione venga pubblicata."
         ]
       },
       {
+        "id": "children",
         "h": "Minori",
         "p": [
           "Queste applicazioni non sono rivolte a minori di 13 anni e non sono progettate per loro."
         ]
       },
       {
+        "id": "deleting",
         "h": "Cancellare i tuoi dati",
         "p": [
           "Tutto ciò che l’applicazione salva si trova sul tuo visore, quindi puoi cancellarlo tu stesso, subito, senza chiedere a nessuno:"
@@ -145,6 +155,7 @@
         ]
       },
       {
+        "id": "deletion-scope",
         "h": "Che cosa raggiunge la cancellazione e che cosa no",
         "p": [
           "La disinstallazione rimuove i tuoi progressi e la registrazione locale dei pacchetti che possiedi. I tuoi acquisti restano legati al tuo account Meta e tornano se reinstalli.",
@@ -153,12 +164,14 @@
         ]
       },
       {
+        "id": "changes",
         "h": "Modifiche a questa informativa",
         "p": [
           "Se qualcosa cambia, questa pagina cambia con esso e la data in alto viene aggiornata. Una modifica che riguardi ciò che viene raccolto sarà segnalata anche nella scheda dell’applicazione nello store."
         ]
       },
       {
+        "id": "contact",
         "h": "Contatti",
         "p": [
           "[Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)"

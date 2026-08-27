@@ -1,7 +1,6 @@
 {
   "name": "Polski",
-  "dir": "ltr",
-  "sourceHash": "ff5261a51a4021e0",
+  "sourceHash": "554a323365d7ee74",
   "site": {
     "skip": "Przejdź do treści",
     "navLabel": "Główna",
@@ -57,6 +56,7 @@
     "summary": "**Te aplikacje nie zbierają żadnych danych osobowych.** Wydana aplikacja w ogóle nie ma dostępu do internetu, więc nie może niczego nigdzie wysłać. Wszystko poniżej to szczegóły stojące za tym zdaniem.",
     "sections": [
       {
+        "id": "who",
         "h": "Od kogo pochodzi ta polityka",
         "p": [
           "Slocgtory to niezależny, jednoosobowy deweloper. Nie ma firmy, nie ma pracowników i nie ma żadnej trzeciej strony zaangażowanej w tworzenie ani prowadzenie tych aplikacji.",
@@ -64,12 +64,14 @@
         ]
       },
       {
+        "id": "scope",
         "h": "Czego dotyczy",
         "p": [
           "Ta polityka obejmuje **AllVRPuzzles**, aplikację na gogle Meta Quest, oraz każdą przyszłą aplikację lub grę wydaną przez Slocgtory, chyba że dana aplikacja publikuje własną politykę."
         ]
       },
       {
+        "id": "data-collected",
         "h": "Zbierane dane: żadne",
         "p": [
           "Wydana aplikacja nie żąda uprawnienia `INTERNET` systemu Android. Bez niego system operacyjny nie pozwoli jej otworzyć połączenia sieciowego, więc nie może przesyłać danych nawet teoretycznie.",
@@ -77,6 +79,7 @@
         ]
       },
       {
+        "id": "stored-on-device",
         "h": "Dane zapisywane na twoich goglach",
         "p": [
           "Aplikacja zapisuje dwie rzeczy we własnej prywatnej pamięci na urządzeniu:"
@@ -87,6 +90,7 @@
         ]
       },
       {
+        "id": "stays-on-device",
         "h": "Te dane zostają na urządzeniu",
         "p": [
           "Żadna z tych rzeczy nie opuszcza twoich gogli. Kopia zapasowa Androida jest dla tej aplikacji wyłączona (`allowBackup=false`), więc dane nie trafiają również do żadnej kopii w chmurze.",
@@ -94,6 +98,7 @@
         ]
       },
       {
+        "id": "purchases",
         "h": "Zakupy i uprawnienia",
         "p": [
           "Paczki obrazów sprzedawane są przez Platform In-App Purchases firmy Meta. Gdy kupujesz paczkę, transakcja odbywa się w całości w interfejsie sklepu Meta. **Dane płatnicze nigdy nie są widoczne dla tej aplikacji ani do niej przekazywane.**",
@@ -107,6 +112,7 @@
         ]
       },
       {
+        "id": "not-requested",
         "h": "O co świadomie nie pytamy",
         "p": [
           "Aplikacja nie żąda i nie otrzymuje nazwy twojego konta Meta, identyfikatora użytkownika, profilu, listy znajomych, adresu e-mail ani informacji płatniczych.",
@@ -114,6 +120,7 @@
         ]
       },
       {
+        "id": "permissions",
         "h": "Uprawnienia, o które prosi aplikacja",
         "p": [
           "Wydana aplikacja prosi o trzy uprawnienia i o żadne inne:"
@@ -124,18 +131,21 @@
         ]
       },
       {
+        "id": "no-internet",
         "h": "Bez internetu, pamięci, mikrofonu i kamery",
         "p": [
           "Wydana aplikacja nie prosi o dostęp do internetu, pamięci plików, mikrofonu, kamery, lokalizacji, kontaktów ani o żadne uprawnienie do konta Meta. Jeśli przyszła wersja będzie kiedyś któregoś potrzebować, ta strona powie o tym, zanim ta wersja trafi do sklepu."
         ]
       },
       {
+        "id": "children",
         "h": "Dzieci",
         "p": [
           "Te aplikacje nie są kierowane do dzieci poniżej 13 roku życia ani nie są dla nich projektowane."
         ]
       },
       {
+        "id": "deleting",
         "h": "Usuwanie twoich danych",
         "p": [
           "Wszystko, co aplikacja zapisuje, znajduje się na twoich goglach, więc możesz to usunąć sam, natychmiast, nikogo nie pytając:"
@@ -145,6 +155,7 @@
         ]
       },
       {
+        "id": "deletion-scope",
         "h": "Co usunięcie obejmuje, a czego nie",
         "p": [
           "Odinstalowanie usuwa twoje postępy i lokalny zapis posiadanych paczek. Twoje zakupy pozostają przy koncie Meta i wracają po ponownej instalacji.",
@@ -153,12 +164,14 @@
         ]
       },
       {
+        "id": "changes",
         "h": "Zmiany w tej polityce",
         "p": [
           "Jeśli cokolwiek z tego się zmieni, ta strona zmieni się razem z tym, a data u góry zostanie zaktualizowana. Zmiana wpływająca na to, co jest zbierane, zostanie również odnotowana na stronie aplikacji w sklepie."
         ]
       },
       {
+        "id": "contact",
         "h": "Kontakt",
         "p": [
           "[Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)"

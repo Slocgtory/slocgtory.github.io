@@ -1,7 +1,6 @@
 {
   "name": "Norsk",
-  "dir": "ltr",
-  "sourceHash": "ff5261a51a4021e0",
+  "sourceHash": "554a323365d7ee74",
   "site": {
     "skip": "Gå til innhold",
     "navLabel": "Hovednavigasjon",
@@ -57,6 +56,7 @@
     "summary": "**Disse appene samler ikke inn personopplysninger.** Den utgitte appen har ingen internettilgang i det hele tatt, og kan derfor ikke sende noe noe sted. Alt nedenfor er detaljene bak den setningen.",
     "sections": [
       {
+        "id": "who",
         "h": "Hvem denne erklæringen kommer fra",
         "p": [
           "Slocgtory er en uavhengig utvikler, én enkelt person. Det finnes ingen bedrift, ingen ansatte og ingen tredjepart involvert i å bygge eller drive disse appene.",
@@ -64,12 +64,14 @@
         ]
       },
       {
+        "id": "scope",
         "h": "Hva den gjelder for",
         "p": [
           "Denne erklæringen gjelder **AllVRPuzzles**, en app for Meta Quest-briller, og enhver framtidig app eller ethvert spill utgitt av Slocgtory, med mindre den appen publiserer sin egen erklæring."
         ]
       },
       {
+        "id": "data-collected",
         "h": "Innsamlede data: ingen",
         "p": [
           "Den utgitte appen ber ikke om Android-tillatelsen `INTERNET`. Uten den lar ikke operativsystemet appen åpne en nettverksforbindelse, så den kan ikke overføre data i det hele tatt.",
@@ -77,6 +79,7 @@
         ]
       },
       {
+        "id": "stored-on-device",
         "h": "Data som lagres på brillene dine",
         "p": [
           "Appen skriver to ting til sitt eget private lager på enheten:"
@@ -87,6 +90,7 @@
         ]
       },
       {
+        "id": "stays-on-device",
         "h": "Disse dataene blir på enheten",
         "p": [
           "Ingen av delene forlater brillene dine. Android-sikkerhetskopiering er slått av for denne appen (`allowBackup=false`), så disse dataene kopieres heller ikke til noen skysikkerhetskopi.",
@@ -94,6 +98,7 @@
         ]
       },
       {
+        "id": "purchases",
         "h": "Kjøp og rettigheter",
         "p": [
           "Bildepakker selges gjennom Metas Platform In-App Purchases. Når du kjøper en, skjer hele transaksjonen inne i Metas eget butikkgrensesnitt. **Betalingsopplysninger blir aldri sett av eller sendt til denne appen.**",
@@ -107,6 +112,7 @@
         ]
       },
       {
+        "id": "not-requested",
         "h": "Hva det bevisst ikke spørres om",
         "p": [
           "Appen ber ikke om og mottar ikke Meta-kontonavnet ditt, bruker-ID-en din, profilen din, vennelisten din, e-postadressen din eller betalingsopplysningene dine.",
@@ -114,6 +120,7 @@
         ]
       },
       {
+        "id": "permissions",
         "h": "Tillatelser appen ber om",
         "p": [
           "Den utgitte appen ber om tre tillatelser, og ingen andre:"
@@ -124,18 +131,21 @@
         ]
       },
       {
+        "id": "no-internet",
         "h": "Ingen internett, lagring, mikrofon eller kamera",
         "p": [
           "Den utgitte appen ber ikke om internettilgang, fillagring, mikrofon, kamera, posisjon, kontakter eller noen Meta-kontotillatelse. Skulle en framtidig versjon trenge noe av dette, vil denne siden si det før den versjonen kommer ut."
         ]
       },
       {
+        "id": "children",
         "h": "Barn",
         "p": [
           "Disse appene retter seg ikke mot barn under 13 år og er ikke laget for dem."
         ]
       },
       {
+        "id": "deleting",
         "h": "Slette dataene dine",
         "p": [
           "Alt appen lagrer ligger på brillene dine, så du kan slette alt selv, med én gang, uten å spørre noen:"
@@ -145,6 +155,7 @@
         ]
       },
       {
+        "id": "deletion-scope",
         "h": "Hva slettingen når, og hva den ikke når",
         "p": [
           "Avinstallasjonen fjerner framgangen din og den lokale noteringen av pakkene dine. Kjøpene dine blir værende på Meta-kontoen din og kommer tilbake hvis du installerer på nytt.",
@@ -153,12 +164,14 @@
         ]
       },
       {
+        "id": "changes",
         "h": "Endringer i denne erklæringen",
         "p": [
           "Endrer noe av dette seg, endres denne siden med, og datoen øverst oppdateres. En endring i hva som samles inn blir også nevnt på appens butikkside."
         ]
       },
       {
+        "id": "contact",
         "h": "Kontakt",
         "p": [
           "[Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)"

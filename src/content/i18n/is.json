@@ -1,7 +1,6 @@
 {
   "name": "Íslenska",
-  "dir": "ltr",
-  "sourceHash": "ff5261a51a4021e0",
+  "sourceHash": "554a323365d7ee74",
   "site": {
     "skip": "Fara í efni",
     "navLabel": "Aðalvalmynd",
@@ -57,6 +56,7 @@
     "summary": "**Þessi forrit safna engum persónuupplýsingum.** Útgefna forritið hefur alls engan netaðgang og getur því ekki sent neitt neitt. Allt hér að neðan eru smáatriðin á bak við þá setningu.",
     "sections": [
       {
+        "id": "who",
         "h": "Frá hverjum þessi stefna er",
         "p": [
           "Slocgtory er sjálfstæður þróunaraðili, ein manneskja. Það er ekkert fyrirtæki, ekkert starfsfólk og enginn þriðji aðili sem kemur að gerð eða rekstri þessara forrita.",
@@ -64,12 +64,14 @@
         ]
       },
       {
+        "id": "scope",
         "h": "Hvað hún nær yfir",
         "p": [
           "Þessi stefna nær yfir **AllVRPuzzles**, forrit fyrir Meta Quest-höfuðtól, og öll framtíðarforrit eða leiki sem Slocgtory gefur út, nema það forrit birti sína eigin stefnu."
         ]
       },
       {
+        "id": "data-collected",
         "h": "Söfnuð gögn: engin",
         "p": [
           "Útgefna forritið biður ekki um Android-heimildina `INTERNET`. Án hennar leyfir stýrikerfið forritinu ekki að opna nettengingu, svo það getur ekki sent gögn, ekki einu sinni í grundvallaratriðum.",
@@ -77,6 +79,7 @@
         ]
       },
       {
+        "id": "stored-on-device",
         "h": "Gögn geymd á höfuðtólinu þínu",
         "p": [
           "Forritið skrifar tvennt í sitt eigið einkageymslusvæði á tækinu:"
@@ -87,6 +90,7 @@
         ]
       },
       {
+        "id": "stays-on-device",
         "h": "Þessi gögn eru áfram í tækinu",
         "p": [
           "Hvorugt fer út úr höfuðtólinu þínu. Android-afritun er slökkt fyrir þetta forrit (`allowBackup=false`), svo þessi gögn eru heldur ekki afrituð í neitt skýjaafrit.",
@@ -94,6 +98,7 @@
         ]
       },
       {
+        "id": "purchases",
         "h": "Kaup og réttindi",
         "p": [
           "Myndapakkar eru seldir í gegnum Platform In-App Purchases frá Meta. Þegar þú kaupir pakka fer viðskiptin alfarið fram í verslunarviðmóti Meta sjálfs. **Greiðsluupplýsingar sjást aldrei af þessu forriti og eru aldrei sendar því.**",
@@ -107,6 +112,7 @@
         ]
       },
       {
+        "id": "not-requested",
         "h": "Hvað er vísvitandi ekki beðið um",
         "p": [
           "Forritið biður hvorki um né fær heiti Meta-reikningsins þíns, notandaauðkenni, notandasnið, vinalista, netfang eða greiðsluupplýsingar.",
@@ -114,6 +120,7 @@
         ]
       },
       {
+        "id": "permissions",
         "h": "Heimildir sem forritið biður um",
         "p": [
           "Útgefna forritið biður um þrjár heimildir og engar aðrar:"
@@ -124,18 +131,21 @@
         ]
       },
       {
+        "id": "no-internet",
         "h": "Ekkert net, geymsla, hljóðnemi eða myndavél",
         "p": [
           "Útgefna forritið biður ekki um netaðgang, skráageymslu, hljóðnema, myndavél, staðsetningu, tengiliði eða neina heimild tengda Meta-reikningi. Ef einhver framtíðarútgáfa þarf á slíku að halda mun þessi síða segja frá því áður en sú útgáfa kemur út."
         ]
       },
       {
+        "id": "children",
         "h": "Börn",
         "p": [
           "Þessi forrit beinast ekki að börnum yngri en 13 ára og eru ekki hönnuð fyrir þau."
         ]
       },
       {
+        "id": "deleting",
         "h": "Að eyða gögnunum þínum",
         "p": [
           "Allt sem forritið geymir er á höfuðtólinu þínu, svo þú getur eytt því öllu sjálf/ur, strax, án þess að spyrja nokkurn:"
@@ -145,6 +155,7 @@
         ]
       },
       {
+        "id": "deletion-scope",
         "h": "Hvað eyðingin nær til og hvað ekki",
         "p": [
           "Að fjarlægja forritið eyðir framvindu þinni og staðbundnu skráningunni á pökkunum þínum. Kaupin þín haldast á Meta-reikningnum þínum og koma aftur ef þú setur forritið upp á ný.",
@@ -153,12 +164,14 @@
         ]
       },
       {
+        "id": "changes",
         "h": "Breytingar á þessari stefnu",
         "p": [
           "Breytist eitthvað af þessu breytist þessi síða með, og dagsetningin efst er uppfærð. Breyting á því hverju er safnað verður einnig tilgreind á verslunarsíðu forritsins."
         ]
       },
       {
+        "id": "contact",
         "h": "Samband",
         "p": [
           "[Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)"

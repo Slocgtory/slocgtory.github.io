@@ -3,6 +3,7 @@ import { inline } from '../lib/i18n';
 import { POLICY_UPDATED } from '../../site.config.mjs';
 
 interface Section {
+  id: string;
   h: string;
   p: string[];
   list?: string[];
@@ -38,7 +39,22 @@ const { privacy, isCanonical } = Astro.props;
 {
   privacy.sections.map((section) => (
     <section class="doc-section">
-      <h2>{section.h}</h2>
+      {/*
+        The heading carries the anchor and the link points at itself, so a
+        clause can be sent to somebody.
+
+        `aria-labelledby` on the link resolves to the heading's own text, which
+        means the link announces as the section it goes to - in whatever
+        language the page is in - without a sixteenth translation of the words
+        "link to this section". The visible mark is hidden from the accessible
+        name so it does not read as "hash".
+      */}
+      <h2 id={section.id}>
+        {section.h}
+        <a class="anchor" href={`#${section.id}`} aria-labelledby={section.id}>
+          <span aria-hidden="true">#</span>
+        </a>
+      </h2>
       <div class="body">
         {section.p.map((paragraph) => (
           <p set:html={inline(paragraph)} />

@@ -977,3 +977,123 @@ main {
     border-color: CanvasText;
   }
 }
+
+/* --- clause anchors ------------------------------------------------------- */
+/*
+ * Quiet until wanted: shown on hover over the heading, and on keyboard focus,
+ * which is the part people forget - a control that only appears on hover cannot
+ * be reached by anyone tabbing.
+ */
+.doc-section h2 {
+  position: relative;
+  scroll-margin-top: 1.5rem;
+}
+
+.anchor {
+  margin-left: 0.4rem;
+  color: var(--ink-mute);
+  text-decoration: none;
+  opacity: 0;
+  transition: opacity 140ms ease, color 140ms ease;
+}
+.doc-section h2:hover .anchor,
+.anchor:focus-visible {
+  opacity: 1;
+}
+.anchor:hover { color: var(--accent); }
+
+/* A landed-on clause says so, briefly and without moving anything. */
+.doc-section h2:target { color: var(--accent); }
+
+@media (prefers-reduced-motion: reduce) {
+  .anchor { transition: none; }
+}
+
+/* --- paper ---------------------------------------------------------------- */
+/*
+ * The privacy policy is the one page here that gets printed or saved as a PDF -
+ * by somebody keeping a copy of what they agreed to, and possibly by whoever
+ * reviews it at Meta. On paper it was carrying the masthead, the settings
+ * button, the language note and, for anyone who had chosen the dark theme, a
+ * near-black background across every sheet.
+ */
+@media print {
+  /* Paper is white whatever the screen was.
+     The middle selector is the one that matters and is not decoration. The dark
+     palette is applied by `:root:not([data-theme='light'])` inside a
+     prefers-color-scheme query, and that query still matches while printing -
+     so this block has to beat it on specificity, not merely come after it. A
+     bare `:root` is one class lighter and loses, which printed #E9EAEE text
+     onto white paper for everybody who had chosen dark. Caught by asking the
+     browser for print + dark, not by reading this file. */
+  :root,
+  :root:not([data-theme='light']),
+  :root[data-theme='dark'],
+  :root[data-theme='light'] {
+    color-scheme: light;
+    --ground: #FFFFFF;
+    --surface: #FFFFFF;
+    --surface-sunk: #FFFFFF;
+    --ink: #000000;
+    --ink-soft: #1A1A1A;
+    --ink-mute: #444444;
+    --line: #BBBBBB;
+    --line-soft: #DDDDDD;
+    --accent: #000000;
+    --accent-ink: #000000;
+    --accent-soft: #FFFFFF;
+    --shadow-sm: none;
+    --shadow-lg: none;
+  }
+
+  /* Controls do nothing on paper, and neither does an offer to change language.
+     The wordmark stays: it says whose document this is. */
+  .skip,
+  .site-nav,
+  .settings,
+  .lang-offer,
+  .anchor {
+    display: none !important;
+  }
+
+  body { background: #fff; }
+
+  main {
+    display: block;
+    max-width: none;
+    padding: 0;
+  }
+
+  .site-head {
+    max-width: none;
+    padding: 0 0 1rem;
+  }
+
+  /* A printed clause is quoted by its address, so the addresses have to be on
+     the page - a link that only exists as blue text is lost the moment it is
+     printed. Internal ones are skipped: they would expand to a bare `/pl/` and
+     say nothing. */
+  a[href^='http']::after,
+  a[href^='mailto']::after {
+    content: ' <' attr(href) '>';
+    font-size: 0.85em;
+    word-break: break-all;
+  }
+
+  /* Nothing should be orphaned from what it introduces. */
+  h1,
+  h2,
+  h3 {
+    break-after: avoid;
+  }
+  .doc-section,
+  li {
+    break-inside: avoid;
+  }
+
+  /* Where this copy came from, so a printed page can be checked against the
+     live one. */
+  .print-source { display: block !important; }
+}
+
+.print-source { display: none; }

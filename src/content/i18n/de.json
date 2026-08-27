@@ -1,7 +1,6 @@
 {
   "name": "Deutsch",
-  "dir": "ltr",
-  "sourceHash": "ff5261a51a4021e0",
+  "sourceHash": "554a323365d7ee74",
   "site": {
     "skip": "Zum Inhalt springen",
     "navLabel": "Hauptnavigation",
@@ -57,6 +56,7 @@
     "summary": "**Diese Apps erheben keine personenbezogenen Daten.** Die veröffentlichte App hat überhaupt keinen Internetzugang und kann daher nichts irgendwohin senden. Alles Weitere sind die Einzelheiten hinter diesem Satz.",
     "sections": [
       {
+        "id": "who",
         "h": "Von wem diese Erklärung stammt",
         "p": [
           "Slocgtory ist ein unabhängiger Entwickler, eine einzelne Person. Es gibt kein Unternehmen, keine Mitarbeiter und keine dritte Partei, die an der Entwicklung oder dem Betrieb dieser Apps beteiligt wäre.",
@@ -64,12 +64,14 @@
         ]
       },
       {
+        "id": "scope",
         "h": "Wofür sie gilt",
         "p": [
           "Diese Erklärung gilt für **AllVRPuzzles**, eine Anwendung für Meta-Quest-Headsets, sowie für jede künftige Anwendung oder jedes Spiel von Slocgtory, sofern diese App keine eigene Erklärung veröffentlicht."
         ]
       },
       {
+        "id": "data-collected",
         "h": "Erhobene Daten: keine",
         "p": [
           "Die veröffentlichte App fordert die Android-Berechtigung `INTERNET` nicht an. Ohne sie erlaubt das Betriebssystem der App nicht, eine Netzwerkverbindung zu öffnen; sie kann also grundsätzlich keine Daten übertragen.",
@@ -77,6 +79,7 @@
         ]
       },
       {
+        "id": "stored-on-device",
         "h": "Auf Ihrem Headset gespeicherte Daten",
         "p": [
           "Die App schreibt zwei Dinge in ihren eigenen privaten Speicher auf dem Gerät:"
@@ -87,6 +90,7 @@
         ]
       },
       {
+        "id": "stays-on-device",
         "h": "Diese Daten bleiben auf dem Gerät",
         "p": [
           "Keines von beidem verlässt Ihr Headset. Die Android-Sicherung ist für diese App abgeschaltet (`allowBackup=false`), diese Daten werden also auch in keine Cloud-Sicherung kopiert.",
@@ -94,6 +98,7 @@
         ]
       },
       {
+        "id": "purchases",
         "h": "Käufe und Berechtigungen",
         "p": [
           "Bildpakete werden über Metas Platform In-App Purchases verkauft. Wenn Sie eines kaufen, findet der Vorgang vollständig in Metas eigener Store-Oberfläche statt. **Zahlungsdaten werden von dieser App weder gesehen noch an sie übergeben.**",
@@ -107,6 +112,7 @@
         ]
       },
       {
+        "id": "not-requested",
         "h": "Wonach bewusst nicht gefragt wird",
         "p": [
           "Die App fordert Ihren Meta-Kontonamen, Ihre Benutzer-ID, Ihr Profil, Ihre Freundesliste, Ihre E-Mail-Adresse und Ihre Zahlungsinformationen nicht an und erhält sie auch nicht.",
@@ -114,6 +120,7 @@
         ]
       },
       {
+        "id": "permissions",
         "h": "Berechtigungen, die die App anfordert",
         "p": [
           "Die veröffentlichte App fordert drei Berechtigungen an und sonst keine:"
@@ -124,18 +131,21 @@
         ]
       },
       {
+        "id": "no-internet",
         "h": "Kein Internet, kein Speicher, kein Mikrofon, keine Kamera",
         "p": [
           "Die veröffentlichte App fordert weder Internetzugang noch Dateispeicher, Mikrofon, Kamera, Standort, Kontakte oder irgendeine Meta-Konto-Berechtigung an. Sollte eine künftige Version einmal etwas davon benötigen, wird diese Seite es sagen, bevor jene Version erscheint."
         ]
       },
       {
+        "id": "children",
         "h": "Kinder",
         "p": [
           "Diese Apps richten sich nicht an Kinder unter 13 Jahren und sind nicht für sie gemacht."
         ]
       },
       {
+        "id": "deleting",
         "h": "Löschen Ihrer Daten",
         "p": [
           "Alles, was die App speichert, liegt auf Ihrem Headset. Sie können es also selbst löschen, sofort und ohne jemanden zu fragen:"
@@ -145,6 +155,7 @@
         ]
       },
       {
+        "id": "deletion-scope",
         "h": "Was das Löschen erreicht und was nicht",
         "p": [
           "Das Deinstallieren entfernt Ihren Fortschritt und den lokalen Vermerk über Ihre Pakete. Ihre Käufe bleiben bei Ihrem Meta-Konto und kehren bei einer Neuinstallation zurück.",
@@ -153,12 +164,14 @@
         ]
       },
       {
+        "id": "changes",
         "h": "Änderungen dieser Erklärung",
         "p": [
           "Wenn sich hieran etwas ändert, ändert sich diese Seite mit, und das Datum oben wird aktualisiert. Eine Änderung daran, was erhoben wird, wird zusätzlich auf der Store-Seite der App vermerkt."
         ]
       },
       {
+        "id": "contact",
         "h": "Kontakt",
         "p": [
           "[Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)"

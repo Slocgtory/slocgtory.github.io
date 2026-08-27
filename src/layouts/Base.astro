@@ -106,6 +106,8 @@ const jsonLd =
 ---
 
 <!doctype html>
+<!-- Every language here is left-to-right; see content.config.ts for why that
+     is stated once here rather than carried per language. -->
 <html lang={locale} dir="ltr" data-locales={LOCALES.join(' ')}>
   <head>
     <meta charset="utf-8" />
@@ -339,5 +341,12 @@ const jsonLd =
     <main id="main">
       <slot />
     </main>
+
+    {/*
+      Printed pages only - see `@media print`. A saved copy of the policy is
+      worth nothing if you cannot tell which page it came from or check it
+      against the live one later.
+    */}
+    <p class="print-source">{canonical}</p>
   </body>
 </html>
