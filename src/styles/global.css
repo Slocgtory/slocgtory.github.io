@@ -53,7 +53,7 @@
      different heights in it - bare text links, an icon-wide box and an
      icon-plus-word box - and three sizes in one row reads as three unrelated
      widgets rather than one bar. */
-  --control-h: 2.25rem;
+  --control-h: 2.5rem;
 
   --step--1: clamp(0.83rem, 0.81rem + 0.09vw, 0.88rem);
   --step-0: clamp(1rem, 0.96rem + 0.18vw, 1.09rem);
@@ -253,7 +253,7 @@ strong { font-weight: 600; }
   width: 100%;
   max-width: var(--page);
   margin: 0 auto;
-  padding: clamp(1.25rem, 3vw, 2rem) 1.5rem 0;
+  padding: clamp(1.5rem, 3.2vw, 2.5rem) 1.5rem 0;
 }
 
 .site-head .inner {
@@ -266,8 +266,11 @@ strong { font-weight: 600; }
   margin-right: auto;
   font-family: var(--font-display), system-ui, sans-serif;
   font-weight: 700;
-  font-size: var(--step-0);
-  letter-spacing: -0.02em;
+  /* Grows with the page. At one size it stayed 17 px while the headline
+     reached 76, which is a name set smaller than a caption - a masthead has to
+     hold its own against what follows it without competing with it. */
+  font-size: clamp(1.15rem, 0.92rem + 0.55vw, 1.65rem);
+  letter-spacing: -0.025em;
   color: var(--ink);
   text-decoration: none;
   padding: 0 0.15rem;
@@ -282,7 +285,7 @@ strong { font-weight: 600; }
   align-items: center;
   justify-content: center;
   border-radius: var(--radius);
-  font-size: var(--step--1);
+  font-size: var(--step-0);
   color: var(--ink-soft);
   text-decoration: none;
   cursor: pointer;
@@ -290,7 +293,7 @@ strong { font-weight: 600; }
   -webkit-tap-highlight-color: transparent;
 }
 
-.nav-link { padding: 0 0.75rem; }
+.nav-link { padding: 0 0.85rem; }
 
 .nav-link:hover,
 .settings > summary:hover {
