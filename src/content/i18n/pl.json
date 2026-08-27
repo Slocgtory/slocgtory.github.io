@@ -1,14 +1,14 @@
 {
   "name": "Polski",
   "dir": "ltr",
-  "sourceHash": "c9e833443ab179cd",
+  "sourceHash": "754a46f7cb321340",
   "site": {
     "skip": "Przejdź do treści",
     "navLabel": "Główna",
+    "settingsLabel": "Ustawienia",
     "langLabel": "Język",
     "email": "Slocgtory@gmail.com",
     "nav": {
-      "home": "Start",
       "privacy": "Prywatność"
     },
     "theme": {

@@ -1,14 +1,14 @@
 {
   "name": "繁體中文",
   "dir": "ltr",
-  "sourceHash": "c9e833443ab179cd",
+  "sourceHash": "754a46f7cb321340",
   "site": {
     "skip": "跳至內容",
     "navLabel": "主要導覽",
+    "settingsLabel": "設定",
     "langLabel": "語言",
     "email": "Slocgtory@gmail.com",
     "nav": {
-      "home": "首頁",
       "privacy": "隱私權"
     },
     "theme": {

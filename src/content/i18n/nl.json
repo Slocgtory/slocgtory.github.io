@@ -1,14 +1,14 @@
 {
   "name": "Nederlands",
   "dir": "ltr",
-  "sourceHash": "c9e833443ab179cd",
+  "sourceHash": "754a46f7cb321340",
   "site": {
     "skip": "Naar de inhoud",
     "navLabel": "Hoofdnavigatie",
+    "settingsLabel": "Instellingen",
     "langLabel": "Taal",
     "email": "Slocgtory@gmail.com",
     "nav": {
-      "home": "Start",
       "privacy": "Privacy"
     },
     "theme": {

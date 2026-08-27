@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Draws the social card at public/og.png.
+ * Draws the social card at public/og.png, and the favicons beside it.
  *
  * The image every chat window, forum and search result shows instead of a bare
  * link. Without one the site shares as a line of blue text, which for a studio
@@ -34,7 +34,6 @@ const GROUND = '#0C0D10';
 const INK = '#E9EAEE';
 const MUTE = '#858C99';
 const ACCENT = '#2340C8';
-const ICON_INK = '#FBFBFC';
 
 async function brandFont() {
   const css = await fetch(
@@ -68,21 +67,35 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${WIDTH}" height="${
   <!-- A hairline of the accent along the top, so the card is not a black slab. -->
   <rect width="${WIDTH}" height="6" fill="${ACCENT}"/>
 
-  <g transform="translate(110 235)">
-    <rect width="160" height="160" rx="33" fill="${ACCENT}"/>
-    <g transform="scale(2.5)">
-      <path fill="${ICON_INK}" d="M15 19 H25.5 a6.5 6.5 0 0 1 13 0 H49 V51 H15 V40.5 a6.5 6.5 0 0 0 0 -13 Z"/>
-    </g>
-  </g>
-
-  <text x="322" y="332" font-family="Brand" font-weight="700" font-size="112"
+  <text x="110" y="330" font-family="Brand" font-weight="700" font-size="112"
         letter-spacing="-3" fill="${INK}">Slocgtory</text>
-  <text x="326" y="392" font-family="Brand" font-weight="700" font-size="32"
+  <text x="114" y="392" font-family="Brand" font-weight="700" font-size="32"
         letter-spacing="1" fill="${MUTE}">slocgtory.github.io</text>
 </svg>`;
 
 const png = await sharp(Buffer.from(svg)).png({ compressionLevel: 9 }).toBuffer();
 writeFileSync(OUT, png);
+console.log(`  public/og.png       1200x630  ${(png.length / 1024).toFixed(1)} KB`);
 
-const meta = await sharp(png).metadata();
-console.log(`  public/og.png  ${meta.width}x${meta.height}  ${(png.length / 1024).toFixed(1)} KB`);
+/**
+ * The tab icon: the first letter of the name, in the face the name is set in.
+ *
+ * Not a symbol. There was a drawn mark here - a puzzle piece - and it was
+ * invented rather than given, which is not a thing to decide on somebody's
+ * behalf. A letter from the wordmark says only what the wordmark already says,
+ * and is meant to be replaced the day there is a real one.
+ */
+const letter = (size) => `<svg xmlns="http://www.w3.org/2000/svg" width="${size}" height="${size}">
+  <defs><style>@font-face{font-family:'Brand';src:url(data:font/ttf;base64,${font}) format('truetype');font-weight:700;}</style></defs>
+  <rect width="${size}" height="${size}" rx="${size * 0.22}" fill="${ACCENT}"/>
+  <text x="50%" y="50%" text-anchor="middle" dominant-baseline="central"
+        font-family="Brand" font-weight="700" font-size="${size * 0.62}"
+        fill="#FBFBFC">S</text>
+</svg>`;
+
+for (const size of [32, 180]) {
+  const name = size === 32 ? 'icon.png' : 'apple-touch-icon.png';
+  const bytes = await sharp(Buffer.from(letter(size))).png({ compressionLevel: 9 }).toBuffer();
+  writeFileSync(join(ROOT, 'public', name), bytes);
+  console.log(`  public/${name.padEnd(19)} ${size}x${size}  ${(bytes.length / 1024).toFixed(1)} KB`);
+}

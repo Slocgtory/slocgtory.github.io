@@ -1,14 +1,14 @@
 {
   "name": "Íslenska",
   "dir": "ltr",
-  "sourceHash": "c9e833443ab179cd",
+  "sourceHash": "754a46f7cb321340",
   "site": {
     "skip": "Fara í efni",
     "navLabel": "Aðalvalmynd",
+    "settingsLabel": "Stillingar",
     "langLabel": "Tungumál",
     "email": "Slocgtory@gmail.com",
     "nav": {
-      "home": "Forsíða",
       "privacy": "Persónuvernd"
     },
     "theme": {

@@ -1,14 +1,14 @@
 {
   "name": "日本語",
   "dir": "ltr",
-  "sourceHash": "c9e833443ab179cd",
+  "sourceHash": "754a46f7cb321340",
   "site": {
     "skip": "本文へ移動",
     "navLabel": "メインナビゲーション",
+    "settingsLabel": "設定",
     "langLabel": "言語",
     "email": "Slocgtory@gmail.com",
     "nav": {
-      "home": "ホーム",
       "privacy": "プライバシー"
     },
     "theme": {

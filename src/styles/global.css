@@ -43,7 +43,13 @@
 
   --measure: 64ch;
   --page: 60rem;
-  --radius: 3px;
+  --radius: 5px;
+
+  /* Every interactive thing in the header is this tall. The bar had three
+     different heights in it - bare text links, an icon-wide box and an
+     icon-plus-word box - and three sizes in one row reads as three unrelated
+     widgets rather than one bar. */
+  --control-h: 2.25rem;
 
   --step--1: clamp(0.83rem, 0.81rem + 0.09vw, 0.88rem);
   --step-0: clamp(1rem, 0.96rem + 0.18vw, 1.09rem);
@@ -230,46 +236,59 @@ strong { font-weight: 600; }
 .site-head {
   border-bottom: 1px solid var(--line);
   background: var(--surface);
+  position: sticky;
+  top: 0;
+  z-index: 40;
 }
 
 .site-head .inner {
   max-width: var(--page);
   margin: 0 auto;
-  padding: 1rem 1.5rem;
+  padding: 0.65rem 1.5rem;
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem 1.5rem;
   align-items: center;
+  gap: 0.25rem;
 }
 
 .wordmark {
+  margin-right: auto;
   font-family: var(--font-display), system-ui, sans-serif;
   font-weight: 700;
   font-size: var(--step-0);
   letter-spacing: -0.02em;
   color: var(--ink);
   text-decoration: none;
+  padding: 0 0.15rem;
 }
 .wordmark:hover { color: var(--accent); }
 
-/* Wordmark left, everything else pushed right; stacks when there is no room. */
-.site-nav {
-  margin-left: auto;
-  display: flex;
-  gap: 1.5rem;
+/* The link and the settings button are the same control, differently filled. */
+.nav-link,
+.settings > summary {
+  height: var(--control-h);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius);
   font-size: var(--step--1);
-}
-.site-nav a {
   color: var(--ink-soft);
   text-decoration: none;
+  cursor: pointer;
+  transition: background 120ms ease, color 120ms ease;
+  -webkit-tap-highlight-color: transparent;
 }
-.site-nav a:hover,
-.site-nav a[aria-current='page'] { color: var(--ink); }
-.site-nav a[aria-current='page'] {
-  text-decoration: underline;
-  text-decoration-color: var(--accent);
-  text-decoration-thickness: 2px;
-  text-underline-offset: 0.4em;
+
+.nav-link { padding: 0 0.75rem; }
+
+.nav-link:hover,
+.settings > summary:hover {
+  background: var(--surface-sunk);
+  color: var(--ink);
+}
+
+.nav-link[aria-current='page'] {
+  color: var(--ink);
+  background: var(--surface-sunk);
 }
 
 /* --- main --------------------------------------------------------------- */
@@ -290,14 +309,28 @@ main {
   gap: 1.1rem;
   padding-bottom: clamp(2rem, 5vw, 3.25rem);
 }
-.hero h1 { max-width: 18ch; }
+.hero h1 { max-width: 17ch; }
 .hero .lede {
   font-size: var(--step-1);
   color: var(--ink-soft);
-  max-width: 52ch;
+  max-width: 50ch;
 }
 
-.block { padding-block: clamp(2rem, 5vw, 3rem); border-top: 1px solid var(--line); }
+/* The same grid the policy page uses, so the two pages share a rhythm. */
+.block {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  padding-block: clamp(2rem, 5vw, 2.75rem);
+  border-top: 1px solid var(--line);
+}
+
+@media (min-width: 56rem) {
+  .block {
+    grid-template-columns: 15rem 1fr;
+    gap: 2.5rem;
+  }
+}
 
 .block-head {
   font-family: var(--font-mono), monospace;
@@ -306,42 +339,53 @@ main {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--ink-mute);
-  margin-bottom: 1.75rem;
+  margin: 0;
 }
 :lang(ja) .block-head,
 :lang(ko) .block-head,
 :lang(zh-Hant) .block-head,
 :lang(zh-Hans) .block-head {
   font-family: inherit;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
+  text-transform: none;
+  font-size: var(--step-0);
 }
 
-/* Rows with a hairline between them, not a stack of rounded cards. */
+.block-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  min-width: 0;
+}
+
 .app-list {
   list-style: none;
   margin: 0;
   padding: 0;
-}
-.app-list > li {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 0.5rem 1.5rem;
-  padding-block: 1.4rem;
-  border-top: 1px solid var(--line-soft);
-  align-items: baseline;
-}
-.app-list > li:first-child { border-top: 0; padding-top: 0; }
-.app-list h3 { grid-column: 1; }
-.app-list p {
-  grid-column: 1 / -1;
-  color: var(--ink-soft);
-  max-width: 58ch;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  max-width: none;
 }
 
+.app-list > li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+/* Name and state together. The state used to be pushed to the container's far
+ * edge, hundreds of pixels from the thing it described. */
+.app-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.app-list p { color: var(--ink-soft); }
+
 .status {
-  grid-column: 2;
-  grid-row: 1;
-  justify-self: end;
   font-family: var(--font-mono), monospace;
   font-size: 0.68rem;
   font-weight: 500;
@@ -350,8 +394,8 @@ main {
   color: var(--accent);
   background: var(--accent-soft);
   border: 1px solid var(--accent);
-  border-radius: var(--radius);
-  padding: 0.2rem 0.5rem;
+  border-radius: 999px;
+  padding: 0.18rem 0.55rem;
   white-space: nowrap;
 }
 :lang(ja) .status,
@@ -361,9 +405,10 @@ main {
   font-family: inherit;
   letter-spacing: 0.04em;
   text-transform: none;
+  font-size: 0.75rem;
 }
 
-.note { color: var(--ink-mute); font-size: var(--step--1); margin-top: 1.5rem; }
+.note { color: var(--ink-mute); font-size: var(--step--1); }
 
 /* --- document ----------------------------------------------------------- */
 
@@ -443,30 +488,18 @@ main {
 }
 .doc-section li::marker { color: var(--ink-mute); }
 
-/* --- settings: appearance and language ---------------------------------- */
+/* --- settings ------------------------------------------------------------ */
 
-.settings {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.6rem 1.25rem;
+.settings { position: relative; }
+
+.settings > summary {
+  width: var(--control-h);
+  list-style: none;
 }
-
-
-
-/* Screen-reader-only: the word beside every icon. A sun and a moon are a
- * well-worn pair, but a path element says nothing out loud, and `title` is a
- * tooltip rather than an accessible name. */
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip-path: inset(50%);
-  white-space: nowrap;
-  border: 0;
+.settings > summary::-webkit-details-marker { display: none; }
+.settings[open] > summary {
+  background: var(--surface-sunk);
+  color: var(--ink);
 }
 
 .ico {
@@ -482,137 +515,73 @@ main {
   stroke-linejoin: round;
 }
 
-
-/* --- the two pickers ---------------------------------------------------- */
-
-.picker {
-  position: relative;
-}
-
-.picker summary {
-  display: flex;
-  align-items: center;
-  gap: 0.45rem;
-  cursor: pointer;
-  list-style: none;
-  padding: 0.3rem 0.6rem;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: var(--surface-sunk);
-  font-size: var(--step--1);
-  color: var(--ink-soft);
-}
-.picker summary::-webkit-details-marker { display: none; }
-.picker summary:hover { color: var(--ink); }
-.picker summary .ico { color: var(--ink-mute); }
-.picker summary:hover .ico,
-.picker[open] summary .ico { color: var(--accent); }
-
-.picker-current { color: var(--ink); }
-
-/* A caret that says which way this opens, drawn rather than fetched. */
-.picker summary::after {
-  content: '';
-  width: 0.4em;
-  height: 0.4em;
-  border-right: 1.5px solid currentColor;
-  border-bottom: 1.5px solid currentColor;
-  transform: translateY(-0.15em) rotate(45deg);
-  transition: transform 120ms ease;
-}
-.picker[open] summary::after { transform: translateY(0.1em) rotate(-135deg); }
-
-.picker nav {
+.panel {
   position: absolute;
   right: 0;
-  top: calc(100% + 0.4rem);
-  z-index: 30;
+  top: calc(100% + 0.5rem);
+  z-index: 50;
+  width: 21rem;
+  max-width: calc(100vw - 2rem);
+  max-height: min(75vh, 32rem);
+  overflow-y: auto;
+  padding: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
   background: var(--surface);
   border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 0.5rem;
+  border-radius: calc(var(--radius) * 2);
   box-shadow: var(--shadow-lg);
-  max-height: min(60vh, 26rem);
-  overflow-y: auto;
 }
 
-.picker ul {
+.group h2 {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.66rem;
+  font-weight: 500;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  margin: 0 0 0.45rem 0.15rem;
+}
+:lang(ja) .group h2,
+:lang(ko) .group h2,
+:lang(zh-Hant) .group h2,
+:lang(zh-Hans) .group h2 {
+  font-family: inherit;
+  letter-spacing: 0.05em;
+  text-transform: none;
+  font-size: 0.74rem;
+}
+
+.choices,
+.languages {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(7.5rem, 1fr));
-  gap: 1px 0.25rem;
+  max-width: none;
 }
 
-.picker a {
-  display: block;
-  padding: 0.3rem 0.6rem;
-  border-radius: 2px;
-  font-size: var(--step--1);
-  color: var(--ink-soft);
-  text-decoration: none;
-  white-space: nowrap;
-}
-.picker a:hover {
-  background: var(--surface-sunk);
-  color: var(--ink);
-}
-.picker a[aria-current='true'] {
-  color: var(--ink);
-  font-weight: 600;
-  background: var(--accent-soft);
-}
+.choices { display: grid; gap: 2px; }
 
-/* On a narrow screen the panel is the width of the screen, not of the button. */
-@media (max-width: 30rem) {
-  .picker nav {
-    position: fixed;
-    left: 0.75rem;
-    right: 0.75rem;
-    top: auto;
-  }
-  .picker ul { grid-template-columns: repeat(2, 1fr); }
-}
-
-/* --- the appearance picker ----------------------------------------------- */
-
-.theme-picker[hidden] { display: none; }
-
-.theme-picker summary { gap: 0; }
-
-/* All three icons are in the summary; one attribute decides which is drawn.
- * The alternative is a script carrying SVG path data in a string, where the
- * markup and the script would each hold half of what the icon is. */
-.theme-picker summary .ico { display: none; }
-.theme-picker[data-choice='system'] summary .ico[data-for='system'],
-.theme-picker[data-choice='light'] summary .ico[data-for='light'],
-.theme-picker[data-choice='dark'] summary .ico[data-for='dark'] {
-  display: grid;
-}
-
-.theme-picker nav { min-width: 9.5rem; }
-.theme-picker ul { grid-template-columns: 1fr; }
-
-.theme-picker label {
+.choices label {
   position: relative;
   display: flex;
   align-items: center;
-  gap: 0.55rem;
-  padding: 0.35rem 0.6rem;
-  border-radius: 2px;
+  gap: 0.6rem;
+  padding: 0.42rem 0.55rem;
+  border-radius: var(--radius);
   font-size: var(--step--1);
   color: var(--ink-soft);
   cursor: pointer;
 }
-.theme-picker label:hover {
+.choices label:hover {
   background: var(--surface-sunk);
   color: var(--ink);
 }
 
 /* The radio stays: it is what makes arrow keys, the tab stop and the
  * announcement work. Only its own box is replaced. */
-.theme-picker input {
+.choices input {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -622,14 +591,52 @@ main {
   cursor: pointer;
 }
 
-.theme-picker label:has(input:checked) {
+.choices label:has(input:checked) {
   background: var(--accent-soft);
   color: var(--ink);
 }
-.theme-picker label:has(input:checked) .ico { color: var(--accent); }
+.choices label:has(input:checked) .ico { color: var(--accent); }
 
 /* The ring belongs on the row you can see, not on the invisible input. */
-.theme-picker label:has(input:focus-visible) {
+.choices label:has(input:focus-visible) {
   outline: 2px solid var(--focus);
   outline-offset: -1px;
+}
+
+.languages {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2px 0.25rem;
+}
+
+.languages a {
+  display: block;
+  padding: 0.38rem 0.55rem;
+  border-radius: var(--radius);
+  font-size: var(--step--1);
+  color: var(--ink-soft);
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.languages a:hover {
+  background: var(--surface-sunk);
+  color: var(--ink);
+}
+.languages a[aria-current='true'] {
+  color: var(--ink);
+  background: var(--accent-soft);
+  font-weight: 600;
+}
+
+/* On a phone the panel is the width of the screen, not of the button. */
+@media (max-width: 30rem) {
+  .panel {
+    position: fixed;
+    left: 0.75rem;
+    right: 0.75rem;
+    width: auto;
+    top: auto;
+  }
 }

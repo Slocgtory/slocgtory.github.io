@@ -5,124 +5,106 @@ import { localeUrl, localesInReadingOrder, type Page } from '../lib/i18n';
 interface Props {
   locale: string;
   page: Page;
+  settingsLabel: string;
   langLabel: string;
   theme: { label: string; system: string; light: string; dark: string };
 }
 
-const { locale, page, langLabel, theme } = Astro.props;
+const { locale, page, settingsLabel, langLabel, theme } = Astro.props;
 
 const entries = await getCollection('i18n');
 const names = new Map(entries.map((e) => [e.id, e.data.name]));
 const endonym = (code: string) => names.get(code) ?? code;
 
 const ordered = localesInReadingOrder(locale, endonym);
-
-const choices = [
-  { value: 'system', label: theme.system },
-  { value: 'light', label: theme.light },
-  { value: 'dark', label: theme.dark },
-] as const;
 ---
 
-<div class="settings">
-  {/*
-    A disclosure rather than three icons side by side, for two reasons. The
-    control beside it is already one, and a header with two matching pills reads
-    as a pair where a segment plus a pill reads as two unrelated things. And a
-    theme is set once and then left alone - permanent visibility is worth paying
-    header room for when a control is used often, which this is not.
+{/*
+  One control rather than two.
 
-    Hidden until the script unhides it: without JavaScript the choice cannot
-    outlive the page, and a control that forgets is worse than one not offered.
-    The system's own setting still works, because the stylesheet answers
-    prefers-color-scheme on its own.
-  */}
-  <details class="picker theme-picker" data-choice="system" hidden data-theme-control>
-    <summary aria-label={theme.label}>
+  Three separate things used to sit here - two nav links, an appearance switch
+  and a language switch - and none of them agreed on a height, a padding or a
+  shape. The appearance one was an icon in a box the width of an icon; the
+  language one was an icon plus a word in a box twice as wide; the nav links
+  were bare text with no box at all. Three sizes in twenty centimetres of bar.
+
+  Both of these are settings, which is a different kind of thing from a link to
+  a page, so they belong behind one button rather than beside the navigation.
+  What is left in the bar is the name, the one other page, and this.
+*/}
+<details class="settings" data-settings>
+  <summary aria-label={settingsLabel} title={settingsLabel}>
+    <span class="ico" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="17" height="17">
+        <path d="M3 8h11M18.5 8H21M3 16h5.5M13 16h8"></path>
+        <circle cx="16" cy="8" r="2.5"></circle>
+        <circle cx="10.5" cy="16" r="2.5"></circle>
+      </svg>
+    </span>
+  </summary>
+
+  <div class="panel">
+    {/*
+      Only this half needs a script, and only this half is hidden without one:
+      the choice cannot outlive the page, and a control that forgets is worse
+      than one not offered. The stylesheet still answers the system setting.
+    */}
+    <section class="group" hidden data-theme-control>
+      <h2>{theme.label}</h2>
       {/*
-        All three icons are rendered and CSS shows the one matching
-        `data-choice`. The alternative is JavaScript that carries SVG path data
-        in a string, where the markup and the script would each hold half of
-        what the icon is.
+        Real radios with one name, so arrow keys, the roving tab stop and the
+        announcement come from the browser. Buttons with ARIA would have to
+        reimplement all three, and usually reimplement two.
       */}
-      <span class="ico" data-for="system" aria-hidden="true">
-        <svg viewBox="0 0 24 24" width="16" height="16">
-          <rect x="2.5" y="3.5" width="19" height="13" rx="2"></rect>
-          <path d="M8.5 20.5h7M12 17v3.5"></path>
-        </svg>
-      </span>
-      <span class="ico" data-for="light" aria-hidden="true">
-        <svg viewBox="0 0 24 24" width="16" height="16">
-          <circle cx="12" cy="12" r="4"></circle>
-          <path
-            d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M6 18l-1.4 1.4M19.4 4.6L18 6"
-          ></path>
-        </svg>
-      </span>
-      <span class="ico" data-for="dark" aria-hidden="true">
-        <svg viewBox="0 0 24 24" width="16" height="16">
-          <path d="M20.5 13.3A8.5 8.5 0 1 1 10.7 3.5a6.6 6.6 0 0 0 9.8 9.8z"></path>
-        </svg>
-      </span>
-    </summary>
+      <ul class="choices" role="radiogroup" aria-label={theme.label}>
+        <li>
+          <label>
+            <input type="radio" name="theme" value="system" checked />
+            <span class="ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="16" height="16">
+                <rect x="2.5" y="3.5" width="19" height="13" rx="2"></rect>
+                <path d="M8.5 20.5h7M12 17v3.5"></path>
+              </svg>
+            </span>
+            <span>{theme.system}</span>
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="radio" name="theme" value="light" />
+            <span class="ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="16" height="16">
+                <circle cx="12" cy="12" r="4"></circle>
+                <path
+                  d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M6 18l-1.4 1.4M19.4 4.6L18 6"
+                ></path>
+              </svg>
+            </span>
+            <span>{theme.light}</span>
+          </label>
+        </li>
+        <li>
+          <label>
+            <input type="radio" name="theme" value="dark" />
+            <span class="ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="16" height="16">
+                <path d="M20.5 13.3A8.5 8.5 0 1 1 10.7 3.5a6.6 6.6 0 0 0 9.8 9.8z"></path>
+              </svg>
+            </span>
+            <span>{theme.dark}</span>
+          </label>
+        </li>
+      </ul>
+    </section>
 
     {/*
-      Real radios with one name, so arrow keys, the roving tab stop and the
-      announcement come from the browser. A list of buttons with ARIA would have
-      to reimplement all three, and usually reimplements two.
+      Plain links, so this half needs no script at all: every entry is a real
+      address for the same page in another language, and it works with scripting
+      off, in a text browser, and when a link is copied.
     */}
-    <nav>
-      <ul role="radiogroup" aria-label={theme.label}>
-        {
-          choices.map(({ value, label }) => (
-            <li>
-              <label>
-                <input type="radio" name="theme" value={value} checked={value === 'system'} />
-                <span class="ico" data-for={value} aria-hidden="true">
-                  {value === 'system' && (
-                    <svg viewBox="0 0 24 24" width="16" height="16">
-                      <rect x="2.5" y="3.5" width="19" height="13" rx="2" />
-                      <path d="M8.5 20.5h7M12 17v3.5" />
-                    </svg>
-                  )}
-                  {value === 'light' && (
-                    <svg viewBox="0 0 24 24" width="16" height="16">
-                      <circle cx="12" cy="12" r="4" />
-                      <path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M6 18l-1.4 1.4M19.4 4.6L18 6" />
-                    </svg>
-                  )}
-                  {value === 'dark' && (
-                    <svg viewBox="0 0 24 24" width="16" height="16">
-                      <path d="M20.5 13.3A8.5 8.5 0 1 1 10.7 3.5a6.6 6.6 0 0 0 9.8 9.8z" />
-                    </svg>
-                  )}
-                </span>
-                <span>{label}</span>
-              </label>
-            </li>
-          ))
-        }
-      </ul>
-    </nav>
-  </details>
-
-  {/*
-    Plain links inside a disclosure, so this one needs no script at all: every
-    entry is a real address for the same page in another language, and it works
-    with scripting off, in a text browser, and when a link is copied.
-  */}
-  <details class="picker lang-picker" data-lang-picker>
-    <summary aria-label={langLabel}>
-      <span class="ico" aria-hidden="true">
-        <svg viewBox="0 0 24 24" width="16" height="16">
-          <circle cx="12" cy="12" r="9"></circle>
-          <path d="M3 12h18M12 3a14 14 0 0 1 0 18a14 14 0 0 1 0-18z"></path>
-        </svg>
-      </span>
-      <span class="picker-current" lang={locale}>{endonym(locale)}</span>
-    </summary>
-    <nav>
-      <ul aria-label={langLabel}>
+    <section class="group">
+      <h2>{langLabel}</h2>
+      <ul class="languages">
         {
           ordered.map((code) => (
             <li>
@@ -138,9 +120,9 @@ const choices = [
           ))
         }
       </ul>
-    </nav>
-  </details>
-</div>
+    </section>
+  </div>
+</details>
 
 {/*
   Deliberately inline and un-bundled. Short enough to read in one go, and the
@@ -149,11 +131,11 @@ const choices = [
 <script is:inline>
   (function () {
     var root = document.documentElement;
-    var picker = document.querySelector('[data-theme-control]');
-    if (!picker) return;
+    var group = document.querySelector('[data-theme-control]');
+    if (!group) return;
 
     // Only now, when there is something to work the control with.
-    picker.hidden = false;
+    group.hidden = false;
 
     function saved() {
       try {
@@ -172,14 +154,19 @@ const choices = [
       if (choice === 'system') delete root.dataset.theme;
       else root.dataset.theme = choice;
 
-      // One attribute; the stylesheet decides which icon the summary shows.
-      picker.dataset.choice = choice;
-
-      var input = picker.querySelector('input[value="' + choice + '"]');
+      var input = group.querySelector('input[value="' + choice + '"]');
       if (input) input.checked = true;
+
+      var dark =
+        choice === 'dark' ||
+        (choice === 'system' &&
+          window.matchMedia &&
+          window.matchMedia('(prefers-color-scheme: dark)').matches);
+      var meta = document.querySelector('[data-theme-color]');
+      if (meta) meta.setAttribute('content', dark ? '#0C0D10' : '#FBFBFC');
     }
 
-    picker.addEventListener('change', function (event) {
+    group.addEventListener('change', function (event) {
       var input = event.target;
       if (!input || input.name !== 'theme') return;
       try {
@@ -189,41 +176,26 @@ const choices = [
         // Nothing to do: the choice still applies to this page.
       }
       apply(input.value);
-      picker.open = false;
     });
 
     apply(saved());
   })();
 
   (function () {
-    // What a menu is expected to do: only one open, close on a click away or on
-    // Escape. Everything underneath already works without any of it.
-    var pickers = document.querySelectorAll('details.picker');
-    if (!pickers.length) return;
-
-    pickers.forEach(function (picker) {
-      picker.addEventListener('toggle', function () {
-        if (!picker.open) return;
-        pickers.forEach(function (other) {
-          if (other !== picker) other.open = false;
-        });
-      });
-    });
+    // What a menu is expected to do: close on a click away or on Escape.
+    // Everything underneath already works without any of it.
+    var menu = document.querySelector('[data-settings]');
+    if (!menu) return;
 
     document.addEventListener('click', function (event) {
-      pickers.forEach(function (picker) {
-        if (picker.open && !picker.contains(event.target)) picker.open = false;
-      });
+      if (menu.open && !menu.contains(event.target)) menu.open = false;
     });
 
     document.addEventListener('keydown', function (event) {
-      if (event.key !== 'Escape') return;
-      pickers.forEach(function (picker) {
-        if (!picker.open) return;
-        picker.open = false;
-        var summary = picker.querySelector('summary');
-        if (summary) summary.focus();
-      });
+      if (event.key !== 'Escape' || !menu.open) return;
+      menu.open = false;
+      var summary = menu.querySelector('summary');
+      if (summary) summary.focus();
     });
   })();
 </script>

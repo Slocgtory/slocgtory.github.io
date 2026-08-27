@@ -1,14 +1,14 @@
 {
   "name": "Svenska",
   "dir": "ltr",
-  "sourceHash": "c9e833443ab179cd",
+  "sourceHash": "754a46f7cb321340",
   "site": {
     "skip": "Hoppa till innehållet",
     "navLabel": "Huvudnavigering",
+    "settingsLabel": "Inställningar",
     "langLabel": "Språk",
     "email": "Slocgtory@gmail.com",
     "nav": {
-      "home": "Start",
       "privacy": "Integritet"
     },
     "theme": {

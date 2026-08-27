@@ -54,10 +54,12 @@ const i18n = defineCollection({
     site: z.object({
       skip: z.string().min(1),
       navLabel: z.string().min(1),
+      /** Names the one control that holds both choices. */
+      settingsLabel: z.string().min(1),
       langLabel: z.string().min(1),
       email: z.string().email(),
+      /** One entry. The wordmark is the link home, so there is no label for it. */
       nav: z.object({
-        home: z.string().min(1),
         privacy: z.string().min(1),
       }),
 

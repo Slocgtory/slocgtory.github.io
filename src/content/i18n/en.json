@@ -5,10 +5,10 @@
   "site": {
     "skip": "Skip to content",
     "navLabel": "Main",
+    "settingsLabel": "Settings",
     "langLabel": "Language",
     "email": "Slocgtory@gmail.com",
     "nav": {
-      "home": "Home",
       "privacy": "Privacy"
     },
     "theme": {

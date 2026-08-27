@@ -10,7 +10,8 @@ interface Site {
   navLabel: string;
   langLabel: string;
   email: string;
-  nav: { home: string; privacy: string };
+  nav: { privacy: string };
+  settingsLabel: string;
   theme: { label: string; system: string; light: string; dark: string };
 }
 
@@ -99,8 +100,8 @@ const year = 2026;
     */}
     <meta name="theme-color" content="#FBFBFC" data-theme-color />
 
-    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="/icon.svg" />
+    <link rel="icon" href="/icon.png" type="image/png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="sitemap" href="/sitemap-index.xml" />
 
     {/*
@@ -127,14 +128,30 @@ const year = 2026;
 
     <header class="site-head">
       <div class="inner">
+        {/*
+          The wordmark is the link home, which is what a wordmark in a header is
+          for - so a separate "Home" beside it was the same destination twice.
+          What is left is the name, the one other page, and settings.
+        */}
         <a class="wordmark" href={homeHref}>Slocgtory</a>
+
         <nav class="site-nav" aria-label={site.navLabel}>
-          <a href={homeHref} aria-current={page === 'home' ? 'page' : undefined}>{site.nav.home}</a>
-          <a href={privacyHref} aria-current={page === 'privacy' ? 'page' : undefined}>
+          <a
+            class="nav-link"
+            href={privacyHref}
+            aria-current={page === 'privacy' ? 'page' : undefined}
+          >
             {site.nav.privacy}
           </a>
         </nav>
-        <Settings locale={locale} page={page} langLabel={site.langLabel} theme={site.theme} />
+
+        <Settings
+          locale={locale}
+          page={page}
+          settingsLabel={site.settingsLabel}
+          langLabel={site.langLabel}
+          theme={site.theme}
+        />
       </div>
     </header>
 
