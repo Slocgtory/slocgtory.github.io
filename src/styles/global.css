@@ -42,7 +42,11 @@
   --shadow-lg: 0 8px 24px rgb(0 0 0 / 0.12);
 
   --measure: 64ch;
-  --page: 60rem;
+  /* 1152 px. Sixty rem left 38 per cent of a 1440p screen in use and the rest
+     as margin, which reads as an unfinished page rather than a composed one.
+     The reading measure below is unaffected: paragraphs stay at 64ch whatever
+     the container does, because line length is about eyes, not about screens. */
+  --page: 76rem;
   --radius: 5px;
 
   /* Every interactive thing in the header is this tall. The bar had three
@@ -55,8 +59,8 @@
   --step-0: clamp(1rem, 0.96rem + 0.18vw, 1.09rem);
   --step-1: clamp(1.13rem, 1.06rem + 0.32vw, 1.32rem);
   --step-2: clamp(1.35rem, 1.22rem + 0.63vw, 1.72rem);
-  --step-3: clamp(1.66rem, 1.4rem + 1.3vw, 2.44rem);
-  --step-4: clamp(2.05rem, 1.55rem + 2.5vw, 3.5rem);
+  --step-3: clamp(1.66rem, 1.35rem + 1.6vw, 2.9rem);
+  --step-4: clamp(2.05rem, 1.4rem + 3.2vw, 4.75rem);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -299,21 +303,40 @@ main {
   max-width: var(--page);
   margin: 0 auto;
   padding: clamp(2.5rem, 6vw, 4.5rem) 1.5rem clamp(3.5rem, 8vw, 6rem);
+
+  /* `safe` is the whole trick. A short page - the home page on a tall screen -
+     centres instead of hanging from the top with half a screen of nothing under
+     it. A long one, like the policy, overflows, and `safe` makes it fall back to
+     the top rather than centring and cutting its own first lines off. */
+  display: flex;
+  flex-direction: column;
+  justify-content: safe center;
 }
 
 /* --- home --------------------------------------------------------------- */
 
 .hero {
-  display: flex;
-  flex-direction: column;
-  gap: 1.1rem;
-  padding-bottom: clamp(2rem, 5vw, 3.25rem);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.2rem;
+  padding-bottom: clamp(2.5rem, 5vw, 4rem);
 }
-.hero h1 { max-width: 17ch; }
+.hero h1 { max-width: 20ch; }
 .hero .lede {
   font-size: var(--step-1);
   color: var(--ink-soft);
-  max-width: 50ch;
+  max-width: 54ch;
+}
+
+/* Above this the page is two columns, and the standfirst joins the one the
+ * sections put their content in. */
+@media (min-width: 56rem) {
+  .hero {
+    grid-template-columns: 15rem 1fr;
+    gap: 1.5rem 2.5rem;
+  }
+  .hero h1 { grid-column: 1 / -1; }
+  .hero .lede { grid-column: 2; }
 }
 
 /* The same grid the policy page uses, so the two pages share a rhythm. */

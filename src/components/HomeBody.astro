@@ -22,6 +22,13 @@ interface Props {
 const { home } = Astro.props;
 ---
 
+{/*
+  The hero sits on the same two-column grid as the sections below it, with the
+  headline spanning and the standfirst in the content column. That puts one
+  strong vertical edge down the whole page - labels at the margin, everything
+  else on one line - instead of a headline, a paragraph and a grid that each
+  begin somewhere different.
+*/}
 <section class="hero">
   <h1>{home.title}</h1>
   <p class="lede" set:html={inline(home.intro)} />
