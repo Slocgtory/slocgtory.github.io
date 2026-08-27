@@ -29,7 +29,15 @@ const { locale, page, title, description, site } = Astro.props;
 const alternates = alternatesFor(page);
 const canonical = new URL(localeUrl(page, locale), SITE_URL).href;
 const homeHref = localeUrl('home', locale);
+const appsHref = localeUrl('apps', locale);
 const privacyHref = localeUrl('privacy', locale);
+
+/** The tab strip, in the order the site reads. */
+const tabs = [
+  { key: 'home', href: homeHref, label: site.nav.home },
+  { key: 'apps', href: appsHref, label: site.nav.apps },
+  { key: 'privacy', href: privacyHref, label: site.nav.privacy },
+] as const;
 const year = 2026;
 ---
 
@@ -178,20 +186,31 @@ const year = 2026;
     <header class="site-head">
       <div class="inner">
         {/*
-          The wordmark is the link home, which is what a wordmark in a header is
-          for - so a separate "Home" beside it was the same destination twice.
-          What is left is the name, the one other page, and settings.
+          Three zones: the name on the left, the tabs in the middle, settings on
+          the right. The middle one is centred on the page rather than on what
+          is left over, which is why the outer two are equal-width columns and
+          not flex items - with `margin-right: auto` the strip drifts whenever
+          the name or the language changes the width of either side.
+
+          Home has a tab of its own even though the wordmark already goes there.
+          A strip that starts at the second page reads as a logo with two links
+          beside it; the duplicate destination is worth less than the strip
+          being a complete list of where the site goes.
         */}
         <a class="wordmark" href={homeHref}>Slocgtory</a>
 
         <nav class="site-nav" aria-label={site.navLabel}>
-          <a
-            class="nav-link"
-            href={privacyHref}
-            aria-current={page === 'privacy' ? 'page' : undefined}
-          >
-            {site.nav.privacy}
-          </a>
+          {
+            tabs.map((tab) => (
+              <a
+                class="nav-link"
+                href={tab.href}
+                aria-current={page === tab.key ? 'page' : undefined}
+              >
+                {tab.label}
+              </a>
+            ))
+          }
         </nav>
 
         <Settings

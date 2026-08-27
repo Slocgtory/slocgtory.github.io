@@ -1,7 +1,7 @@
 {
   "name": "Deutsch",
   "dir": "ltr",
-  "sourceHash": "249fbe556f1f373f",
+  "sourceHash": "ff5261a51a4021e0",
   "site": {
     "skip": "Zum Inhalt springen",
     "navLabel": "Hauptnavigation",
@@ -12,6 +12,8 @@
     "dismiss": "Schließen",
     "email": "Slocgtory@gmail.com",
     "nav": {
+      "home": "Start",
+      "apps": "Apps",
       "privacy": "Datenschutz"
     },
     "theme": {
@@ -27,18 +29,24 @@
     "metaTitle": "Slocgtory",
     "metaDescription": "Unabhängige VR-Entwicklung für Meta Quest. Apps und die Datenschutzerklärung, die für sie gilt.",
     "title": "Virtual Reality, von einer einzigen Person gebaut.",
-    "intro": "Slocgtory ist ein unabhängiger Entwickler, der Spiele für Meta Quest macht. Diese Seite listet auf, was bisher entstanden ist, und enthält die Datenschutzerklärung, die für alles davon gilt.",
-    "appsHeading": "Apps",
-    "apps": [
+    "intro": "Slocgtory ist ein unabhängiger Entwickler, der Spiele für Meta Quest macht. Eine Person, von Anfang bis Ende.",
+    "contactHeading": "Kontakt",
+    "contactBody": "Fragen, Fehlermeldungen und alles zu Ihren Daten: [Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)."
+  },
+  "apps": {
+    "metaTitle": "Apps — Slocgtory",
+    "metaDescription": "Virtual-Reality-Apps von Slocgtory für Meta Quest und was jede davon macht.",
+    "title": "Was es bisher gibt.",
+    "intro": "Alles, was Slocgtory für Meta Quest gemacht hat, veröffentlicht oder nicht.",
+    "heading": "Apps",
+    "list": [
       {
         "name": "AllVRPuzzles",
         "status": "In Entwicklung",
         "desc": "Ein Puzzlespiel für Meta Quest 3 und 3S. 210 Bilder in 26 Räumen, in Virtual Reality zerschnitten und zusammengesetzt, gespielt mit Handtracking oder Controllern. Demnächst im Meta Horizon Store."
       }
     ],
-    "appsNote": "Bisher wurde nichts veröffentlicht. Jede App wird hier aufgeführt, sobald sie erscheint, mit einem Link zu ihrer Store-Seite.",
-    "contactHeading": "Kontakt",
-    "contactBody": "Fragen, Fehlermeldungen und alles zu Ihren Daten: [Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)."
+    "note": "Bisher wurde nichts veröffentlicht. Jede App wird hier aufgeführt, sobald sie erscheint, mit einem Link zu ihrer Store-Seite."
   },
   "privacy": {
     "metaTitle": "Datenschutzerklärung",

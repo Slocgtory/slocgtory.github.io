@@ -1,7 +1,7 @@
 {
   "name": "Norsk",
   "dir": "ltr",
-  "sourceHash": "249fbe556f1f373f",
+  "sourceHash": "ff5261a51a4021e0",
   "site": {
     "skip": "Gå til innhold",
     "navLabel": "Hovednavigasjon",
@@ -12,6 +12,8 @@
     "dismiss": "Lukk",
     "email": "Slocgtory@gmail.com",
     "nav": {
+      "home": "Hjem",
+      "apps": "Apper",
       "privacy": "Personvern"
     },
     "theme": {
@@ -27,18 +29,24 @@
     "metaTitle": "Slocgtory",
     "metaDescription": "Uavhengig VR-utvikling for Meta Quest. Apper og personvernerklæringen som gjelder for dem.",
     "title": "Virtuell virkelighet, laget av én person.",
-    "intro": "Slocgtory er en uavhengig utvikler som lager spill til Meta Quest. Denne siden viser hva som finnes så langt, og inneholder personvernerklæringen som gjelder for alt sammen.",
-    "appsHeading": "Apper",
-    "apps": [
+    "intro": "Slocgtory er en uavhengig utvikler som lager spill til Meta Quest. Én person, fra start til slutt.",
+    "contactHeading": "Kontakt",
+    "contactBody": "Spørsmål, feilmeldinger og alt som gjelder dataene dine: [Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)."
+  },
+  "apps": {
+    "metaTitle": "Apper — Slocgtory",
+    "metaDescription": "Virtual reality-apper fra Slocgtory for Meta Quest, og hva hver enkelt gjør.",
+    "title": "Det som finnes så langt.",
+    "intro": "Alt Slocgtory har laget for Meta Quest, utgitt eller ikke.",
+    "heading": "Apper",
+    "list": [
       {
         "name": "AllVRPuzzles",
         "status": "Under utvikling",
         "desc": "Et puslespill for Meta Quest 3 og 3S. 210 bilder fordelt på 26 rom, skåret opp og satt sammen i virtuell virkelighet, spilt med håndsporing eller kontrollere. Kommer til Meta Horizon Store."
       }
     ],
-    "appsNote": "Ingenting er lansert ennå. Hver app blir listet opp her når den kommer, med lenke til butikksiden.",
-    "contactHeading": "Kontakt",
-    "contactBody": "Spørsmål, feilmeldinger og alt som gjelder dataene dine: [Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)."
+    "note": "Ingenting er lansert ennå. Hver app blir listet opp her når den kommer, med lenke til butikksiden."
   },
   "privacy": {
     "metaTitle": "Personvernerklæring",

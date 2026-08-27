@@ -1,7 +1,7 @@
 import { getEntry } from 'astro:content';
 import { LOCALES, DEFAULT_LOCALE } from '../../site.config.mjs';
 
-export type Page = 'home' | 'privacy';
+export type Page = 'home' | 'apps' | 'privacy';
 
 /**
  * Where a page lives for a given language.
@@ -12,7 +12,7 @@ export type Page = 'home' | 'privacy';
  * automatically, and every hop is a thing that can answer wrongly.
  */
 export function localeUrl(page: Page, locale: string): string {
-  const leaf = page === 'home' ? '' : 'privacy/';
+  const leaf = page === 'home' ? '' : `${page}/`;
   return locale === DEFAULT_LOCALE ? `/${leaf}` : `/${locale}/${leaf}`;
 }
 

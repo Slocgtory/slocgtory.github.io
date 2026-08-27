@@ -1,0 +1,17 @@
+---
+import Base from '../../layouts/Base.astro';
+import AppsBody from '../../components/AppsBody.astro';
+import { loadLocale, DEFAULT_LOCALE } from '../../lib/i18n';
+
+const data = await loadLocale(DEFAULT_LOCALE);
+---
+
+<Base
+  locale={DEFAULT_LOCALE}
+  page="apps"
+  title={data.apps.metaTitle}
+  description={data.apps.metaDescription}
+  site={data.site}
+>
+  <AppsBody apps={data.apps} />
+</Base>

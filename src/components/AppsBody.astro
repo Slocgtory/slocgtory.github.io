@@ -1,0 +1,57 @@
+---
+import { inline } from '../lib/i18n';
+
+interface App {
+  name: string;
+  status: string;
+  desc: string;
+}
+
+interface Props {
+  apps: {
+    title: string;
+    intro: string;
+    heading: string;
+    list: App[];
+    note: string;
+  };
+}
+
+const { apps } = Astro.props;
+---
+
+{/*
+  The catalogue, on the same two-column grid as every other page: the label in
+  the margin, the content on one vertical edge beside it. It lived on the home
+  page until there was a tab for it, and moved rather than being copied - two
+  tabs showing one list is worse than either tab alone.
+*/}
+<section class="hero">
+  <h1>{apps.title}</h1>
+  <p class="lede" set:html={inline(apps.intro)} />
+</section>
+
+<section class="block">
+  <h2 class="block-head">{apps.heading}</h2>
+  <div class="block-body">
+    <ul class="app-list">
+      {
+        apps.list.map((app) => (
+          <li>
+            {/*
+              The status sits against the name rather than at the far edge of
+              the container, where it reads as a stray badge instead of as this
+              app's state.
+            */}
+            <div class="app-head">
+              <h3>{app.name}</h3>
+              <span class="status">{app.status}</span>
+            </div>
+            <p set:html={inline(app.desc)} />
+          </li>
+        ))
+      }
+    </ul>
+    <p class="note" set:html={inline(apps.note)} />
+  </div>
+</section>

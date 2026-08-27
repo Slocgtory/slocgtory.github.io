@@ -1,7 +1,7 @@
 {
   "name": "繁體中文",
   "dir": "ltr",
-  "sourceHash": "249fbe556f1f373f",
+  "sourceHash": "ff5261a51a4021e0",
   "site": {
     "skip": "跳至內容",
     "navLabel": "主要導覽",
@@ -12,6 +12,8 @@
     "dismiss": "關閉",
     "email": "Slocgtory@gmail.com",
     "nav": {
+      "home": "首頁",
+      "apps": "應用程式",
       "privacy": "隱私權"
     },
     "theme": {
@@ -27,18 +29,24 @@
     "metaTitle": "Slocgtory",
     "metaDescription": "為 Meta Quest 打造的獨立虛擬實境開發。應用程式，以及適用於它們的隱私權政策。",
     "title": "由一個人打造的虛擬實境。",
-    "intro": "Slocgtory 是一位獨立開發者，為 Meta Quest 製作遊戲。本頁列出目前已有的作品，並收錄適用於全部作品的隱私權政策。",
-    "appsHeading": "應用程式",
-    "apps": [
+    "intro": "Slocgtory 是一位獨立開發者，為 Meta Quest 製作遊戲。從頭到尾，一個人完成。",
+    "contactHeading": "聯絡方式",
+    "contactBody": "問題、錯誤回報，以及任何與您資料相關的事項：[Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)"
+  },
+  "apps": {
+    "metaTitle": "應用程式 — Slocgtory",
+    "metaDescription": "Slocgtory 為 Meta Quest 開發的虛擬實境應用程式，以及每款的內容。",
+    "title": "目前已有的作品。",
+    "intro": "Slocgtory 為 Meta Quest 製作的全部作品，無論是否已發布。",
+    "heading": "應用程式",
+    "list": [
       {
         "name": "AllVRPuzzles",
         "status": "開發中",
         "desc": "一款 Meta Quest 3 與 3S 的拼圖遊戲。26 個房間中共 210 幅畫作，在虛擬實境中切割並拼合，可使用手部追蹤或控制器遊玩。即將登陸 Meta Horizon Store。"
       }
     ],
-    "appsNote": "目前尚未推出任何作品。每款應用程式推出時都會列在這裡，並附上商店頁面連結。",
-    "contactHeading": "聯絡方式",
-    "contactBody": "問題、錯誤回報，以及任何與您資料相關的事項：[Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)"
+    "note": "目前尚未推出任何作品。每款應用程式推出時都會列在這裡，並附上商店頁面連結。"
   },
   "privacy": {
     "metaTitle": "隱私權政策",

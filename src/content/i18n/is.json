@@ -1,7 +1,7 @@
 {
   "name": "Íslenska",
   "dir": "ltr",
-  "sourceHash": "249fbe556f1f373f",
+  "sourceHash": "ff5261a51a4021e0",
   "site": {
     "skip": "Fara í efni",
     "navLabel": "Aðalvalmynd",
@@ -12,6 +12,8 @@
     "dismiss": "Loka",
     "email": "Slocgtory@gmail.com",
     "nav": {
+      "home": "Forsíða",
+      "apps": "Forrit",
       "privacy": "Persónuvernd"
     },
     "theme": {
@@ -27,18 +29,24 @@
     "metaTitle": "Slocgtory",
     "metaDescription": "Sjálfstæð þróun sýndarveruleika fyrir Meta Quest. Forritin og persónuverndarstefnan sem gildir um þau.",
     "title": "Sýndarveruleiki, smíðaður af einni manneskju.",
-    "intro": "Slocgtory er sjálfstæður þróunaraðili sem gerir leiki fyrir Meta Quest. Þessi síða telur upp það sem til er hingað til og geymir persónuverndarstefnuna sem gildir um allt saman.",
-    "appsHeading": "Forrit",
-    "apps": [
+    "intro": "Slocgtory er sjálfstæður þróunaraðili sem gerir leiki fyrir Meta Quest. Ein manneskja, frá upphafi til enda.",
+    "contactHeading": "Samband",
+    "contactBody": "Spurningar, villutilkynningar og allt sem varðar gögnin þín: [Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)."
+  },
+  "apps": {
+    "metaTitle": "Forrit — Slocgtory",
+    "metaDescription": "Sýndarveruleikaforrit frá Slocgtory fyrir Meta Quest og hvað hvert þeirra gerir.",
+    "title": "Það sem til er hingað til.",
+    "intro": "Allt sem Slocgtory hefur gert fyrir Meta Quest, útgefið eða ekki.",
+    "heading": "Forrit",
+    "list": [
       {
         "name": "AllVRPuzzles",
         "status": "Í þróun",
         "desc": "Púsluspil fyrir Meta Quest 3 og 3S. 210 myndir í 26 herbergjum, skornar og settar saman í sýndarveruleika, spilaðar með handrakningu eða stýringum. Væntanlegt í Meta Horizon Store."
       }
     ],
-    "appsNote": "Ekkert hefur enn komið út. Hvert forrit birtist hér þegar það kemur út, með tengli á verslunarsíðu sína.",
-    "contactHeading": "Samband",
-    "contactBody": "Spurningar, villutilkynningar og allt sem varðar gögnin þín: [Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)."
+    "note": "Ekkert hefur enn komið út. Hvert forrit birtist hér þegar það kemur út, með tengli á verslunarsíðu sína."
   },
   "privacy": {
     "metaTitle": "Persónuverndarstefna",

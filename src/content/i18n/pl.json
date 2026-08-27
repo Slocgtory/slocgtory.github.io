@@ -1,7 +1,7 @@
 {
   "name": "Polski",
   "dir": "ltr",
-  "sourceHash": "249fbe556f1f373f",
+  "sourceHash": "ff5261a51a4021e0",
   "site": {
     "skip": "Przejdź do treści",
     "navLabel": "Główna",
@@ -12,6 +12,8 @@
     "dismiss": "Zamknij",
     "email": "Slocgtory@gmail.com",
     "nav": {
+      "home": "Start",
+      "apps": "Aplikacje",
       "privacy": "Prywatność"
     },
     "theme": {
@@ -27,18 +29,24 @@
     "metaTitle": "Slocgtory",
     "metaDescription": "Niezależny deweloper gier VR na Meta Quest. Aplikacje i polityka prywatności, która je obejmuje.",
     "title": "Wirtualna rzeczywistość robiona przez jedną osobę.",
-    "intro": "Slocgtory to niezależny deweloper tworzący gry na Meta Quest. Ta strona wymienia to, co już powstało, i zawiera politykę prywatności obejmującą całość.",
-    "appsHeading": "Aplikacje",
-    "apps": [
+    "intro": "Slocgtory to niezależny deweloper tworzący gry na Meta Quest. Jedna osoba, od początku do końca.",
+    "contactHeading": "Kontakt",
+    "contactBody": "Pytania, zgłoszenia błędów i wszystko dotyczące twoich danych: [Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)."
+  },
+  "apps": {
+    "metaTitle": "Aplikacje — Slocgtory",
+    "metaDescription": "Aplikacje VR od Slocgtory na Meta Quest i co robi każda z nich.",
+    "title": "Co powstało do tej pory.",
+    "intro": "Wszystko, co Slocgtory zrobiło na Meta Quest — wydane albo nie.",
+    "heading": "Aplikacje",
+    "list": [
       {
         "name": "AllVRPuzzles",
         "status": "W produkcji",
         "desc": "Gra w układanie puzzli na Meta Quest 3 i 3S. 210 obrazów w 26 pokojach, ciętych i składanych w wirtualnej rzeczywistości, obsługiwanych dłońmi albo kontrolerami. Wkrótce w Meta Horizon Store."
       }
     ],
-    "appsNote": "Nic nie zostało jeszcze wydane. Każda aplikacja pojawi się tutaj wraz z premierą, z linkiem do jej strony w sklepie.",
-    "contactHeading": "Kontakt",
-    "contactBody": "Pytania, zgłoszenia błędów i wszystko dotyczące twoich danych: [Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)."
+    "note": "Nic nie zostało jeszcze wydane. Każda aplikacja pojawi się tutaj wraz z premierą, z linkiem do jej strony w sklepie."
   },
   "privacy": {
     "metaTitle": "Polityka prywatności",

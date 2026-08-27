@@ -1,7 +1,7 @@
 {
   "name": "Dansk",
   "dir": "ltr",
-  "sourceHash": "249fbe556f1f373f",
+  "sourceHash": "ff5261a51a4021e0",
   "site": {
     "skip": "Gå til indhold",
     "navLabel": "Hovednavigation",
@@ -12,6 +12,8 @@
     "dismiss": "Luk",
     "email": "Slocgtory@gmail.com",
     "nav": {
+      "home": "Forside",
+      "apps": "Apps",
       "privacy": "Privatliv"
     },
     "theme": {
@@ -27,18 +29,24 @@
     "metaTitle": "Slocgtory",
     "metaDescription": "Uafhængig virtual reality-udvikling til Meta Quest. Apps og den privatlivspolitik, der dækker dem.",
     "title": "Virtual reality, bygget af én person.",
-    "intro": "Slocgtory er en uafhængig udvikler, der laver spil til Meta Quest. Denne side viser, hvad der findes indtil videre, og indeholder den privatlivspolitik, der dækker det hele.",
-    "appsHeading": "Apps",
-    "apps": [
+    "intro": "Slocgtory er en uafhængig udvikler, der laver spil til Meta Quest. Én person, fra start til slut.",
+    "contactHeading": "Kontakt",
+    "contactBody": "Spørgsmål, fejlrapporter og alt om dine data: [Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)."
+  },
+  "apps": {
+    "metaTitle": "Apps — Slocgtory",
+    "metaDescription": "Virtual reality-apps fra Slocgtory til Meta Quest, og hvad hver enkelt gør.",
+    "title": "Hvad der findes indtil videre.",
+    "intro": "Alt, hvad Slocgtory har lavet til Meta Quest – udgivet eller ej.",
+    "heading": "Apps",
+    "list": [
       {
         "name": "AllVRPuzzles",
         "status": "Under udvikling",
         "desc": "Et puslespil til Meta Quest 3 og 3S. 210 billeder fordelt på 26 rum, skåret ud og samlet i virtual reality, spillet med håndsporing eller controllere. Kommer til Meta Horizon Store."
       }
     ],
-    "appsNote": "Der er endnu ikke udgivet noget. Hver app bliver vist her, når den udkommer, med et link til dens butiksside.",
-    "contactHeading": "Kontakt",
-    "contactBody": "Spørgsmål, fejlrapporter og alt om dine data: [Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)."
+    "note": "Der er endnu ikke udgivet noget. Hver app bliver vist her, når den udkommer, med et link til dens butiksside."
   },
   "privacy": {
     "metaTitle": "Privatlivspolitik",

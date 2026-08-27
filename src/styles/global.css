@@ -256,14 +256,57 @@ strong { font-weight: 600; }
   padding: clamp(1.5rem, 3.2vw, 2.5rem) 1.5rem 0;
 }
 
+/*
+  Three zones, and the middle one is centred on the *page*.
+
+  A flex row with `margin-right: auto` on the name centres the tabs on whatever
+  space is left, so the strip sits off-centre by half the difference between the
+  name and the settings button - and moves every time the language changes the
+  width of a tab. Two equal outer columns fix the middle to the page's own
+  centre line and keep it there in all sixteen.
+
+  `minmax(0, 1fr)` rather than `1fr`: a grid track's default minimum is its
+  content, so a long set of tab labels would push the outer columns wider
+  instead of letting the middle one shrink.
+*/
 .site-head .inner {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
   align-items: center;
   gap: 0.4rem;
 }
 
+.site-head .settings {
+  justify-self: end;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 2.2vw, 1.9rem);
+  justify-content: center;
+}
+
+/*
+  Below the tab strip's own width the three zones stop being three. The name
+  keeps the left, settings keep the right, and the tabs drop to a full-width row
+  under both rather than squeezing into a gap that is no longer there.
+*/
+@media (max-width: 34rem) {
+  .site-head .inner {
+    grid-template-columns: minmax(0, 1fr) auto;
+    row-gap: 0.7rem;
+  }
+  .site-nav {
+    grid-row: 2;
+    grid-column: 1 / -1;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+}
+
 .wordmark {
-  margin-right: auto;
+  justify-self: start;
   font-family: var(--font-display), system-ui, sans-serif;
   font-weight: 700;
   /* Grows with the page. At one size it stayed 17 px while the headline
@@ -277,36 +320,29 @@ strong { font-weight: 600; }
 }
 .wordmark:hover { color: var(--accent); }
 
-/* One shape for both, and a shape at rest rather than only on hover.
- *
- * A flat icon with no container is indistinguishable from a decorative glyph -
- * it has no affordance, which is the usual finding about icon-only buttons and
- * was exactly what the settings control looked like: a stray mark. And a grey
- * text link beside it made a pair of two unrelated things, one of which the eye
- * could not tell was clickable at all.
- *
- * Now they are the same object twice: same height, same radius, same border,
- * same resting fill. One holds a word and one holds an icon. */
-.nav-link,
+/*
+  The settings control is a button, so it keeps a button's shape.
+
+  A flat icon with no container is indistinguishable from a decorative glyph -
+  it has no affordance, which is the usual finding about icon-only buttons and
+  was exactly what this looked like before: a stray mark. The container is what
+  says it can be pressed.
+*/
 .settings > summary {
   height: var(--control-h);
+  width: var(--control-h);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   border: 1px solid var(--line);
   border-radius: 999px;
   background: var(--surface-sunk);
-  font-size: var(--step--1);
   color: var(--ink-soft);
-  text-decoration: none;
   cursor: pointer;
   transition: background 140ms ease, color 140ms ease, border-color 140ms ease;
   -webkit-tap-highlight-color: transparent;
 }
 
-.nav-link { padding: 0 1.05rem; }
-
-.nav-link:hover,
 .settings > summary:hover,
 .settings[open] > summary {
   background: var(--surface);
@@ -314,11 +350,59 @@ strong { font-weight: 600; }
   color: var(--ink);
 }
 
+/*
+  The tabs are text, not buttons.
+
+  They were pills, and that was right when there was one of them: a lone text
+  link beside an icon button reads as two unrelated things, so the link borrowed
+  the button's shape to make a pair. Three of them is a different object. A row
+  of bordered pills is a segmented control - a thing you *set*, like the theme
+  switch inside the panel - and the tabs are places you *go*. The received
+  pattern for pill navigation is one container around the whole strip with only
+  the current item filled, never three separate buttons, and this page has no
+  room for another container: the masthead already dropped its band and its rule
+  to stop being chrome.
+
+  So they are text, grouped by proximity, and the current one is marked twice
+  over. Colour alone fails anyone who cannot separate these two greys - the
+  guidance is explicit that a state needs a second signal - so the weight shifts
+  and a rule appears under the word. The rule is always in the box and only ever
+  changes colour, so nothing moves when it arrives.
+*/
+.nav-link {
+  position: relative;
+  padding: 0.35rem 0.1rem;
+  /* Scales with the page the way the name beside it does. On the body scale
+     the strip stayed 14px while the wordmark reached 26 and the headline 76,
+     which is the complaint the masthead already had once: a bar sized for a
+     laptop sitting under a page sized for a 1440p screen. */
+  font-size: clamp(0.9rem, 0.82rem + 0.2vw, 1.06rem);
+  color: var(--ink-mute);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 140ms ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.15rem;
+  height: 2px;
+  border-radius: 2px;
+  background: transparent;
+  transition: background 140ms ease;
+}
+
+.nav-link:hover { color: var(--ink); }
+.nav-link:hover::after { background: var(--line); }
+
 .nav-link[aria-current='page'] {
   color: var(--ink);
-  background: var(--accent-soft);
-  border-color: var(--accent);
+  font-weight: 600;
 }
+.nav-link[aria-current='page']::after { background: var(--accent); }
 
 /* --- main --------------------------------------------------------------- */
 

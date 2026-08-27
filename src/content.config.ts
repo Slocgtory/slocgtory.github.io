@@ -69,8 +69,12 @@ const i18n = defineCollection({
       otherLanguage: z.string().min(1),
       dismiss: z.string().min(1),
       email: z.string().email(),
-      /** One entry. The wordmark is the link home, so there is no label for it. */
+      /** The three tabs. `home` has a label again: the wordmark still links
+       *  home, but a centred tab strip that skips its own first stop reads as
+       *  two pages plus a logo rather than as a site with three pages. */
       nav: z.object({
+        home: z.string().min(1),
+        apps: z.string().min(1),
         privacy: z.string().min(1),
       }),
 
@@ -92,11 +96,21 @@ const i18n = defineCollection({
       metaDescription: z.string().min(1),
       title: z.string().min(1),
       intro: z.string().min(1),
-      appsHeading: z.string().min(1),
-      apps: z.array(app).min(1),
-      appsNote: z.string().min(1),
       contactHeading: z.string().min(1),
       contactBody: z.string().min(1),
+    }),
+
+    /** The catalogue. It used to be three fields inside `home`, which is where
+     *  it lived when home was the only page with anything on it. */
+    apps: z.object({
+      metaTitle: z.string().min(1),
+      metaDescription: z.string().min(1),
+      title: z.string().min(1),
+      intro: z.string().min(1),
+      /** Labels the list in the margin, the way every other block is labelled. */
+      heading: z.string().min(1),
+      list: z.array(app).min(1),
+      note: z.string().min(1),
     }),
 
     privacy: z.object({

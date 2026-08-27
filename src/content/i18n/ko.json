@@ -1,7 +1,7 @@
 {
   "name": "한국어",
   "dir": "ltr",
-  "sourceHash": "249fbe556f1f373f",
+  "sourceHash": "ff5261a51a4021e0",
   "site": {
     "skip": "본문으로 건너뛰기",
     "navLabel": "주요 메뉴",
@@ -12,6 +12,8 @@
     "dismiss": "닫기",
     "email": "Slocgtory@gmail.com",
     "nav": {
+      "home": "홈",
+      "apps": "앱",
       "privacy": "개인정보"
     },
     "theme": {
@@ -27,18 +29,24 @@
     "metaTitle": "Slocgtory",
     "metaDescription": "Meta Quest용 독립 VR 개발. 앱과 이에 적용되는 개인정보 처리방침.",
     "title": "한 사람이 만드는 가상현실.",
-    "intro": "Slocgtory는 Meta Quest용 게임을 만드는 독립 개발자입니다. 이 페이지에는 현재까지 만들어진 것과, 그 전부에 적용되는 개인정보 처리방침이 있습니다.",
-    "appsHeading": "앱",
-    "apps": [
+    "intro": "Slocgtory는 Meta Quest용 게임을 만드는 독립 개발자입니다. 기획부터 완성까지, 혼자서.",
+    "contactHeading": "문의",
+    "contactBody": "질문, 오류 신고, 데이터에 관한 모든 문의: [Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)"
+  },
+  "apps": {
+    "metaTitle": "앱 — Slocgtory",
+    "metaDescription": "Slocgtory가 Meta Quest용으로 만드는 VR 앱과 각각의 내용.",
+    "title": "지금까지 만든 것.",
+    "intro": "Slocgtory가 Meta Quest용으로 만든 모든 것. 출시 여부와 상관없이.",
+    "heading": "앱",
+    "list": [
       {
         "name": "AllVRPuzzles",
         "status": "개발 중",
         "desc": "Meta Quest 3 및 3S용 직소 퍼즐 게임. 26개의 방에 담긴 210장의 그림을 가상현실에서 잘라내고 맞춥니다. 핸드 트래킹 또는 컨트롤러로 플레이할 수 있습니다. Meta Horizon Store 출시 예정."
       }
     ],
-    "appsNote": "아직 출시된 것은 없습니다. 각 앱은 출시와 함께 스토어 페이지 링크와 함께 여기에 표시됩니다.",
-    "contactHeading": "문의",
-    "contactBody": "질문, 오류 신고, 데이터에 관한 모든 문의: [Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)"
+    "note": "아직 출시된 것은 없습니다. 각 앱은 출시와 함께 스토어 페이지 링크와 함께 여기에 표시됩니다."
   },
   "privacy": {
     "metaTitle": "개인정보 처리방침",

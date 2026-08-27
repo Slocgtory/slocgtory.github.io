@@ -1,7 +1,7 @@
 {
   "name": "Italiano",
   "dir": "ltr",
-  "sourceHash": "249fbe556f1f373f",
+  "sourceHash": "ff5261a51a4021e0",
   "site": {
     "skip": "Vai al contenuto",
     "navLabel": "Navigazione principale",
@@ -12,6 +12,8 @@
     "dismiss": "Chiudi",
     "email": "Slocgtory@gmail.com",
     "nav": {
+      "home": "Home",
+      "apps": "Applicazioni",
       "privacy": "Privacy"
     },
     "theme": {
@@ -27,18 +29,24 @@
     "metaTitle": "Slocgtory",
     "metaDescription": "Sviluppo indipendente di realtà virtuale per Meta Quest. Le applicazioni e l’informativa sulla privacy che le riguarda.",
     "title": "Realtà virtuale, costruita da una persona sola.",
-    "intro": "Slocgtory è uno sviluppatore indipendente che crea giochi per Meta Quest. Questa pagina elenca ciò che esiste finora e contiene l’informativa sulla privacy che vale per tutto.",
-    "appsHeading": "Applicazioni",
-    "apps": [
+    "intro": "Slocgtory è uno sviluppatore indipendente che crea giochi per Meta Quest. Una persona sola, dall’inizio alla fine.",
+    "contactHeading": "Contatti",
+    "contactBody": "Domande, segnalazioni di errori e qualsiasi cosa riguardi i tuoi dati: [Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)."
+  },
+  "apps": {
+    "metaTitle": "Applicazioni — Slocgtory",
+    "metaDescription": "Le app di realtà virtuale di Slocgtory per Meta Quest e cosa fa ciascuna.",
+    "title": "Ciò che esiste finora.",
+    "intro": "Tutto ciò che Slocgtory ha realizzato per Meta Quest, pubblicato o no.",
+    "heading": "Applicazioni",
+    "list": [
       {
         "name": "AllVRPuzzles",
         "status": "In sviluppo",
         "desc": "Un gioco di puzzle per Meta Quest 3 e 3S. 210 immagini distribuite in 26 stanze, tagliate e ricomposte in realtà virtuale, con il tracciamento delle mani o i controller. Presto su Meta Horizon Store."
       }
     ],
-    "appsNote": "Non è ancora uscito nulla. Ogni applicazione comparirà qui alla pubblicazione, con un collegamento alla sua pagina nello store.",
-    "contactHeading": "Contatti",
-    "contactBody": "Domande, segnalazioni di errori e qualsiasi cosa riguardi i tuoi dati: [Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)."
+    "note": "Non è ancora uscito nulla. Ogni applicazione comparirà qui alla pubblicazione, con un collegamento alla sua pagina nello store."
   },
   "privacy": {
     "metaTitle": "Informativa sulla privacy",

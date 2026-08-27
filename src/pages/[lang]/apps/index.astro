@@ -1,0 +1,22 @@
+---
+import Base from '../../../layouts/Base.astro';
+import AppsBody from '../../../components/AppsBody.astro';
+import { loadLocale, TRANSLATED_LOCALES } from '../../../lib/i18n';
+
+export function getStaticPaths() {
+  return TRANSLATED_LOCALES.map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const data = await loadLocale(lang!);
+---
+
+<Base
+  locale={lang!}
+  page="apps"
+  title={data.apps.metaTitle}
+  description={data.apps.metaDescription}
+  site={data.site}
+>
+  <AppsBody apps={data.apps} />
+</Base>

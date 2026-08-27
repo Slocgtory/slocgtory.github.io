@@ -1,7 +1,7 @@
 {
   "name": "Svenska",
   "dir": "ltr",
-  "sourceHash": "249fbe556f1f373f",
+  "sourceHash": "ff5261a51a4021e0",
   "site": {
     "skip": "Hoppa till innehållet",
     "navLabel": "Huvudnavigering",
@@ -12,6 +12,8 @@
     "dismiss": "Stäng",
     "email": "Slocgtory@gmail.com",
     "nav": {
+      "home": "Start",
+      "apps": "Appar",
       "privacy": "Integritet"
     },
     "theme": {
@@ -27,18 +29,24 @@
     "metaTitle": "Slocgtory",
     "metaDescription": "Oberoende VR-utveckling för Meta Quest. Appar och integritetspolicyn som gäller för dem.",
     "title": "Virtuell verklighet, byggd av en enda person.",
-    "intro": "Slocgtory är en oberoende utvecklare som gör spel till Meta Quest. Den här sidan listar vad som finns hittills och innehåller integritetspolicyn som gäller för allt.",
-    "appsHeading": "Appar",
-    "apps": [
+    "intro": "Slocgtory är en oberoende utvecklare som gör spel till Meta Quest. En person, från början till slut.",
+    "contactHeading": "Kontakt",
+    "contactBody": "Frågor, felrapporter och allt som rör dina uppgifter: [Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)."
+  },
+  "apps": {
+    "metaTitle": "Appar — Slocgtory",
+    "metaDescription": "Virtual reality-appar från Slocgtory för Meta Quest, och vad var och en gör.",
+    "title": "Det som finns hittills.",
+    "intro": "Allt som Slocgtory har gjort för Meta Quest, släppt eller inte.",
+    "heading": "Appar",
+    "list": [
       {
         "name": "AllVRPuzzles",
         "status": "Under utveckling",
         "desc": "Ett pusselspel för Meta Quest 3 och 3S. 210 bilder fördelade på 26 rum, skurna och lagda i virtuell verklighet, med handspårning eller handkontroller. Kommer till Meta Horizon Store."
       }
     ],
-    "appsNote": "Inget är släppt än. Varje app listas här när den kommer ut, med en länk till dess butikssida.",
-    "contactHeading": "Kontakt",
-    "contactBody": "Frågor, felrapporter och allt som rör dina uppgifter: [Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)."
+    "note": "Inget är släppt än. Varje app listas här när den kommer ut, med en länk till dess butikssida."
   },
   "privacy": {
     "metaTitle": "Integritetspolicy",

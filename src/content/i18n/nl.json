@@ -1,7 +1,7 @@
 {
   "name": "Nederlands",
   "dir": "ltr",
-  "sourceHash": "249fbe556f1f373f",
+  "sourceHash": "ff5261a51a4021e0",
   "site": {
     "skip": "Naar de inhoud",
     "navLabel": "Hoofdnavigatie",
@@ -12,6 +12,8 @@
     "dismiss": "Sluiten",
     "email": "Slocgtory@gmail.com",
     "nav": {
+      "home": "Home",
+      "apps": "Apps",
       "privacy": "Privacy"
     },
     "theme": {
@@ -27,18 +29,24 @@
     "metaTitle": "Slocgtory",
     "metaDescription": "Onafhankelijke virtual-realityontwikkeling voor Meta Quest. De apps en het privacybeleid dat erop van toepassing is.",
     "title": "Virtual reality, gemaakt door één persoon.",
-    "intro": "Slocgtory is een onafhankelijke ontwikkelaar die spellen maakt voor Meta Quest. Deze pagina noemt wat er tot nu toe is en bevat het privacybeleid dat voor alles geldt.",
-    "appsHeading": "Apps",
-    "apps": [
+    "intro": "Slocgtory is een onafhankelijke ontwikkelaar die spellen maakt voor Meta Quest. Één persoon, van begin tot eind.",
+    "contactHeading": "Contact",
+    "contactBody": "Vragen, foutmeldingen en alles over je gegevens: [Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)."
+  },
+  "apps": {
+    "metaTitle": "Apps — Slocgtory",
+    "metaDescription": "Virtual reality-apps van Slocgtory voor Meta Quest, en wat elke app doet.",
+    "title": "Wat er tot nu toe is.",
+    "intro": "Alles wat Slocgtory voor Meta Quest heeft gemaakt, uitgebracht of niet.",
+    "heading": "Apps",
+    "list": [
       {
         "name": "AllVRPuzzles",
         "status": "In ontwikkeling",
         "desc": "Een legpuzzelspel voor Meta Quest 3 en 3S. 210 afbeeldingen verdeeld over 26 kamers, in virtual reality gesneden en in elkaar gezet, met handtracking of controllers. Binnenkort in de Meta Horizon Store."
       }
     ],
-    "appsNote": "Er is nog niets uitgebracht. Elke app komt hier te staan zodra die verschijnt, met een link naar de winkelpagina.",
-    "contactHeading": "Contact",
-    "contactBody": "Vragen, foutmeldingen en alles over je gegevens: [Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)."
+    "note": "Er is nog niets uitgebracht. Elke app komt hier te staan zodra die verschijnt, met een link naar de winkelpagina."
   },
   "privacy": {
     "metaTitle": "Privacybeleid",

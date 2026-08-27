@@ -1,19 +1,10 @@
 ---
 import { inline } from '../lib/i18n';
 
-interface App {
-  name: string;
-  status: string;
-  desc: string;
-}
-
 interface Props {
   home: {
     title: string;
     intro: string;
-    appsHeading: string;
-    apps: App[];
-    appsNote: string;
     contactHeading: string;
     contactBody: string;
   };
@@ -32,38 +23,6 @@ const { home } = Astro.props;
 <section class="hero">
   <h1>{home.title}</h1>
   <p class="lede" set:html={inline(home.intro)} />
-</section>
-
-{/*
-  The same two-column rhythm the policy page uses: the label sits in the margin
-  beside what it labels. It was a stacked list in a column half the width of the
-  page, which left the right forty per cent of every screen empty and made the
-  two pages look like they came from different sites.
-*/}
-<section class="block">
-  <h2 class="block-head">{home.appsHeading}</h2>
-  <div class="block-body">
-    <ul class="app-list">
-      {
-        home.apps.map((app) => (
-          <li>
-            {/*
-              The status sits against the name. It used to be pushed to the far
-              edge of the container, seven hundred pixels from the thing it
-              described, which reads as a stray badge rather than as this app's
-              state.
-            */}
-            <div class="app-head">
-              <h3>{app.name}</h3>
-              <span class="status">{app.status}</span>
-            </div>
-            <p set:html={inline(app.desc)} />
-          </li>
-        ))
-      }
-    </ul>
-    <p class="note" set:html={inline(home.appsNote)} />
-  </div>
 </section>
 
 <section class="block">

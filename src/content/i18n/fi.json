@@ -1,7 +1,7 @@
 {
   "name": "Suomi",
   "dir": "ltr",
-  "sourceHash": "249fbe556f1f373f",
+  "sourceHash": "ff5261a51a4021e0",
   "site": {
     "skip": "Siirry sisältöön",
     "navLabel": "Päävalikko",
@@ -12,6 +12,8 @@
     "dismiss": "Sulje",
     "email": "Slocgtory@gmail.com",
     "nav": {
+      "home": "Etusivu",
+      "apps": "Sovellukset",
       "privacy": "Tietosuoja"
     },
     "theme": {
@@ -27,18 +29,24 @@
     "metaTitle": "Slocgtory",
     "metaDescription": "Riippumatonta virtuaalitodellisuuskehitystä Meta Questille. Sovellukset ja niitä koskeva tietosuojaseloste.",
     "title": "Virtuaalitodellisuutta, yhden ihmisen tekemänä.",
-    "intro": "Slocgtory on riippumaton kehittäjä, joka tekee pelejä Meta Questille. Tällä sivulla on lueteltu se, mitä toistaiseksi on olemassa, sekä tietosuojaseloste, joka koskee kaikkea.",
-    "appsHeading": "Sovellukset",
-    "apps": [
+    "intro": "Slocgtory on riippumaton kehittäjä, joka tekee pelejä Meta Questille. Yksi ihminen, alusta loppuun.",
+    "contactHeading": "Yhteystiedot",
+    "contactBody": "Kysymykset, virheilmoitukset ja kaikki tietojasi koskeva: [Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)."
+  },
+  "apps": {
+    "metaTitle": "Sovellukset — Slocgtory",
+    "metaDescription": "Slocgtoryn virtuaalitodellisuussovellukset Meta Questille ja mitä kukin niistä tekee.",
+    "title": "Mitä on toistaiseksi olemassa.",
+    "intro": "Kaikki, mitä Slocgtory on tehnyt Meta Questille, julkaistu tai ei.",
+    "heading": "Sovellukset",
+    "list": [
       {
         "name": "AllVRPuzzles",
         "status": "Kehitteillä",
         "desc": "Palapelipeli Meta Quest 3:lle ja 3S:lle. 210 kuvaa 26 huoneessa, paloiteltuina ja koottuina virtuaalitodellisuudessa, käsienseurannalla tai ohjaimilla. Tulossa Meta Horizon Storeen."
       }
     ],
-    "appsNote": "Mitään ei ole vielä julkaistu. Jokainen sovellus listataan tähän julkaisunsa yhteydessä, linkkinä kauppasivulleen.",
-    "contactHeading": "Yhteystiedot",
-    "contactBody": "Kysymykset, virheilmoitukset ja kaikki tietojasi koskeva: [Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)."
+    "note": "Mitään ei ole vielä julkaistu. Jokainen sovellus listataan tähän julkaisunsa yhteydessä, linkkinä kauppasivulleen."
   },
   "privacy": {
     "metaTitle": "Tietosuojaseloste",

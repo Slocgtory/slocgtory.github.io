@@ -12,6 +12,8 @@
     "dismiss": "Dismiss",
     "email": "Slocgtory@gmail.com",
     "nav": {
+      "home": "Home",
+      "apps": "Apps",
       "privacy": "Privacy"
     },
     "theme": {
@@ -27,18 +29,24 @@
     "metaTitle": "Slocgtory",
     "metaDescription": "Independent virtual reality development for Meta Quest. Apps, and the privacy policy that covers them.",
     "title": "Virtual reality, built by one person.",
-    "intro": "Slocgtory is an independent developer making games for Meta Quest. This page lists what exists so far and holds the privacy policy that covers all of it.",
-    "appsHeading": "Apps",
-    "apps": [
+    "intro": "Slocgtory is an independent developer making games for Meta Quest. One person, start to finish.",
+    "contactHeading": "Contact",
+    "contactBody": "Questions, bug reports, and anything about your data: [Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)."
+  },
+  "apps": {
+    "metaTitle": "Apps — Slocgtory",
+    "metaDescription": "Virtual reality apps by Slocgtory for Meta Quest, and what each one does.",
+    "title": "What exists so far.",
+    "intro": "Everything Slocgtory has made for Meta Quest, released or not.",
+    "heading": "Apps",
+    "list": [
       {
         "name": "AllVRPuzzles",
         "status": "In development",
         "desc": "A jigsaw puzzle game for Meta Quest 3 and 3S. 210 pictures across 26 rooms, cut and assembled in virtual reality, played with hand tracking or controllers. Coming to the Meta Horizon Store."
       }
     ],
-    "appsNote": "Nothing has been released yet. Each app will be listed here as it ships, with a link to its store page.",
-    "contactHeading": "Contact",
-    "contactBody": "Questions, bug reports, and anything about your data: [Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)."
+    "note": "Nothing has been released yet. Each app will be listed here as it ships, with a link to its store page."
   },
   "privacy": {
     "metaTitle": "Privacy Policy",
