@@ -1,6 +1,6 @@
 {
   "name": "한국어",
-  "sourceHash": "5d4dfd48edab4a8b",
+  "sourceHash": "e351e56a5bdcf006",
   "site": {
     "skip": "본문으로 건너뛰기",
     "navLabel": "주요 메뉴",
@@ -52,11 +52,11 @@
         "slug": "allvrpuzzles",
         "name": "AllVRPuzzles",
         "status": "개발 중",
-        "desc": "Meta Quest 3 및 3S용 직소 퍼즐 게임. 26개의 방에 담긴 210장의 그림을 가상현실에서 잘라내고 맞춥니다. 핸드 트래킹 또는 컨트롤러로 플레이할 수 있습니다. Meta Horizon Store 출시 예정.",
+        "desc": "Meta Quest 2, 3, 3S용 직소 퍼즐 게임. 26개의 방에 담긴 210장의 그림을 가상현실에서 잘라내고 맞춥니다. 핸드 트래킹 또는 컨트롤러로 플레이할 수 있습니다. Meta Horizon Store 출시 예정.",
         "more": "이 앱에 대하여",
         "page": {
           "metaTitle": "AllVRPuzzles — Slocgtory",
-          "metaDescription": "Meta Quest 3 및 3S용 직소 퍼즐. 26개 방에 210점, 12조각부터 500조각까지, 손이나 컨트롤러로.",
+          "metaDescription": "Meta Quest 2, 3, 3S용 직소 퍼즐. 26개 방에 210점, 12조각부터 500조각까지, 손이나 컨트롤러로.",
           "intro": [
             "가상현실에서 잘라 맞추는 직소 퍼즐. 그림을 고르고, 얼마나 잘게 나눌지 고른 다음 — 12조각이든 500조각이든 — 원하는 크기와 거리로 맞춰 둔 판 위에서 맞춥니다.",
             "아직 개발 중입니다. 출시되는 날 이 페이지에 스토어 링크가 올라갑니다."
@@ -64,11 +64,15 @@
           "facts": [
             {
               "label": "헤드셋",
-              "value": "Meta Quest 3 및 Quest 3S"
+              "value": "Meta Quest 2, Quest 3, Quest 3S"
             },
             {
               "label": "그림",
               "value": "26개 방에 210점, 그중 10점은 무료"
+            },
+            {
+              "label": "주변 환경",
+              "value": "카메라로 보는 내 방, 또는 게임 속 방"
             },
             {
               "label": "난이도",

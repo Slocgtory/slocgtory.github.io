@@ -1,6 +1,6 @@
 {
   "name": "Íslenska",
-  "sourceHash": "5d4dfd48edab4a8b",
+  "sourceHash": "e351e56a5bdcf006",
   "site": {
     "skip": "Fara í efni",
     "navLabel": "Aðalvalmynd",
@@ -52,11 +52,11 @@
         "slug": "allvrpuzzles",
         "name": "AllVRPuzzles",
         "status": "Í þróun",
-        "desc": "Púsluspil fyrir Meta Quest 3 og 3S. 210 myndir í 26 herbergjum, skornar og settar saman í sýndarveruleika, spilaðar með handrakningu eða stýringum. Væntanlegt í Meta Horizon Store.",
+        "desc": "Púsluspil fyrir Meta Quest 2, 3 og 3S. 210 myndir í 26 herbergjum, skornar og settar saman í sýndarveruleika, spilaðar með handrakningu eða stýringum. Væntanlegt í Meta Horizon Store.",
         "more": "Um þetta forrit",
         "page": {
           "metaTitle": "AllVRPuzzles — Slocgtory",
-          "metaDescription": "Púsluspil fyrir Meta Quest 3 og 3S. 210 myndir í 26 herbergjum, frá 12 upp í 500 kubba, með höndunum eða með stýringum.",
+          "metaDescription": "Púsluspil fyrir Meta Quest 2, 3 og 3S. 210 myndir í 26 herbergjum, frá 12 upp í 500 kubba, með höndunum eða með stýringum.",
           "intro": [
             "Púsluspil, skorið og sett saman í sýndarveruleika. Veldu mynd, veldu hversu smátt hún brotnar — tólf kubbar eða fimm hundruð — og settu hana saman á borði sem þú hefur sjálf stillt að stærð og fjarlægð.",
             "Enn í þróun. Á útgáfudegi verður hér tengill í verslunina."
@@ -64,11 +64,15 @@
           "facts": [
             {
               "label": "Höfuðtól",
-              "value": "Meta Quest 3 og Quest 3S"
+              "value": "Meta Quest 2, Quest 3 og Quest 3S"
             },
             {
               "label": "Myndir",
               "value": "210 í 26 herbergjum, tíu þeirra ókeypis"
+            },
+            {
+              "label": "Umhverfi",
+              "value": "Þitt eigið herbergi gegnum myndavélarnar, eða eitt úr leiknum"
             },
             {
               "label": "Erfiðleikastig",

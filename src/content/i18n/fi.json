@@ -1,6 +1,6 @@
 {
   "name": "Suomi",
-  "sourceHash": "5d4dfd48edab4a8b",
+  "sourceHash": "e351e56a5bdcf006",
   "site": {
     "skip": "Siirry sisältöön",
     "navLabel": "Päävalikko",
@@ -52,11 +52,11 @@
         "slug": "allvrpuzzles",
         "name": "AllVRPuzzles",
         "status": "Kehitteillä",
-        "desc": "Palapelipeli Meta Quest 3:lle ja 3S:lle. 210 kuvaa 26 huoneessa, paloiteltuina ja koottuina virtuaalitodellisuudessa, käsienseurannalla tai ohjaimilla. Tulossa Meta Horizon Storeen.",
+        "desc": "Palapelipeli Meta Quest 2:lle, 3:lle ja 3S:lle. 210 kuvaa 26 huoneessa, paloiteltuina ja koottuina virtuaalitodellisuudessa, käsienseurannalla tai ohjaimilla. Tulossa Meta Horizon Storeen.",
         "more": "Tietoja tästä sovelluksesta",
         "page": {
           "metaTitle": "AllVRPuzzles — Slocgtory",
-          "metaDescription": "Palapelipeli Meta Quest 3:lle ja 3S:lle. 210 kuvaa 26 huoneessa, 12–500 palaa, käsin tai ohjaimin.",
+          "metaDescription": "Palapelipeli Meta Quest 2:lle, 3:lle ja 3S:lle. 210 kuvaa 26 huoneessa, 12–500 palaa, käsin tai ohjaimin.",
           "intro": [
             "Palapeli, joka leikataan ja kootaan virtuaalitodellisuudessa. Valitse kuva, valitse kuinka pieniksi paloiksi se hajoaa — kaksitoista palaa tai viisisataa — ja kokoa se alustalla, jonka koon ja etäisyyden olet itse asettanut.",
             "Vielä kehitteillä. Julkaisupäivänä tällä sivulla on linkki kauppaan."
@@ -64,11 +64,15 @@
           "facts": [
             {
               "label": "Laite",
-              "value": "Meta Quest 3 ja Quest 3S"
+              "value": "Meta Quest 2, Quest 3 ja Quest 3S"
             },
             {
               "label": "Kuvat",
               "value": "210 kuvaa 26 huoneessa, kymmenen niistä ilmaisia"
+            },
+            {
+              "label": "Ympäristö",
+              "value": "Oma huoneesi kameroiden läpi tai pelin rakentama"
             },
             {
               "label": "Vaikeustaso",

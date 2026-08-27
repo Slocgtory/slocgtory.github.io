@@ -1,6 +1,6 @@
 {
   "name": "Italiano",
-  "sourceHash": "5d4dfd48edab4a8b",
+  "sourceHash": "e351e56a5bdcf006",
   "site": {
     "skip": "Vai al contenuto",
     "navLabel": "Navigazione principale",
@@ -52,11 +52,11 @@
         "slug": "allvrpuzzles",
         "name": "AllVRPuzzles",
         "status": "In sviluppo",
-        "desc": "Un gioco di puzzle per Meta Quest 3 e 3S. 210 immagini distribuite in 26 stanze, tagliate e ricomposte in realtà virtuale, con il tracciamento delle mani o i controller. Presto su Meta Horizon Store.",
+        "desc": "Un gioco di puzzle per Meta Quest 2, 3 e 3S. 210 immagini distribuite in 26 stanze, tagliate e ricomposte in realtà virtuale, con il tracciamento delle mani o i controller. Presto su Meta Horizon Store.",
         "more": "Su questa app",
         "page": {
           "metaTitle": "AllVRPuzzles — Slocgtory",
-          "metaDescription": "Un gioco di puzzle per Meta Quest 3 e 3S. 210 immagini in 26 stanze, da 12 a 500 pezzi, con le mani o con i controller.",
+          "metaDescription": "Un gioco di puzzle per Meta Quest 2, 3 e 3S. 210 immagini in 26 stanze, da 12 a 500 pezzi, con le mani o con i controller.",
           "intro": [
             "Un puzzle tagliato e ricomposto in realtà virtuale. Scegli un’immagine, scegli quanto finemente si divide — dodici pezzi o cinquecento — e componilo su un tavolo regolato sulla misura e sulla distanza che preferisci.",
             "Ancora in sviluppo. Il giorno dell’uscita questa pagina avrà un collegamento al negozio."
@@ -64,11 +64,15 @@
           "facts": [
             {
               "label": "Visore",
-              "value": "Meta Quest 3 e Quest 3S"
+              "value": "Meta Quest 2, Quest 3 e Quest 3S"
             },
             {
               "label": "Immagini",
               "value": "210 in 26 stanze, dieci gratuite"
+            },
+            {
+              "label": "Ambiente",
+              "value": "La tua stanza vista dalle telecamere, o una costruita dal gioco"
             },
             {
               "label": "Difficoltà",
