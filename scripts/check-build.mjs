@@ -142,6 +142,38 @@ for (const code of LOCALES) {
   if (!existsSync(join(DIST, 'og', `${code}.png`))) fail(`og/${code}.png`, 'no social card for this language');
 }
 
+// --- the sitemap agrees with what was built -------------------------------
+/*
+ * Nothing was checking this, and it is exactly the kind of gap that stays quiet:
+ * a page can build, link correctly and be reachable while simply not being in
+ * the file that tells search engines it exists. Adding the app pages was the
+ * moment to notice - sixteen new addresses that nobody would have missed.
+ */
+const sitemapFile = join(DIST, 'sitemap-0.xml');
+if (!existsSync(sitemapFile)) {
+  fail('sitemap-0.xml', 'no sitemap was written');
+} else {
+  const listed = new Set(
+    [...readFileSync(sitemapFile, 'utf8').matchAll(/<loc>([^<]*)<\/loc>/g)].map((m) => m[1]),
+  );
+
+  for (const file of pages) {
+    const rel = relative(DIST, file).replace(/\\/g, '/');
+    if (rel === ERROR_PAGE) {
+      // An error page is not a place, and inviting a crawler to it is worse
+      // than useless: it is the one address that must not be in here.
+      if (listed.has(ownUrl(rel))) fail(rel, 'the error page is in the sitemap');
+      continue;
+    }
+    if (!listed.has(ownUrl(rel))) fail(rel, 'built but missing from the sitemap');
+  }
+
+  for (const url of listed) {
+    const path = join(DIST, url.replace(SITE_URL, ''), 'index.html');
+    if (!existsSync(path)) fail('sitemap-0.xml', 'lists a page that was not built', url);
+  }
+}
+
 // --- report ---------------------------------------------------------------
 const GREEN = '\x1b[32m';
 const RED = '\x1b[31m';
