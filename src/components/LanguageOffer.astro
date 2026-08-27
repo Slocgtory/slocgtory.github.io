@@ -30,7 +30,9 @@ const others = LOCALES.filter((code) => code !== locale).map((code) => ({
   versions. Add links and let people choose.
 
   So nothing moves on its own. If the browser asks for a language this site
-  speaks, and the page being read is not in it, one line appears offering it.
+  speaks, and the page being read is not in it, a note appears under the settings
+  button offering it - beside the control that acts on it, rather than at the
+  other end of the header from it.
   Written in that language, because a line in English offering Polish is no use
   to somebody who is here because they do not read English.
 
@@ -91,5 +93,16 @@ const others = LOCALES.filter((code) => code !== locale).map((code) => ({
         // Nothing to do.
       }
     });
+
+    // Opening the panel closes the note: it hangs off that button, and once the
+    // panel is over it the note is both covered and answered. Not recorded as a
+    // refusal, though - opening the settings is not declining the offer, so a
+    // reader who opens and closes without choosing is asked again next time.
+    var menu = document.querySelector('[data-settings]');
+    if (menu) {
+      menu.addEventListener('toggle', function () {
+        if (menu.open) box.hidden = true;
+      });
+    }
   })();
 </script>

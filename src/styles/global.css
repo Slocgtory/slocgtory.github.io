@@ -270,6 +270,7 @@ strong { font-weight: 600; }
   instead of letting the middle one shrink.
 */
 .site-head .inner {
+  position: relative;
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
   align-items: center;
@@ -831,29 +832,61 @@ main {
 
 /* --- the language offer -------------------------------------------------- */
 /*
- * One quiet line under the masthead, in the language being offered. It is a
- * link and a dismiss, never a redirect - see the component for why.
+ * A note hung off the settings button, written in the language it offers. It is
+ * a link and a dismiss, never a redirect - see the component for why.
+ *
+ * It used to be a line under the masthead. Anchoring it here puts the sentence
+ * and the control that acts on it in one place: the reader who is told the page
+ * exists in their language can either take the link or open the panel a
+ * centimetre above it and pick from all sixteen. Under the masthead those were
+ * two unrelated marks at opposite ends of the header.
  */
 
 .lang-offer {
-  width: 100%;
-  max-width: var(--page);
-  margin: 0 auto;
-  padding: 0.75rem 1.5rem 0;
+  position: absolute;
+  right: 0;
+  top: calc(100% + 0.6rem);
+  /* Under the settings panel, which is 50: if both were ever open the panel is
+     the one being used. The script closes this when that opens, so they should
+     not meet - the order is here in case they do. */
+  z-index: 40;
+  width: max-content;
+  max-width: min(21rem, calc(100vw - 2rem));
 }
 .lang-offer[hidden] { display: none; }
 
+/* Points at the button it belongs to. Without it the card is a box that happens
+   to be nearby rather than a note attached to that control. */
+.lang-offer::before {
+  content: '';
+  position: absolute;
+  top: -0.3rem;
+  /* Derived, not eyeballed. The card's right edge is the button's right edge,
+     so the button's centre is half a control in from it; backing off half the
+     caret's own width puts the point exactly under it, and it stays there if
+     the control ever changes size. Picked by eye it landed 2px off. */
+  right: calc(var(--control-h) / 2 - 0.3rem);
+  width: 0.6rem;
+  height: 0.6rem;
+  transform: rotate(45deg);
+  background: var(--surface);
+  border-left: 1px solid var(--line);
+  border-top: 1px solid var(--line);
+}
+
 .offer {
   display: flex;
-  align-items: center;
-  gap: 0.5rem;
+  align-items: flex-start;
+  gap: 0.4rem;
   max-width: none;
-  padding: 0.5rem 0.6rem 0.5rem 0.9rem;
+  margin: 0;
+  padding: 0.7rem 0.55rem 0.7rem 0.85rem;
   border: 1px solid var(--line);
-  border-radius: 999px;
-  background: var(--surface-sunk);
-  width: fit-content;
+  border-radius: calc(var(--radius) * 2);
+  background: var(--surface);
+  box-shadow: var(--shadow-lg);
   font-size: var(--step--1);
+  line-height: 1.45;
 }
 .offer[hidden] { display: none; }
 
@@ -868,6 +901,7 @@ main {
 }
 
 .offer button {
+  flex: none;
   display: grid;
   place-items: center;
   width: 1.6rem;
@@ -880,6 +914,30 @@ main {
   cursor: pointer;
 }
 .offer button:hover {
-  background: var(--surface);
+  background: var(--surface-sunk);
   color: var(--ink);
 }
+
+/*
+  On a narrow screen the note stops floating and becomes a row of the header.
+
+  Hanging off the button it covered the tab strip, which at this width sits
+  directly under it - a notice that hides the navigation in order to tell you
+  about a language. As a third row it pushes instead of covering.
+
+  This has to live below the base rule rather than up with the rest of the
+  masthead's breakpoint: same specificity, so the later one wins, and up there
+  the absolute positioning below simply overrode it.
+*/
+@media (max-width: 34rem) {
+  .lang-offer {
+    position: static;
+    grid-row: 3;
+    grid-column: 1 / -1;
+    width: auto;
+    max-width: none;
+  }
+  /* Nothing directly above it to point at any more. */
+  .lang-offer::before { display: none; }
+}
+

@@ -213,6 +213,14 @@ const year = 2026;
           }
         </nav>
 
+        {/*
+          The offer hangs off the settings button rather than sitting under the
+          masthead, because the button is what answers it. A notice in one place
+          and its remedy in another makes the reader find the second on their
+          own; anchored here, the sentence and the control that acts on it are
+          the same object, and the panel behind it opens on the language list
+          with System at the top.
+        */}
         <Settings
           locale={locale}
           page={page}
@@ -221,6 +229,8 @@ const year = 2026;
           systemLanguage={site.systemLanguage}
           theme={site.theme}
         />
+
+        <LanguageOffer locale={locale} page={page} />
       </div>
     </header>
 
@@ -230,8 +240,6 @@ const year = 2026;
       page, and under Contact in the policy, which is the one Meta's submission
       form points at. A strip repeating it under every page was furniture.
     */}
-    <LanguageOffer locale={locale} page={page} />
-
     <main id="main">
       <slot />
     </main>
