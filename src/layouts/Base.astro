@@ -319,9 +319,19 @@ const jsonLd =
         <a class="wordmark" href={homeHref}>Slocgtory</a>
 
         <nav class="site-nav" aria-label={site.navLabel}>
+          {/*
+            `data-leaf` is this link's address with the language taken off, and
+            `data-nav-key` is which translated word belongs in it. Only the 404
+            reads them - it is one file serving every language and has to
+            restate the header in the reader's own - and they exist because the
+            alternative was matching `.nav-link` by position, which quietly went
+            wrong the moment a menu was added between two of them.
+          */}
           <a
             class="nav-link"
             href={homeHref}
+            data-leaf=""
+            data-nav-key="home"
             aria-current={!errorPage && page === 'home' ? 'page' : undefined}
           >
             {site.nav.home}
@@ -348,13 +358,20 @@ const jsonLd =
             <a
               class="nav-link"
               href={appsHref}
+              data-leaf="apps/"
+              data-nav-key="apps"
               aria-current={!errorPage && String(page).startsWith('apps') ? 'page' : undefined}
             >
               {site.nav.apps}
             </a>
 
             <details data-menu>
-              <summary class="caret" aria-label={site.nav.appsMenu} title={site.nav.appsMenu}>
+              <summary
+                class="caret"
+                data-nav-label="appsMenu"
+                aria-label={site.nav.appsMenu}
+                title={site.nav.appsMenu}
+              >
                 {/* `ico`, or the stroke rules do not reach it and the chevron
                     renders as a filled wedge - which is what it was doing. */}
                 <span class="ico" aria-hidden="true">
@@ -367,7 +384,12 @@ const jsonLd =
               <div class="panel menu-panel">
                 <ul>
                   <li>
-                    <a href={appsHref} aria-current={page === 'apps' ? 'true' : undefined}>
+                    <a
+                      href={appsHref}
+                      data-leaf="apps/"
+                      data-nav-key="allApps"
+                      aria-current={page === 'apps' ? 'true' : undefined}
+                    >
                       {site.nav.allApps}
                     </a>
                   </li>
@@ -376,6 +398,7 @@ const jsonLd =
                       <li>
                         <a
                           href={localeUrl(`apps/${app.slug}`, locale)}
+                          data-leaf={`apps/${app.slug}/`}
                           aria-current={page === `apps/${app.slug}` ? 'true' : undefined}
                         >
                           {app.name}
@@ -391,6 +414,8 @@ const jsonLd =
           <a
             class="nav-link"
             href={privacyHref}
+            data-leaf="privacy/"
+            data-nav-key="privacy"
             aria-current={!errorPage && page === 'privacy' ? 'page' : undefined}
           >
             {site.nav.privacy}

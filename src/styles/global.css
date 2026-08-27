@@ -1232,6 +1232,28 @@ main {
   display: inline-flex;
 }
 
+/*
+  A bridge across the gap, and it is not decoration.
+
+  The panel hangs half a rem below the tab, and that half a rem is over nothing:
+  a pointer travelling from the word into the menu leaves the group, the close
+  timer starts, and by the time it arrives the menu has gone. Measured, not
+  guessed - the menu opened on hover and was shut again before the pointer was
+  halfway there.
+
+  So while it is open, the group extends invisibly under itself and the journey
+  never leaves. Wider than the tab because the panel is centred on it and people
+  move diagonally toward a corner, which is the whole reason this fails.
+*/
+.tab-menu:has(details[open])::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: -6rem;
+  right: -6rem;
+  height: 0.6rem;
+}
+
 .tab-menu .caret {
   display: inline-flex;
   align-items: center;

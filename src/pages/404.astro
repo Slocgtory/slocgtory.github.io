@@ -24,10 +24,17 @@ const notFound = await Promise.all(
       code,
       title: site.notFoundTitle,
       body: site.notFoundBody,
-      // The three tabs in this language too. Swapping the message and leaving
-      // the navigation in English produced a page that was half translated -
-      // and the half that stayed was the half offering the way out.
-      nav: JSON.stringify([site.nav.home, site.nav.apps, site.nav.privacy]),
+      // Every word in the header, keyed rather than ordered. It was a list of
+      // three matched to `.nav-link` by position, and that broke silently the
+      // day a menu appeared between two of them: the tabs turned Polish and the
+      // menu inside them stayed English, pointing at English addresses.
+      nav: JSON.stringify({
+        home: site.nav.home,
+        apps: site.nav.apps,
+        appsMenu: site.nav.appsMenu,
+        allApps: site.nav.allApps,
+        privacy: site.nav.privacy,
+      }),
     };
   }),
 );
@@ -79,16 +86,25 @@ const notFound = await Promise.all(
     root.lang = match;
     document.title = wanted.querySelector('h1').textContent + ' - Slocgtory';
 
-    // The header came from the layout in the canonical language. Its labels and
-    // its links both move, so the tabs go to this reader's version of each page
-    // rather than back to English.
-    var labels = JSON.parse(wanted.getAttribute('data-nav') || '[]');
+    // The header came from the layout in the canonical language, so both its
+    // words and its addresses have to move. Every link in it carries the path
+    // it points at with the language stripped off, and the ones whose text is
+    // translated say which word they want - so this walks what is there rather
+    // than assuming what is there.
+    var labels = JSON.parse(wanted.getAttribute('data-nav') || '{}');
     var prefix = match === 'en' ? '' : '/' + match;
-    var leaves = ['/', '/apps/', '/privacy/'];
-    var tabs = document.querySelectorAll('.nav-link');
-    for (var i = 0; i < tabs.length && i < labels.length; i++) {
-      tabs[i].textContent = labels[i];
-      tabs[i].setAttribute('href', prefix + leaves[i]);
-    }
+
+    document.querySelectorAll('[data-leaf]').forEach(function (link) {
+      link.setAttribute('href', prefix + '/' + link.getAttribute('data-leaf'));
+      var key = link.getAttribute('data-nav-key');
+      if (key && labels[key]) link.textContent = labels[key];
+    });
+
+    document.querySelectorAll('[data-nav-label]').forEach(function (el) {
+      var word = labels[el.getAttribute('data-nav-label')];
+      if (!word) return;
+      el.setAttribute('aria-label', word);
+      el.setAttribute('title', word);
+    });
   })();
 </script>
