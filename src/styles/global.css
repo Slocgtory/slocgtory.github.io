@@ -981,14 +981,31 @@ main {
  * the panel shows three identical rows.
  */
 @media (forced-colors: active) {
+  /*
+    All three markers become the same object here, and it is an outline for a
+    reason that was measured rather than reasoned.
+
+    The current tab is marked by a 2px bar drawn as an `::after` background, and
+    a background is precisely what this mode takes away. Two attempts failed:
+    `background: Highlight` came back as the author's blue when the element was
+    opted out with `forced-color-adjust: none`, and came back as plain white
+    when it was not - invisible either way. The outlines below were already
+    resolving to the user's own Highlight, so the tab uses what demonstrably
+    survives instead of a third guess at what should.
+  */
   .nav-link[aria-current='page']::after {
-    background: Highlight;
-    forced-color-adjust: none;
+    display: none;
+  }
+
+  .nav-link[aria-current='page'],
+  .choices label:has(input:checked),
+  .languages a[aria-current='true'] {
+    outline: 2px solid Highlight;
+    outline-offset: 2px;
   }
 
   .choices label:has(input:checked),
   .languages a[aria-current='true'] {
-    outline: 2px solid Highlight;
     outline-offset: -2px;
   }
 
