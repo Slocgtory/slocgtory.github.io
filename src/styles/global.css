@@ -1043,9 +1043,6 @@ main {
 /* A landed-on clause says so, briefly and without moving anything. */
 .doc-section h2:target { color: var(--accent); }
 
-@media (prefers-reduced-motion: reduce) {
-  .anchor { transition: none; }
-}
 
 /* --- paper ---------------------------------------------------------------- */
 /*
