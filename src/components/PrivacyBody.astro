@@ -1,0 +1,55 @@
+---
+import { inline } from '../lib/i18n';
+
+interface Section {
+  h: string;
+  p: string[];
+  list?: string[];
+}
+
+interface Props {
+  privacy: {
+    title: string;
+    updated: string;
+    canonicalNote: string;
+    summary: string;
+    sections: Section[];
+  };
+  isCanonical: boolean;
+}
+
+const { privacy, isCanonical } = Astro.props;
+---
+
+<div class="doc-head">
+  <h1>{privacy.title}</h1>
+  <p class="updated">{privacy.updated}</p>
+</div>
+
+{
+  !isCanonical && privacy.canonicalNote && (
+    <p class="canon-note" set:html={inline(privacy.canonicalNote)} />
+  )
+}
+
+<p class="summary" set:html={inline(privacy.summary)} />
+
+{
+  privacy.sections.map((section) => (
+    <section class="doc-section">
+      <h2>{section.h}</h2>
+      <div class="body">
+        {section.p.map((paragraph) => (
+          <p set:html={inline(paragraph)} />
+        ))}
+        {section.list && (
+          <ul>
+            {section.list.map((item) => (
+              <li set:html={inline(item)} />
+            ))}
+          </ul>
+        )}
+      </div>
+    </section>
+  ))
+}

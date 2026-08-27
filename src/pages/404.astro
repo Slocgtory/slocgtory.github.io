@@ -1,0 +1,25 @@
+---
+import Base from '../layouts/Base.astro';
+import { loadLocale, DEFAULT_LOCALE, inline } from '../lib/i18n';
+
+const data = await loadLocale(DEFAULT_LOCALE);
+---
+
+<Base
+  locale={DEFAULT_LOCALE}
+  page="home"
+  title={`${data.site.notFoundTitle} - Slocgtory`}
+  description={data.site.notFoundTitle}
+  nav={data.site.nav}
+  labels={{
+      skip: data.site.skip,
+      navLabel: data.site.navLabel,
+      langLabel: data.site.langLabel,
+      email: data.site.email,
+    }}
+>
+  <section class="hero">
+    <h1>{data.site.notFoundTitle}</h1>
+    <p class="lede" set:html={inline(data.site.notFoundBody)} />
+  </section>
+</Base>

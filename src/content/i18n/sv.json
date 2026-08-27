@@ -1,0 +1,152 @@
+{
+  "name": "Svenska",
+  "dir": "ltr",
+  "sourceHash": "a3a2413c93ce7c53",
+  "site": {
+    "skip": "Hoppa till innehållet",
+    "navLabel": "Huvudnavigering",
+    "langLabel": "Språk",
+    "email": "Slocgtory@gmail.com",
+    "nav": {
+      "home": "Start",
+      "privacy": "Integritet"
+    },
+    "notFoundTitle": "Sidan hittades inte",
+    "notFoundBody": "Den adressen finns inte på den här webbplatsen. Prova [startsidan](/sv/) eller [integritetspolicyn](/sv/privacy/)."
+  },
+  "home": {
+    "metaTitle": "Slocgtory",
+    "metaDescription": "Oberoende VR-utveckling för Meta Quest. Appar och integritetspolicyn som gäller för dem.",
+    "title": "Virtuell verklighet, byggd av en enda person.",
+    "intro": "Slocgtory är en oberoende utvecklare som gör spel till Meta Quest. Den här sidan listar vad som finns hittills och innehåller integritetspolicyn som gäller för allt.",
+    "appsHeading": "Appar",
+    "apps": [
+      {
+        "name": "AllVRPuzzles",
+        "status": "Under utveckling",
+        "desc": "Ett pusselspel för Meta Quest 3 och 3S. 210 bilder fördelade på 26 rum, skurna och lagda i virtuell verklighet, med handspårning eller handkontroller. Kommer till Meta Horizon Store."
+      }
+    ],
+    "appsNote": "Inget är släppt än. Varje app listas här när den kommer ut, med en länk till dess butikssida.",
+    "contactHeading": "Kontakt",
+    "contactBody": "Frågor, felrapporter och allt som rör dina uppgifter: [Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)."
+  },
+  "privacy": {
+    "metaTitle": "Integritetspolicy",
+    "metaDescription": "Integritetspolicy för AllVRPuzzles och alla Slocgtory-appar. Inga personuppgifter samlas in; den släppta appen har ingen internetåtkomst.",
+    "title": "Integritetspolicy",
+    "updated": "Senast uppdaterad: 27 augusti 2026",
+    "canonicalNote": "Detta är en översättning för bekvämlighets skull. Den **engelska versionen** gäller: vid avvikelser är den engelska texten den som tillämpas. [Läs på engelska](/privacy/).",
+    "summary": "**De här apparna samlar inte in några personuppgifter.** Den släppta appen har ingen internetåtkomst alls och kan därför inte skicka något någonstans. Allt nedan är detaljerna bakom den meningen.",
+    "sections": [
+      {
+        "h": "Vem den här policyn kommer från",
+        "p": [
+          "Slocgtory är en oberoende utvecklare, en enda person. Det finns inget företag, inga anställda och ingen tredje part inblandad i att bygga eller driva de här apparna.",
+          "Kontakt: [Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)"
+        ]
+      },
+      {
+        "h": "Vad den omfattar",
+        "p": [
+          "Den här policyn omfattar **AllVRPuzzles**, en app för Meta Quest-headset, och varje framtida app eller spel som Slocgtory ger ut, om inte den appen publicerar en egen policy."
+        ]
+      },
+      {
+        "h": "Insamlade uppgifter: inga",
+        "p": [
+          "Den släppta appen begär inte Android-behörigheten `INTERNET`. Utan den låter operativsystemet inte appen öppna någon nätverksanslutning, så den kan inte överföra uppgifter ens i princip.",
+          "Det finns inga servrar bakom de här apparna. Det finns ingen analys, ingen annonsering, inget annons-id, ingen kraschrapportering, ingen telemetri och ingen spårning av något slag. Ingenting om hur du spelar registreras någonstans utanför ditt eget headset."
+        ]
+      },
+      {
+        "h": "Uppgifter som sparas på ditt headset",
+        "p": [
+          "Appen skriver två saker till sitt eget privata utrymme på enheten:"
+        ],
+        "list": [
+          "**Dina framsteg i spelet** — vilka pussel du har börjat på eller lagt färdigt, och hur bitarna ligger just nu.",
+          "**En lokal notering om vilka bildpaket du äger**, så att appen kan visa dina paket utan att fråga butiken varje gång."
+        ]
+      },
+      {
+        "h": "Uppgifterna stannar på enheten",
+        "p": [
+          "Inget av detta lämnar ditt headset. Android-säkerhetskopiering är avstängd för den här appen (`allowBackup=false`), så uppgifterna kopieras inte heller till någon molnsäkerhetskopia.",
+          "Om du avinstallerar appen raderas båda."
+        ]
+      },
+      {
+        "h": "Köp och rättigheter",
+        "p": [
+          "Bildpaket säljs via Metas Platform In-App Purchases. När du köper ett sker hela transaktionen inuti Metas eget butiksgränssnitt. **Betaluppgifter ses aldrig av och skickas aldrig till den här appen.**",
+          "Appen ställer fyra frågor till Metas Platform SDK och får bara svaren:"
+        ],
+        "list": [
+          "Har personen som bär det här headsetet rätt att köra den här appen? Svar: ja eller nej.",
+          "Vad kostar bildpaketen? Svar: priser och paketnamn.",
+          "Vilka paket äger den här personen redan? Svar: en lista med paket-id:n, till exempel `pack_cats`.",
+          "Öppna betalningen för det här paketet. Sköts helt av Meta."
+        ]
+      },
+      {
+        "h": "Vad som medvetet inte efterfrågas",
+        "p": [
+          "Appen begär inte och tar inte emot ditt Meta-kontonamn, ditt användar-id, din profil, din vänlista, din e-postadress eller dina betaluppgifter.",
+          "Meta behandlar frågorna ovan som plattformsoperatör, enligt sina egna villkor. Se Metas [Kompletterande integritetspolicy för Meta Platforms Technologies](https://www.meta.com/legal/quest/privacy-policy/)."
+        ]
+      },
+      {
+        "h": "Behörigheter som appen begär",
+        "p": [
+          "Den släppta appen begär tre behörigheter och inga andra:"
+        ],
+        "list": [
+          "`org.khronos.openxr.permission.OPENXR` och `OPENXR_SYSTEM` — krävs för att över huvud taget kunna öppna en VR-session.",
+          "`com.oculus.permission.HAND_TRACKING` — så att du kan spela med händerna i stället för handkontroller."
+        ]
+      },
+      {
+        "h": "Inget internet, lagring, mikrofon eller kamera",
+        "p": [
+          "Den släppta appen begär inte internetåtkomst, fillagring, mikrofon, kamera, plats, kontakter eller någon Meta-kontobehörighet. Skulle en framtida version någon gång behöva något av detta kommer den här sidan att säga det innan den versionen släpps."
+        ]
+      },
+      {
+        "h": "Barn",
+        "p": [
+          "De här apparna riktar sig inte till barn under 13 år och är inte utformade för dem."
+        ]
+      },
+      {
+        "h": "Radera dina uppgifter",
+        "p": [
+          "Allt som appen sparar finns på ditt headset, så du kan radera alltihop själv, direkt, utan att fråga någon:"
+        ],
+        "list": [
+          "Öppna **Appar** på din Quest, leta upp **AllVRPuzzles**, öppna menyn och välj **Avinstallera**."
+        ]
+      },
+      {
+        "h": "Vad raderingen når och inte når",
+        "p": [
+          "Avinstallationen tar bort dina framsteg och den lokala noteringen om dina paket. Dina köp ligger kvar på ditt Meta-konto och kommer tillbaka om du installerar om.",
+          "Det finns ingen kopia på den här sidan att radera, eftersom ingen kopia någonsin görs. Vill du ha det bekräftat skriftligt, eller har du någon annan fråga om dina uppgifter, skriv till [Slocgtory@gmail.com](mailto:Slocgtory@gmail.com) så får du svar inom 30 dagar.",
+          "För uppgifter som Meta har om ditt konto eller dina köp, kontakta Meta direkt. De uppgifterna tillhör Meta, inte oss, och bara Meta kan göra något åt dem."
+        ]
+      },
+      {
+        "h": "Ändringar av den här policyn",
+        "p": [
+          "Om något av detta ändras ändras den här sidan med, och datumet överst uppdateras. En ändring som påverkar vad som samlas in noteras även på appens butikssida."
+        ]
+      },
+      {
+        "h": "Kontakt",
+        "p": [
+          "[Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)"
+        ]
+      }
+    ]
+  }
+}

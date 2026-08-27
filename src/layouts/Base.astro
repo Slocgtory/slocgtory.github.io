@@ -1,0 +1,112 @@
+---
+import { Font } from 'astro:assets';
+import { getCollection } from 'astro:content';
+import { SITE_URL } from '../../site.config.mjs';
+import { alternatesFor, localeUrl, LOCALES, DEFAULT_LOCALE, type Page } from '../lib/i18n';
+import '../styles/global.css';
+
+interface Props {
+  locale: string;
+  page: Page;
+  title: string;
+  description: string;
+  nav: { home: string; privacy: string };
+  labels: { skip: string; navLabel: string; langLabel: string; email: string };
+}
+
+const { locale, page, title, description, nav, labels } = Astro.props;
+
+// Endonyms come from the translation files themselves, so a language names
+// itself in its own language and there is no second list to keep in step.
+const entries = await getCollection('i18n');
+const endonym = new Map(entries.map((e) => [e.id, e.data.name]));
+
+const alternates = alternatesFor(page);
+const canonical = new URL(localeUrl(page, locale), SITE_URL).href;
+const homeHref = localeUrl('home', locale);
+const privacyHref = localeUrl('privacy', locale);
+const year = 2026;
+---
+
+<!doctype html>
+<html lang={locale} dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+
+    {
+      alternates.map(({ code, url }) => (
+        <link rel="alternate" hreflang={code} href={new URL(url, SITE_URL).href} />
+      ))
+    }
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href={new URL(localeUrl(page, DEFAULT_LOCALE), SITE_URL).href}
+    />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content={locale.replace('-', '_')} />
+    <meta name="twitter:card" content="summary" />
+
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <Font cssVariable="--font-body" preload />
+    <Font cssVariable="--font-display" preload />
+    <Font cssVariable="--font-mono" />
+  </head>
+
+  <body>
+    <a class="skip" href="#main">{labels.skip}</a>
+
+    <header class="site-head">
+      <div class="inner">
+        <a class="wordmark" href={homeHref}>Slocgtory</a>
+        <nav aria-label={labels.navLabel}>
+          <a href={homeHref} aria-current={page === 'home' ? 'page' : undefined}>{nav.home}</a>
+          <a href={privacyHref} aria-current={page === 'privacy' ? 'page' : undefined}>
+            {nav.privacy}
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <slot />
+    </main>
+
+    <footer class="site-foot">
+      <div class="inner">
+        <nav class="langs" aria-label={labels.langLabel}>
+          <h2>{labels.langLabel}</h2>
+          <ul>
+            {
+              LOCALES.map((code) => (
+                <li>
+                  <a
+                    href={localeUrl(page, code)}
+                    hreflang={code}
+                    lang={code}
+                    aria-current={code === locale ? 'true' : undefined}
+                  >
+                    {endonym.get(code) ?? code}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </nav>
+        <p class="colophon">
+          &copy; {year} Slocgtory &middot; <a href={`mailto:${labels.email}`}>{labels.email}</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

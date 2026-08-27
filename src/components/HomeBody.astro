@@ -1,0 +1,49 @@
+---
+import { inline } from '../lib/i18n';
+
+interface App {
+  name: string;
+  status: string;
+  desc: string;
+}
+
+interface Props {
+  home: {
+    title: string;
+    intro: string;
+    appsHeading: string;
+    apps: App[];
+    appsNote: string;
+    contactHeading: string;
+    contactBody: string;
+  };
+}
+
+const { home } = Astro.props;
+---
+
+<section class="hero">
+  <h1>{home.title}</h1>
+  <p class="lede" set:html={inline(home.intro)} />
+</section>
+
+<section class="block">
+  <h2 class="block-head">{home.appsHeading}</h2>
+  <ul class="app-list">
+    {
+      home.apps.map((app) => (
+        <li>
+          <h3>{app.name}</h3>
+          <span class="status">{app.status}</span>
+          <p set:html={inline(app.desc)} />
+        </li>
+      ))
+    }
+  </ul>
+  <p class="note" set:html={inline(home.appsNote)} />
+</section>
+
+<section class="block">
+  <h2 class="block-head">{home.contactHeading}</h2>
+  <p set:html={inline(home.contactBody)} />
+</section>

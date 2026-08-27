@@ -1,0 +1,152 @@
+{
+  "name": "Español",
+  "dir": "ltr",
+  "sourceHash": "a3a2413c93ce7c53",
+  "site": {
+    "skip": "Saltar al contenido",
+    "navLabel": "Navegación principal",
+    "langLabel": "Idioma",
+    "email": "Slocgtory@gmail.com",
+    "nav": {
+      "home": "Inicio",
+      "privacy": "Privacidad"
+    },
+    "notFoundTitle": "Página no encontrada",
+    "notFoundBody": "Esa dirección no existe en este sitio. Prueba con la [página de inicio](/es/) o con la [política de privacidad](/es/privacy/)."
+  },
+  "home": {
+    "metaTitle": "Slocgtory",
+    "metaDescription": "Desarrollo independiente de realidad virtual para Meta Quest. Las aplicaciones y la política de privacidad que las cubre.",
+    "title": "Realidad virtual hecha por una sola persona.",
+    "intro": "Slocgtory es un desarrollador independiente que crea juegos para Meta Quest. Esta página recoge lo que existe hasta ahora y contiene la política de privacidad que lo cubre todo.",
+    "appsHeading": "Aplicaciones",
+    "apps": [
+      {
+        "name": "AllVRPuzzles",
+        "status": "En desarrollo",
+        "desc": "Un juego de rompecabezas para Meta Quest 3 y 3S. 210 imágenes repartidas en 26 salas, cortadas y montadas en realidad virtual, con seguimiento de manos o mandos. Próximamente en Meta Horizon Store."
+      }
+    ],
+    "appsNote": "Todavía no se ha publicado nada. Cada aplicación aparecerá aquí cuando salga, con un enlace a su página en la tienda.",
+    "contactHeading": "Contacto",
+    "contactBody": "Preguntas, informes de errores y cualquier asunto sobre tus datos: [Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)."
+  },
+  "privacy": {
+    "metaTitle": "Política de privacidad",
+    "metaDescription": "Política de privacidad de AllVRPuzzles y de todas las aplicaciones de Slocgtory. No se recopilan datos personales; la aplicación publicada no tiene acceso a Internet.",
+    "title": "Política de privacidad",
+    "updated": "Última actualización: 27 de agosto de 2026",
+    "canonicalNote": "Esta es una traducción de cortesía. La **versión en inglés** es la que prevalece: si ambas discrepan, se aplica el texto en inglés. [Leer en inglés](/privacy/).",
+    "summary": "**Estas aplicaciones no recopilan ningún dato personal.** La aplicación publicada no tiene acceso a Internet en absoluto, así que no puede enviar nada a ninguna parte. Todo lo que sigue es el detalle detrás de esa frase.",
+    "sections": [
+      {
+        "h": "De quién procede esta política",
+        "p": [
+          "Slocgtory es un desarrollador independiente, una sola persona. No hay empresa, ni empleados, ni ningún tercero implicado en la creación o el funcionamiento de estas aplicaciones.",
+          "Contacto: [Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)"
+        ]
+      },
+      {
+        "h": "Qué cubre",
+        "p": [
+          "Esta política cubre **AllVRPuzzles**, una aplicación para las gafas Meta Quest, y cualquier aplicación o juego que Slocgtory publique en el futuro, salvo que esa aplicación publique su propia política."
+        ]
+      },
+      {
+        "h": "Datos recopilados: ninguno",
+        "p": [
+          "La aplicación publicada no solicita el permiso `INTERNET` de Android. Sin él, el sistema operativo no le permite abrir una conexión de red, por lo que no puede transmitir datos ni siquiera en principio.",
+          "Detrás de estas aplicaciones no hay servidores. No hay analítica, ni publicidad, ni identificador publicitario, ni informes de fallos, ni telemetría, ni seguimiento de ningún tipo. Nada sobre cómo juegas se registra fuera de tus propias gafas."
+        ]
+      },
+      {
+        "h": "Datos guardados en tus gafas",
+        "p": [
+          "La aplicación escribe dos cosas en su propio almacenamiento privado del dispositivo:"
+        ],
+        "list": [
+          "**Tu progreso en el juego**: qué rompecabezas has empezado o terminado y cómo están colocadas las piezas ahora mismo.",
+          "**Un registro local de qué packs de imágenes tienes**, para que la aplicación pueda mostrarlos sin consultar la tienda cada vez."
+        ]
+      },
+      {
+        "h": "Esos datos se quedan en el dispositivo",
+        "p": [
+          "Ninguna de las dos cosas sale de tus gafas. La copia de seguridad de Android está desactivada para esta aplicación (`allowBackup=false`), así que estos datos tampoco se copian a ninguna copia en la nube.",
+          "Desinstalar la aplicación borra ambas."
+        ]
+      },
+      {
+        "h": "Compras y derechos de acceso",
+        "p": [
+          "Los packs de imágenes se venden mediante las Platform In-App Purchases de Meta. Cuando compras uno, la transacción ocurre por completo dentro de la interfaz de la tienda de Meta. **Esta aplicación nunca ve ni recibe tus datos de pago.**",
+          "La aplicación le hace cuatro preguntas al Platform SDK de Meta y solo recibe las respuestas:"
+        ],
+        "list": [
+          "¿La persona que lleva estas gafas tiene derecho a ejecutar esta aplicación? Respuesta: sí o no.",
+          "¿Cuánto cuestan los packs de imágenes? Respuesta: precios y nombres de los packs.",
+          "¿Qué packs tiene ya esta persona? Respuesta: una lista de identificadores de pack, como `pack_cats`.",
+          "Abre el pago de este pack. Lo gestiona Meta por completo."
+        ]
+      },
+      {
+        "h": "Lo que deliberadamente no se pide",
+        "p": [
+          "La aplicación no solicita ni recibe el nombre de tu cuenta de Meta, tu identificador de usuario, tu perfil, tu lista de amigos, tu dirección de correo ni tus datos de pago.",
+          "Meta procesa las preguntas anteriores como operador de la plataforma, bajo sus propias condiciones. Consulta la [Política de privacidad complementaria de Meta Platforms Technologies](https://www.meta.com/legal/quest/privacy-policy/)."
+        ]
+      },
+      {
+        "h": "Permisos que solicita la aplicación",
+        "p": [
+          "La aplicación publicada solicita tres permisos, y ninguno más:"
+        ],
+        "list": [
+          "`org.khronos.openxr.permission.OPENXR` y `OPENXR_SYSTEM`: necesarios para poder abrir una sesión de realidad virtual.",
+          "`com.oculus.permission.HAND_TRACKING`: para que puedas jugar con las manos en lugar de con los mandos."
+        ]
+      },
+      {
+        "h": "Sin Internet, sin almacenamiento, sin micrófono y sin cámara",
+        "p": [
+          "La aplicación publicada no solicita acceso a Internet, almacenamiento de archivos, micrófono, cámara, ubicación, contactos ni ningún permiso de cuenta de Meta. Si alguna versión futura llegara a necesitar alguno, esta página lo dirá antes de que esa versión salga."
+        ]
+      },
+      {
+        "h": "Menores",
+        "p": [
+          "Estas aplicaciones no están dirigidas a menores de 13 años ni están diseñadas para ellos."
+        ]
+      },
+      {
+        "h": "Borrar tus datos",
+        "p": [
+          "Todo lo que la aplicación guarda está en tus gafas, así que puedes borrarlo tú mismo, de inmediato y sin pedírselo a nadie:"
+        ],
+        "list": [
+          "En tus Quest, abre **Aplicaciones**, busca **AllVRPuzzles**, abre su menú y elige **Desinstalar**."
+        ]
+      },
+      {
+        "h": "Qué alcanza el borrado y qué no",
+        "p": [
+          "Desinstalar elimina tu progreso y el registro local de los packs que tienes. Tus compras siguen asociadas a tu cuenta de Meta y vuelven si reinstalas.",
+          "Por esta parte no hay ninguna copia que borrar, porque nunca se hace ninguna. Si quieres que te lo confirmemos por escrito, o tienes cualquier otra pregunta sobre tus datos, escribe a [Slocgtory@gmail.com](mailto:Slocgtory@gmail.com) y recibirás respuesta en un plazo de 30 días.",
+          "Para los datos que Meta conserva sobre tu cuenta o tus compras, contacta directamente con Meta. Esos datos son de Meta, no nuestros, y solo Meta puede actuar sobre ellos."
+        ]
+      },
+      {
+        "h": "Cambios en esta política",
+        "p": [
+          "Si algo de esto cambia, esta página cambia con ello y se actualiza la fecha de arriba. Un cambio que afecte a lo que se recopila se indicará además en la ficha de la aplicación en la tienda."
+        ]
+      },
+      {
+        "h": "Contacto",
+        "p": [
+          "[Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+---
+import Base from '../../layouts/Base.astro';
+import HomeBody from '../../components/HomeBody.astro';
+import { loadLocale, TRANSLATED_LOCALES } from '../../lib/i18n';
+
+export function getStaticPaths() {
+  return TRANSLATED_LOCALES.map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const data = await loadLocale(lang!);
+---
+
+<Base
+  locale={lang!}
+  page="home"
+  title={data.home.metaTitle}
+  description={data.home.metaDescription}
+  nav={data.site.nav}
+  labels={{
+      skip: data.site.skip,
+      navLabel: data.site.navLabel,
+      langLabel: data.site.langLabel,
+      email: data.site.email,
+    }}
+>
+  <HomeBody home={data.home} />
+</Base>

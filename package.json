@@ -1,0 +1,19 @@
+{
+  "name": "slocgtory-site",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "description": "slocgtory.github.io - apps and the privacy policy that covers them",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "node scripts/check-translations.mjs && astro build",
+    "preview": "astro preview",
+    "check": "node scripts/check-translations.mjs",
+    "check:strict": "node scripts/check-translations.mjs --strict",
+    "restamp": "node scripts/check-translations.mjs --restamp"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.3",
+    "astro": "^7.2.8"
+  }
+}

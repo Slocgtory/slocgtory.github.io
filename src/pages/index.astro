@@ -1,0 +1,23 @@
+---
+import Base from '../layouts/Base.astro';
+import HomeBody from '../components/HomeBody.astro';
+import { loadLocale, DEFAULT_LOCALE } from '../lib/i18n';
+
+const data = await loadLocale(DEFAULT_LOCALE);
+---
+
+<Base
+  locale={DEFAULT_LOCALE}
+  page="home"
+  title={data.home.metaTitle}
+  description={data.home.metaDescription}
+  nav={data.site.nav}
+  labels={{
+      skip: data.site.skip,
+      navLabel: data.site.navLabel,
+      langLabel: data.site.langLabel,
+      email: data.site.email,
+    }}
+>
+  <HomeBody home={data.home} />
+</Base>

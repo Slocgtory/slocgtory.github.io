@@ -1,0 +1,152 @@
+{
+  "name": "Suomi",
+  "dir": "ltr",
+  "sourceHash": "a3a2413c93ce7c53",
+  "site": {
+    "skip": "Siirry sisältöön",
+    "navLabel": "Päävalikko",
+    "langLabel": "Kieli",
+    "email": "Slocgtory@gmail.com",
+    "nav": {
+      "home": "Etusivu",
+      "privacy": "Tietosuoja"
+    },
+    "notFoundTitle": "Sivua ei löytynyt",
+    "notFoundBody": "Tätä osoitetta ei ole tällä sivustolla. Kokeile [etusivua](/fi/) tai [tietosuojaselostetta](/fi/privacy/)."
+  },
+  "home": {
+    "metaTitle": "Slocgtory",
+    "metaDescription": "Riippumatonta virtuaalitodellisuuskehitystä Meta Questille. Sovellukset ja niitä koskeva tietosuojaseloste.",
+    "title": "Virtuaalitodellisuutta, yhden ihmisen tekemänä.",
+    "intro": "Slocgtory on riippumaton kehittäjä, joka tekee pelejä Meta Questille. Tällä sivulla on lueteltu se, mitä toistaiseksi on olemassa, sekä tietosuojaseloste, joka koskee kaikkea.",
+    "appsHeading": "Sovellukset",
+    "apps": [
+      {
+        "name": "AllVRPuzzles",
+        "status": "Kehitteillä",
+        "desc": "Palapelipeli Meta Quest 3:lle ja 3S:lle. 210 kuvaa 26 huoneessa, paloiteltuina ja koottuina virtuaalitodellisuudessa, käsienseurannalla tai ohjaimilla. Tulossa Meta Horizon Storeen."
+      }
+    ],
+    "appsNote": "Mitään ei ole vielä julkaistu. Jokainen sovellus listataan tähän julkaisunsa yhteydessä, linkkinä kauppasivulleen.",
+    "contactHeading": "Yhteystiedot",
+    "contactBody": "Kysymykset, virheilmoitukset ja kaikki tietojasi koskeva: [Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)."
+  },
+  "privacy": {
+    "metaTitle": "Tietosuojaseloste",
+    "metaDescription": "AllVRPuzzlesin ja kaikkien Slocgtoryn sovellusten tietosuojaseloste. Henkilötietoja ei kerätä lainkaan; julkaistulla sovelluksella ei ole internetyhteyttä.",
+    "title": "Tietosuojaseloste",
+    "updated": "Viimeksi päivitetty: 27. elokuuta 2026",
+    "canonicalNote": "Tämä on epävirallinen käännös. Ratkaiseva on **englanninkielinen versio**: ristiriitatilanteessa sovelletaan englanninkielistä tekstiä. [Lue englanniksi](/privacy/).",
+    "summary": "**Nämä sovellukset eivät kerää mitään henkilötietoja.** Julkaistulla sovelluksella ei ole lainkaan internetyhteyttä, joten se ei voi lähettää mitään minnekään. Kaikki alla oleva on tämän lauseen taustaa.",
+    "sections": [
+      {
+        "h": "Keneltä tämä seloste on",
+        "p": [
+          "Slocgtory on riippumaton kehittäjä, yksi ihminen. Ei ole yritystä, ei työntekijöitä eikä kolmatta osapuolta, joka osallistuisi näiden sovellusten tekemiseen tai ylläpitoon.",
+          "Yhteystiedot: [Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)"
+        ]
+      },
+      {
+        "h": "Mitä se koskee",
+        "p": [
+          "Tämä seloste koskee sovellusta **AllVRPuzzles**, joka on tarkoitettu Meta Quest -laseille, sekä kaikkia Slocgtoryn tulevia sovelluksia ja pelejä, ellei kyseinen sovellus julkaise omaa selostettaan."
+        ]
+      },
+      {
+        "h": "Kerätyt tiedot: ei mitään",
+        "p": [
+          "Julkaistu sovellus ei pyydä Androidin `INTERNET`-käyttöoikeutta. Ilman sitä käyttöjärjestelmä ei salli sovelluksen avata verkkoyhteyttä, joten se ei voi lähettää tietoja edes periaatteessa.",
+          "Näiden sovellusten takana ei ole palvelimia. Ei ole analytiikkaa, ei mainoksia, ei mainostunnistetta, ei kaatumisraportointia, ei telemetriaa eikä minkäänlaista seurantaa. Mitään pelaamisestasi ei tallenneta mihinkään omien lasiesi ulkopuolelle."
+        ]
+      },
+      {
+        "h": "Laseillesi tallennettavat tiedot",
+        "p": [
+          "Sovellus kirjoittaa laitteen omaan yksityiseen tallennustilaansa kaksi asiaa:"
+        ],
+        "list": [
+          "**Pelin edistymisesi** — mitkä palapelit olet aloittanut tai saanut valmiiksi ja miten palat ovat tällä hetkellä.",
+          "**Paikallisen merkinnän siitä, mitkä kuvapaketit omistat**, jotta sovellus voi näyttää pakettisi kysymättä kaupalta joka kerta."
+        ]
+      },
+      {
+        "h": "Tiedot pysyvät laitteessa",
+        "p": [
+          "Kumpikaan ei poistu laseistasi. Androidin varmuuskopiointi on tältä sovellukselta pois käytöstä (`allowBackup=false`), joten tiedot eivät päädy myöskään pilvivarmuuskopioon.",
+          "Sovelluksen poistaminen poistaa molemmat."
+        ]
+      },
+      {
+        "h": "Ostot ja käyttöoikeudet",
+        "p": [
+          "Kuvapaketit myydään Metan Platform In-App Purchases -järjestelmän kautta. Kun ostat paketin, tapahtuma hoidetaan kokonaan Metan omassa kauppakäyttöliittymässä. **Tämä sovellus ei koskaan näe maksutietojasi eikä niitä välitetä sille.**",
+          "Sovellus esittää Metan Platform SDK:lle neljä kysymystä ja saa vain vastaukset:"
+        ],
+        "list": [
+          "Onko näitä laseja käyttävällä henkilöllä oikeus suorittaa tämä sovellus? Vastaus: kyllä tai ei.",
+          "Mitä kuvapaketit maksavat? Vastaus: hinnat ja pakettien nimet.",
+          "Mitkä paketit tämä henkilö jo omistaa? Vastaus: luettelo pakettitunnisteista, kuten `pack_cats`.",
+          "Avaa tämän paketin maksu. Hoituu kokonaan Metan kautta."
+        ]
+      },
+      {
+        "h": "Mitä tarkoituksella ei kysytä",
+        "p": [
+          "Sovellus ei pyydä eikä vastaanota Meta-tilisi nimeä, käyttäjätunnistettasi, profiiliasi, kaverilistaasi, sähköpostiosoitettasi tai maksutietojasi.",
+          "Meta käsittelee yllä olevat kysymykset alustan ylläpitäjänä omin ehdoin. Katso Metan [Meta Platforms Technologiesin täydentävä tietosuojakäytäntö](https://www.meta.com/legal/quest/privacy-policy/)."
+        ]
+      },
+      {
+        "h": "Sovelluksen pyytämät käyttöoikeudet",
+        "p": [
+          "Julkaistu sovellus pyytää kolmea käyttöoikeutta eikä mitään muuta:"
+        ],
+        "list": [
+          "`org.khronos.openxr.permission.OPENXR` ja `OPENXR_SYSTEM` — välttämättömiä, jotta virtuaalitodellisuusistunto ylipäätään voidaan avata.",
+          "`com.oculus.permission.HAND_TRACKING` — jotta voit pelata käsilläsi ohjainten sijaan."
+        ]
+      },
+      {
+        "h": "Ei internetiä, tallennustilaa, mikrofonia eikä kameraa",
+        "p": [
+          "Julkaistu sovellus ei pyydä internetyhteyttä, tiedostojen tallennustilaa, mikrofonia, kameraa, sijaintia, yhteystietoja eikä mitään Meta-tiliin liittyvää käyttöoikeutta. Jos jokin tuleva versio joskus tarvitsee jotain näistä, tämä sivu kertoo siitä ennen kyseisen version julkaisua."
+        ]
+      },
+      {
+        "h": "Lapset",
+        "p": [
+          "Näitä sovelluksia ei ole suunnattu alle 13-vuotiaille lapsille eikä niitä ole suunniteltu heille."
+        ]
+      },
+      {
+        "h": "Tietojesi poistaminen",
+        "p": [
+          "Kaikki, mitä sovellus tallentaa, on laseissasi, joten voit poistaa kaiken itse, heti, kysymättä keneltäkään:"
+        ],
+        "list": [
+          "Avaa Questissäsi **Sovellukset**, etsi **AllVRPuzzles**, avaa sen valikko ja valitse **Poista**."
+        ]
+      },
+      {
+        "h": "Mihin poistaminen yltää ja mihin ei",
+        "p": [
+          "Poistaminen pyyhkii edistymisesi ja paikallisen merkinnän omistamistasi paketeista. Ostoksesi säilyvät Meta-tililläsi ja palaavat, jos asennat sovelluksen uudelleen.",
+          "Tällä puolella ei ole mitään kopiota poistettavaksi, koska sellaista ei koskaan tehdä. Jos haluat tästä kirjallisen vahvistuksen tai sinulla on muuta kysyttävää tiedoistasi, kirjoita osoitteeseen [Slocgtory@gmail.com](mailto:Slocgtory@gmail.com), niin saat vastauksen 30 päivän kuluessa.",
+          "Metan tililläsi tai ostoksistasi säilyttämien tietojen osalta ota yhteyttä suoraan Metaan. Ne tiedot ovat Metan, eivät meidän, ja vain Meta voi käsitellä niitä."
+        ]
+      },
+      {
+        "h": "Muutokset tähän selosteeseen",
+        "p": [
+          "Jos jokin tästä muuttuu, tämä sivu muuttuu mukana ja yllä oleva päivämäärä päivitetään. Kerättäviin tietoihin vaikuttava muutos mainitaan lisäksi sovelluksen kauppasivulla."
+        ]
+      },
+      {
+        "h": "Yhteystiedot",
+        "p": [
+          "[Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)"
+        ]
+      }
+    ]
+  }
+}

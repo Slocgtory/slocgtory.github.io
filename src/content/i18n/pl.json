@@ -1,0 +1,137 @@
+{
+  "name": "Polski",
+  "dir": "ltr",
+  "sourceHash": "a3a2413c93ce7c53",
+  "site": {
+    "skip": "Przejdź do treści",
+    "navLabel": "Główna",
+    "langLabel": "Język",
+    "email": "Slocgtory@gmail.com",
+    "nav": { "home": "Start", "privacy": "Prywatność" },
+    "notFoundTitle": "Nie znaleziono strony",
+    "notFoundBody": "Ten adres nie istnieje na tej stronie. Spróbuj [strony głównej](/pl/) albo [polityki prywatności](/pl/privacy/)."
+  },
+  "home": {
+    "metaTitle": "Slocgtory",
+    "metaDescription": "Niezależny deweloper gier VR na Meta Quest. Aplikacje i polityka prywatności, która je obejmuje.",
+    "title": "Wirtualna rzeczywistość robiona przez jedną osobę.",
+    "intro": "Slocgtory to niezależny deweloper tworzący gry na Meta Quest. Ta strona wymienia to, co już powstało, i zawiera politykę prywatności obejmującą całość.",
+    "appsHeading": "Aplikacje",
+    "apps": [
+      {
+        "name": "AllVRPuzzles",
+        "status": "W produkcji",
+        "desc": "Gra w układanie puzzli na Meta Quest 3 i 3S. 210 obrazów w 26 pokojach, ciętych i składanych w wirtualnej rzeczywistości, obsługiwanych dłońmi albo kontrolerami. Wkrótce w Meta Horizon Store."
+      }
+    ],
+    "appsNote": "Nic nie zostało jeszcze wydane. Każda aplikacja pojawi się tutaj wraz z premierą, z linkiem do jej strony w sklepie.",
+    "contactHeading": "Kontakt",
+    "contactBody": "Pytania, zgłoszenia błędów i wszystko dotyczące twoich danych: [Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)."
+  },
+  "privacy": {
+    "metaTitle": "Polityka prywatności",
+    "metaDescription": "Polityka prywatności dla AllVRPuzzles i wszystkich aplikacji Slocgtory. Nie zbieramy żadnych danych osobowych, a wydana aplikacja nie ma dostępu do internetu.",
+    "title": "Polityka prywatności",
+    "updated": "Ostatnia aktualizacja: 27 sierpnia 2026",
+    "canonicalNote": "To jest tłumaczenie pomocnicze. Wersją rozstrzygającą jest **wersja angielska** — w razie rozbieżności obowiązuje tekst angielski. [Przeczytaj po angielsku](/privacy/).",
+    "summary": "**Te aplikacje nie zbierają żadnych danych osobowych.** Wydana aplikacja w ogóle nie ma dostępu do internetu, więc nie może niczego nigdzie wysłać. Wszystko poniżej to szczegóły stojące za tym zdaniem.",
+    "sections": [
+      {
+        "h": "Od kogo pochodzi ta polityka",
+        "p": [
+          "Slocgtory to niezależny, jednoosobowy deweloper. Nie ma firmy, nie ma pracowników i nie ma żadnej trzeciej strony zaangażowanej w tworzenie ani prowadzenie tych aplikacji.",
+          "Kontakt: [Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)"
+        ]
+      },
+      {
+        "h": "Czego dotyczy",
+        "p": [
+          "Ta polityka obejmuje **AllVRPuzzles**, aplikację na gogle Meta Quest, oraz każdą przyszłą aplikację lub grę wydaną przez Slocgtory, chyba że dana aplikacja publikuje własną politykę."
+        ]
+      },
+      {
+        "h": "Zbierane dane: żadne",
+        "p": [
+          "Wydana aplikacja nie żąda uprawnienia `INTERNET` systemu Android. Bez niego system operacyjny nie pozwoli jej otworzyć połączenia sieciowego, więc nie może przesyłać danych nawet teoretycznie.",
+          "Za tymi aplikacjami nie stoją żadne serwery. Nie ma analityki, nie ma reklam, nie ma identyfikatora reklamowego, nie ma raportowania awarii, nie ma telemetrii i nie ma żadnego śledzenia. Nic o tym, jak grasz, nie jest zapisywane nigdzie poza twoimi goglami."
+        ]
+      },
+      {
+        "h": "Dane zapisywane na twoich goglach",
+        "p": ["Aplikacja zapisuje dwie rzeczy we własnej prywatnej pamięci na urządzeniu:"],
+        "list": [
+          "**Twoje postępy w grze** — które układanki zacząłeś lub skończyłeś i jak aktualnie ułożone są elementy.",
+          "**Lokalny zapis tego, które paczki obrazów posiadasz**, żeby aplikacja mogła je pokazać bez odpytywania sklepu za każdym razem."
+        ]
+      },
+      {
+        "h": "Te dane zostają na urządzeniu",
+        "p": [
+          "Żadna z tych rzeczy nie opuszcza twoich gogli. Kopia zapasowa Androida jest dla tej aplikacji wyłączona (`allowBackup=false`), więc dane nie trafiają również do żadnej kopii w chmurze.",
+          "Odinstalowanie aplikacji usuwa obie."
+        ]
+      },
+      {
+        "h": "Zakupy i uprawnienia",
+        "p": [
+          "Paczki obrazów sprzedawane są przez Platform In-App Purchases firmy Meta. Gdy kupujesz paczkę, transakcja odbywa się w całości w interfejsie sklepu Meta. **Dane płatnicze nigdy nie są widoczne dla tej aplikacji ani do niej przekazywane.**",
+          "Aplikacja zadaje Platform SDK firmy Meta cztery pytania i otrzymuje wyłącznie odpowiedzi:"
+        ],
+        "list": [
+          "Czy osoba w tych goglach ma uprawnienie do uruchomienia tej aplikacji? Odpowiedź: tak albo nie.",
+          "Ile kosztują paczki obrazów? Odpowiedź: ceny i nazwy paczek.",
+          "Które paczki ta osoba już posiada? Odpowiedź: lista identyfikatorów paczek, na przykład `pack_cats`.",
+          "Otwórz kasę dla tej paczki. Obsługuje to w całości Meta."
+        ]
+      },
+      {
+        "h": "O co świadomie nie pytamy",
+        "p": [
+          "Aplikacja nie żąda i nie otrzymuje nazwy twojego konta Meta, identyfikatora użytkownika, profilu, listy znajomych, adresu e-mail ani informacji płatniczych.",
+          "Meta przetwarza powyższe pytania jako operator platformy, na własnych warunkach. Zobacz [Uzupełniające zasady ochrony prywatności Meta Platforms Technologies](https://www.meta.com/legal/quest/privacy-policy/)."
+        ]
+      },
+      {
+        "h": "Uprawnienia, o które prosi aplikacja",
+        "p": ["Wydana aplikacja prosi o trzy uprawnienia i o żadne inne:"],
+        "list": [
+          "`org.khronos.openxr.permission.OPENXR` i `OPENXR_SYSTEM` — niezbędne, żeby w ogóle otworzyć sesję wirtualnej rzeczywistości.",
+          "`com.oculus.permission.HAND_TRACKING` — żebyś mógł grać dłońmi zamiast kontrolerami."
+        ]
+      },
+      {
+        "h": "Bez internetu, pamięci, mikrofonu i kamery",
+        "p": [
+          "Wydana aplikacja nie prosi o dostęp do internetu, pamięci plików, mikrofonu, kamery, lokalizacji, kontaktów ani o żadne uprawnienie do konta Meta. Jeśli przyszła wersja będzie kiedyś któregoś potrzebować, ta strona powie o tym, zanim ta wersja trafi do sklepu."
+        ]
+      },
+      {
+        "h": "Dzieci",
+        "p": ["Te aplikacje nie są kierowane do dzieci poniżej 13 roku życia ani nie są dla nich projektowane."]
+      },
+      {
+        "h": "Usuwanie twoich danych",
+        "p": ["Wszystko, co aplikacja zapisuje, znajduje się na twoich goglach, więc możesz to usunąć sam, natychmiast, nikogo nie pytając:"],
+        "list": ["Na goglach Quest otwórz **Aplikacje**, znajdź **AllVRPuzzles**, otwórz menu i wybierz **Odinstaluj**."]
+      },
+      {
+        "h": "Co usunięcie obejmuje, a czego nie",
+        "p": [
+          "Odinstalowanie usuwa twoje postępy i lokalny zapis posiadanych paczek. Twoje zakupy pozostają przy koncie Meta i wracają po ponownej instalacji.",
+          "Po naszej stronie nie ma kopii do usunięcia, ponieważ żadna kopia nigdy nie powstaje. Jeśli chcesz to potwierdzone na piśmie albo masz inne pytanie o swoje dane, napisz na [Slocgtory@gmail.com](mailto:Slocgtory@gmail.com), a odpowiedź otrzymasz w ciągu 30 dni.",
+          "W sprawie danych, które Meta przechowuje o twoim koncie lub zakupach, skontaktuj się bezpośrednio z Meta. Te dane należą do Meta, nie do nas, i tylko Meta może nimi dysponować."
+        ]
+      },
+      {
+        "h": "Zmiany w tej polityce",
+        "p": [
+          "Jeśli cokolwiek z tego się zmieni, ta strona zmieni się razem z tym, a data u góry zostanie zaktualizowana. Zmiana wpływająca na to, co jest zbierane, zostanie również odnotowana na stronie aplikacji w sklepie."
+        ]
+      },
+      {
+        "h": "Kontakt",
+        "p": ["[Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)"]
+      }
+    ]
+  }
+}

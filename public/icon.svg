@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Slocgtory">
+  <title>Slocgtory</title>
+  <rect width="64" height="64" rx="13" fill="#2340C8"/>
+  <path fill="#FBFBFC" d="M18 17h13v5.2a4.4 4.4 0 1 1 4.8 0V17H49v13h-5.2a4.4 4.4 0 1 0 0 4.8H49V48H35.8v-5.2a4.4 4.4 0 1 0-4.8 0V48H18V17Z"/>
+</svg>

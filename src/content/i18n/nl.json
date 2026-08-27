@@ -1,0 +1,152 @@
+{
+  "name": "Nederlands",
+  "dir": "ltr",
+  "sourceHash": "a3a2413c93ce7c53",
+  "site": {
+    "skip": "Naar de inhoud",
+    "navLabel": "Hoofdnavigatie",
+    "langLabel": "Taal",
+    "email": "Slocgtory@gmail.com",
+    "nav": {
+      "home": "Start",
+      "privacy": "Privacy"
+    },
+    "notFoundTitle": "Pagina niet gevonden",
+    "notFoundBody": "Dit adres bestaat niet op deze site. Probeer de [startpagina](/nl/) of het [privacybeleid](/nl/privacy/)."
+  },
+  "home": {
+    "metaTitle": "Slocgtory",
+    "metaDescription": "Onafhankelijke virtual-realityontwikkeling voor Meta Quest. De apps en het privacybeleid dat erop van toepassing is.",
+    "title": "Virtual reality, gemaakt door één persoon.",
+    "intro": "Slocgtory is een onafhankelijke ontwikkelaar die spellen maakt voor Meta Quest. Deze pagina noemt wat er tot nu toe is en bevat het privacybeleid dat voor alles geldt.",
+    "appsHeading": "Apps",
+    "apps": [
+      {
+        "name": "AllVRPuzzles",
+        "status": "In ontwikkeling",
+        "desc": "Een legpuzzelspel voor Meta Quest 3 en 3S. 210 afbeeldingen verdeeld over 26 kamers, in virtual reality gesneden en in elkaar gezet, met handtracking of controllers. Binnenkort in de Meta Horizon Store."
+      }
+    ],
+    "appsNote": "Er is nog niets uitgebracht. Elke app komt hier te staan zodra die verschijnt, met een link naar de winkelpagina.",
+    "contactHeading": "Contact",
+    "contactBody": "Vragen, foutmeldingen en alles over je gegevens: [Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)."
+  },
+  "privacy": {
+    "metaTitle": "Privacybeleid",
+    "metaDescription": "Privacybeleid voor AllVRPuzzles en alle Slocgtory-apps. Er worden geen persoonsgegevens verzameld; de uitgebrachte app heeft geen internettoegang.",
+    "title": "Privacybeleid",
+    "updated": "Laatst bijgewerkt: 27 augustus 2026",
+    "canonicalNote": "Dit is een vertaling voor het gemak. De **Engelse versie** is bepalend: bij verschillen geldt de Engelse tekst. [Lees in het Engels](/privacy/).",
+    "summary": "**Deze apps verzamelen geen persoonsgegevens.** De uitgebrachte app heeft helemaal geen internettoegang en kan dus niets ergens naartoe sturen. Alles hieronder is de uitwerking van die zin.",
+    "sections": [
+      {
+        "h": "Van wie dit beleid komt",
+        "p": [
+          "Slocgtory is een onafhankelijke ontwikkelaar, één persoon. Er is geen bedrijf, geen personeel en geen derde partij betrokken bij het bouwen of draaien van deze apps.",
+          "Contact: [Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)"
+        ]
+      },
+      {
+        "h": "Waarvoor het geldt",
+        "p": [
+          "Dit beleid geldt voor **AllVRPuzzles**, een app voor Meta Quest-headsets, en voor elke toekomstige app of elk spel van Slocgtory, tenzij die app een eigen beleid publiceert."
+        ]
+      },
+      {
+        "h": "Verzamelde gegevens: geen",
+        "p": [
+          "De uitgebrachte app vraagt de Android-rechten `INTERNET` niet aan. Zonder die toestemming staat het besturingssysteem de app niet toe een netwerkverbinding te openen, dus kan hij in principe geen gegevens versturen.",
+          "Achter deze apps staan geen servers. Er is geen analytics, geen advertenties, geen advertentie-id, geen crashrapportage, geen telemetrie en geen enkele vorm van tracking. Niets over hoe je speelt wordt ergens buiten je eigen headset vastgelegd."
+        ]
+      },
+      {
+        "h": "Gegevens die op je headset worden bewaard",
+        "p": [
+          "De app schrijft twee dingen naar zijn eigen privéopslag op het apparaat:"
+        ],
+        "list": [
+          "**Je spelvoortgang** — welke puzzels je bent begonnen of hebt afgemaakt, en hoe de stukjes nu liggen.",
+          "**Een lokale notitie van welke afbeeldingspakketten je bezit**, zodat de app ze kan tonen zonder telkens de winkel te bevragen."
+        ]
+      },
+      {
+        "h": "Die gegevens blijven op het apparaat",
+        "p": [
+          "Geen van beide verlaat je headset. De Android-back-up staat voor deze app uit (`allowBackup=false`), dus deze gegevens worden ook niet naar een cloudback-up gekopieerd.",
+          "Bij het verwijderen van de app worden beide gewist."
+        ]
+      },
+      {
+        "h": "Aankopen en rechten",
+        "p": [
+          "Afbeeldingspakketten worden verkocht via Meta’s Platform In-App Purchases. Als je er een koopt, verloopt de transactie volledig binnen Meta’s eigen winkelinterface. **Betaalgegevens worden nooit door deze app gezien of aan deze app doorgegeven.**",
+          "De app stelt Meta’s Platform SDK vier vragen en ontvangt alleen de antwoorden:"
+        ],
+        "list": [
+          "Heeft degene die deze headset draagt het recht deze app uit te voeren? Antwoord: ja of nee.",
+          "Wat kosten de afbeeldingspakketten? Antwoord: prijzen en pakketnamen.",
+          "Welke pakketten heeft deze persoon al? Antwoord: een lijst met pakket-id’s, zoals `pack_cats`.",
+          "Open de betaling voor dit pakket. Volledig afgehandeld door Meta."
+        ]
+      },
+      {
+        "h": "Wat er bewust niet wordt gevraagd",
+        "p": [
+          "De app vraagt niet om en ontvangt niet je Meta-accountnaam, gebruikers-id, profiel, vriendenlijst, e-mailadres of betaalgegevens.",
+          "Meta verwerkt bovenstaande vragen als platformexploitant, onder eigen voorwaarden. Zie Meta’s [Aanvullend privacybeleid voor Meta Platforms Technologies](https://www.meta.com/legal/quest/privacy-policy/)."
+        ]
+      },
+      {
+        "h": "Rechten die de app aanvraagt",
+        "p": [
+          "De uitgebrachte app vraagt drie rechten aan en verder geen:"
+        ],
+        "list": [
+          "`org.khronos.openxr.permission.OPENXR` en `OPENXR_SYSTEM` — nodig om überhaupt een virtual-realitysessie te openen.",
+          "`com.oculus.permission.HAND_TRACKING` — zodat je met je handen kunt spelen in plaats van met controllers."
+        ]
+      },
+      {
+        "h": "Geen internet, opslag, microfoon of camera",
+        "p": [
+          "De uitgebrachte app vraagt geen internettoegang, bestandsopslag, microfoon, camera, locatie, contacten of enig Meta-accountrecht aan. Mocht een toekomstige versie er ooit een nodig hebben, dan zegt deze pagina dat voordat die versie verschijnt."
+        ]
+      },
+      {
+        "h": "Kinderen",
+        "p": [
+          "Deze apps zijn niet gericht op kinderen onder de 13 en zijn niet voor hen ontworpen."
+        ]
+      },
+      {
+        "h": "Je gegevens verwijderen",
+        "p": [
+          "Alles wat de app bewaart staat op je headset, dus je kunt het zelf verwijderen, meteen, zonder iemand iets te hoeven vragen:"
+        ],
+        "list": [
+          "Open op je Quest **Apps**, zoek **AllVRPuzzles**, open het menu en kies **Verwijderen**."
+        ]
+      },
+      {
+        "h": "Wat verwijderen wel en niet bereikt",
+        "p": [
+          "Verwijderen wist je voortgang en de lokale notitie van je pakketten. Je aankopen blijven bij je Meta-account en komen terug als je opnieuw installeert.",
+          "Aan deze kant is er geen kopie om te verwijderen, omdat er nooit een wordt gemaakt. Wil je dat schriftelijk bevestigd hebben, of heb je een andere vraag over je gegevens, schrijf dan naar [Slocgtory@gmail.com](mailto:Slocgtory@gmail.com); je krijgt binnen 30 dagen antwoord.",
+          "Voor gegevens die Meta over je account of je aankopen bewaart, neem je rechtstreeks contact op met Meta. Die gegevens zijn van Meta, niet van ons, en alleen Meta kan er iets mee doen."
+        ]
+      },
+      {
+        "h": "Wijzigingen in dit beleid",
+        "p": [
+          "Verandert hier iets aan, dan verandert deze pagina mee en wordt de datum bovenaan bijgewerkt. Een wijziging in wat er wordt verzameld wordt ook vermeld op de winkelpagina van de app."
+        ]
+      },
+      {
+        "h": "Contact",
+        "p": [
+          "[Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "name": "English",
+  "dir": "ltr",
+  "sourceHash": "canonical",
+  "site": {
+    "skip": "Skip to content",
+    "navLabel": "Main",
+    "langLabel": "Language",
+    "email": "Slocgtory@gmail.com",
+    "nav": { "home": "Home", "privacy": "Privacy" },
+    "notFoundTitle": "Page not found",
+    "notFoundBody": "That address does not exist on this site. Try the [home page](/) or the [privacy policy](/privacy/)."
+  },
+  "home": {
+    "metaTitle": "Slocgtory",
+    "metaDescription": "Independent virtual reality development for Meta Quest. Apps, and the privacy policy that covers them.",
+    "title": "Virtual reality, built by one person.",
+    "intro": "Slocgtory is an independent developer making games for Meta Quest. This page lists what exists so far and holds the privacy policy that covers all of it.",
+    "appsHeading": "Apps",
+    "apps": [
+      {
+        "name": "AllVRPuzzles",
+        "status": "In development",
+        "desc": "A jigsaw puzzle game for Meta Quest 3 and 3S. 210 pictures across 26 rooms, cut and assembled in virtual reality, played with hand tracking or controllers. Coming to the Meta Horizon Store."
+      }
+    ],
+    "appsNote": "Nothing has been released yet. Each app will be listed here as it ships, with a link to its store page.",
+    "contactHeading": "Contact",
+    "contactBody": "Questions, bug reports, and anything about your data: [Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)."
+  },
+  "privacy": {
+    "metaTitle": "Privacy Policy",
+    "metaDescription": "Privacy policy for AllVRPuzzles and all Slocgtory applications. No personal data is collected; the released app has no internet access.",
+    "title": "Privacy Policy",
+    "updated": "Last updated: 27 August 2026",
+    "canonicalNote": "",
+    "summary": "**These apps do not collect any personal data.** The released app does not have internet access at all, so it cannot send anything anywhere. Everything below is the detail behind that sentence.",
+    "sections": [
+      {
+        "h": "Who this policy is from",
+        "p": [
+          "Slocgtory is an independent, one-person developer. There is no company, no staff, and no third party involved in building or running these apps.",
+          "Contact: [Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)"
+        ]
+      },
+      {
+        "h": "What it covers",
+        "p": [
+          "This policy covers **AllVRPuzzles**, an application for Meta Quest headsets, and any future application or game published by Slocgtory unless that app publishes a policy of its own."
+        ]
+      },
+      {
+        "h": "Data collected: none",
+        "p": [
+          "The released app does not request the Android `INTERNET` permission. Without it, the operating system will not allow the app to open a network connection, so it cannot transmit data even in principle.",
+          "There are no servers behind these apps. There is no analytics, no advertising, no advertising identifier, no crash reporting, no telemetry, and no tracking of any kind. Nothing about how you play is recorded anywhere outside your own headset."
+        ]
+      },
+      {
+        "h": "Data stored on your headset",
+        "p": ["The app writes two things into its own private storage on the device:"],
+        "list": [
+          "**Your game progress** - which puzzles you have started or finished, and how the pieces are currently arranged.",
+          "**A local record of which picture packs you own**, so the app can show your packs without asking the store every time."
+        ]
+      },
+      {
+        "h": "That data stays on the device",
+        "p": [
+          "Neither item leaves your headset. Android backup is switched off for this app (`allowBackup=false`), so this data is not copied into any cloud backup either.",
+          "Uninstalling the app deletes both."
+        ]
+      },
+      {
+        "h": "Purchases and entitlements",
+        "p": [
+          "Picture packs are sold through Meta's Platform In-App Purchases. When you buy one, the transaction happens entirely inside Meta's own store interface. **Payment details are never seen by, or passed to, this app.**",
+          "The app asks Meta's Platform SDK four questions and receives only the answers:"
+        ],
+        "list": [
+          "Is the person wearing this headset entitled to run this app? Answered yes or no.",
+          "What do the picture packs cost? Answered with prices and pack names.",
+          "Which packs does this person already own? Answered with a list of pack identifiers, such as `pack_cats`.",
+          "Open the checkout for this pack. Handled entirely by Meta."
+        ]
+      },
+      {
+        "h": "What is deliberately not asked for",
+        "p": [
+          "The app does not request and does not receive your Meta account name, user ID, profile, friends list, email address, or payment information.",
+          "Meta processes the questions above as the platform operator, under its own terms. See Meta's [Supplementary Privacy Policy for Meta Platforms Technologies](https://www.meta.com/legal/quest/privacy-policy/)."
+        ]
+      },
+      {
+        "h": "Permissions the app requests",
+        "p": ["The released app requests three permissions, and no others:"],
+        "list": [
+          "`org.khronos.openxr.permission.OPENXR` and `OPENXR_SYSTEM` - required to open a virtual reality session at all.",
+          "`com.oculus.permission.HAND_TRACKING` - so you can play with your hands instead of controllers."
+        ]
+      },
+      {
+        "h": "No internet, storage, microphone or camera",
+        "p": [
+          "The released app does not request internet access, file storage, microphone, camera, location, contacts, or any Meta account permission. If a future version ever needs one, this page will say so before that version ships."
+        ]
+      },
+      {
+        "h": "Children",
+        "p": ["These apps are not directed to children under 13 and are not designed for them."]
+      },
+      {
+        "h": "Deleting your data",
+        "p": [
+          "Everything the app stores is on your headset, so you can delete all of it yourself, immediately, without asking anyone:"
+        ],
+        "list": [
+          "On your Quest, open **Apps**, find **AllVRPuzzles**, open its menu, and choose **Uninstall**."
+        ]
+      },
+      {
+        "h": "What deletion does and does not reach",
+        "p": [
+          "Uninstalling removes your progress and the local record of which packs you own. Your purchases stay with your Meta account and come back if you reinstall.",
+          "There is no copy on this side to delete, because no copy is ever made. If you would like that confirmed in writing, or have any other question about your data, write to [Slocgtory@gmail.com](mailto:Slocgtory@gmail.com) and you will get a reply within 30 days.",
+          "For data Meta holds about your account or your purchases, contact Meta directly. That data is Meta's, not ours, and only Meta can act on it."
+        ]
+      },
+      {
+        "h": "Changes to this policy",
+        "p": [
+          "If any of this changes, this page changes with it and the date at the top is updated. A change that affects what is collected will also be noted in the app's store listing."
+        ]
+      },
+      {
+        "h": "Contact",
+        "p": ["[Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)"]
+      }
+    ]
+  }
+}

@@ -1,0 +1,53 @@
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# One deploy at a time; a queued run replaces an older queued run rather than
+# stacking up behind it.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: withastro/action@v6
+
+  deploy:
+    name: Deploy
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5
+
+  # Deliberately not a dependency of `deploy`.
+  #
+  # A translation that has fallen behind English is worth seeing, but it must
+  # not stop a one-word correction to the English page from going live - that
+  # would mean the most accurate version of the policy is the one blocked from
+  # shipping. So this runs in parallel and goes red on its own, while the site
+  # deploys regardless.
+  translations:
+    name: Translations up to date
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+      - run: node scripts/check-translations.mjs --strict

@@ -1,0 +1,152 @@
+{
+  "name": "Italiano",
+  "dir": "ltr",
+  "sourceHash": "a3a2413c93ce7c53",
+  "site": {
+    "skip": "Vai al contenuto",
+    "navLabel": "Navigazione principale",
+    "langLabel": "Lingua",
+    "email": "Slocgtory@gmail.com",
+    "nav": {
+      "home": "Home",
+      "privacy": "Privacy"
+    },
+    "notFoundTitle": "Pagina non trovata",
+    "notFoundBody": "Questo indirizzo non esiste su questo sito. Prova la [pagina iniziale](/it/) o l'[informativa sulla privacy](/it/privacy/)."
+  },
+  "home": {
+    "metaTitle": "Slocgtory",
+    "metaDescription": "Sviluppo indipendente di realtà virtuale per Meta Quest. Le applicazioni e l’informativa sulla privacy che le riguarda.",
+    "title": "Realtà virtuale, costruita da una persona sola.",
+    "intro": "Slocgtory è uno sviluppatore indipendente che crea giochi per Meta Quest. Questa pagina elenca ciò che esiste finora e contiene l’informativa sulla privacy che vale per tutto.",
+    "appsHeading": "Applicazioni",
+    "apps": [
+      {
+        "name": "AllVRPuzzles",
+        "status": "In sviluppo",
+        "desc": "Un gioco di puzzle per Meta Quest 3 e 3S. 210 immagini distribuite in 26 stanze, tagliate e ricomposte in realtà virtuale, con il tracciamento delle mani o i controller. Presto su Meta Horizon Store."
+      }
+    ],
+    "appsNote": "Non è ancora uscito nulla. Ogni applicazione comparirà qui alla pubblicazione, con un collegamento alla sua pagina nello store.",
+    "contactHeading": "Contatti",
+    "contactBody": "Domande, segnalazioni di errori e qualsiasi cosa riguardi i tuoi dati: [Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)."
+  },
+  "privacy": {
+    "metaTitle": "Informativa sulla privacy",
+    "metaDescription": "Informativa sulla privacy di AllVRPuzzles e di tutte le applicazioni Slocgtory. Non viene raccolto alcun dato personale; l’applicazione pubblicata non ha accesso a Internet.",
+    "title": "Informativa sulla privacy",
+    "updated": "Ultimo aggiornamento: 27 agosto 2026",
+    "canonicalNote": "Questa è una traduzione di cortesia. Fa fede la **versione inglese**: in caso di divergenza prevale il testo inglese. [Leggi in inglese](/privacy/).",
+    "summary": "**Queste applicazioni non raccolgono alcun dato personale.** L’applicazione pubblicata non ha alcun accesso a Internet, quindi non può inviare nulla da nessuna parte. Tutto ciò che segue è il dettaglio dietro questa frase.",
+    "sections": [
+      {
+        "h": "Da chi proviene questa informativa",
+        "p": [
+          "Slocgtory è uno sviluppatore indipendente, una persona sola. Non esiste una società, non ci sono dipendenti e nessun terzo è coinvolto nella creazione o nella gestione di queste applicazioni.",
+          "Contatti: [Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)"
+        ]
+      },
+      {
+        "h": "Che cosa copre",
+        "p": [
+          "Questa informativa copre **AllVRPuzzles**, un’applicazione per i visori Meta Quest, e qualsiasi futura applicazione o gioco pubblicato da Slocgtory, salvo che quell’applicazione pubblichi una propria informativa."
+        ]
+      },
+      {
+        "h": "Dati raccolti: nessuno",
+        "p": [
+          "L’applicazione pubblicata non richiede il permesso Android `INTERNET`. Senza di esso il sistema operativo non le consente di aprire una connessione di rete, quindi non può trasmettere dati nemmeno in linea di principio.",
+          "Dietro queste applicazioni non ci sono server. Non c’è analitica, non c’è pubblicità, non c’è identificatore pubblicitario, non ci sono rapporti sugli arresti anomali, non c’è telemetria e non c’è tracciamento di alcun tipo. Nulla di come giochi viene registrato al di fuori del tuo visore."
+        ]
+      },
+      {
+        "h": "Dati salvati sul tuo visore",
+        "p": [
+          "L’applicazione scrive due cose nella propria memoria privata sul dispositivo:"
+        ],
+        "list": [
+          "**I tuoi progressi di gioco**: quali puzzle hai iniziato o completato e come sono disposti i pezzi in questo momento.",
+          "**Una registrazione locale di quali pacchetti di immagini possiedi**, perché l’applicazione possa mostrarli senza interrogare lo store ogni volta."
+        ]
+      },
+      {
+        "h": "Questi dati restano sul dispositivo",
+        "p": [
+          "Nessuna delle due cose lascia il tuo visore. Il backup di Android è disattivato per questa applicazione (`allowBackup=false`), quindi questi dati non finiscono nemmeno in un backup nel cloud.",
+          "Disinstallando l’applicazione entrambe vengono cancellate."
+        ]
+      },
+      {
+        "h": "Acquisti e diritti di accesso",
+        "p": [
+          "I pacchetti di immagini sono venduti tramite le Platform In-App Purchases di Meta. Quando ne acquisti uno, la transazione avviene interamente nell’interfaccia dello store di Meta. **I dati di pagamento non sono mai visti da questa applicazione né le vengono trasmessi.**",
+          "L’applicazione pone quattro domande al Platform SDK di Meta e ne riceve soltanto le risposte:"
+        ],
+        "list": [
+          "La persona che indossa questo visore ha il diritto di eseguire questa applicazione? Risposta: sì o no.",
+          "Quanto costano i pacchetti di immagini? Risposta: prezzi e nomi dei pacchetti.",
+          "Quali pacchetti possiede già questa persona? Risposta: un elenco di identificatori di pacchetto, come `pack_cats`.",
+          "Apri il pagamento per questo pacchetto. Gestito interamente da Meta."
+        ]
+      },
+      {
+        "h": "Ciò che deliberatamente non viene chiesto",
+        "p": [
+          "L’applicazione non richiede e non riceve il nome del tuo account Meta, il tuo identificativo utente, il tuo profilo, la tua lista di amici, il tuo indirizzo e-mail o i tuoi dati di pagamento.",
+          "Meta tratta le domande qui sopra in qualità di operatore della piattaforma, secondo le proprie condizioni. Vedi l’[Informativa sulla privacy supplementare di Meta Platforms Technologies](https://www.meta.com/legal/quest/privacy-policy/)."
+        ]
+      },
+      {
+        "h": "Permessi richiesti dall’applicazione",
+        "p": [
+          "L’applicazione pubblicata richiede tre permessi e nessun altro:"
+        ],
+        "list": [
+          "`org.khronos.openxr.permission.OPENXR` e `OPENXR_SYSTEM`: necessari per poter aprire una sessione di realtà virtuale.",
+          "`com.oculus.permission.HAND_TRACKING`: per poter giocare con le mani anziché con i controller."
+        ]
+      },
+      {
+        "h": "Niente Internet, archiviazione, microfono o fotocamera",
+        "p": [
+          "L’applicazione pubblicata non richiede accesso a Internet, archiviazione file, microfono, fotocamera, posizione, contatti né alcun permesso relativo all’account Meta. Se una versione futura dovesse averne bisogno, questa pagina lo dirà prima che quella versione venga pubblicata."
+        ]
+      },
+      {
+        "h": "Minori",
+        "p": [
+          "Queste applicazioni non sono rivolte a minori di 13 anni e non sono progettate per loro."
+        ]
+      },
+      {
+        "h": "Cancellare i tuoi dati",
+        "p": [
+          "Tutto ciò che l’applicazione salva si trova sul tuo visore, quindi puoi cancellarlo tu stesso, subito, senza chiedere a nessuno:"
+        ],
+        "list": [
+          "Sul tuo Quest apri **App**, trova **AllVRPuzzles**, apri il suo menu e scegli **Disinstalla**."
+        ]
+      },
+      {
+        "h": "Che cosa raggiunge la cancellazione e che cosa no",
+        "p": [
+          "La disinstallazione rimuove i tuoi progressi e la registrazione locale dei pacchetti che possiedi. I tuoi acquisti restano legati al tuo account Meta e tornano se reinstalli.",
+          "Da questa parte non c’è alcuna copia da cancellare, perché non ne viene mai creata alcuna. Se desideri una conferma scritta, o hai qualsiasi altra domanda sui tuoi dati, scrivi a [Slocgtory@gmail.com](mailto:Slocgtory@gmail.com) e riceverai risposta entro 30 giorni.",
+          "Per i dati che Meta conserva sul tuo account o sui tuoi acquisti, contatta direttamente Meta. Quei dati sono di Meta, non nostri, e solo Meta può intervenire su di essi."
+        ]
+      },
+      {
+        "h": "Modifiche a questa informativa",
+        "p": [
+          "Se qualcosa cambia, questa pagina cambia con esso e la data in alto viene aggiornata. Una modifica che riguardi ciò che viene raccolto sarà segnalata anche nella scheda dell’applicazione nello store."
+        ]
+      },
+      {
+        "h": "Contatti",
+        "p": [
+          "[Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "name": "Íslenska",
+  "dir": "ltr",
+  "sourceHash": "a3a2413c93ce7c53",
+  "site": {
+    "skip": "Fara í efni",
+    "navLabel": "Aðalvalmynd",
+    "langLabel": "Tungumál",
+    "email": "Slocgtory@gmail.com",
+    "nav": {
+      "home": "Forsíða",
+      "privacy": "Persónuvernd"
+    },
+    "notFoundTitle": "Síðan fannst ekki",
+    "notFoundBody": "Þetta veffang er ekki til á þessum vef. Prófaðu [forsíðuna](/is/) eða [persónuverndarstefnuna](/is/privacy/)."
+  },
+  "home": {
+    "metaTitle": "Slocgtory",
+    "metaDescription": "Sjálfstæð þróun sýndarveruleika fyrir Meta Quest. Forritin og persónuverndarstefnan sem gildir um þau.",
+    "title": "Sýndarveruleiki, smíðaður af einni manneskju.",
+    "intro": "Slocgtory er sjálfstæður þróunaraðili sem gerir leiki fyrir Meta Quest. Þessi síða telur upp það sem til er hingað til og geymir persónuverndarstefnuna sem gildir um allt saman.",
+    "appsHeading": "Forrit",
+    "apps": [
+      {
+        "name": "AllVRPuzzles",
+        "status": "Í þróun",
+        "desc": "Púsluspil fyrir Meta Quest 3 og 3S. 210 myndir í 26 herbergjum, skornar og settar saman í sýndarveruleika, spilaðar með handrakningu eða stýringum. Væntanlegt í Meta Horizon Store."
+      }
+    ],
+    "appsNote": "Ekkert hefur enn komið út. Hvert forrit birtist hér þegar það kemur út, með tengli á verslunarsíðu sína.",
+    "contactHeading": "Samband",
+    "contactBody": "Spurningar, villutilkynningar og allt sem varðar gögnin þín: [Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)."
+  },
+  "privacy": {
+    "metaTitle": "Persónuverndarstefna",
+    "metaDescription": "Persónuverndarstefna fyrir AllVRPuzzles og öll forrit Slocgtory. Engum persónuupplýsingum er safnað; útgefna forritið hefur engan netaðgang.",
+    "title": "Persónuverndarstefna",
+    "updated": "Síðast uppfært: 27. ágúst 2026",
+    "canonicalNote": "Þetta er þýðing til hægðarauka. **Enska útgáfan** gildir: ef þeim ber ekki saman gildir enski textinn. [Lesa á ensku](/privacy/).",
+    "summary": "**Þessi forrit safna engum persónuupplýsingum.** Útgefna forritið hefur alls engan netaðgang og getur því ekki sent neitt neitt. Allt hér að neðan eru smáatriðin á bak við þá setningu.",
+    "sections": [
+      {
+        "h": "Frá hverjum þessi stefna er",
+        "p": [
+          "Slocgtory er sjálfstæður þróunaraðili, ein manneskja. Það er ekkert fyrirtæki, ekkert starfsfólk og enginn þriðji aðili sem kemur að gerð eða rekstri þessara forrita.",
+          "Samband: [Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)"
+        ]
+      },
+      {
+        "h": "Hvað hún nær yfir",
+        "p": [
+          "Þessi stefna nær yfir **AllVRPuzzles**, forrit fyrir Meta Quest-höfuðtól, og öll framtíðarforrit eða leiki sem Slocgtory gefur út, nema það forrit birti sína eigin stefnu."
+        ]
+      },
+      {
+        "h": "Söfnuð gögn: engin",
+        "p": [
+          "Útgefna forritið biður ekki um Android-heimildina `INTERNET`. Án hennar leyfir stýrikerfið forritinu ekki að opna nettengingu, svo það getur ekki sent gögn, ekki einu sinni í grundvallaratriðum.",
+          "Það eru engir netþjónar á bak við þessi forrit. Það er engin greining, engar auglýsingar, ekkert auglýsingaauðkenni, engar hrunskýrslur, engin fjarmæling og engin rakning af neinu tagi. Ekkert um það hvernig þú spilar er skráð nokkurs staðar utan þinna eigin höfuðtóla."
+        ]
+      },
+      {
+        "h": "Gögn geymd á höfuðtólinu þínu",
+        "p": [
+          "Forritið skrifar tvennt í sitt eigið einkageymslusvæði á tækinu:"
+        ],
+        "list": [
+          "**Framvindu þína í leiknum** — hvaða púsluspil þú hefur byrjað á eða klárað og hvernig bitarnir liggja núna.",
+          "**Staðbundna skráningu á því hvaða myndapakka þú átt**, svo forritið geti sýnt pakkana þína án þess að spyrja verslunina í hvert sinn."
+        ]
+      },
+      {
+        "h": "Þessi gögn eru áfram í tækinu",
+        "p": [
+          "Hvorugt fer út úr höfuðtólinu þínu. Android-afritun er slökkt fyrir þetta forrit (`allowBackup=false`), svo þessi gögn eru heldur ekki afrituð í neitt skýjaafrit.",
+          "Ef forritið er fjarlægt eyðast bæði."
+        ]
+      },
+      {
+        "h": "Kaup og réttindi",
+        "p": [
+          "Myndapakkar eru seldir í gegnum Platform In-App Purchases frá Meta. Þegar þú kaupir pakka fer viðskiptin alfarið fram í verslunarviðmóti Meta sjálfs. **Greiðsluupplýsingar sjást aldrei af þessu forriti og eru aldrei sendar því.**",
+          "Forritið spyr Platform SDK frá Meta fjögurra spurninga og fær aðeins svörin:"
+        ],
+        "list": [
+          "Hefur sá sem ber þetta höfuðtól rétt á að keyra þetta forrit? Svar: já eða nei.",
+          "Hvað kosta myndapakkarnir? Svar: verð og heiti pakka.",
+          "Hvaða pakka á þessi einstaklingur nú þegar? Svar: listi yfir pakkaauðkenni, til dæmis `pack_cats`.",
+          "Opnaðu greiðslu fyrir þennan pakka. Alfarið í höndum Meta."
+        ]
+      },
+      {
+        "h": "Hvað er vísvitandi ekki beðið um",
+        "p": [
+          "Forritið biður hvorki um né fær heiti Meta-reikningsins þíns, notandaauðkenni, notandasnið, vinalista, netfang eða greiðsluupplýsingar.",
+          "Meta vinnur ofangreindar spurningar sem rekstraraðili vettvangsins, á eigin skilmálum. Sjá [Viðbótarpersónuverndarstefnu Meta Platforms Technologies](https://www.meta.com/legal/quest/privacy-policy/)."
+        ]
+      },
+      {
+        "h": "Heimildir sem forritið biður um",
+        "p": [
+          "Útgefna forritið biður um þrjár heimildir og engar aðrar:"
+        ],
+        "list": [
+          "`org.khronos.openxr.permission.OPENXR` og `OPENXR_SYSTEM` — nauðsynlegar til að hægt sé að opna sýndarveruleikalotu yfirleitt.",
+          "`com.oculus.permission.HAND_TRACKING` — svo þú getir spilað með höndunum í stað stýringa."
+        ]
+      },
+      {
+        "h": "Ekkert net, geymsla, hljóðnemi eða myndavél",
+        "p": [
+          "Útgefna forritið biður ekki um netaðgang, skráageymslu, hljóðnema, myndavél, staðsetningu, tengiliði eða neina heimild tengda Meta-reikningi. Ef einhver framtíðarútgáfa þarf á slíku að halda mun þessi síða segja frá því áður en sú útgáfa kemur út."
+        ]
+      },
+      {
+        "h": "Börn",
+        "p": [
+          "Þessi forrit beinast ekki að börnum yngri en 13 ára og eru ekki hönnuð fyrir þau."
+        ]
+      },
+      {
+        "h": "Að eyða gögnunum þínum",
+        "p": [
+          "Allt sem forritið geymir er á höfuðtólinu þínu, svo þú getur eytt því öllu sjálf/ur, strax, án þess að spyrja nokkurn:"
+        ],
+        "list": [
+          "Opnaðu **Forrit** á Quest-tækinu þínu, finndu **AllVRPuzzles**, opnaðu valmynd þess og veldu **Fjarlægja**."
+        ]
+      },
+      {
+        "h": "Hvað eyðingin nær til og hvað ekki",
+        "p": [
+          "Að fjarlægja forritið eyðir framvindu þinni og staðbundnu skráningunni á pökkunum þínum. Kaupin þín haldast á Meta-reikningnum þínum og koma aftur ef þú setur forritið upp á ný.",
+          "Það er ekkert afrit þessum megin til að eyða, því ekkert afrit er nokkurn tíma búið til. Viljir þú fá það staðfest skriflega, eða hafir þú aðra spurningu um gögnin þín, skrifaðu á [Slocgtory@gmail.com](mailto:Slocgtory@gmail.com) og þú færð svar innan 30 daga.",
+          "Varðandi gögn sem Meta geymir um reikninginn þinn eða kaupin þín skaltu hafa samband beint við Meta. Þau gögn tilheyra Meta, ekki okkur, og aðeins Meta getur brugðist við þeim."
+        ]
+      },
+      {
+        "h": "Breytingar á þessari stefnu",
+        "p": [
+          "Breytist eitthvað af þessu breytist þessi síða með, og dagsetningin efst er uppfærð. Breyting á því hverju er safnað verður einnig tilgreind á verslunarsíðu forritsins."
+        ]
+      },
+      {
+        "h": "Samband",
+        "p": [
+          "[Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)"
+        ]
+      }
+    ]
+  }
+}

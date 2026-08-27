@@ -1,0 +1,152 @@
+{
+  "name": "Deutsch",
+  "dir": "ltr",
+  "sourceHash": "a3a2413c93ce7c53",
+  "site": {
+    "skip": "Zum Inhalt springen",
+    "navLabel": "Hauptnavigation",
+    "langLabel": "Sprache",
+    "email": "Slocgtory@gmail.com",
+    "nav": {
+      "home": "Start",
+      "privacy": "Datenschutz"
+    },
+    "notFoundTitle": "Seite nicht gefunden",
+    "notFoundBody": "Diese Adresse gibt es auf dieser Website nicht. Versuchen Sie die [Startseite](/de/) oder die [Datenschutzerklärung](/de/privacy/)."
+  },
+  "home": {
+    "metaTitle": "Slocgtory",
+    "metaDescription": "Unabhängige VR-Entwicklung für Meta Quest. Apps und die Datenschutzerklärung, die für sie gilt.",
+    "title": "Virtual Reality, von einer einzigen Person gebaut.",
+    "intro": "Slocgtory ist ein unabhängiger Entwickler, der Spiele für Meta Quest macht. Diese Seite listet auf, was bisher entstanden ist, und enthält die Datenschutzerklärung, die für alles davon gilt.",
+    "appsHeading": "Apps",
+    "apps": [
+      {
+        "name": "AllVRPuzzles",
+        "status": "In Entwicklung",
+        "desc": "Ein Puzzlespiel für Meta Quest 3 und 3S. 210 Bilder in 26 Räumen, in Virtual Reality zerschnitten und zusammengesetzt, gespielt mit Handtracking oder Controllern. Demnächst im Meta Horizon Store."
+      }
+    ],
+    "appsNote": "Bisher wurde nichts veröffentlicht. Jede App wird hier aufgeführt, sobald sie erscheint, mit einem Link zu ihrer Store-Seite.",
+    "contactHeading": "Kontakt",
+    "contactBody": "Fragen, Fehlermeldungen und alles zu Ihren Daten: [Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)."
+  },
+  "privacy": {
+    "metaTitle": "Datenschutzerklärung",
+    "metaDescription": "Datenschutzerklärung für AllVRPuzzles und alle Slocgtory-Anwendungen. Es werden keine personenbezogenen Daten erhoben; die veröffentlichte App hat keinen Internetzugang.",
+    "title": "Datenschutzerklärung",
+    "updated": "Zuletzt aktualisiert: 27. August 2026",
+    "canonicalNote": "Dies ist eine Übersetzung zur Orientierung. Maßgeblich ist die **englische Fassung**; bei Abweichungen gilt der englische Text. [Auf Englisch lesen](/privacy/).",
+    "summary": "**Diese Apps erheben keine personenbezogenen Daten.** Die veröffentlichte App hat überhaupt keinen Internetzugang und kann daher nichts irgendwohin senden. Alles Weitere sind die Einzelheiten hinter diesem Satz.",
+    "sections": [
+      {
+        "h": "Von wem diese Erklärung stammt",
+        "p": [
+          "Slocgtory ist ein unabhängiger Entwickler, eine einzelne Person. Es gibt kein Unternehmen, keine Mitarbeiter und keine dritte Partei, die an der Entwicklung oder dem Betrieb dieser Apps beteiligt wäre.",
+          "Kontakt: [Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)"
+        ]
+      },
+      {
+        "h": "Wofür sie gilt",
+        "p": [
+          "Diese Erklärung gilt für **AllVRPuzzles**, eine Anwendung für Meta-Quest-Headsets, sowie für jede künftige Anwendung oder jedes Spiel von Slocgtory, sofern diese App keine eigene Erklärung veröffentlicht."
+        ]
+      },
+      {
+        "h": "Erhobene Daten: keine",
+        "p": [
+          "Die veröffentlichte App fordert die Android-Berechtigung `INTERNET` nicht an. Ohne sie erlaubt das Betriebssystem der App nicht, eine Netzwerkverbindung zu öffnen; sie kann also grundsätzlich keine Daten übertragen.",
+          "Hinter diesen Apps stehen keine Server. Es gibt keine Analyse, keine Werbung, keine Werbe-ID, keine Absturzberichte, keine Telemetrie und kein Tracking jeglicher Art. Nichts darüber, wie Sie spielen, wird irgendwo außerhalb Ihres eigenen Headsets aufgezeichnet."
+        ]
+      },
+      {
+        "h": "Auf Ihrem Headset gespeicherte Daten",
+        "p": [
+          "Die App schreibt zwei Dinge in ihren eigenen privaten Speicher auf dem Gerät:"
+        ],
+        "list": [
+          "**Ihren Spielfortschritt** — welche Puzzles Sie begonnen oder abgeschlossen haben und wie die Teile gerade liegen.",
+          "**Einen lokalen Vermerk, welche Bildpakete Sie besitzen**, damit die App Ihre Pakete anzeigen kann, ohne jedes Mal den Store zu fragen."
+        ]
+      },
+      {
+        "h": "Diese Daten bleiben auf dem Gerät",
+        "p": [
+          "Keines von beidem verlässt Ihr Headset. Die Android-Sicherung ist für diese App abgeschaltet (`allowBackup=false`), diese Daten werden also auch in keine Cloud-Sicherung kopiert.",
+          "Beim Deinstallieren der App werden beide gelöscht."
+        ]
+      },
+      {
+        "h": "Käufe und Berechtigungen",
+        "p": [
+          "Bildpakete werden über Metas Platform In-App Purchases verkauft. Wenn Sie eines kaufen, findet der Vorgang vollständig in Metas eigener Store-Oberfläche statt. **Zahlungsdaten werden von dieser App weder gesehen noch an sie übergeben.**",
+          "Die App stellt Metas Platform SDK vier Fragen und erhält ausschließlich die Antworten:"
+        ],
+        "list": [
+          "Ist die Person, die dieses Headset trägt, berechtigt, diese App auszuführen? Antwort: ja oder nein.",
+          "Was kosten die Bildpakete? Antwort: Preise und Paketnamen.",
+          "Welche Pakete besitzt diese Person bereits? Antwort: eine Liste von Paketkennungen, etwa `pack_cats`.",
+          "Öffne die Kasse für dieses Paket. Wird vollständig von Meta abgewickelt."
+        ]
+      },
+      {
+        "h": "Wonach bewusst nicht gefragt wird",
+        "p": [
+          "Die App fordert Ihren Meta-Kontonamen, Ihre Benutzer-ID, Ihr Profil, Ihre Freundesliste, Ihre E-Mail-Adresse und Ihre Zahlungsinformationen nicht an und erhält sie auch nicht.",
+          "Meta verarbeitet die obigen Fragen als Plattformbetreiber nach eigenen Bedingungen. Siehe Metas [Ergänzende Datenschutzrichtlinie für Meta Platforms Technologies](https://www.meta.com/legal/quest/privacy-policy/)."
+        ]
+      },
+      {
+        "h": "Berechtigungen, die die App anfordert",
+        "p": [
+          "Die veröffentlichte App fordert drei Berechtigungen an und sonst keine:"
+        ],
+        "list": [
+          "`org.khronos.openxr.permission.OPENXR` und `OPENXR_SYSTEM` — erforderlich, um überhaupt eine VR-Sitzung zu öffnen.",
+          "`com.oculus.permission.HAND_TRACKING` — damit Sie mit den Händen statt mit Controllern spielen können."
+        ]
+      },
+      {
+        "h": "Kein Internet, kein Speicher, kein Mikrofon, keine Kamera",
+        "p": [
+          "Die veröffentlichte App fordert weder Internetzugang noch Dateispeicher, Mikrofon, Kamera, Standort, Kontakte oder irgendeine Meta-Konto-Berechtigung an. Sollte eine künftige Version einmal etwas davon benötigen, wird diese Seite es sagen, bevor jene Version erscheint."
+        ]
+      },
+      {
+        "h": "Kinder",
+        "p": [
+          "Diese Apps richten sich nicht an Kinder unter 13 Jahren und sind nicht für sie gemacht."
+        ]
+      },
+      {
+        "h": "Löschen Ihrer Daten",
+        "p": [
+          "Alles, was die App speichert, liegt auf Ihrem Headset. Sie können es also selbst löschen, sofort und ohne jemanden zu fragen:"
+        ],
+        "list": [
+          "Öffnen Sie auf Ihrer Quest **Apps**, suchen Sie **AllVRPuzzles**, öffnen Sie das Menü und wählen Sie **Deinstallieren**."
+        ]
+      },
+      {
+        "h": "Was das Löschen erreicht und was nicht",
+        "p": [
+          "Das Deinstallieren entfernt Ihren Fortschritt und den lokalen Vermerk über Ihre Pakete. Ihre Käufe bleiben bei Ihrem Meta-Konto und kehren bei einer Neuinstallation zurück.",
+          "Auf dieser Seite gibt es keine Kopie zu löschen, weil nie eine angelegt wird. Wenn Sie das schriftlich bestätigt haben möchten oder eine andere Frage zu Ihren Daten haben, schreiben Sie an [Slocgtory@gmail.com](mailto:Slocgtory@gmail.com); Sie erhalten innerhalb von 30 Tagen eine Antwort.",
+          "Für Daten, die Meta über Ihr Konto oder Ihre Käufe speichert, wenden Sie sich bitte direkt an Meta. Diese Daten gehören Meta, nicht uns, und nur Meta kann darüber verfügen."
+        ]
+      },
+      {
+        "h": "Änderungen dieser Erklärung",
+        "p": [
+          "Wenn sich hieran etwas ändert, ändert sich diese Seite mit, und das Datum oben wird aktualisiert. Eine Änderung daran, was erhoben wird, wird zusätzlich auf der Store-Seite der App vermerkt."
+        ]
+      },
+      {
+        "h": "Kontakt",
+        "p": [
+          "[Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+---
+import Base from '../../../layouts/Base.astro';
+import PrivacyBody from '../../../components/PrivacyBody.astro';
+import { loadLocale, TRANSLATED_LOCALES } from '../../../lib/i18n';
+
+export function getStaticPaths() {
+  return TRANSLATED_LOCALES.map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params;
+const data = await loadLocale(lang!);
+---
+
+<Base
+  locale={lang!}
+  page="privacy"
+  title={`${data.privacy.metaTitle} - Slocgtory`}
+  description={data.privacy.metaDescription}
+  nav={data.site.nav}
+  labels={{
+      skip: data.site.skip,
+      navLabel: data.site.navLabel,
+      langLabel: data.site.langLabel,
+      email: data.site.email,
+    }}
+>
+  <PrivacyBody privacy={data.privacy} isCanonical={false} />
+</Base>
