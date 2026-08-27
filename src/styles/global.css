@@ -235,20 +235,28 @@ strong { font-weight: 600; }
 }
 .skip:focus { left: 0.75rem; top: 0.75rem; }
 
-/* --- header ------------------------------------------------------------- */
+/* --- masthead ------------------------------------------------------------ */
+/*
+ * Not a bar. It was one - a full-width band in a different surface colour with
+ * a hairline under it, stuck to the top - and on a wide screen that is a wide
+ * empty stripe with three small things adrift in the middle of it, because the
+ * band spans the window while its contents are held to the container. The line
+ * drew attention to exactly the emptiness it created.
+ *
+ * A site of two pages, one of which barely scrolls, does not need persistent
+ * chrome either. So this sits in the page's own column, on the same left edge
+ * as the headline and the section labels, and scrolls away like a masthead in
+ * print rather than hovering like an application toolbar.
+ */
 
 .site-head {
-  border-bottom: 1px solid var(--line);
-  background: var(--surface);
-  position: sticky;
-  top: 0;
-  z-index: 40;
+  width: 100%;
+  max-width: var(--page);
+  margin: 0 auto;
+  padding: clamp(1.25rem, 3vw, 2rem) 1.5rem 0;
 }
 
 .site-head .inner {
-  max-width: var(--page);
-  margin: 0 auto;
-  padding: 0.65rem 1.5rem;
   display: flex;
   align-items: center;
   gap: 0.25rem;
@@ -302,7 +310,7 @@ main {
   width: 100%;
   max-width: var(--page);
   margin: 0 auto;
-  padding: clamp(2.5rem, 6vw, 4.5rem) 1.5rem clamp(3.5rem, 8vw, 6rem);
+  padding: clamp(2rem, 5vw, 3.5rem) 1.5rem clamp(3.5rem, 8vw, 6rem);
 
   /* `safe` is the whole trick. A short page - the home page on a tall screen -
      centres instead of hanging from the top with half a screen of nothing under
