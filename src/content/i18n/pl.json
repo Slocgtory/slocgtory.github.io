@@ -1,6 +1,6 @@
 {
   "name": "Polski",
-  "sourceHash": "a078012feea6fae8",
+  "sourceHash": "d2a48b1c281666e1",
   "site": {
     "skip": "Przejdź do treści",
     "navLabel": "Główna",
@@ -64,7 +64,7 @@
           "facts": [
             {
               "label": "Gogle",
-              "value": "Meta Quest 2, Quest 3, Quest 3S i Quest Pro"
+              "value": "Meta Quest 1, 2, 3, 3S i Quest Pro. Sklep nie obsługuje już Questa 1."
             },
             {
               "label": "Obrazy",

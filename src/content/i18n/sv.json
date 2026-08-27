@@ -1,6 +1,6 @@
 {
   "name": "Svenska",
-  "sourceHash": "a078012feea6fae8",
+  "sourceHash": "d2a48b1c281666e1",
   "site": {
     "skip": "Hoppa till innehållet",
     "navLabel": "Huvudnavigering",
@@ -64,7 +64,7 @@
           "facts": [
             {
               "label": "Headset",
-              "value": "Meta Quest 2, Quest 3, Quest 3S och Quest Pro"
+              "value": "Meta Quest 1, 2, 3, 3S och Quest Pro. Butiken erbjuder inte längre Quest 1."
             },
             {
               "label": "Bilder",

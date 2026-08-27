@@ -1,6 +1,6 @@
 {
   "name": "Dansk",
-  "sourceHash": "a078012feea6fae8",
+  "sourceHash": "d2a48b1c281666e1",
   "site": {
     "skip": "Gå til indhold",
     "navLabel": "Hovednavigation",
@@ -64,7 +64,7 @@
           "facts": [
             {
               "label": "Headset",
-              "value": "Meta Quest 2, Quest 3, Quest 3S og Quest Pro"
+              "value": "Meta Quest 1, 2, 3, 3S og Quest Pro. Butikken fører ikke længere Quest 1."
             },
             {
               "label": "Billeder",
