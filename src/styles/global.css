@@ -688,3 +688,58 @@ main {
     top: auto;
   }
 }
+
+/* --- the language offer -------------------------------------------------- */
+/*
+ * One quiet line under the masthead, in the language being offered. It is a
+ * link and a dismiss, never a redirect - see the component for why.
+ */
+
+.lang-offer {
+  width: 100%;
+  max-width: var(--page);
+  margin: 0 auto;
+  padding: 0.75rem 1.5rem 0;
+}
+.lang-offer[hidden] { display: none; }
+
+.offer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: none;
+  padding: 0.5rem 0.6rem 0.5rem 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface-sunk);
+  width: fit-content;
+  font-size: var(--step--1);
+}
+.offer[hidden] { display: none; }
+
+.offer a {
+  color: var(--ink-soft);
+  text-decoration: none;
+  text-underline-offset: 0.2em;
+}
+.offer a:hover {
+  color: var(--ink);
+  text-decoration: underline;
+}
+
+.offer button {
+  display: grid;
+  place-items: center;
+  width: 1.6rem;
+  height: 1.6rem;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ink-mute);
+  cursor: pointer;
+}
+.offer button:hover {
+  background: var(--surface);
+  color: var(--ink);
+}

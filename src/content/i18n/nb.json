@@ -1,12 +1,14 @@
 {
   "name": "Norsk",
   "dir": "ltr",
-  "sourceHash": "754a46f7cb321340",
+  "sourceHash": "0932137cf870eee4",
   "site": {
     "skip": "Gå til innhold",
     "navLabel": "Hovednavigasjon",
     "settingsLabel": "Innstillinger",
     "langLabel": "Språk",
+    "otherLanguage": "Denne siden finnes også på norsk.",
+    "dismiss": "Lukk",
     "email": "Slocgtory@gmail.com",
     "nav": {
       "privacy": "Personvern"

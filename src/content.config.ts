@@ -57,6 +57,12 @@ const i18n = defineCollection({
       /** Names the one control that holds both choices. */
       settingsLabel: z.string().min(1),
       langLabel: z.string().min(1),
+
+      /** Offered to a visitor whose browser speaks this language, written in it.
+       *  A Pole reading the English page has to be offered Polish in Polish, or
+       *  it is not an offer. */
+      otherLanguage: z.string().min(1),
+      dismiss: z.string().min(1),
       email: z.string().email(),
       /** One entry. The wordmark is the link home, so there is no label for it. */
       nav: z.object({

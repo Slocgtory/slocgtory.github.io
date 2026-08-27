@@ -1,12 +1,14 @@
 {
   "name": "한국어",
   "dir": "ltr",
-  "sourceHash": "754a46f7cb321340",
+  "sourceHash": "0932137cf870eee4",
   "site": {
     "skip": "본문으로 건너뛰기",
     "navLabel": "주요 메뉴",
     "settingsLabel": "설정",
     "langLabel": "언어",
+    "otherLanguage": "이 페이지는 한국어로도 볼 수 있습니다.",
+    "dismiss": "닫기",
     "email": "Slocgtory@gmail.com",
     "nav": {
       "privacy": "개인정보"

@@ -1,12 +1,14 @@
 {
   "name": "Français",
   "dir": "ltr",
-  "sourceHash": "754a46f7cb321340",
+  "sourceHash": "0932137cf870eee4",
   "site": {
     "skip": "Aller au contenu",
     "navLabel": "Navigation principale",
     "settingsLabel": "Paramètres",
     "langLabel": "Langue",
+    "otherLanguage": "Cette page existe aussi en français.",
+    "dismiss": "Fermer",
     "email": "Slocgtory@gmail.com",
     "nav": {
       "privacy": "Confidentialité"

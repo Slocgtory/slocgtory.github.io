@@ -1,6 +1,7 @@
 ---
 import { Font } from 'astro:assets';
 import Settings from '../components/Settings.astro';
+import LanguageOffer from '../components/LanguageOffer.astro';
 import { SITE_URL } from '../../site.config.mjs';
 import { alternatesFor, localeUrl, DEFAULT_LOCALE, type Page } from '../lib/i18n';
 import '../styles/global.css';
@@ -161,6 +162,8 @@ const year = 2026;
       page, and under Contact in the policy, which is the one Meta's submission
       form points at. A strip repeating it under every page was furniture.
     */}
+    <LanguageOffer locale={locale} page={page} />
+
     <main id="main">
       <slot />
     </main>
