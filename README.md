@@ -18,10 +18,11 @@ named anywhere are `www.meta.com`, for the link to Meta's own privacy policy,
 and `schema.org`, which is a vocabulary identifier in the structured data and
 is never fetched.
 
-**"Nothing bundled" is not "no JavaScript".** About 8KB of it is inlined into
-each page, and it is all there is: the theme stamp that has to run before the
-first paint, the one place that works out which language the browser is asking
-for, the settings panel, the language note, and the 404's switch. Nothing is
+**"Nothing bundled" is not "no JavaScript".** Under 10KB of it is inlined into
+each page, and it is all there is: the theme stamp that has to run
+before the first paint, the one place that works out which language the browser
+is asking for, the settings panel, the menus, the language note, and the 404's
+switch. Nothing is
 fetched to run any of it, and every one of them is a progressive enhancement -
 the pages work with scripting off, minus the parts that cannot exist without
 it.
@@ -41,8 +42,9 @@ China, which is not a Quest market at all.
     src/content/i18n/*.json   one file per language - all the words live here
     src/content.config.ts     schema; a missing field fails the build
     src/pages/                routes: English at /, others at /<lang>/
-    src/layouts/Base.astro    head, masthead, structured data
-    src/components/           three page bodies, the settings panel, the
+                              home, apps/, apps/<slug>/, privacy/, 404
+    src/layouts/Base.astro    head, masthead, apps menu, structured data
+    src/components/           the page bodies, the settings panel, the
                               language note
     src/styles/global.css     the whole design system, including print
     site.config.mjs           the language list and the tables keyed by it
@@ -70,7 +72,10 @@ Four steps, in this order, and the order matters:
 3. `seal-csp.mjs` - hashes every inline script and style in the built files and
    writes them into each page's Content-Security-Policy. The hashes are of the
    final bytes, after minification, so they cannot be written by hand.
-4. `check-build.mjs` - reads `dist/` back and checks what it says.
+4. `check-build.mjs` - reads `dist/` back and checks what it says: canonicals
+   that point at themselves, seventeen hreflang links, `lang` matching the path,
+   structured data that parses and is present on every app page, a sitemap that
+   agrees with what was built, and every internal link and asset resolving.
 
 Steps 3 and 4 exist because a whole class of fault is invisible in the source.
 The 404 is built through the same layout as every other page and passes
@@ -118,7 +123,8 @@ marks it current.
 
 ## Adding a language
 
-1. Copy `src/content/i18n/en.json` to `<code>.json` and translate it.
+1. Copy `src/content/i18n/en.json` to `<code>.json` and translate it. That file
+   carries the app pages too - each entry in `apps.list` has its own `page`.
 2. Add the code to `LOCALES` in `site.config.mjs`, then to the two tables keyed
    by it in the same file: `OG_LOCALES` and `LOCALE_MARKETS`.
 3. `node tools/make-og-card.mjs` to draw its social card.
