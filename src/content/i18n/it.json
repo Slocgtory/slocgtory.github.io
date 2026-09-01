@@ -1,6 +1,6 @@
 {
   "name": "Italiano",
-  "sourceHash": "d2a48b1c281666e1",
+  "sourceHash": "e32d444d1cbf35aa",
   "site": {
     "skip": "Vai al contenuto",
     "navLabel": "Navigazione principale",
@@ -52,11 +52,11 @@
         "slug": "allvrpuzzles",
         "name": "AllVRPuzzles",
         "status": "In sviluppo",
-        "desc": "Un gioco di puzzle per Meta Quest. 210 immagini distribuite in 26 stanze, tagliate e ricomposte in realtà virtuale, con il tracciamento delle mani o i controller. Presto su Meta Horizon Store.",
+        "desc": "Un gioco di puzzle per Meta Quest. 210 immagini, tagliate e ricomposte in realtà virtuale, con il tracciamento delle mani o i controller. Presto su Meta Horizon Store.",
         "more": "Su questa app",
         "page": {
           "metaTitle": "AllVRPuzzles — Slocgtory",
-          "metaDescription": "Un gioco di puzzle per Meta Quest. 210 immagini in 26 stanze, da 12 a 500 pezzi, con le mani o con i controller.",
+          "metaDescription": "Un gioco di puzzle per Meta Quest. 210 immagini, da 12 a 500 pezzi, con le mani o con i controller.",
           "intro": [
             "Un puzzle tagliato e ricomposto in realtà virtuale. Scegli un’immagine, scegli quanto finemente si divide — dodici pezzi o cinquecento — e componilo su un tavolo regolato sulla misura e sulla distanza che preferisci.",
             "Ancora in sviluppo. Il giorno dell’uscita questa pagina avrà un collegamento al negozio."
@@ -68,7 +68,7 @@
             },
             {
               "label": "Immagini",
-              "value": "210 in 26 stanze, dieci gratuite"
+              "value": "210, dieci gratuite"
             },
             {
               "label": "Ambiente",

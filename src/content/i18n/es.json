@@ -1,6 +1,6 @@
 {
   "name": "Español",
-  "sourceHash": "d2a48b1c281666e1",
+  "sourceHash": "e32d444d1cbf35aa",
   "site": {
     "skip": "Saltar al contenido",
     "navLabel": "Navegación principal",
@@ -52,11 +52,11 @@
         "slug": "allvrpuzzles",
         "name": "AllVRPuzzles",
         "status": "En desarrollo",
-        "desc": "Un juego de rompecabezas para Meta Quest. 210 imágenes repartidas en 26 salas, cortadas y montadas en realidad virtual, con seguimiento de manos o mandos. Próximamente en Meta Horizon Store.",
+        "desc": "Un juego de rompecabezas para Meta Quest. 210 imágenes, cortadas y montadas en realidad virtual, con seguimiento de manos o mandos. Próximamente en Meta Horizon Store.",
         "more": "Sobre esta aplicación",
         "page": {
           "metaTitle": "AllVRPuzzles — Slocgtory",
-          "metaDescription": "Un juego de puzles para Meta Quest. 210 imágenes en 26 salas, de 12 a 500 piezas, con las manos o con mandos.",
+          "metaDescription": "Un juego de puzles para Meta Quest. 210 imágenes, de 12 a 500 piezas, con las manos o con mandos.",
           "intro": [
             "Un puzle cortado y armado en realidad virtual. Elige una imagen, elige en cuántas piezas se parte —doce o quinientas— y móntalo en un tablero ajustado al tamaño y la distancia que prefieras.",
             "Todavía en desarrollo. El día del lanzamiento esta página tendrá un enlace a la tienda."
@@ -68,7 +68,7 @@
             },
             {
               "label": "Imágenes",
-              "value": "210 en 26 salas, diez de ellas gratuitas"
+              "value": "210, diez de ellas gratuitas"
             },
             {
               "label": "Entorno",

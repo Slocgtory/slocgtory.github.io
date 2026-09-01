@@ -1,6 +1,6 @@
 {
   "name": "Deutsch",
-  "sourceHash": "d2a48b1c281666e1",
+  "sourceHash": "e32d444d1cbf35aa",
   "site": {
     "skip": "Zum Inhalt springen",
     "navLabel": "Hauptnavigation",
@@ -52,11 +52,11 @@
         "slug": "allvrpuzzles",
         "name": "AllVRPuzzles",
         "status": "In Entwicklung",
-        "desc": "Ein Puzzlespiel für Meta Quest. 210 Bilder in 26 Räumen, in Virtual Reality zerschnitten und zusammengesetzt, gespielt mit Handtracking oder Controllern. Demnächst im Meta Horizon Store.",
+        "desc": "Ein Puzzlespiel für Meta Quest. 210 Bilder, in Virtual Reality zerschnitten und zusammengesetzt, gespielt mit Handtracking oder Controllern. Demnächst im Meta Horizon Store.",
         "more": "Über diese App",
         "page": {
           "metaTitle": "AllVRPuzzles — Slocgtory",
-          "metaDescription": "Ein Puzzlespiel für Meta Quest. 210 Bilder in 26 Räumen, von 12 bis 500 Teilen, mit den Händen oder mit Controllern.",
+          "metaDescription": "Ein Puzzlespiel für Meta Quest. 210 Bilder, von 12 bis 500 Teilen, mit den Händen oder mit Controllern.",
           "intro": [
             "Ein Puzzle, in der virtuellen Realität geschnitten und zusammengesetzt. Bild wählen, Feinheit wählen — zwölf Teile oder fünfhundert — und auf einem Brett bauen, dessen Größe und Abstand Sie selbst einstellen.",
             "Noch in Entwicklung. Am Tag der Veröffentlichung steht hier ein Link zum Store."
@@ -68,7 +68,7 @@
             },
             {
               "label": "Bilder",
-              "value": "210 in 26 Räumen, zehn davon kostenlos"
+              "value": "210, zehn davon kostenlos"
             },
             {
               "label": "Umgebung",

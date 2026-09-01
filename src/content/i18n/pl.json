@@ -1,6 +1,6 @@
 {
   "name": "Polski",
-  "sourceHash": "d2a48b1c281666e1",
+  "sourceHash": "e32d444d1cbf35aa",
   "site": {
     "skip": "Przejdź do treści",
     "navLabel": "Główna",
@@ -52,11 +52,11 @@
         "slug": "allvrpuzzles",
         "name": "AllVRPuzzles",
         "status": "W produkcji",
-        "desc": "Gra w układanie puzzli na Meta Quest. 210 obrazów w 26 pokojach, ciętych i składanych w wirtualnej rzeczywistości, obsługiwanych dłońmi albo kontrolerami. Wkrótce w Meta Horizon Store.",
+        "desc": "Gra w układanie puzzli na Meta Quest. 210 obrazów, ciętych i składanych w wirtualnej rzeczywistości, obsługiwanych dłońmi albo kontrolerami. Wkrótce w Meta Horizon Store.",
         "more": "O tej aplikacji",
         "page": {
           "metaTitle": "AllVRPuzzles — Slocgtory",
-          "metaDescription": "Gra w układanie puzzli na Meta Quest. 210 obrazów w 26 pokojach, od 12 do 500 elementów, dłońmi albo kontrolerami.",
+          "metaDescription": "Gra w układanie puzzli na Meta Quest. 210 obrazów, od 12 do 500 elementów, dłońmi albo kontrolerami.",
           "intro": [
             "Puzzle cięte i składane w wirtualnej rzeczywistości. Wybierasz obraz, wybierasz, jak drobno ma się rozpaść — dwanaście elementów albo pięćset — i układasz go na planszy ustawionej na rozmiar i odległość, które ci odpowiadają.",
             "Wciąż w produkcji. W dniu premiery pojawi się tutaj link do sklepu."
@@ -68,7 +68,7 @@
             },
             {
               "label": "Obrazy",
-              "value": "210 w 26 pokojach, dziesięć darmowych"
+              "value": "210, dziesięć darmowych"
             },
             {
               "label": "Otoczenie",

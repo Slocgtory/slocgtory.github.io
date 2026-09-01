@@ -52,11 +52,11 @@
         "slug": "allvrpuzzles",
         "name": "AllVRPuzzles",
         "status": "In development",
-        "desc": "A jigsaw puzzle game for Meta Quest. 210 pictures across 26 rooms, cut and assembled in virtual reality, played with hand tracking or controllers. Coming to the Meta Horizon Store.",
+        "desc": "A jigsaw puzzle game for Meta Quest. 210 pictures, cut and assembled in virtual reality, played with hand tracking or controllers. Coming to the Meta Horizon Store.",
         "more": "About this app",
         "page": {
           "metaTitle": "AllVRPuzzles — Slocgtory",
-          "metaDescription": "A jigsaw puzzle game for Meta Quest. 210 pictures across 26 rooms, from 12 pieces to 500, played with your hands or with controllers.",
+          "metaDescription": "A jigsaw puzzle game for Meta Quest. 210 pictures, from 12 pieces to 500, played with your hands or with controllers.",
           "intro": [
             "A jigsaw puzzle, cut and assembled in virtual reality. Pick a picture, pick how finely it breaks apart — twelve pieces or five hundred — and build it on a board set to the size and the distance that suit you.",
             "Still in development. This page will carry a store link the day it ships."
@@ -68,7 +68,7 @@
             },
             {
               "label": "Pictures",
-              "value": "210 across 26 rooms, ten of them free"
+              "value": "210, ten of them free"
             },
             {
               "label": "Surroundings",

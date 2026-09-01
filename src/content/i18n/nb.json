@@ -1,6 +1,6 @@
 {
   "name": "Norsk",
-  "sourceHash": "d2a48b1c281666e1",
+  "sourceHash": "e32d444d1cbf35aa",
   "site": {
     "skip": "Gå til innhold",
     "navLabel": "Hovednavigasjon",
@@ -52,11 +52,11 @@
         "slug": "allvrpuzzles",
         "name": "AllVRPuzzles",
         "status": "Under utvikling",
-        "desc": "Et puslespill for Meta Quest. 210 bilder fordelt på 26 rom, skåret opp og satt sammen i virtuell virkelighet, spilt med håndsporing eller kontrollere. Kommer til Meta Horizon Store.",
+        "desc": "Et puslespill for Meta Quest. 210 bilder, skåret opp og satt sammen i virtuell virkelighet, spilt med håndsporing eller kontrollere. Kommer til Meta Horizon Store.",
         "more": "Om denne appen",
         "page": {
           "metaTitle": "AllVRPuzzles — Slocgtory",
-          "metaDescription": "Et puslespill til Meta Quest. 210 bilder i 26 rom, fra 12 til 500 brikker, med hendene eller med kontrollere.",
+          "metaDescription": "Et puslespill til Meta Quest. 210 bilder, fra 12 til 500 brikker, med hendene eller med kontrollere.",
           "intro": [
             "Et puslespill, skåret opp og lagt i virtuell virkelighet. Velg et bilde, velg hvor fint det deles opp — tolv brikker eller fem hundre — og bygg det på en plate du selv har satt i størrelse og avstand.",
             "Fortsatt under utvikling. På lanseringsdagen står det en lenke til butikken her."
@@ -68,7 +68,7 @@
             },
             {
               "label": "Bilder",
-              "value": "210 i 26 rom, ti av dem gratis"
+              "value": "210, ti av dem gratis"
             },
             {
               "label": "Omgivelser",
