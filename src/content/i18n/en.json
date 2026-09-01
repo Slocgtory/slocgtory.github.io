@@ -56,7 +56,7 @@
         "more": "About this app",
         "page": {
           "metaTitle": "AllVRPuzzles — Slocgtory",
-          "metaDescription": "A jigsaw puzzle game for Meta Quest. 210 pictures, from 12 pieces to 500, played with your hands or with controllers.",
+          "metaDescription": "A jigsaw puzzle game for Meta Quest. 210 pictures, from 50 pieces to 300, played with your hands or with controllers.",
           "intro": [
             "A jigsaw puzzle, cut and assembled in virtual reality. Pick a picture, pick how finely it breaks apart — twelve pieces or five hundred — and build it on a board set to the size and the distance that suit you.",
             "Still in development. This page will carry a store link the day it ships."
@@ -76,7 +76,7 @@
             },
             {
               "label": "Difficulty",
-              "value": "Five settings, from 12 pieces to 500"
+              "value": "Five settings, from 50 pieces to 300"
             },
             {
               "label": "Input",

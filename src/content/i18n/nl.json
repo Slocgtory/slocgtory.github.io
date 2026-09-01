@@ -1,6 +1,6 @@
 {
   "name": "Nederlands",
-  "sourceHash": "e32d444d1cbf35aa",
+  "sourceHash": "caaff95b99c3c50b",
   "site": {
     "skip": "Naar de inhoud",
     "navLabel": "Hoofdnavigatie",
@@ -56,7 +56,7 @@
         "more": "Over deze app",
         "page": {
           "metaTitle": "AllVRPuzzles — Slocgtory",
-          "metaDescription": "Een puzzelspel voor Meta Quest. 210 afbeeldingen, van 12 tot 500 stukjes, met je handen of met controllers.",
+          "metaDescription": "Een puzzelspel voor Meta Quest. 210 afbeeldingen, van 50 tot 300 stukjes, met je handen of met controllers.",
           "intro": [
             "Een legpuzzel, gesneden en gelegd in virtual reality. Kies een afbeelding, kies hoe fijn hij uiteenvalt — twaalf stukjes of vijfhonderd — en leg hem op een bord dat je zelf op maat en afstand zet.",
             "Nog in ontwikkeling. Op de dag van verschijnen staat hier een link naar de winkel."
@@ -76,7 +76,7 @@
             },
             {
               "label": "Moeilijkheid",
-              "value": "Vijf standen, van 12 tot 500 stukjes"
+              "value": "Vijf standen, van 50 tot 300 stukjes"
             },
             {
               "label": "Besturing",

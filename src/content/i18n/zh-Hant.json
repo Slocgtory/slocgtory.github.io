@@ -1,6 +1,6 @@
 {
   "name": "繁體中文",
-  "sourceHash": "e32d444d1cbf35aa",
+  "sourceHash": "caaff95b99c3c50b",
   "site": {
     "skip": "跳至內容",
     "navLabel": "主要導覽",
@@ -56,7 +56,7 @@
         "more": "關於這個應用程式",
         "page": {
           "metaTitle": "AllVRPuzzles — Slocgtory",
-          "metaDescription": "Meta Quest 的拼圖遊戲。210 張圖，12 片到 500 片，用雙手或控制器遊玩。",
+          "metaDescription": "Meta Quest 的拼圖遊戲。210 張圖，50 片到 300 片，用雙手或控制器遊玩。",
           "intro": [
             "在虛擬實境中切開並拼合的拼圖。選一張圖，選要切得多細——12 片或 500 片——然後在你自己調好大小與距離的板子上拼起來。",
             "仍在開發中。上架當天，這裡會放上商店連結。"
@@ -76,7 +76,7 @@
             },
             {
               "label": "難度",
-              "value": "五段，從 12 片到 500 片"
+              "value": "五段，從 50 片到 300 片"
             },
             {
               "label": "操作",

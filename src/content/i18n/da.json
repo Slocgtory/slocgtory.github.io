@@ -1,6 +1,6 @@
 {
   "name": "Dansk",
-  "sourceHash": "e32d444d1cbf35aa",
+  "sourceHash": "caaff95b99c3c50b",
   "site": {
     "skip": "Gå til indhold",
     "navLabel": "Hovednavigation",
@@ -56,7 +56,7 @@
         "more": "Om denne app",
         "page": {
           "metaTitle": "AllVRPuzzles — Slocgtory",
-          "metaDescription": "Et puslespil til Meta Quest. 210 billeder, fra 12 til 500 brikker, med hænderne eller med controllere.",
+          "metaDescription": "Et puslespil til Meta Quest. 210 billeder, fra 50 til 300 brikker, med hænderne eller med controllere.",
           "intro": [
             "Et puslespil, skåret og samlet i virtual reality. Vælg et billede, vælg hvor fint det deles op — tolv brikker eller fem hundrede — og byg det på en plade, du selv har sat i størrelse og afstand.",
             "Stadig under udvikling. På udgivelsesdagen står der et link til butikken her."
@@ -76,7 +76,7 @@
             },
             {
               "label": "Sværhedsgrad",
-              "value": "Fem trin, fra 12 til 500 brikker"
+              "value": "Fem trin, fra 50 til 300 brikker"
             },
             {
               "label": "Styring",

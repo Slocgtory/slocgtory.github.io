@@ -1,6 +1,6 @@
 {
   "name": "Suomi",
-  "sourceHash": "e32d444d1cbf35aa",
+  "sourceHash": "caaff95b99c3c50b",
   "site": {
     "skip": "Siirry sisältöön",
     "navLabel": "Päävalikko",
@@ -56,7 +56,7 @@
         "more": "Tietoja tästä sovelluksesta",
         "page": {
           "metaTitle": "AllVRPuzzles — Slocgtory",
-          "metaDescription": "Palapelipeli Meta Questille. 210 kuvaa, 12–500 palaa, käsin tai ohjaimin.",
+          "metaDescription": "Palapelipeli Meta Questille. 210 kuvaa, 50–300 palaa, käsin tai ohjaimin.",
           "intro": [
             "Palapeli, joka leikataan ja kootaan virtuaalitodellisuudessa. Valitse kuva, valitse kuinka pieniksi paloiksi se hajoaa — kaksitoista palaa tai viisisataa — ja kokoa se alustalla, jonka koon ja etäisyyden olet itse asettanut.",
             "Vielä kehitteillä. Julkaisupäivänä tällä sivulla on linkki kauppaan."
@@ -76,7 +76,7 @@
             },
             {
               "label": "Vaikeustaso",
-              "value": "Viisi asetusta, 12–500 palaa"
+              "value": "Viisi asetusta, 50–300 palaa"
             },
             {
               "label": "Ohjaus",

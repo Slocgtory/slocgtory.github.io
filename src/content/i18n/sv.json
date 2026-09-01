@@ -1,6 +1,6 @@
 {
   "name": "Svenska",
-  "sourceHash": "e32d444d1cbf35aa",
+  "sourceHash": "caaff95b99c3c50b",
   "site": {
     "skip": "Hoppa till innehållet",
     "navLabel": "Huvudnavigering",
@@ -56,7 +56,7 @@
         "more": "Om den här appen",
         "page": {
           "metaTitle": "AllVRPuzzles — Slocgtory",
-          "metaDescription": "Ett pusselspel till Meta Quest. 210 bilder, från 12 till 500 bitar, med händerna eller med handkontroller.",
+          "metaDescription": "Ett pusselspel till Meta Quest. 210 bilder, från 50 till 300 bitar, med händerna eller med handkontroller.",
           "intro": [
             "Ett pussel, skuret och lagt i virtuell verklighet. Välj en bild, välj hur fint den delas — tolv bitar eller femhundra — och lägg den på en skiva som du själv ställt in i storlek och avstånd.",
             "Fortfarande under utveckling. På släppdagen finns här en länk till butiken."
@@ -76,7 +76,7 @@
             },
             {
               "label": "Svårighetsgrad",
-              "value": "Fem lägen, från 12 till 500 bitar"
+              "value": "Fem lägen, från 50 till 300 bitar"
             },
             {
               "label": "Styrning",

@@ -1,6 +1,6 @@
 {
   "name": "Íslenska",
-  "sourceHash": "e32d444d1cbf35aa",
+  "sourceHash": "caaff95b99c3c50b",
   "site": {
     "skip": "Fara í efni",
     "navLabel": "Aðalvalmynd",
@@ -56,7 +56,7 @@
         "more": "Um þetta forrit",
         "page": {
           "metaTitle": "AllVRPuzzles — Slocgtory",
-          "metaDescription": "Púsluspil fyrir Meta Quest. 210 myndir, frá 12 upp í 500 kubba, með höndunum eða með stýringum.",
+          "metaDescription": "Púsluspil fyrir Meta Quest. 210 myndir, frá 50 upp í 300 kubba, með höndunum eða með stýringum.",
           "intro": [
             "Púsluspil, skorið og sett saman í sýndarveruleika. Veldu mynd, veldu hversu smátt hún brotnar — tólf kubbar eða fimm hundruð — og settu hana saman á borði sem þú hefur sjálf stillt að stærð og fjarlægð.",
             "Enn í þróun. Á útgáfudegi verður hér tengill í verslunina."
@@ -76,7 +76,7 @@
             },
             {
               "label": "Erfiðleikastig",
-              "value": "Fimm stillingar, frá 12 upp í 500 kubba"
+              "value": "Fimm stillingar, frá 50 upp í 300 kubba"
             },
             {
               "label": "Stýring",

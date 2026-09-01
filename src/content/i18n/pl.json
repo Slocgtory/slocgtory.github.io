@@ -1,6 +1,6 @@
 {
   "name": "Polski",
-  "sourceHash": "e32d444d1cbf35aa",
+  "sourceHash": "caaff95b99c3c50b",
   "site": {
     "skip": "Przejdź do treści",
     "navLabel": "Główna",
@@ -56,7 +56,7 @@
         "more": "O tej aplikacji",
         "page": {
           "metaTitle": "AllVRPuzzles — Slocgtory",
-          "metaDescription": "Gra w układanie puzzli na Meta Quest. 210 obrazów, od 12 do 500 elementów, dłońmi albo kontrolerami.",
+          "metaDescription": "Gra w układanie puzzli na Meta Quest. 210 obrazów, od 50 do 300 elementów, dłońmi albo kontrolerami.",
           "intro": [
             "Puzzle cięte i składane w wirtualnej rzeczywistości. Wybierasz obraz, wybierasz, jak drobno ma się rozpaść — dwanaście elementów albo pięćset — i układasz go na planszy ustawionej na rozmiar i odległość, które ci odpowiadają.",
             "Wciąż w produkcji. W dniu premiery pojawi się tutaj link do sklepu."
@@ -76,7 +76,7 @@
             },
             {
               "label": "Trudność",
-              "value": "Pięć poziomów, od 12 do 500 elementów"
+              "value": "Pięć poziomów, od 50 do 300 elementów"
             },
             {
               "label": "Sterowanie",

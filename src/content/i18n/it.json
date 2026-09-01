@@ -1,6 +1,6 @@
 {
   "name": "Italiano",
-  "sourceHash": "e32d444d1cbf35aa",
+  "sourceHash": "caaff95b99c3c50b",
   "site": {
     "skip": "Vai al contenuto",
     "navLabel": "Navigazione principale",
@@ -56,7 +56,7 @@
         "more": "Su questa app",
         "page": {
           "metaTitle": "AllVRPuzzles — Slocgtory",
-          "metaDescription": "Un gioco di puzzle per Meta Quest. 210 immagini, da 12 a 500 pezzi, con le mani o con i controller.",
+          "metaDescription": "Un gioco di puzzle per Meta Quest. 210 immagini, da 50 a 300 pezzi, con le mani o con i controller.",
           "intro": [
             "Un puzzle tagliato e ricomposto in realtà virtuale. Scegli un’immagine, scegli quanto finemente si divide — dodici pezzi o cinquecento — e componilo su un tavolo regolato sulla misura e sulla distanza che preferisci.",
             "Ancora in sviluppo. Il giorno dell’uscita questa pagina avrà un collegamento al negozio."
@@ -76,7 +76,7 @@
             },
             {
               "label": "Difficoltà",
-              "value": "Cinque livelli, da 12 a 500 pezzi"
+              "value": "Cinque livelli, da 50 a 300 pezzi"
             },
             {
               "label": "Comandi",
