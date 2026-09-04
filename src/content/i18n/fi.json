@@ -87,11 +87,13 @@
               "value": "18"
             }
           ],
-          "privacyNote": "Julkaistu sovellus ei koskaan pyydä internetyhteyttä, joten mikään sen tallentama ei voi poistua laitteestasi. Yksityiskohdat ovat [tietosuojaselosteessa](/fi/privacy/)."
+          "privacyNote": "Tällä pelillä on [oma tietosuojakäytäntö](/fi/apps/allvrpuzzles/privacy/): ilmainen kokeilujakso lähettää kaksi vain tämän sovelluksen näkemää laitetunnistetta pienelle lisenssipalvelimelle, Meta vahvistaa lasit ja ostoksesi, eikä mikään muu poistu laseistasi."
         }
       }
     ],
-    "note": "Mitään ei ole vielä julkaistu. Jokainen sovellus listataan tähän julkaisunsa yhteydessä, linkkinä kauppasivulleen."
+    "note": "Mitään ei ole vielä julkaistu. Jokainen sovellus listataan tähän julkaisunsa yhteydessä, linkkinä kauppasivulleen.",
+    "policyLink": "Tämän sovelluksen tietosuojakäytäntö",
+    "policyInEnglishNote": "Tämä käytäntö on toistaiseksi saatavilla vain englanniksi. [Lue englanniksi]({url})."
   },
   "privacy": {
     "metaTitle": "Tietosuojaseloste",

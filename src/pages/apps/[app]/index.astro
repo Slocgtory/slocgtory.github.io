@@ -1,7 +1,7 @@
 ---
 import Base from '../../../layouts/Base.astro';
 import AppBody from '../../../components/AppBody.astro';
-import { loadLocale, DEFAULT_LOCALE } from '../../../lib/i18n';
+import { loadLocale, localeUrl, DEFAULT_LOCALE } from '../../../lib/i18n';
 
 export async function getStaticPaths() {
   const { apps } = await loadLocale(DEFAULT_LOCALE);
@@ -10,6 +10,9 @@ export async function getStaticPaths() {
 
 const data = await loadLocale(DEFAULT_LOCALE);
 const app = data.apps.list.find((a) => a.slug === Astro.params.app)!;
+const policy = app.policy
+  ? { href: localeUrl(`apps/${app.slug}/privacy`, DEFAULT_LOCALE), label: data.apps.policyLink }
+  : undefined;
 ---
 
 <Base
@@ -20,5 +23,5 @@ const app = data.apps.list.find((a) => a.slug === Astro.params.app)!;
   site={data.site}
   apps={[app]}
 >
-  <AppBody app={app} factsHeading={data.apps.detailsHeading} />
+  <AppBody app={app} factsHeading={data.apps.detailsHeading} policy={policy} />
 </Base>

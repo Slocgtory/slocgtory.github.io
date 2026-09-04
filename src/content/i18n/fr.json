@@ -87,11 +87,13 @@
               "value": "18"
             }
           ],
-          "privacyNote": "L'application publiée ne demande jamais l'accès à Internet : rien de ce qu'elle enregistre ne peut quitter votre casque. Le détail se trouve dans la [politique de confidentialité](/fr/privacy/)."
+          "privacyNote": "Ce jeu a sa [propre politique de confidentialité](/fr/apps/allvrpuzzles/privacy/) : l'essai gratuit envoie deux identifiants d'appareil visibles uniquement par cette application à un petit serveur de licences, Meta confirme le casque et vos achats, et rien d'autre ne quitte votre casque."
         }
       }
     ],
-    "note": "Rien n'est encore sorti. Chaque application sera listée ici dès sa parution, avec un lien vers sa page dans la boutique."
+    "note": "Rien n'est encore sorti. Chaque application sera listée ici dès sa parution, avec un lien vers sa page dans la boutique.",
+    "policyLink": "Politique de confidentialité de cette application",
+    "policyInEnglishNote": "Cette politique n'est disponible qu'en anglais pour le moment. [Lire en anglais]({url})."
   },
   "privacy": {
     "metaTitle": "Politique de confidentialité",

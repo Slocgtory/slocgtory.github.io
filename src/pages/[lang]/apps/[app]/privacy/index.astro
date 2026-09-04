@@ -1,0 +1,50 @@
+---
+import Base from '../../../../../layouts/Base.astro';
+import PrivacyBody from '../../../../../components/PrivacyBody.astro';
+import { loadLocale, localeUrl, DEFAULT_LOCALE, TRANSLATED_LOCALES } from '../../../../../lib/i18n';
+
+/* Every language gets the address, so the hreflang set of the English page is
+   complete. A language that has translated the policy shows its own text; one
+   that has not shows the English text under a note in its own language. */
+export async function getStaticPaths() {
+  const { apps } = await loadLocale(DEFAULT_LOCALE);
+  const slugs = apps.list.filter((app) => app.policy).map((app) => app.slug);
+  return TRANSLATED_LOCALES.flatMap((lang) => slugs.map((app) => ({ params: { lang, app } })));
+}
+
+const { lang, app: slug } = Astro.params;
+const data = await loadLocale(lang!);
+const english = await loadLocale(DEFAULT_LOCALE);
+const app = data.apps.list.find((a) => a.slug === slug)!;
+const englishPolicy = english.apps.list.find((a) => a.slug === slug)!.policy!;
+const englishUrl = localeUrl(`apps/${slug}/privacy`, DEFAULT_LOCALE);
+
+const policy = app.policy ?? englishPolicy;
+/* The site-wide translation note ends in a link to `/privacy/`; pointed here at
+   this app's English policy instead, so the note is not a sixteen-language
+   duplicate of a sentence that already exists. */
+const canonicalNote = app.policy
+  ? data.privacy.canonicalNote.replace('](/privacy/)', `](${englishUrl})`)
+  : data.apps.policyInEnglishNote.replace('{url}', englishUrl);
+---
+
+<Base
+  locale={lang!}
+  page={`apps/${slug}/privacy`}
+  title={`${policy.metaTitle} - Slocgtory`}
+  description={policy.metaDescription}
+  site={data.site}
+  apps={[app]}
+>
+  <PrivacyBody
+    privacy={{
+      title: policy.title,
+      updated: policy.updated,
+      canonicalNote,
+      summary: policy.summary,
+      sections: policy.sections,
+    }}
+    updatedIso={policy.updatedIso}
+    isCanonical={false}
+  />
+</Base>

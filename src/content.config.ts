@@ -29,6 +29,22 @@ const section = z.object({
   list: z.array(z.string().min(1)).optional(),
 });
 
+/** An app's own privacy policy, the same shape as the site-wide one so both
+ *  render through PrivacyBody. Optional per language: a language without one
+ *  renders the English text under `/<lang>/apps/<slug>/privacy/` with a note
+ *  saying so (`apps.policyInEnglishNote`), so the address exists in every
+ *  language and the hreflang set stays complete. */
+const policy = z.object({
+  metaTitle: z.string().min(1),
+  metaDescription: z.string().min(1),
+  title: z.string().min(1),
+  updated: z.string().min(1),
+  /** ISO date for the <time> element; the same in every language. */
+  updatedIso: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+  summary: z.string().min(1),
+  sections: z.array(section).min(1),
+});
+
 const app = z.object({
   /** Last segment of this app's own address, and the same in every language:
    *  `/apps/allvrpuzzles/` and `/pl/apps/allvrpuzzles/`. A translated slug
@@ -51,6 +67,9 @@ const app = z.object({
     facts: z.array(z.object({ label: z.string().min(1), value: z.string().min(1) })).min(1),
     privacyNote: z.string().min(1),
   }),
+  /** This app's own policy. Present in English for every app that talks to a
+   *  server; a translation may omit it and fall back to the English text. */
+  policy: policy.optional(),
 });
 
 const i18n = defineCollection({
@@ -167,6 +186,12 @@ const i18n = defineCollection({
       detailsHeading: z.string().min(1),
       list: z.array(app).min(1),
       note: z.string().min(1),
+      /** The link from an app's page to its own policy. */
+      policyLink: z.string().min(1),
+      /** Shown above an app policy rendered in English because this language
+       *  has no translation of it yet. `{url}` is replaced with the English
+       *  address. Empty in English itself, which is why there is no min(1). */
+      policyInEnglishNote: z.string(),
     }),
 
     privacy: z.object({

@@ -12,9 +12,11 @@ interface Props {
     };
   };
   factsHeading: string;
+  /** The app's own privacy policy, when it has one. */
+  policy?: { href: string; label: string };
 }
 
-const { app, factsHeading } = Astro.props;
+const { app, factsHeading, policy } = Astro.props;
 ---
 
 {/*
@@ -48,5 +50,10 @@ const { app, factsHeading } = Astro.props;
       }
     </dl>
     <p class="note" set:html={inline(app.page.privacyNote)} />
+    {policy && (
+      <p class="note">
+        <a href={policy.href}>{policy.label}</a>
+      </p>
+    )}
   </div>
 </section>

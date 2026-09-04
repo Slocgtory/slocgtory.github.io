@@ -87,11 +87,13 @@
               "value": "18"
             }
           ],
-          "privacyNote": "Die veröffentlichte App fragt nie nach Internetzugriff, also kann nichts, was sie speichert, Ihr Headset verlassen. Einzelheiten in der [Datenschutzerklärung](/de/privacy/)."
+          "privacyNote": "Dieses Spiel hat eine [eigene Datenschutzerklärung](/de/apps/allvrpuzzles/privacy/): Die kostenlose Testphase sendet zwei nur für diese App sichtbare Gerätekennungen an einen kleinen Lizenzserver, Meta bestätigt das Headset und deine Käufe, und sonst verlässt nichts dein Headset."
         }
       }
     ],
-    "note": "Bisher wurde nichts veröffentlicht. Jede App wird hier aufgeführt, sobald sie erscheint, mit einem Link zu ihrer Store-Seite."
+    "note": "Bisher wurde nichts veröffentlicht. Jede App wird hier aufgeführt, sobald sie erscheint, mit einem Link zu ihrer Store-Seite.",
+    "policyLink": "Datenschutzerklärung dieser App",
+    "policyInEnglishNote": "Diese Datenschutzerklärung liegt derzeit nur auf Englisch vor. [Auf Englisch lesen]({url})."
   },
   "privacy": {
     "metaTitle": "Datenschutzerklärung",

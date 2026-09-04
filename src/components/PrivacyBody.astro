@@ -18,14 +18,16 @@ interface Props {
     sections: Section[];
   };
   isCanonical: boolean;
+  /** An app policy carries its own date; the site-wide one uses POLICY_UPDATED. */
+  updatedIso?: string;
 }
 
-const { privacy, isCanonical } = Astro.props;
+const { privacy, isCanonical, updatedIso } = Astro.props;
 ---
 
 <div class="doc-head">
   <h1>{privacy.title}</h1>
-  <p class="updated"><time datetime={POLICY_UPDATED}>{privacy.updated}</time></p>
+  <p class="updated"><time datetime={updatedIso ?? POLICY_UPDATED}>{privacy.updated}</time></p>
 </div>
 
 {

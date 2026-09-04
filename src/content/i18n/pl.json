@@ -1,6 +1,6 @@
 {
   "name": "Polski",
-  "sourceHash": "caaff95b99c3c50b",
+  "sourceHash": "e35bdcd9cef6b9cb",
   "site": {
     "skip": "Przejdź do treści",
     "navLabel": "Główna",
@@ -87,19 +87,143 @@
               "value": "18"
             }
           ],
-          "privacyNote": "Wydana aplikacja nigdy nie prosi o dostęp do internetu, więc nic, co zapisuje, nie opuszcza twoich gogli. Szczegóły w [polityce prywatności](/pl/privacy/)."
+          "privacyNote": "Ta gra ma [własną politykę prywatności](/pl/apps/allvrpuzzles/privacy/): darmowy okres próbny wysyła do małego serwera licencyjnego dwa identyfikatory urządzenia widoczne tylko dla tej aplikacji, Meta potwierdza gogle i twoje zakupy, i nic więcej nie opuszcza twoich gogli."
+        },
+        "policy": {
+          "metaTitle": "Polityka prywatności AllVRPuzzles",
+          "metaDescription": "Polityka prywatności AllVRPuzzles na Meta Quest: dwa identyfikatory urządzenia widoczne tylko dla tej aplikacji na potrzeby darmowego okresu próbnego, atestacja i weryfikacja zakupów przez Metę, i nic więcej.",
+          "title": "Polityka prywatności AllVRPuzzles",
+          "updated": "Ostatnia aktualizacja: 4 września 2026",
+          "updatedIso": "2026-09-04",
+          "summary": "**AllVRPuzzles nie zbiera żadnych danych osobowych poza tym, czego wymaga darmowy okres próbny.** Gra wysyła do małego serwera licencyjnego dwa identyfikatory, które na twoich goglach widzi wyłącznie ta aplikacja, prosi Metę o potwierdzenie gogli i twoich zakupów, i nie robi nic więcej: bez analityki, bez reklam, bez śledzenia. Wszystko poniżej to szczegóły stojące za tym zdaniem.",
+          "sections": [
+            {
+              "id": "who",
+              "h": "Od kogo pochodzi ta polityka",
+              "p": [
+                "Slocgtory to niezależny, jednoosobowy deweloper. Nie ma firmy ani pracowników; jedyne strony trzecie zaangażowane w działanie tej gry to dwaj dostawcy usług wymienieni poniżej.",
+                "Kontakt: [Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)"
+              ]
+            },
+            {
+              "id": "scope",
+              "h": "Czego dotyczy",
+              "p": [
+                "Ta polityka dotyczy gry **AllVRPuzzles** na gogle Meta Quest. Dla tej gry zastępuje [ogólną politykę prywatności Slocgtory](/pl/privacy/), która nadal obejmuje tę stronę oraz aplikacje bez własnej polityki."
+              ]
+            },
+            {
+              "id": "trial-ids",
+              "h": "Identyfikatory urządzenia na potrzeby darmowego okresu próbnego",
+              "p": [
+                "Podstawowa gra jest darmowa przez ograniczony okres próbny. Aby liczyć ten okres na gogle, a nie na instalację, gra przy uruchomieniu wysyła do naszego serwera licencyjnego dwa identyfikatory: `ANDROID_ID`, czyli identyfikator, który Android przypisuje tej aplikacji na tych goglach, oraz identyfikator urządzenia Widevine w postaci widocznej dla tej aplikacji.",
+                "Oba są specyficzne dla AllVRPuzzles na twoich goglach: inne aplikacje widzą inne wartości i nie da się nimi rozpoznać cię w innych aplikacjach ani usługach. Serwer zapisuje je razem z czasem rozpoczęcia okresu próbnego i czasem, kiedy gogle były ostatnio widziane. W rozumieniu RODO są to dane osobowe, jako trwały identyfikator urządzenia, i tak je traktujemy.",
+                "Cel: obsługa licencji próbnej, uniemożliwienie resetowania okresu próbnego przez reinstalację lub reset gogli oraz policzenie, ile gogli korzysta z gry. Podstawa prawna: wykonanie umowy z tobą (art. 6 ust. 1 lit. b RODO) w zakresie licencji oraz nasz prawnie uzasadniony interes (art. 6 ust. 1 lit. f) w zakresie zliczeń, które nigdy nie identyfikują osoby."
+              ],
+              "list": [
+                "**Okres przechowywania:** wpis jest usuwany automatycznie, gdy gogle nie były widziane przez 24 miesiące.",
+                "**Gdzie:** Cloudflare Worker i magazyn Cloudflare Durable Object (Cloudflare, Inc., działający jako nasz podmiot przetwarzający)."
+              ]
+            },
+            {
+              "id": "attestation",
+              "h": "Atestacja urządzenia",
+              "p": [
+                "Aby odróżnić prawdziwe gogle od zmanipulowanych, gra prosi system Meta Horizon OS o token Platform Integrity i przekazuje go do naszego serwera, który wysyła go do usługi weryfikacyjnej Mety. Zweryfikowany wynik zawiera nazwę pakietu aplikacji, jej certyfikat podpisu, stan integralności gogli oraz, jeśli Meta go udostępni, identyfikator urządzenia nadany przez Metę. Zachowujemy jedynie kluczowany skrót tego identyfikatora, wyłącznie po to, by powiązać go z wpisem okresu próbnego; sam token nie jest przechowywany.",
+                "Atestacja nigdy nie blokuje gry: gogle, które jej nie przejdą albo nie mogą jej wykonać, i tak otrzymują swój werdykt próbny. Meta przetwarza token zgodnie z własną [polityką prywatności](https://www.meta.com/legal/quest/privacy-policy/)."
+              ]
+            },
+            {
+              "id": "purchases",
+              "h": "Zakupy i tożsamość konta Meta",
+              "p": [
+                "Pakiety obrazków są sprzedawane przez zakupy w aplikacji Mety. Transakcja odbywa się w całości w interfejsie sklepu Mety, a **dane płatnicze nigdy nie są widoczne dla tej gry ani jej przekazywane.** Sprawdzanie zakupów odbywa się na goglach przez Platform SDK Mety.",
+                "Jeśli włączone jest nasze serwerowe sprawdzanie zakupów, gra dodatkowo wysyła twój identyfikator użytkownika Meta wraz z jednorazowym dowodem wystawionym przez Metę, a nasz serwer pyta Metę, czy to konto posiada pakiet. Obok wpisu okresu próbnego zachowujemy jedynie kluczowany skrót identyfikatora użytkownika; dowód ani żadne dane profilu nie są przechowywane."
+              ]
+            },
+            {
+              "id": "server",
+              "h": "Dane techniczne na naszym serwerze",
+              "p": [
+                "Cloudflare, który hostuje serwer licencyjny, przetwarza twój adres IP, aby dostarczyć odpowiedź i egzekwować limity zapytań. Nie przechowujemy adresów IP. Logi serwera mogą odnotować wynik zapytania, na przykład że atestacja została odrzucona i dlaczego, bez żadnego identyfikatora."
+              ]
+            },
+            {
+              "id": "not-collected",
+              "h": "Czego gra nie robi",
+              "p": [
+                "Nic więcej nie opuszcza twoich gogli. W szczególności:"
+              ],
+              "list": [
+                "Brak analityki rozgrywki, śledzenia sesji, raportowania awarii i telemetrii.",
+                "Brak reklam i identyfikatorów reklamowych.",
+                "Brak sprzedaży ani udostępniania danych do celów marketingowych.",
+                "Brak dostępu do mikrofonu, kamery, lokalizacji i kontaktów."
+              ]
+            },
+            {
+              "id": "stored-on-device",
+              "h": "Dane zapisywane na twoich goglach",
+              "p": [
+                "Gra zapisuje we własnej prywatnej pamięci: twoje postępy, lokalny rejestr posiadanych pakietów oraz ostatnio otrzymany podpisany werdykt okresu próbnego. Kopia zapasowa Androida jest dla tej aplikacji wyłączona, więc nic z tego nie trafia do kopii w chmurze. Odinstalowanie gry usuwa to wszystko. Wpis okresu próbnego na naszym serwerze pozostaje do czasu wygaśnięcia, więc ponowna instalacja nie rozpoczyna okresu próbnego od nowa."
+              ]
+            },
+            {
+              "id": "recipients",
+              "h": "Kto otrzymuje dane",
+              "p": [
+                "Dwóch dostawców i nikt więcej:"
+              ],
+              "list": [
+                "**Cloudflare, Inc.**, hostujący i przechowujący serwer licencyjny, jako nasz podmiot przetwarzający.",
+                "**Meta Platforms Technologies**, na potrzeby atestacji i weryfikacji zakupów, jako niezależny administrator zgodnie z własną polityką."
+              ]
+            },
+            {
+              "id": "rights",
+              "h": "Twoje prawa",
+              "p": [
+                "Na podstawie RODO możesz żądać dostępu do danych, które przechowujemy o twoich goglach, ich sprostowania lub usunięcia, a także sprzeciwić się przetwarzaniu opartemu na prawnie uzasadnionym interesie. Napisz na [Slocgtory@gmail.com](mailto:Slocgtory@gmail.com), a odpowiedź otrzymasz w ciągu 30 dni.",
+                "Aby odnaleźć twój wpis, potrzebujemy obu identyfikatorów urządzenia. Gra pokazuje je na stronie O grze w ustawieniach. Usunięcie wpisu kończy bieżącą licencję próbną na tych goglach.",
+                "Możesz też złożyć skargę do organu nadzorczego; w Polsce jest nim [UODO](https://uodo.gov.pl/)."
+              ]
+            },
+            {
+              "id": "children",
+              "h": "Dzieci",
+              "p": [
+                "Gra jest przeznaczona dla osób spełniających wymagania wiekowe konta Meta Horizon. Nie zbieramy świadomie danych dzieci."
+              ]
+            },
+            {
+              "id": "changes",
+              "h": "Zmiany w tej polityce",
+              "p": [
+                "Jeśli cokolwiek z tego się zmieni, zmieni się ta strona, a data u góry zostanie zaktualizowana. Zmiana wpływająca na to, co jest zbierane, zostanie też odnotowana w opisie gry w sklepie."
+              ]
+            },
+            {
+              "id": "contact",
+              "h": "Kontakt",
+              "p": [
+                "[Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)"
+              ]
+            }
+          ]
         }
       }
     ],
-    "note": "Nic nie zostało jeszcze wydane. Każda aplikacja pojawi się tutaj wraz z premierą, z linkiem do jej strony w sklepie."
+    "note": "Nic nie zostało jeszcze wydane. Każda aplikacja pojawi się tutaj wraz z premierą, z linkiem do jej strony w sklepie.",
+    "policyLink": "Polityka prywatności tej aplikacji",
+    "policyInEnglishNote": "Ta polityka jest na razie dostępna tylko po angielsku. [Przeczytaj po angielsku]({url})."
   },
   "privacy": {
     "metaTitle": "Polityka prywatności",
-    "metaDescription": "Polityka prywatności dla AllVRPuzzles i wszystkich aplikacji Slocgtory. Nie zbieramy żadnych danych osobowych, a wydana aplikacja nie ma dostępu do internetu.",
+    "metaDescription": "Polityka prywatności strony i aplikacji Slocgtory. Strona nie śledzi odwiedzających; aplikacje bez własnej polityki nie zbierają danych osobowych. AllVRPuzzles ma własną politykę.",
     "title": "Polityka prywatności",
     "updated": "Ostatnia aktualizacja: 27 sierpnia 2026",
     "canonicalNote": "To jest tłumaczenie pomocnicze. Wersją rozstrzygającą jest **wersja angielska** — w razie rozbieżności obowiązuje tekst angielski. [Przeczytaj po angielsku](/privacy/).",
-    "summary": "**Te aplikacje nie zbierają żadnych danych osobowych.** Wydana aplikacja w ogóle nie ma dostępu do internetu, więc nie może niczego nigdzie wysłać. Wszystko poniżej to szczegóły stojące za tym zdaniem.",
+    "summary": "**Aplikacje objęte tą polityką nie zbierają żadnych danych osobowych**, a ta strona nie śledzi odwiedzających. AllVRPuzzles ma teraz [własną politykę](/pl/apps/allvrpuzzles/privacy/), bo jej darmowy okres próbny łączy się z serwerem licencyjnym; wszystko poniżej dotyczy aplikacji, które własnej polityki nie mają.",
     "sections": [
       {
         "id": "who",
@@ -113,7 +237,7 @@
         "id": "scope",
         "h": "Czego dotyczy",
         "p": [
-          "Ta polityka obejmuje **AllVRPuzzles**, aplikację na gogle Meta Quest, oraz każdą przyszłą aplikację lub grę wydaną przez Slocgtory, chyba że dana aplikacja publikuje własną politykę."
+          "Ta polityka obejmuje tę stronę oraz każdą aplikację lub grę wydaną przez Slocgtory, która nie publikuje własnej polityki. **AllVRPuzzles** ma własną: [Polityka prywatności AllVRPuzzles](/pl/apps/allvrpuzzles/privacy/)."
         ]
       },
       {
@@ -197,7 +321,7 @@
           "Wszystko, co aplikacja zapisuje, znajduje się na twoich goglach, więc możesz to usunąć sam, natychmiast, nikogo nie pytając:"
         ],
         "list": [
-          "Na goglach Quest otwórz **Aplikacje**, znajdź **AllVRPuzzles**, otwórz menu i wybierz **Odinstaluj**."
+          "Na goglach Quest otwórz **Aplikacje**, znajdź aplikację, otwórz menu i wybierz **Odinstaluj**."
         ]
       },
       {

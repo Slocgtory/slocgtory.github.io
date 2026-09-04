@@ -87,11 +87,13 @@
               "value": "18"
             }
           ],
-          "privacyNote": "Den utgitte appen ber aldri om internettilgang, så ingenting av det den lagrer kan forlate headsettet ditt. Detaljene står i [personvernerklæringen](/nb/privacy/)."
+          "privacyNote": "Dette spillet har sin [egen personvernerklæring](/nb/apps/allvrpuzzles/privacy/): den gratis prøveperioden sender to enhets-ID-er som bare denne appen ser, til en liten lisensserver, Meta bekrefter headsettet og kjøpene dine, og ingenting annet forlater headsettet ditt."
         }
       }
     ],
-    "note": "Ingenting er lansert ennå. Hver app blir listet opp her når den kommer, med lenke til butikksiden."
+    "note": "Ingenting er lansert ennå. Hver app blir listet opp her når den kommer, med lenke til butikksiden.",
+    "policyLink": "Personvernerklæring for denne appen",
+    "policyInEnglishNote": "Denne erklæringen finnes foreløpig bare på engelsk. [Les på engelsk]({url})."
   },
   "privacy": {
     "metaTitle": "Personvernerklæring",

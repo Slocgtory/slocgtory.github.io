@@ -87,19 +87,143 @@
               "value": "18"
             }
           ],
-          "privacyNote": "The released app never asks for internet access, so nothing it saves can leave your headset. The [privacy policy](/privacy/) has the detail."
+          "privacyNote": "This game has a [privacy policy of its own](/apps/allvrpuzzles/privacy/): the free trial sends two app-specific device identifiers to a small licensing server, Meta confirms the headset and your purchases, and nothing else leaves your headset."
+        },
+        "policy": {
+          "metaTitle": "AllVRPuzzles Privacy Policy",
+          "metaDescription": "Privacy policy for AllVRPuzzles on Meta Quest: two app-specific device identifiers for the free trial, Meta's attestation and purchase checks, and nothing else.",
+          "title": "AllVRPuzzles Privacy Policy",
+          "updated": "Last updated: 4 September 2026",
+          "updatedIso": "2026-09-04",
+          "summary": "**AllVRPuzzles collects no personal data beyond what its free trial needs.** The game sends two identifiers that only this app can see on your headset to a small licensing server, asks Meta to confirm the headset and your purchases, and does nothing else: no analytics, no advertising, no tracking. Everything below is the detail behind that sentence.",
+          "sections": [
+            {
+              "id": "who",
+              "h": "Who this policy is from",
+              "p": [
+                "Slocgtory is an independent, one-person developer. There is no company and no staff; the only third parties involved in running this game are the two service providers named below.",
+                "Contact: [Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)"
+              ]
+            },
+            {
+              "id": "scope",
+              "h": "What it covers",
+              "p": [
+                "This policy covers **AllVRPuzzles** for Meta Quest headsets. For this game it replaces the [general Slocgtory privacy policy](/privacy/), which still covers this website and any app without a policy of its own."
+              ]
+            },
+            {
+              "id": "trial-ids",
+              "h": "Device identifiers for the free trial",
+              "p": [
+                "The base game is free to play for a limited trial period. To count that period per headset rather than per install, the game sends two identifiers to our licensing server when it starts: `ANDROID_ID`, the identifier Android assigns to this app on this headset, and the Widevine device identifier as exposed to this app.",
+                "Both are specific to AllVRPuzzles on your headset: other apps see different values, and they cannot be used to recognise you across apps or services. The server stores them together with the time the trial started and the time the headset was last seen. They count as personal data under the GDPR, as a persistent device identifier, and are treated as such.",
+                "Purpose: to run the trial licence, to stop the trial being reset by reinstalling or resetting the headset, and to count how many headsets use the game. Legal basis: performance of the contract with you (Art. 6(1)(b) GDPR) for the licence, and our legitimate interest (Art. 6(1)(f)) for counts that never identify a person."
+              ],
+              "list": [
+                "**Retention:** a record is deleted automatically once its headset has not been seen for 24 months.",
+                "**Where:** a Cloudflare Worker and Cloudflare Durable Object storage (Cloudflare, Inc., acting as our processor)."
+              ]
+            },
+            {
+              "id": "attestation",
+              "h": "Device attestation",
+              "p": [
+                "To tell genuine headsets from tampered ones, the game asks Meta Horizon OS for a Platform Integrity token and forwards it to our server, which sends it to Meta's verification service. The verified result names the app package, its signing certificate, the headset's integrity state and, when Meta provides it, a Meta-assigned device identifier. We keep a keyed hash of that identifier only to link it to the trial record; the token itself is not stored.",
+                "Attestation never blocks the game: a headset that fails it, or cannot perform it, still receives its trial verdict. Meta processes the token under its own [privacy policy](https://www.meta.com/legal/quest/privacy-policy/)."
+              ]
+            },
+            {
+              "id": "purchases",
+              "h": "Purchases and Meta user identity",
+              "p": [
+                "Picture packs are sold through Meta's in-app purchases. The transaction happens entirely inside Meta's own store interface, and **payment details are never seen by, or passed to, this game.** Purchase checks run on the headset through Meta's Platform SDK.",
+                "If our server-side purchase check is enabled, the game additionally sends your Meta user ID together with a one-time proof issued by Meta, and our server asks Meta whether that account owns a pack. We keep only a keyed hash of the user ID next to the trial record; the proof and any profile data are not stored."
+              ]
+            },
+            {
+              "id": "server",
+              "h": "Technical data on our server",
+              "p": [
+                "Cloudflare, which hosts the licensing server, processes your IP address to deliver the response and to enforce rate limits. We do not store IP addresses. Server logs may record the outcome of a request, for example that an attestation was rejected and why, without any identifier."
+              ]
+            },
+            {
+              "id": "not-collected",
+              "h": "What the game does not do",
+              "p": [
+                "Nothing else leaves your headset. In particular:"
+              ],
+              "list": [
+                "No gameplay analytics, session tracking, crash reporting or telemetry.",
+                "No advertising and no advertising identifiers.",
+                "No sale or sharing of data for marketing.",
+                "No microphone, camera, location or contacts access."
+              ]
+            },
+            {
+              "id": "stored-on-device",
+              "h": "Data stored on your headset",
+              "p": [
+                "The game writes into its own private storage: your progress, a local record of which packs you own, and the signed trial verdict it last received. Android backup is switched off for this app, so none of it is copied into a cloud backup. Uninstalling the game deletes all of it. The trial record on our server remains until it expires, so reinstalling does not restart the trial."
+              ]
+            },
+            {
+              "id": "recipients",
+              "h": "Who receives data",
+              "p": [
+                "Two providers, and no others:"
+              ],
+              "list": [
+                "**Cloudflare, Inc.**, which hosts and stores the licensing server, as our processor.",
+                "**Meta Platforms Technologies**, for attestation and purchase verification, as an independent controller under its own policy."
+              ]
+            },
+            {
+              "id": "rights",
+              "h": "Your rights",
+              "p": [
+                "Under the GDPR you may ask for access to, correction of, or deletion of the data we hold about your headset, and object to processing based on legitimate interest. Write to [Slocgtory@gmail.com](mailto:Slocgtory@gmail.com) and you will get a reply within 30 days.",
+                "To find your record we need the two device identifiers. The game shows them on its About page, under Settings. Deleting the record ends the current trial licence on that headset.",
+                "You may also complain to your data protection authority; in Poland that is the [UODO](https://uodo.gov.pl/)."
+              ]
+            },
+            {
+              "id": "children",
+              "h": "Children",
+              "p": [
+                "The game is intended for people who meet the Meta Horizon account age requirements. We do not knowingly collect data from children."
+              ]
+            },
+            {
+              "id": "changes",
+              "h": "Changes to this policy",
+              "p": [
+                "If any of this changes, this page changes with it and the date at the top is updated. A change that affects what is collected will also be noted in the game's store listing."
+              ]
+            },
+            {
+              "id": "contact",
+              "h": "Contact",
+              "p": [
+                "[Slocgtory@gmail.com](mailto:Slocgtory@gmail.com)"
+              ]
+            }
+          ]
         }
       }
     ],
-    "note": "Nothing has been released yet. Each app will be listed here as it ships, with a link to its store page."
+    "note": "Nothing has been released yet. Each app will be listed here as it ships, with a link to its store page.",
+    "policyLink": "Privacy policy for this app",
+    "policyInEnglishNote": ""
   },
   "privacy": {
     "metaTitle": "Privacy Policy",
-    "metaDescription": "Privacy policy for AllVRPuzzles and all Slocgtory applications. No personal data is collected; the released app has no internet access.",
+    "metaDescription": "Privacy policy for Slocgtory's website and apps. The website does not track visitors; apps without a policy of their own collect no personal data. AllVRPuzzles has its own policy.",
     "title": "Privacy Policy",
     "updated": "Last updated: 27 August 2026",
     "canonicalNote": "",
-    "summary": "**These apps do not collect any personal data.** The released app does not have internet access at all, so it cannot send anything anywhere. Everything below is the detail behind that sentence.",
+    "summary": "**Apps under this policy do not collect any personal data**, and this website does not track its visitors. AllVRPuzzles now has a [policy of its own](/apps/allvrpuzzles/privacy/), because its free trial talks to a licensing server; everything below applies to apps without one.",
     "sections": [
       {
         "id": "who",
@@ -113,7 +237,7 @@
         "id": "scope",
         "h": "What it covers",
         "p": [
-          "This policy covers **AllVRPuzzles**, an application for Meta Quest headsets, and any future application or game published by Slocgtory unless that app publishes a policy of its own."
+          "This policy covers this website and any application or game published by Slocgtory that does not publish a policy of its own. **AllVRPuzzles** has its own: the [AllVRPuzzles Privacy Policy](/apps/allvrpuzzles/privacy/)."
         ]
       },
       {
@@ -197,7 +321,7 @@
           "Everything the app stores is on your headset, so you can delete all of it yourself, immediately, without asking anyone:"
         ],
         "list": [
-          "On your Quest, open **Apps**, find **AllVRPuzzles**, open its menu, and choose **Uninstall**."
+          "On your Quest, open **Apps**, find the app, open its menu, and choose **Uninstall**."
         ]
       },
       {

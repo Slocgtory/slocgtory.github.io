@@ -87,11 +87,13 @@
               "value": "18"
             }
           ],
-          "privacyNote": "L’app pubblicata non chiede mai l’accesso a Internet, quindi nulla di ciò che salva può lasciare il visore. Il dettaglio è nell’[informativa sulla privacy](/it/privacy/)."
+          "privacyNote": "Questo gioco ha una [propria informativa sulla privacy](/it/apps/allvrpuzzles/privacy/): la prova gratuita invia due identificatori del dispositivo visibili solo a questa app a un piccolo server di licenze, Meta conferma il visore e i tuoi acquisti, e nient'altro lascia il tuo visore."
         }
       }
     ],
-    "note": "Non è ancora uscito nulla. Ogni applicazione comparirà qui alla pubblicazione, con un collegamento alla sua pagina nello store."
+    "note": "Non è ancora uscito nulla. Ogni applicazione comparirà qui alla pubblicazione, con un collegamento alla sua pagina nello store.",
+    "policyLink": "Informativa sulla privacy di questa app",
+    "policyInEnglishNote": "Questa informativa è per ora disponibile solo in inglese. [Leggi in inglese]({url})."
   },
   "privacy": {
     "metaTitle": "Informativa sulla privacy",

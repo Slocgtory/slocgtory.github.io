@@ -87,11 +87,13 @@
               "value": "18"
             }
           ],
-          "privacyNote": "Den släppta appen ber aldrig om internetåtkomst, så inget av det den sparar kan lämna ditt headset. Detaljerna finns i [integritetspolicyn](/sv/privacy/)."
+          "privacyNote": "Det här spelet har en [egen integritetspolicy](/sv/apps/allvrpuzzles/privacy/): den kostnadsfria provperioden skickar två enhets-id:n som bara den här appen ser till en liten licensserver, Meta bekräftar headsetet och dina köp, och inget annat lämnar ditt headset."
         }
       }
     ],
-    "note": "Inget är släppt än. Varje app listas här när den kommer ut, med en länk till dess butikssida."
+    "note": "Inget är släppt än. Varje app listas här när den kommer ut, med en länk till dess butikssida.",
+    "policyLink": "Integritetspolicy för den här appen",
+    "policyInEnglishNote": "Den här policyn finns tills vidare bara på engelska. [Läs på engelska]({url})."
   },
   "privacy": {
     "metaTitle": "Integritetspolicy",

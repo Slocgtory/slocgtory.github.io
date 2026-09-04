@@ -87,11 +87,13 @@
               "value": "18"
             }
           ],
-          "privacyNote": "Útgefna forritið biður aldrei um nettengingu, svo ekkert sem það vistar kemst úr höfuðtólinu þínu. Nánar í [persónuverndarstefnunni](/is/privacy/)."
+          "privacyNote": "Þessi leikur hefur [sína eigin persónuverndarstefnu](/is/apps/allvrpuzzles/privacy/): ókeypis prufutíminn sendir tvö tækisauðkenni, sem aðeins þetta forrit sér, á lítinn leyfisþjón, Meta staðfestir höfuðtólið og kaupin þín, og ekkert annað fer frá höfuðtólinu þínu."
         }
       }
     ],
-    "note": "Ekkert hefur enn komið út. Hvert forrit birtist hér þegar það kemur út, með tengli á verslunarsíðu sína."
+    "note": "Ekkert hefur enn komið út. Hvert forrit birtist hér þegar það kemur út, með tengli á verslunarsíðu sína.",
+    "policyLink": "Persónuverndarstefna þessa forrits",
+    "policyInEnglishNote": "Þessi stefna er enn sem komið er aðeins til á ensku. [Lesa á ensku]({url})."
   },
   "privacy": {
     "metaTitle": "Persónuverndarstefna",

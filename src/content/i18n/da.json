@@ -87,11 +87,13 @@
               "value": "18"
             }
           ],
-          "privacyNote": "Den udgivne app beder aldrig om internetadgang, så intet af det, den gemmer, kan forlade dit headset. Detaljerne står i [privatlivspolitikken](/da/privacy/)."
+          "privacyNote": "Dette spil har sin [egen privatlivspolitik](/da/apps/allvrpuzzles/privacy/): den gratis prøveperiode sender to enheds-id'er, som kun denne app kan se, til en lille licensserver, Meta bekræfter headsettet og dine køb, og intet andet forlader dit headset."
         }
       }
     ],
-    "note": "Der er endnu ikke udgivet noget. Hver app bliver vist her, når den udkommer, med et link til dens butiksside."
+    "note": "Der er endnu ikke udgivet noget. Hver app bliver vist her, når den udkommer, med et link til dens butiksside.",
+    "policyLink": "Privatlivspolitik for denne app",
+    "policyInEnglishNote": "Denne politik findes indtil videre kun på engelsk. [Læs på engelsk]({url})."
   },
   "privacy": {
     "metaTitle": "Privatlivspolitik",

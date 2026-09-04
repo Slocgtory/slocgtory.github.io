@@ -1,0 +1,38 @@
+---
+import Base from '../../../../layouts/Base.astro';
+import PrivacyBody from '../../../../components/PrivacyBody.astro';
+import { loadLocale, DEFAULT_LOCALE } from '../../../../lib/i18n';
+
+/* One address per app that has a policy of its own: `/apps/<slug>/privacy/`.
+   This is the address that goes into the Meta store listing, so it is stable
+   and unprefixed, like `/privacy/`. */
+export async function getStaticPaths() {
+  const { apps } = await loadLocale(DEFAULT_LOCALE);
+  return apps.list.filter((app) => app.policy).map((app) => ({ params: { app: app.slug } }));
+}
+
+const data = await loadLocale(DEFAULT_LOCALE);
+const app = data.apps.list.find((a) => a.slug === Astro.params.app)!;
+const policy = app.policy!;
+---
+
+<Base
+  locale={DEFAULT_LOCALE}
+  page={`apps/${app.slug}/privacy`}
+  title={`${policy.metaTitle} - Slocgtory`}
+  description={policy.metaDescription}
+  site={data.site}
+  apps={[app]}
+>
+  <PrivacyBody
+    privacy={{
+      title: policy.title,
+      updated: policy.updated,
+      canonicalNote: '',
+      summary: policy.summary,
+      sections: policy.sections,
+    }}
+    updatedIso={policy.updatedIso}
+    isCanonical={true}
+  />
+</Base>

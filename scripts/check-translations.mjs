@@ -161,7 +161,23 @@ const drifted = [];
 
 for (const code of others) {
   const doc = read(code);
-  const drift = firstDrift(canonShape, shape(contentOf(doc)));
+  // An app's own policy may be untranslated: the site then shows the English
+  // text under a note in this language (see src/pages/[lang]/apps/[app]/privacy).
+  // So a missing `policy` is a gap to report, not a broken shape. Compare
+  // against English with those policies removed, and say which they are.
+  const expected = structuredClone(canonShape);
+  const untranslated = [];
+  (doc.apps?.list ?? []).forEach((app, i) => {
+    const canonApp = expected.apps?.list?.[i];
+    if (canonApp && canonApp.policy !== undefined && app.policy === undefined) {
+      delete canonApp.policy;
+      untranslated.push(app.slug ?? String(i));
+    }
+  });
+  if (untranslated.length) {
+    console.log(`  ${dim('note')}  ${code.padEnd(8)} app policy shown in English for: ${untranslated.join(', ')}`);
+  }
+  const drift = firstDrift(expected, shape(contentOf(doc)));
 
   if (drift) {
     drifted.push({ code, drift });

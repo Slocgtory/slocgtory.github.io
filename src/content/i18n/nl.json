@@ -87,11 +87,13 @@
               "value": "18"
             }
           ],
-          "privacyNote": "De uitgebrachte app vraagt nooit om internettoegang, dus niets van wat hij opslaat kan je headset verlaten. De details staan in het [privacybeleid](/nl/privacy/)."
+          "privacyNote": "Dit spel heeft een [eigen privacybeleid](/nl/apps/allvrpuzzles/privacy/): de gratis proefperiode stuurt twee alleen voor deze app zichtbare apparaat-id's naar een kleine licentieserver, Meta bevestigt de headset en je aankopen, en verder verlaat niets je headset."
         }
       }
     ],
-    "note": "Er is nog niets uitgebracht. Elke app komt hier te staan zodra die verschijnt, met een link naar de winkelpagina."
+    "note": "Er is nog niets uitgebracht. Elke app komt hier te staan zodra die verschijnt, met een link naar de winkelpagina.",
+    "policyLink": "Privacybeleid van deze app",
+    "policyInEnglishNote": "Dit beleid is voorlopig alleen in het Engels beschikbaar. [In het Engels lezen]({url})."
   },
   "privacy": {
     "metaTitle": "Privacybeleid",
