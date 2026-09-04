@@ -1,6 +1,6 @@
 {
   "name": "Svenska",
-  "sourceHash": "caaff95b99c3c50b",
+  "sourceHash": "e35bdcd9cef6b9cb",
   "site": {
     "skip": "Hoppa till innehållet",
     "navLabel": "Huvudnavigering",
@@ -97,11 +97,11 @@
   },
   "privacy": {
     "metaTitle": "Integritetspolicy",
-    "metaDescription": "Integritetspolicy för AllVRPuzzles och alla Slocgtory-appar. Inga personuppgifter samlas in; den släppta appen har ingen internetåtkomst.",
+    "metaDescription": "Integritetspolicy för Slocgtorys webbplats och appar. Webbplatsen spårar inte besökare; appar utan egen policy samlar inte in några personuppgifter. AllVRPuzzles har en egen policy.",
     "title": "Integritetspolicy",
     "updated": "Senast uppdaterad: 27 augusti 2026",
     "canonicalNote": "Detta är en översättning för bekvämlighets skull. Den **engelska versionen** gäller: vid avvikelser är den engelska texten den som tillämpas. [Läs på engelska](/privacy/).",
-    "summary": "**De här apparna samlar inte in några personuppgifter.** Den släppta appen har ingen internetåtkomst alls och kan därför inte skicka något någonstans. Allt nedan är detaljerna bakom den meningen.",
+    "summary": "**Appar som omfattas av den här policyn samlar inte in några personuppgifter**, och den här webbplatsen spårar inte sina besökare. AllVRPuzzles har nu [en egen policy](/sv/apps/allvrpuzzles/privacy/), eftersom dess kostnadsfria provperiod pratar med en licensserver; allt nedan gäller appar utan egen policy.",
     "sections": [
       {
         "id": "who",
@@ -115,7 +115,7 @@
         "id": "scope",
         "h": "Vad den omfattar",
         "p": [
-          "Den här policyn omfattar **AllVRPuzzles**, en app för Meta Quest-headset, och varje framtida app eller spel som Slocgtory ger ut, om inte den appen publicerar en egen policy."
+          "Den här policyn omfattar den här webbplatsen och varje applikation eller spel som Slocgtory ger ut och som inte publicerar en egen policy. **AllVRPuzzles** har en egen: [AllVRPuzzles integritetspolicy](/sv/apps/allvrpuzzles/privacy/)."
         ]
       },
       {
@@ -199,7 +199,7 @@
           "Allt som appen sparar finns på ditt headset, så du kan radera alltihop själv, direkt, utan att fråga någon:"
         ],
         "list": [
-          "Öppna **Appar** på din Quest, leta upp **AllVRPuzzles**, öppna menyn och välj **Avinstallera**."
+          "Öppna **Appar** på din Quest, leta upp appen, öppna menyn och välj **Avinstallera**."
         ]
       },
       {

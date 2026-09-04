@@ -1,6 +1,6 @@
 {
   "name": "Dansk",
-  "sourceHash": "caaff95b99c3c50b",
+  "sourceHash": "e35bdcd9cef6b9cb",
   "site": {
     "skip": "Gå til indhold",
     "navLabel": "Hovednavigation",
@@ -97,11 +97,11 @@
   },
   "privacy": {
     "metaTitle": "Privatlivspolitik",
-    "metaDescription": "Privatlivspolitik for AllVRPuzzles og alle Slocgtory-apps. Der indsamles ingen persondata; den udgivne app har ingen internetadgang.",
+    "metaDescription": "Privatlivspolitik for Slocgtorys websted og apps. Webstedet sporer ikke besøgende; apps uden egen politik indsamler ingen personoplysninger. AllVRPuzzles har sin egen politik.",
     "title": "Privatlivspolitik",
     "updated": "Sidst opdateret: 27. august 2026",
     "canonicalNote": "Dette er en oversættelse til orientering. Den **engelske version** er gældende: ved uoverensstemmelser gælder den engelske tekst. [Læs på engelsk](/privacy/).",
-    "summary": "**Disse apps indsamler ingen persondata.** Den udgivne app har slet ingen internetadgang og kan derfor ikke sende noget nogen steder hen. Alt nedenfor er detaljerne bag den sætning.",
+    "summary": "**Apps under denne politik indsamler ingen personoplysninger**, og dette websted sporer ikke sine besøgende. AllVRPuzzles har nu [sin egen politik](/da/apps/allvrpuzzles/privacy/), fordi den gratis prøveperiode taler med en licensserver; alt nedenfor gælder for apps uden egen politik.",
     "sections": [
       {
         "id": "who",
@@ -115,7 +115,7 @@
         "id": "scope",
         "h": "Hvad den dækker",
         "p": [
-          "Denne politik dækker **AllVRPuzzles**, en app til Meta Quest-headsets, samt enhver fremtidig app eller ethvert spil udgivet af Slocgtory, medmindre den app udgiver sin egen politik."
+          "Denne politik dækker dette websted og enhver applikation eller ethvert spil udgivet af Slocgtory, som ikke udgiver sin egen politik. **AllVRPuzzles** har sin egen: [AllVRPuzzles' privatlivspolitik](/da/apps/allvrpuzzles/privacy/)."
         ]
       },
       {
@@ -199,7 +199,7 @@
           "Alt, hvad appen gemmer, ligger på dit headset, så du kan selv slette det hele, med det samme, uden at spørge nogen:"
         ],
         "list": [
-          "Åbn **Apps** på din Quest, find **AllVRPuzzles**, åbn menuen og vælg **Afinstaller**."
+          "Åbn **Apps** på din Quest, find appen, åbn menuen og vælg **Afinstaller**."
         ]
       },
       {

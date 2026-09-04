@@ -1,6 +1,6 @@
 {
   "name": "繁體中文",
-  "sourceHash": "caaff95b99c3c50b",
+  "sourceHash": "e35bdcd9cef6b9cb",
   "site": {
     "skip": "跳至內容",
     "navLabel": "主要導覽",
@@ -97,11 +97,11 @@
   },
   "privacy": {
     "metaTitle": "隱私權政策",
-    "metaDescription": "AllVRPuzzles 及所有 Slocgtory 應用程式的隱私權政策。不收集任何個人資料；已發行的應用程式沒有網際網路存取權。",
+    "metaDescription": "Slocgtory 網站與應用程式的隱私權政策。網站不追蹤訪客；沒有自身政策的應用程式不蒐集任何個人資料。AllVRPuzzles 有自己的政策。",
     "title": "隱私權政策",
     "updated": "最後更新：2026 年 8 月 27 日",
     "canonicalNote": "本文為便利閱讀之譯本。以**英文版**為準；兩者如有出入，概以英文內容為準。[閱讀英文版](/privacy/)",
-    "summary": "**這些應用程式不收集任何個人資料。** 已發行的應用程式完全沒有網際網路存取權，因此無法將任何資料傳送至任何地方。以下是這句話背後的細節。",
+    "summary": "**受本政策規範的應用程式不蒐集任何個人資料**，本網站也不追蹤訪客。AllVRPuzzles 的免費試用會與授權伺服器通訊，因此現在有[自己的政策](/zh-Hant/apps/allvrpuzzles/privacy/)；以下內容適用於沒有自身政策的應用程式。",
     "sections": [
       {
         "id": "who",
@@ -115,7 +115,7 @@
         "id": "scope",
         "h": "適用範圍",
         "p": [
-          "本政策適用於 **AllVRPuzzles**，一款供 Meta Quest 頭戴裝置使用的應用程式；除非該應用程式另行發布自己的政策，否則亦適用於 Slocgtory 日後發行的所有應用程式與遊戲。"
+          "本政策適用於本網站以及 Slocgtory 發布的、未發布自身政策的所有應用程式與遊戲。**AllVRPuzzles** 有自己的政策：[AllVRPuzzles 隱私權政策](/zh-Hant/apps/allvrpuzzles/privacy/)。"
         ]
       },
       {
@@ -199,7 +199,7 @@
           "應用程式儲存的一切都在您的頭戴裝置上，因此您可以自行、立即刪除全部內容，無需向任何人提出申請："
         ],
         "list": [
-          "在您的 Quest 上開啟**應用程式**，找到 **AllVRPuzzles**，開啟其選單並選擇**解除安裝**。"
+          "在您的 Quest 上開啟**應用程式**，找到 該應用程式，開啟其選單並選擇**解除安裝**。"
         ]
       },
       {

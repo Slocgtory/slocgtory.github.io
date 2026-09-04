@@ -1,6 +1,6 @@
 {
   "name": "Íslenska",
-  "sourceHash": "caaff95b99c3c50b",
+  "sourceHash": "e35bdcd9cef6b9cb",
   "site": {
     "skip": "Fara í efni",
     "navLabel": "Aðalvalmynd",
@@ -97,11 +97,11 @@
   },
   "privacy": {
     "metaTitle": "Persónuverndarstefna",
-    "metaDescription": "Persónuverndarstefna fyrir AllVRPuzzles og öll forrit Slocgtory. Engum persónuupplýsingum er safnað; útgefna forritið hefur engan netaðgang.",
+    "metaDescription": "Persónuverndarstefna fyrir vefsvæði og forrit Slocgtory. Vefsvæðið rekur ekki gesti; forrit án eigin stefnu safna engum persónuupplýsingum. AllVRPuzzles hefur sína eigin stefnu.",
     "title": "Persónuverndarstefna",
     "updated": "Síðast uppfært: 27. ágúst 2026",
     "canonicalNote": "Þetta er þýðing til hægðarauka. **Enska útgáfan** gildir: ef þeim ber ekki saman gildir enski textinn. [Lesa á ensku](/privacy/).",
-    "summary": "**Þessi forrit safna engum persónuupplýsingum.** Útgefna forritið hefur alls engan netaðgang og getur því ekki sent neitt neitt. Allt hér að neðan eru smáatriðin á bak við þá setningu.",
+    "summary": "**Forrit sem falla undir þessa stefnu safna engum persónuupplýsingum**, og þetta vefsvæði rekur ekki gesti sína. AllVRPuzzles hefur nú [sína eigin stefnu](/is/apps/allvrpuzzles/privacy/), því ókeypis prufutími þess talar við leyfisþjón; allt hér að neðan á við um forrit sem hafa enga eigin stefnu.",
     "sections": [
       {
         "id": "who",
@@ -115,7 +115,7 @@
         "id": "scope",
         "h": "Hvað hún nær yfir",
         "p": [
-          "Þessi stefna nær yfir **AllVRPuzzles**, forrit fyrir Meta Quest-höfuðtól, og öll framtíðarforrit eða leiki sem Slocgtory gefur út, nema það forrit birti sína eigin stefnu."
+          "Þessi stefna nær yfir þetta vefsvæði og öll forrit og leiki sem Slocgtory gefur út og birta ekki eigin stefnu. **AllVRPuzzles** hefur sína eigin: [persónuverndarstefnu AllVRPuzzles](/is/apps/allvrpuzzles/privacy/)."
         ]
       },
       {
@@ -199,7 +199,7 @@
           "Allt sem forritið geymir er á höfuðtólinu þínu, svo þú getur eytt því öllu sjálf/ur, strax, án þess að spyrja nokkurn:"
         ],
         "list": [
-          "Opnaðu **Forrit** á Quest-tækinu þínu, finndu **AllVRPuzzles**, opnaðu valmynd þess og veldu **Fjarlægja**."
+          "Opnaðu **Forrit** á Quest-tækinu þínu, finndu forritið, opnaðu valmynd þess og veldu **Fjarlægja**."
         ]
       },
       {

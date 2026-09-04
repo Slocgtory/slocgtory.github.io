@@ -1,6 +1,6 @@
 {
   "name": "Suomi",
-  "sourceHash": "caaff95b99c3c50b",
+  "sourceHash": "e35bdcd9cef6b9cb",
   "site": {
     "skip": "Siirry sisältöön",
     "navLabel": "Päävalikko",
@@ -97,11 +97,11 @@
   },
   "privacy": {
     "metaTitle": "Tietosuojaseloste",
-    "metaDescription": "AllVRPuzzlesin ja kaikkien Slocgtoryn sovellusten tietosuojaseloste. Henkilötietoja ei kerätä lainkaan; julkaistulla sovelluksella ei ole internetyhteyttä.",
+    "metaDescription": "Slocgtoryn verkkosivuston ja sovellusten tietosuojakäytäntö. Sivusto ei seuraa kävijöitä; sovellukset, joilla ei ole omaa käytäntöä, eivät kerää henkilötietoja. AllVRPuzzlesilla on oma käytäntönsä.",
     "title": "Tietosuojaseloste",
     "updated": "Viimeksi päivitetty: 27. elokuuta 2026",
     "canonicalNote": "Tämä on epävirallinen käännös. Ratkaiseva on **englanninkielinen versio**: ristiriitatilanteessa sovelletaan englanninkielistä tekstiä. [Lue englanniksi](/privacy/).",
-    "summary": "**Nämä sovellukset eivät kerää mitään henkilötietoja.** Julkaistulla sovelluksella ei ole lainkaan internetyhteyttä, joten se ei voi lähettää mitään minnekään. Kaikki alla oleva on tämän lauseen taustaa.",
+    "summary": "**Tämän käytännön piiriin kuuluvat sovellukset eivät kerää mitään henkilötietoja**, eikä tämä sivusto seuraa kävijöitään. AllVRPuzzlesilla on nyt [oma käytäntönsä](/fi/apps/allvrpuzzles/privacy/), koska sen ilmainen kokeilujakso on yhteydessä lisenssipalvelimeen; kaikki alla oleva koskee sovelluksia, joilla omaa käytäntöä ei ole.",
     "sections": [
       {
         "id": "who",
@@ -115,7 +115,7 @@
         "id": "scope",
         "h": "Mitä se koskee",
         "p": [
-          "Tämä seloste koskee sovellusta **AllVRPuzzles**, joka on tarkoitettu Meta Quest -laseille, sekä kaikkia Slocgtoryn tulevia sovelluksia ja pelejä, ellei kyseinen sovellus julkaise omaa selostettaan."
+          "Tämä käytäntö kattaa tämän verkkosivuston sekä kaikki Slocgtoryn julkaisemat sovellukset ja pelit, jotka eivät julkaise omaa käytäntöään. **AllVRPuzzlesilla** on omansa: [AllVRPuzzlesin tietosuojakäytäntö](/fi/apps/allvrpuzzles/privacy/)."
         ]
       },
       {
@@ -199,7 +199,7 @@
           "Kaikki, mitä sovellus tallentaa, on laseissasi, joten voit poistaa kaiken itse, heti, kysymättä keneltäkään:"
         ],
         "list": [
-          "Avaa Questissäsi **Sovellukset**, etsi **AllVRPuzzles**, avaa sen valikko ja valitse **Poista**."
+          "Avaa Questissäsi **Sovellukset**, etsi sovellus, avaa sen valikko ja valitse **Poista**."
         ]
       },
       {

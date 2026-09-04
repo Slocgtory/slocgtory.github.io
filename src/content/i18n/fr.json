@@ -1,6 +1,6 @@
 {
   "name": "Français",
-  "sourceHash": "caaff95b99c3c50b",
+  "sourceHash": "e35bdcd9cef6b9cb",
   "site": {
     "skip": "Aller au contenu",
     "navLabel": "Navigation principale",
@@ -97,11 +97,11 @@
   },
   "privacy": {
     "metaTitle": "Politique de confidentialité",
-    "metaDescription": "Politique de confidentialité d'AllVRPuzzles et de toutes les applications Slocgtory. Aucune donnée personnelle n'est collectée ; l'application publiée n'a pas d'accès à Internet.",
+    "metaDescription": "Politique de confidentialité du site et des applications de Slocgtory. Le site ne suit pas ses visiteurs ; les applications sans politique propre ne collectent aucune donnée personnelle. AllVRPuzzles a sa propre politique.",
     "title": "Politique de confidentialité",
     "updated": "Dernière mise à jour : 27 août 2026",
     "canonicalNote": "Ceci est une traduction de courtoisie. La **version anglaise** fait foi : en cas de divergence, c'est le texte anglais qui s'applique. [Lire en anglais](/privacy/).",
-    "summary": "**Ces applications ne collectent aucune donnée personnelle.** L'application publiée n'a aucun accès à Internet : elle ne peut donc rien envoyer nulle part. Tout ce qui suit détaille cette phrase.",
+    "summary": "**Les applications couvertes par cette politique ne collectent aucune donnée personnelle**, et ce site ne suit pas ses visiteurs. AllVRPuzzles a désormais [sa propre politique](/fr/apps/allvrpuzzles/privacy/), parce que son essai gratuit communique avec un serveur de licences ; tout ce qui suit s'applique aux applications qui n'en ont pas.",
     "sections": [
       {
         "id": "who",
@@ -115,7 +115,7 @@
         "id": "scope",
         "h": "Ce qu'elle couvre",
         "p": [
-          "Cette politique couvre **AllVRPuzzles**, une application pour les casques Meta Quest, ainsi que toute application ou tout jeu publié à l'avenir par Slocgtory, sauf si cette application publie sa propre politique."
+          "Cette politique couvre ce site et toute application ou tout jeu publié par Slocgtory qui ne publie pas de politique propre. **AllVRPuzzles** a la sienne : la [politique de confidentialité d'AllVRPuzzles](/fr/apps/allvrpuzzles/privacy/)."
         ]
       },
       {
@@ -199,7 +199,7 @@
           "Tout ce que l'application enregistre se trouve sur votre casque : vous pouvez donc tout supprimer vous-même, immédiatement, sans rien demander à personne :"
         ],
         "list": [
-          "Sur votre Quest, ouvrez **Applications**, trouvez **AllVRPuzzles**, ouvrez son menu et choisissez **Désinstaller**."
+          "Sur votre Quest, ouvrez **Applications**, trouvez l'application, ouvrez son menu et choisissez **Désinstaller**."
         ]
       },
       {

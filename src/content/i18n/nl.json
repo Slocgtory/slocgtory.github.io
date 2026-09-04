@@ -1,6 +1,6 @@
 {
   "name": "Nederlands",
-  "sourceHash": "caaff95b99c3c50b",
+  "sourceHash": "e35bdcd9cef6b9cb",
   "site": {
     "skip": "Naar de inhoud",
     "navLabel": "Hoofdnavigatie",
@@ -97,11 +97,11 @@
   },
   "privacy": {
     "metaTitle": "Privacybeleid",
-    "metaDescription": "Privacybeleid voor AllVRPuzzles en alle Slocgtory-apps. Er worden geen persoonsgegevens verzameld; de uitgebrachte app heeft geen internettoegang.",
+    "metaDescription": "Privacybeleid voor de website en de apps van Slocgtory. De website volgt geen bezoekers; apps zonder eigen beleid verzamelen geen persoonsgegevens. AllVRPuzzles heeft een eigen beleid.",
     "title": "Privacybeleid",
     "updated": "Laatst bijgewerkt: 27 augustus 2026",
     "canonicalNote": "Dit is een vertaling voor het gemak. De **Engelse versie** is bepalend: bij verschillen geldt de Engelse tekst. [Lees in het Engels](/privacy/).",
-    "summary": "**Deze apps verzamelen geen persoonsgegevens.** De uitgebrachte app heeft helemaal geen internettoegang en kan dus niets ergens naartoe sturen. Alles hieronder is de uitwerking van die zin.",
+    "summary": "**Apps onder dit beleid verzamelen geen persoonsgegevens**, en deze website volgt haar bezoekers niet. AllVRPuzzles heeft nu een [eigen beleid](/nl/apps/allvrpuzzles/privacy/), omdat de gratis proefperiode met een licentieserver praat; alles hieronder geldt voor apps zonder eigen beleid.",
     "sections": [
       {
         "id": "who",
@@ -115,7 +115,7 @@
         "id": "scope",
         "h": "Waarvoor het geldt",
         "p": [
-          "Dit beleid geldt voor **AllVRPuzzles**, een app voor Meta Quest-headsets, en voor elke toekomstige app of elk spel van Slocgtory, tenzij die app een eigen beleid publiceert."
+          "Dit beleid geldt voor deze website en voor elke applicatie of game van Slocgtory die geen eigen beleid publiceert. **AllVRPuzzles** heeft er een: het [privacybeleid van AllVRPuzzles](/nl/apps/allvrpuzzles/privacy/)."
         ]
       },
       {
@@ -199,7 +199,7 @@
           "Alles wat de app bewaart staat op je headset, dus je kunt het zelf verwijderen, meteen, zonder iemand iets te hoeven vragen:"
         ],
         "list": [
-          "Open op je Quest **Apps**, zoek **AllVRPuzzles**, open het menu en kies **Verwijderen**."
+          "Open op je Quest **Apps**, zoek de app, open het menu en kies **Verwijderen**."
         ]
       },
       {

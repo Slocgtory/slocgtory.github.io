@@ -1,6 +1,6 @@
 {
   "name": "Norsk",
-  "sourceHash": "caaff95b99c3c50b",
+  "sourceHash": "e35bdcd9cef6b9cb",
   "site": {
     "skip": "Gå til innhold",
     "navLabel": "Hovednavigasjon",
@@ -97,11 +97,11 @@
   },
   "privacy": {
     "metaTitle": "Personvernerklæring",
-    "metaDescription": "Personvernerklæring for AllVRPuzzles og alle Slocgtory-apper. Ingen personopplysninger samles inn; den utgitte appen har ingen internettilgang.",
+    "metaDescription": "Personvernerklæring for Slocgtorys nettsted og apper. Nettstedet sporer ikke besøkende; apper uten egen erklæring samler ikke inn personopplysninger. AllVRPuzzles har sin egen erklæring.",
     "title": "Personvernerklæring",
     "updated": "Sist oppdatert: 27. august 2026",
     "canonicalNote": "Dette er en oversettelse til orientering. Den **engelske versjonen** er den gjeldende: ved avvik er det den engelske teksten som gjelder. [Les på engelsk](/privacy/).",
-    "summary": "**Disse appene samler ikke inn personopplysninger.** Den utgitte appen har ingen internettilgang i det hele tatt, og kan derfor ikke sende noe noe sted. Alt nedenfor er detaljene bak den setningen.",
+    "summary": "**Apper under denne erklæringen samler ikke inn noen personopplysninger**, og dette nettstedet sporer ikke sine besøkende. AllVRPuzzles har nå [sin egen erklæring](/nb/apps/allvrpuzzles/privacy/), fordi den gratis prøveperioden snakker med en lisensserver; alt nedenfor gjelder apper uten egen erklæring.",
     "sections": [
       {
         "id": "who",
@@ -115,7 +115,7 @@
         "id": "scope",
         "h": "Hva den gjelder for",
         "p": [
-          "Denne erklæringen gjelder **AllVRPuzzles**, en app for Meta Quest-briller, og enhver framtidig app eller ethvert spill utgitt av Slocgtory, med mindre den appen publiserer sin egen erklæring."
+          "Denne erklæringen dekker dette nettstedet og enhver applikasjon eller ethvert spill utgitt av Slocgtory som ikke publiserer en egen erklæring. **AllVRPuzzles** har sin egen: [AllVRPuzzles' personvernerklæring](/nb/apps/allvrpuzzles/privacy/)."
         ]
       },
       {
@@ -199,7 +199,7 @@
           "Alt appen lagrer ligger på brillene dine, så du kan slette alt selv, med én gang, uten å spørre noen:"
         ],
         "list": [
-          "På Quest-en din åpner du **Apper**, finner **AllVRPuzzles**, åpner menyen og velger **Avinstaller**."
+          "På Quest-en din åpner du **Apper**, finner appen, åpner menyen og velger **Avinstaller**."
         ]
       },
       {

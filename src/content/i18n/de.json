@@ -1,6 +1,6 @@
 {
   "name": "Deutsch",
-  "sourceHash": "caaff95b99c3c50b",
+  "sourceHash": "e35bdcd9cef6b9cb",
   "site": {
     "skip": "Zum Inhalt springen",
     "navLabel": "Hauptnavigation",
@@ -97,11 +97,11 @@
   },
   "privacy": {
     "metaTitle": "Datenschutzerklärung",
-    "metaDescription": "Datenschutzerklärung für AllVRPuzzles und alle Slocgtory-Anwendungen. Es werden keine personenbezogenen Daten erhoben; die veröffentlichte App hat keinen Internetzugang.",
+    "metaDescription": "Datenschutzerklärung für die Website und die Apps von Slocgtory. Die Website verfolgt keine Besucher; Apps ohne eigene Erklärung erheben keine personenbezogenen Daten. AllVRPuzzles hat eine eigene Erklärung.",
     "title": "Datenschutzerklärung",
     "updated": "Zuletzt aktualisiert: 27. August 2026",
     "canonicalNote": "Dies ist eine Übersetzung zur Orientierung. Maßgeblich ist die **englische Fassung**; bei Abweichungen gilt der englische Text. [Auf Englisch lesen](/privacy/).",
-    "summary": "**Diese Apps erheben keine personenbezogenen Daten.** Die veröffentlichte App hat überhaupt keinen Internetzugang und kann daher nichts irgendwohin senden. Alles Weitere sind die Einzelheiten hinter diesem Satz.",
+    "summary": "**Apps unter dieser Erklärung erheben keine personenbezogenen Daten**, und diese Website verfolgt ihre Besucher nicht. AllVRPuzzles hat jetzt eine [eigene Erklärung](/de/apps/allvrpuzzles/privacy/), weil seine kostenlose Testphase mit einem Lizenzserver spricht; alles Folgende gilt für Apps ohne eigene Erklärung.",
     "sections": [
       {
         "id": "who",
@@ -115,7 +115,7 @@
         "id": "scope",
         "h": "Wofür sie gilt",
         "p": [
-          "Diese Erklärung gilt für **AllVRPuzzles**, eine Anwendung für Meta-Quest-Headsets, sowie für jede künftige Anwendung oder jedes Spiel von Slocgtory, sofern diese App keine eigene Erklärung veröffentlicht."
+          "Diese Erklärung gilt für diese Website und für jede Anwendung und jedes Spiel von Slocgtory, das keine eigene Erklärung veröffentlicht. **AllVRPuzzles** hat eine eigene: die [Datenschutzerklärung von AllVRPuzzles](/de/apps/allvrpuzzles/privacy/)."
         ]
       },
       {
@@ -199,7 +199,7 @@
           "Alles, was die App speichert, liegt auf Ihrem Headset. Sie können es also selbst löschen, sofort und ohne jemanden zu fragen:"
         ],
         "list": [
-          "Öffnen Sie auf Ihrer Quest **Apps**, suchen Sie **AllVRPuzzles**, öffnen Sie das Menü und wählen Sie **Deinstallieren**."
+          "Öffnen Sie auf Ihrer Quest **Apps**, suchen Sie die App, öffnen Sie das Menü und wählen Sie **Deinstallieren**."
         ]
       },
       {

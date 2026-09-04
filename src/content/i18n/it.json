@@ -1,6 +1,6 @@
 {
   "name": "Italiano",
-  "sourceHash": "caaff95b99c3c50b",
+  "sourceHash": "e35bdcd9cef6b9cb",
   "site": {
     "skip": "Vai al contenuto",
     "navLabel": "Navigazione principale",
@@ -97,11 +97,11 @@
   },
   "privacy": {
     "metaTitle": "Informativa sulla privacy",
-    "metaDescription": "Informativa sulla privacy di AllVRPuzzles e di tutte le applicazioni Slocgtory. Non viene raccolto alcun dato personale; l’applicazione pubblicata non ha accesso a Internet.",
+    "metaDescription": "Informativa sulla privacy del sito e delle app di Slocgtory. Il sito non traccia i visitatori; le app senza un'informativa propria non raccolgono dati personali. AllVRPuzzles ha una propria informativa.",
     "title": "Informativa sulla privacy",
     "updated": "Ultimo aggiornamento: 27 agosto 2026",
     "canonicalNote": "Questa è una traduzione di cortesia. Fa fede la **versione inglese**: in caso di divergenza prevale il testo inglese. [Leggi in inglese](/privacy/).",
-    "summary": "**Queste applicazioni non raccolgono alcun dato personale.** L’applicazione pubblicata non ha alcun accesso a Internet, quindi non può inviare nulla da nessuna parte. Tutto ciò che segue è il dettaglio dietro questa frase.",
+    "summary": "**Le app coperte da questa informativa non raccolgono alcun dato personale**, e questo sito non traccia i suoi visitatori. AllVRPuzzles ha ora una [propria informativa](/it/apps/allvrpuzzles/privacy/), perché la sua prova gratuita comunica con un server di licenze; tutto quanto segue vale per le app che non ne hanno una.",
     "sections": [
       {
         "id": "who",
@@ -115,7 +115,7 @@
         "id": "scope",
         "h": "Che cosa copre",
         "p": [
-          "Questa informativa copre **AllVRPuzzles**, un’applicazione per i visori Meta Quest, e qualsiasi futura applicazione o gioco pubblicato da Slocgtory, salvo che quell’applicazione pubblichi una propria informativa."
+          "Questa informativa copre questo sito e qualsiasi applicazione o gioco pubblicato da Slocgtory che non pubblichi un'informativa propria. **AllVRPuzzles** ne ha una: l'[informativa sulla privacy di AllVRPuzzles](/it/apps/allvrpuzzles/privacy/)."
         ]
       },
       {
@@ -199,7 +199,7 @@
           "Tutto ciò che l’applicazione salva si trova sul tuo visore, quindi puoi cancellarlo tu stesso, subito, senza chiedere a nessuno:"
         ],
         "list": [
-          "Sul tuo Quest apri **App**, trova **AllVRPuzzles**, apri il suo menu e scegli **Disinstalla**."
+          "Sul tuo Quest apri **App**, trova l'app, apri il suo menu e scegli **Disinstalla**."
         ]
       },
       {

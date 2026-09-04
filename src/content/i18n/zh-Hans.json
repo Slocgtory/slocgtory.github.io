@@ -1,6 +1,6 @@
 {
   "name": "简体中文",
-  "sourceHash": "caaff95b99c3c50b",
+  "sourceHash": "e35bdcd9cef6b9cb",
   "site": {
     "skip": "跳到内容",
     "navLabel": "主导航",
@@ -97,11 +97,11 @@
   },
   "privacy": {
     "metaTitle": "隐私政策",
-    "metaDescription": "AllVRPuzzles 及所有 Slocgtory 应用的隐私政策。不收集任何个人数据；已发布的应用没有互联网访问权限。",
+    "metaDescription": "Slocgtory 网站和应用的隐私政策。网站不跟踪访客；没有自己政策的应用不收集任何个人数据。AllVRPuzzles 有自己的政策。",
     "title": "隐私政策",
     "updated": "最后更新：2026 年 8 月 27 日",
     "canonicalNote": "本文为便于阅读的译本。以**英文版**为准；两者如有出入，概以英文内容为准。[阅读英文版](/privacy/)",
-    "summary": "**这些应用不收集任何个人数据。** 已发布的应用完全没有互联网访问权限，因此无法将任何数据发送到任何地方。以下是这句话背后的细节。",
+    "summary": "**受本政策约束的应用不收集任何个人数据**，本网站也不跟踪访客。AllVRPuzzles 的免费试用会与授权服务器通信，因此现在有[自己的政策](/zh-Hans/apps/allvrpuzzles/privacy/)；以下内容适用于没有自己政策的应用。",
     "sections": [
       {
         "id": "who",
@@ -115,7 +115,7 @@
         "id": "scope",
         "h": "适用范围",
         "p": [
-          "本政策适用于 **AllVRPuzzles**，一款供 Meta Quest 头戴设备使用的应用；除非该应用另行发布自己的政策，否则也适用于 Slocgtory 日后发布的所有应用与游戏。"
+          "本政策适用于本网站以及 Slocgtory 发布的、未发布自己政策的所有应用和游戏。**AllVRPuzzles** 有自己的政策：[AllVRPuzzles 隐私政策](/zh-Hans/apps/allvrpuzzles/privacy/)。"
         ]
       },
       {
@@ -199,7 +199,7 @@
           "应用保存的一切都在您的头戴设备上，因此您可以自行、立即删除全部内容，无需向任何人提出申请："
         ],
         "list": [
-          "在您的 Quest 上打开**应用**，找到 **AllVRPuzzles**，打开其菜单并选择**卸载**。"
+          "在您的 Quest 上打开**应用**，找到 该应用，打开其菜单并选择**卸载**。"
         ]
       },
       {
